@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if page.url == "/" %}{% assign heading = "Ghost Boat · Fleet Tactical Trainer" %}{% else %}{% assign heading = page.title | default: site.title | append: " · Ghost Boat" %}{% endif %}
+  <title>{{ heading }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ghost Boat">
+  <meta property="og:title" content="{{ heading }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ '/screenshots/banner.png' | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#03101a">
+  <link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+</head>
+<body>
+  <div class="console">
+    <header class="bar">
+      <a class="mark" href="{{ '/' | relative_url }}">GHOST BOAT</a>
+      <span class="restricted">FLEET TACTICAL TRAINER · RESTRICTED</span>
+      <nav aria-label="Papers">
+        <a href="{{ '/' | relative_url }}">Notice</a>
+        <a href="{{ '/manual.html' | relative_url }}">Manual</a>
+        <a href="{{ '/quickref.html' | relative_url }}">Quick reference</a>
+        <a class="cta" href="{{ '/#requisition' | relative_url }}">Requisition</a>
+      </nav>
+    </header>
+    <main class="markdown-body">
+      {{ content }}
+    </main>
+    <footer class="foot">
+      Fleet Training Command · ghost-boat.com · Do not reply to this notice.
+    </footer>
+  </div>
+</body>
+</html>

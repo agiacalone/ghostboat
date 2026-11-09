@@ -56,7 +56,24 @@ body, .markdown-body {
     color: $value;
   }
   em {
-    color: $label;
+    color: $text;
+  }
+  // On the site the banner is the hero: the README's own title lines stay
+  // for the repository page, and screen readers, but not on screen.
+  > h1:first-child,
+  > h1:first-child + p,
+  > h1:first-child + p + p {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+  // A caption under a screenshot: the italic line that follows it.
+  p > a > img + br,
+  p img + em {
+    display: block;
   }
   hr {
     background-color: $frame;
@@ -99,9 +116,71 @@ body, .markdown-body {
   }
 }
 
-.footer, footer {
-  color: $faint;
-  border-top-color: $frame;
+// The console's top bar and foot, as the trainer draws its frame.
+.console {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4em 1.4em;
+  padding: 14px 0 10px;
+  border-bottom: 1px solid $frame;
+  font-family: $mono;
+  .mark {
+    color: $value;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+    text-decoration: none;
+  }
+  .restricted {
+    color: #5596ae;
+    font-size: 0.85em;
+    letter-spacing: 0.08em;
+  }
+  nav {
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2em 1.1em;
+  }
+  nav a {
+    color: $own;
+    text-decoration: none;
+    padding: 4px 0;
+  }
+  nav a:hover {
+    color: $value;
+    text-decoration: underline;
+  }
+  nav a.cta {
+    color: $bg;
+    background: $value;
+    padding: 4px 10px;
+    font-weight: bold;
+  }
+  nav a.cta:hover {
+    background: $own;
+    text-decoration: none;
+  }
+}
+.console .markdown-body {
+  padding: 24px 0 8px;
+}
+.foot {
+  color: #5596ae;
+  font-family: $mono;
+  font-size: 0.85em;
+  padding: 18px 0 40px;
+  border-top: 1px solid $frame;
+}
+@media (max-width: 600px) {
+  .bar nav {
+    margin-left: 0;
+  }
 }
 
 ::selection {

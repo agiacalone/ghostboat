@@ -4,7 +4,9 @@
 
 *A game of patience. Run silent, run dark.*
 
-![The trainer's main console: GHOST BOAT over a starfield, a boat running dark across a planet's limb, and the menu below](screenshots/banner.png)
+[![The trainer's main console: GHOST BOAT over a starfield, a boat running dark across a planet's limb, and the menu below](screenshots/banner.png)](screenshots/banner.png)
+
+*Trainer room, main console. Every exercise starts here.*
 
 > **FLOTILLA NOTICE 1. POSTED AT ALL DEPOTS.**
 >
@@ -18,7 +20,9 @@ Nobody out here can see anyone. Hulls are painted black, and starlight shows not
 
 So you drift, and listen. A bearing comes up on the waterfall: a convoy, six merchants and one escort, crossing your patrol line. You don't know how far off they are. You have a bearing, and patience. Change course, let the bearings cross, and the range comes out of the geometry. When the solution firms to GOOD, you fire, and everyone hears you.
 
-![Torpedo in the black: condition red, an enemy torpedo inbound on its bearing, and the boat turning away to run](screenshots/torpedo-in-the-black.png)
+[![Torpedo in the black: condition red, an enemy torpedo inbound on its bearing, and the boat turning away to run](screenshots/torpedo-in-the-black.png)](screenshots/torpedo-in-the-black.png)
+
+*Condition red: a torpedo in the black, and the boat turning away to run.*
 
 ## What the trainer teaches
 
@@ -31,17 +35,25 @@ So you drift, and listen. A bearing comes up on the waterfall: a convoy, six mer
 - **The boat is yours to run.** The board, the battery, the air and the damage parties. Leave them to the crew, or reach in and nurse a hurt boat home.
 - **The war changes.** Three eras: the happy time, the counters, and the hunters' war. Every technique arrives with its answer.
 
-![Hunting a convoy: every contact tagged on the rose with range, height and closing speed, the escort pinging, the convoy's trace on the waterfall](screenshots/convoy-hunt.png)
+[![Hunting a convoy: every contact tagged on the rose with range, height and closing speed, the escort pinging, the convoy's trace on the waterfall](screenshots/convoy-hunt.png)](screenshots/convoy-hunt.png)
 
-![The 3-D plot: one boat above your level and one below, each on a drop line](screenshots/three-d-view.png)
+*A convoy on the rose, every contact tagged; the escort is pinging.*
 
-![The sensors station: the passive array and the infrared waterfall side by side, one target on both](screenshots/sensors-station.png)
+[![The 3-D plot: one boat above your level and one below, each on a drop line](screenshots/three-d-view.png)](screenshots/three-d-view.png)
+
+*Space has an up and a down. One boat above your level, one below.*
+
+[![The sensors station: the passive array and the infrared waterfall side by side, one target on both](screenshots/sensors-station.png)](screenshots/sensors-station.png)
+
+*The sensors station: the passive array and infrared on one target.*
 
 ## The trainer room
 
 The trainer runs on any modern console, as large as the room allows: 160 columns by 45 rows is comfortable, and a smaller one shows fewer windows. Thirteen colour schemes are fitted, from Deep Signal to Polaris.
 
-![The Polaris scheme: a convoy hunt in frost on polar night](screenshots/polaris.png)
+[![The Polaris scheme: a convoy hunt in frost on polar night](screenshots/polaris.png)](screenshots/polaris.png)
+
+*One of thirteen colour schemes fitted to the trainer: Polaris.*
 
 ## Requisition
 

@@ -13,6 +13,8 @@
 > **CAPTAINS WANTED** for long patrols in the black. Hazardous duty. Small boat, seventy crew, four tubes, and no one coming for you. Ability to sit very still is required. Ability to count bearings is preferred.
 >
 > Apply to the Fleet Tactical Trainer. Time on the trainer does not count toward time in the black.
+>
+> Applications: [recruitment@ghost-boat.net](mailto:recruitment@ghost-boat.net)
 
 ## The black
 

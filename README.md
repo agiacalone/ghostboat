@@ -73,4 +73,4 @@ Every issue of the trainer comes with its workings open to inspection: the sourc
 
 ---
 
-*Prepared for Fleet Training Command by A. Giacalone. Do not reply to this notice.*
+*Prepared for Fleet Training Command by A. Giacalone. Do not reply to this notice. Correspondence to Fleet Training Command: [command@ghost-boat.net](mailto:command@ghost-boat.net). Requisitions: [requisition@ghost-boat.net](mailto:requisition@ghost-boat.net).*

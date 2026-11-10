@@ -74,6 +74,9 @@ kbd {
   background: var(--bg);
 }
 .screen.on { display: block; }
+/* Every styled run is a block one line tall, so painted rows meet with no
+   seam (block glyphs arrive as painted spaces; see frame2html.py). */
+.screen span { display: inline-block; height: 1.2em; vertical-align: top; }
 .ready { color: var(--label); margin: 0.4em 0 0; font-size: 0.93em; }
 
 /* A window: the frame, with its title set into the top edge. */

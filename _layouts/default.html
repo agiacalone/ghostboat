@@ -15,26 +15,39 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#03101a">
   <link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 </head>
 <body>
+  <a class="skip" href="#main">Skip to the notice</a>
   <div class="console">
     <header class="bar">
       <a class="mark" href="{{ '/' | relative_url }}">GHOST BOAT</a>
-      <span class="restricted">FLEET TACTICAL TRAINER · RESTRICTED</span>
       <nav aria-label="Papers">
-        <a href="{{ '/' | relative_url }}">Notice</a>
-        <a href="{{ '/manual.html' | relative_url }}">Manual</a>
-        <a href="{{ '/quickref.html' | relative_url }}">Quick reference</a>
-        <a class="cta" href="{{ '/#requisition' | relative_url }}">Requisition</a>
+        <a href="{{ '/manual.html' | relative_url }}"><kbd>?</kbd> manual</a>
+        <a href="{{ '/quickref.html' | relative_url }}"><kbd>q</kbd> quick reference</a>
+        <a href="{{ '/#requisition' | relative_url }}"><kbd>r</kbd> requisition</a>
       </nav>
     </header>
-    <main class="markdown-body">
+    <main id="main" class="{% if page.url == '/' %}home{% else %}paper{% endif %}">
       {{ content }}
     </main>
     <footer class="foot">
-      Fleet Training Command · ghost-boat.com · Do not reply to this notice. Correspondence: <a href="mailto:command@ghost-boat.net">command@ghost-boat.net</a>
+      <p>Prepared for Fleet Training Command by A. Giacalone. Do not reply to this notice.</p>
+      <p>Correspondence: <a href="mailto:command@ghost-boat.net">command@ghost-boat.net</a>. Requisitions: <a href="mailto:requisition@ghost-boat.net">requisition@ghost-boat.net</a>.</p>
     </footer>
   </div>
+  <script>
+    // GitHub's callouts (> [!IMPORTANT]) in the papers: drop the marker and
+    // let the frame say it.
+    document.querySelectorAll('.paper blockquote > p:first-child').forEach(function (p) {
+      var m = p.innerHTML.match(/^\s*\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*/);
+      if (!m) return;
+      p.innerHTML = p.innerHTML.slice(m[0].length);
+      p.parentNode.classList.add('callout', m[1].toLowerCase());
+    });
+  </script>
 </body>
 </html>

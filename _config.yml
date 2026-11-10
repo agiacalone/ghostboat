@@ -1,3 +1,12 @@
 title: Fleet Tactical Trainer
 description: A game of patience. Run silent, run dark.
-theme: jekyll-theme-primer
+# No theme: the site draws its own console (assets/css/site.css), in the
+# trainer's Deep Signal colours.
+exclude:
+  - README.md
+  - LICENSE
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

@@ -60,9 +60,11 @@ kbd {
   margin-right: 0.6ch;
 }
 
-/* The title screen, as text: 98 cells wide, scaled to fit the column.
-   JetBrains Mono's advance is 0.6 em, so 98 cells are 58.8 em. */
-.hero { margin: 28px 0 0; overflow: hidden; }
+/* The title screen, as text: GHOST BOAT (54 cells) and, beside it, one of
+   the ten posters (44 cells), 98 cells in all, scaled to fit the column.
+   JetBrains Mono's advance is 0.6 em, so 98 cells are 58.8 em. On a phone
+   the poster hangs under the title and each is scaled to the full width. */
+.hero { margin: 28px 0 0; overflow: hidden; display: flex; align-items: flex-start; }
 .screen {
   display: none;
   margin: 0;
@@ -73,7 +75,7 @@ kbd {
   color: var(--value);
   background: var(--bg);
 }
-.screen.on { display: block; }
+.screen.title, .screen.on { display: block; }
 /* Every styled run is a block one line tall, so painted rows meet with no
    seam (block glyphs arrive as painted spaces; see frame2html.py). */
 .screen span { display: inline-block; height: 1.2em; vertical-align: top; }
@@ -157,8 +159,17 @@ figcaption { color: var(--label); font-size: 0.9em; margin-top: 0.4em; }
 @media (max-width: 640px) {
   body { font-size: 14px; }
   .bar nav { margin-left: 0; }
-  .window { padding: 1.4em 2ch 1em; }
-  .pair, .posters { grid-template-columns: 1fr; }
+  .window { padding: 1.4em 1.5ch 1em; }
+  .pair, .window .posters { grid-template-columns: 1fr; }
+  .window .posters { gap: 1.6em; }
+  .hero { flex-direction: column; align-items: center; gap: 1em; }
+  .screen.title { font-size: min(18px, calc((100vw - 34px) / 32.4)); }
+  .screen.poster { font-size: min(18px, calc((100vw - 34px) / 26.4)); }
+  .ready { text-align: center; }
+  /* A screenshot of the whole console is unreadable at phone width: show
+     it at a readable size, and let it pan sideways inside its frame. */
+  figure > a { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--frame); }
+  figure img { width: 760px; max-width: none; border: 0; }
   .papers { grid-template-columns: 1fr; }
   .papers dd { margin-bottom: 0.6em; }
 }

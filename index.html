@@ -134,7 +134,7 @@ title: Fleet Tactical Trainer
 <script>
   // As the trainer does: a different poster each time the room opens.
   (function () {
-    var all = document.querySelectorAll('.hero .screen');
+    var all = document.querySelectorAll('.hero .screen.poster');
     if (!all.length) return;
     var pick = Math.floor(Math.random() * all.length);
     for (var i = 0; i < all.length; i++) all[i].classList.toggle('on', i === pick);

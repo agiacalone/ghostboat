@@ -168,6 +168,7 @@ figcaption { color: var(--label); font-size: 0.9em; margin-top: 0.4em; }
   .ready { text-align: center; }
   /* A screenshot of the whole console is unreadable at phone width: show
      it at a readable size, and let it pan sideways inside its frame. */
+  figure { min-width: 0; }
   figure > a { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--frame); }
   figure img { width: 760px; max-width: none; border: 0; }
   .papers { grid-template-columns: 1fr; }

@@ -1,5 +1,6 @@
 title: Fleet Tactical Trainer
 description: A game of patience. Run silent, run dark.
+url: https://ghost-boat.com
 # No theme: the site draws its own console (assets/css/site.css), in the
 # trainer's Deep Signal colours.
 exclude:

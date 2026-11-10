@@ -159,3 +159,19 @@ figcaption { color: var(--label); font-size: 0.9em; margin-top: 0.4em; }
   .papers { grid-template-columns: 1fr; }
   .papers dd { margin-bottom: 0.6em; }
 }
+
+/* Hang this poster: the codes to put one on your own wall. */
+.hang { margin: 0.5em 0 0; font-size: 0.86em; }
+.hang summary { color: var(--label); cursor: pointer; }
+.hang summary:hover, .hang[open] summary { color: var(--value); }
+.hang p { margin: 0.6em 0 0.2em; color: var(--label); }
+.hang pre {
+  margin: 0; padding: 0.5em 1ch; background: #0a2233; border: 1px solid var(--frame);
+  white-space: pre-wrap; word-break: break-all; color: var(--own);
+}
+.hang pre code { font-family: var(--mono); }
+.hang button {
+  font: inherit; color: var(--value); background: var(--bg);
+  border: 1px solid var(--frame); padding: 0 1ch; margin-top: 0.3em; cursor: pointer;
+}
+.hang button:hover { border-color: var(--value); }

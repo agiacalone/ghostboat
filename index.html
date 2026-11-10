@@ -61,17 +61,31 @@ title: Fleet Tactical Trainer
 <section class="window" aria-labelledby="posters">
   <h2 id="posters">Recruiting posters</h2>
   <p>Posters are available at your nearest recruitment office. Hang one in the mess. The trainer hangs one on its title screen each time it starts.</p>
+  <p>To hang one on your own wall, open <em>Hang this poster</em> under it and copy the code into your page or forum post. The poster links back here, to the recruiting office. Each poster also comes as JPEG banners in the common sizes, or <a href="{{ '/assets/banners/ghost-boat-banners.zip' | relative_url }}">take all fifty in one bundle</a>.</p>
   <ul class="posters">
-    <li><img src="{{ '/assets/posters/poster-1.png' | relative_url }}" alt="A ghost running dark across a planet's sunlit limb: Volunteer for the boats" loading="lazy" width="405" height="230"></li>
-    <li><img src="{{ '/assets/posters/poster-2.png' | relative_url }}" alt="A carrier under way beside a planet, a craft away and an escort below: The fleet goes where it is needed" loading="lazy" width="405" height="230"></li>
-    <li><img src="{{ '/assets/posters/poster-3.png' | relative_url }}" alt="A ghost in silhouette against a rising moon: The silent service needs you" loading="lazy" width="405" height="230"></li>
-    <li><img src="{{ '/assets/posters/poster-4.png' | relative_url }}" alt="Two boats in company through a nebula: Hunt together. Come home together." loading="lazy" width="405" height="230"></li>
-    <li><img src="{{ '/assets/posters/poster-5.png' | relative_url }}" alt="A ghost's torpedo running to its target: One shot. Make it count." loading="lazy" width="405" height="230"></li>
-    <li><img src="{{ '/assets/posters/poster-6.png' | relative_url }}" alt="Three merchant ships in convoy: Keep 'em sailing" loading="lazy" width="405" height="230"></li>
-    <li><img src="{{ '/assets/posters/poster-7.png' | relative_url }}" alt="A ship's sound spreading in rings toward a boat that listens: The enemy is listening" loading="lazy" width="405" height="230"></li>
-    <li><img src="{{ '/assets/posters/poster-8.png' | relative_url }}" alt="A boat giving itself away in rings of signal, and a torpedo on its way: Loose lips sink boats" loading="lazy" width="405" height="230"></li>
-    <li><img src="{{ '/assets/posters/poster-9.png' | relative_url }}" alt="A ghost beneath a spiral galaxy: Join the fleet. See the stars." loading="lazy" width="405" height="230"></li>
-    <li><img src="{{ '/assets/posters/poster-10.png' | relative_url }}" alt="Searchlights over a planet's limb: Buy war bonds" loading="lazy" width="405" height="230"></li>
+{%- for p in site.data.posters %}
+    {%- capture src %}{{ '/assets/posters/poster-' | append: p.n | append: '.png' | absolute_url }}{% endcapture %}
+    {%- capture html %}<a href="{{ '/' | absolute_url }}"><img src="{{ src }}" alt="{{ p.alt | replace: '"', '&quot;' }}" width="405" height="230"></a>{% endcapture %}
+    <li>
+      <a href="{{ src }}"><img src="{{ src }}" alt="{{ p.alt | escape }}" loading="lazy" width="405" height="230"></a>
+      <details class="hang">
+        <summary>Hang this poster</summary>
+        <p>HTML, for a web page:</p>
+        <pre><code>{{ html | escape }}</code></pre>
+        <p>Markdown, for a forum or a README:</p>
+        <pre><code>[![{{ p.alt }}]({{ src }})]({{ '/' | absolute_url }})</code></pre>
+        <p>BBCode, for an older forum:</p>
+        <pre><code>[url={{ '/' | absolute_url }}][img]{{ src }}[/img][/url]</code></pre>
+        <p>JPEG banners, to post with a link to {{ '/' | absolute_url }}:
+          {%- assign b = '/assets/banners/poster-' | append: p.n %}
+          <a href="{{ b | append: '-social.jpg' | relative_url }}">link preview, 1200&times;630</a>,
+          <a href="{{ b | append: '-header.jpg' | relative_url }}">profile header, 1500&times;500</a>,
+          <a href="{{ b | append: '-leaderboard.jpg' | relative_url }}">leaderboard, 728&times;90</a>,
+          <a href="{{ b | append: '-rectangle.jpg' | relative_url }}">rectangle, 300&times;250</a>,
+          <a href="{{ b | append: '-wide.jpg' | relative_url }}">the full title line, 1960&times;480</a>.</p>
+      </details>
+    </li>
+{%- endfor %}
   </ul>
 </section>
 
@@ -125,4 +139,16 @@ title: Fleet Tactical Trainer
     var pick = Math.floor(Math.random() * all.length);
     for (var i = 0; i < all.length; i++) all[i].classList.toggle('on', i === pick);
   })();
+  // Hang this poster: a Copy button under each code, where the browser allows it.
+  if (navigator.clipboard) document.querySelectorAll('.hang pre').forEach(function (pre) {
+    var b = document.createElement('button');
+    b.type = 'button'; b.textContent = 'Copy';
+    b.addEventListener('click', function () {
+      navigator.clipboard.writeText(pre.textContent).then(function () {
+        b.textContent = 'Copied';
+        setTimeout(function () { b.textContent = 'Copy'; }, 1500);
+      });
+    });
+    pre.after(b);
+  });
 </script>

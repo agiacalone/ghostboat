@@ -12,11 +12,11 @@
 >
 > **CAPTAINS WANTED** for long patrols in the black. Hazardous duty. Small boat, seventy crew, four tubes, and no one coming for you. Ability to sit very still is required. Ability to count bearings is preferred.
 >
-> Apply to the Fleet Tactical Trainer. Time on the trainer does not count toward time in the black.
+> Every recruit qualifies on the Fleet Tactical Trainer before taking a boat. Time on the trainer does not count toward time in the black.
 >
 > Applications: [recruitment@ghost-boat.net](mailto:recruitment@ghost-boat.net)
 
-## The black
+## Service in the black
 
 Nobody out here can see anyone. Hulls are painted black, and starlight shows nothing. A ship is found by what it cannot help giving off: the heat of its hull, the radio of its machinery, the pull of its magnetism. The enemy finds you the same way.
 
@@ -26,7 +26,9 @@ So you drift, and listen. A bearing comes up on the waterfall: a convoy, six mer
 
 *Condition red: a torpedo in the black, and the boat turning away to run.*
 
-## What the trainer teaches
+## The fleet's most accurate simulator
+
+The Fleet Tactical Trainer simulates war in the black as it is fought, with nothing simplified for the recruit. What you learn on it is what will keep your boat alive.
 
 - **You fly by instruments alone.** A bearing rose, a waterfall of what the array hears, and a contacts table that firms up as you listen.
 - **The drive is loud; speed is not.** A ghost coasting at any speed is a whisper. Light the drive and you are heard a hundred times farther off.
@@ -49,9 +51,9 @@ So you drift, and listen. A bearing comes up on the waterfall: a convoy, six mer
 
 *The sensors station: the passive array and infrared on one target.*
 
-## Posted at all depots
+## Recruiting posters
 
-The Ghost Boat Service recruits at every depot in the fleet.
+Posters are available at your nearest recruitment office. Hang one in the mess.
 
 | | |
 |---|---|
@@ -61,7 +63,7 @@ The Ghost Boat Service recruits at every depot in the fleet.
 | ![A ship's sound spreading toward a boat that listens: The enemy is listening](assets/posters/poster-7.png) | ![A boat giving itself away, and a torpedo on its way: Loose lips sink boats](assets/posters/poster-8.png) |
 | ![A ghost beneath a spiral galaxy: Join the fleet. See the stars.](assets/posters/poster-9.png) | ![Searchlights over a planet's limb: Buy war bonds](assets/posters/poster-10.png) |
 
-## The trainer room
+## The training programme
 
 The trainer runs on any modern console, as large as the room allows: 160 columns by 45 rows is comfortable, and a smaller one shows fewer windows. Training lessons teach one idea each, the challenges are rated from Routine to Severe, and every lost fight can be replayed from the true positions. Sixteen colour schemes are fitted, from Deep Signal to Polaris.
 
@@ -77,13 +79,13 @@ The trainer runs on any modern console, as large as the room allows: 160 columns
 
 *One of sixteen colour schemes fitted to the trainer: Polaris.*
 
-## Requisition
+## Buy war bonds
 
-Copies of the trainer will be issued through Steam. Buy war bonds: buy the game once, and every update after is free. There will be no paid expansions and no DLC. The requisition office opens soon.
+Back the fleet. In plain words: Ghost Boat will be sold on Steam. Buy it once and every update after is free. There will be no paid expansions and no DLC. The requisition office opens soon.
 
-Captains who wish to support the trainer programme may do so on Patreon. That office opens soon too.
+Citizens who wish to support the trainer programme may do so on Patreon. That office opens soon too.
 
-## Papers issued with the trainer
+## Papers issued to recruits
 
 | Paper | Contents |
 |---|---|

@@ -102,6 +102,7 @@ Press `Enter` with nothing dialled (or `:`) and type an order. `↑` brings back
 | `beam s1`, `steer s1`, `away s1` | Turn to put a contact abeam, ahead, astern |
 | `fire s1`, `salvo 3 s1`, `fire s1 homing`, `fire s1 mk2h` | Torpedoes |
 | `fire s1 contact`, `exploder contact`, `exploder prox` | Exploder for one salvo, or standing |
+| `seeker 800 narrow`, `seeker off` | Homing seeker on 800 km out, looking ahead only; back to the standard. Stands until changed |
 | `check s1` | Fire control's answer for each weapon, without firing |
 | `drop s1` | Take a silent contact off the table until it is heard again |
 | `mark 045`, `mark s1`, `mark b off`, `mark off` | Up to three bearing marks on the rose |

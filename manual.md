@@ -436,7 +436,7 @@ The comms station's window: who can hear us, and who we are talking to.
 
 The weapons station's window answers one question: can I shoot, and if not, what must change? `setup weapons` opens it, `v` reaches it in any window, and `show fire` puts it in the focused one.
 
-The top line gives the exploder setting, the tubes and the magazine. Below that is a grid. Each row is a contact you hold, with the crew's call and the solution's quality. Each column is a weapon kind aboard. A cell reads `OK`, with the time to the meeting or the range, or it names what blocks the shot.
+The top line gives the exploder setting, the seeker setting when it is not the standard (`SEEK 800 km NARROW`), the tubes and the magazine. Below that is a grid. Each row is a contact you hold, with the crew's call and the solution's quality. Each column is a weapon kind aboard. A cell reads `OK`, with the time to the meeting or the range, or it names what blocks the shot.
 
 | Cell | Means |
 |---|---|
@@ -445,6 +445,8 @@ The top line gives the exploder setting, the tubes and the magazine. Below that 
 | `OK 48km` | Clear to fire a gun, at fire control's range. |
 | `arming 38km` | The order will go, but the run is inside arming distance. It will not arm. |
 | `hits Mere` | The order will go, but the run crosses a body on the way and the torpedo will strike it. `Enter` never offers this shot. |
+| `rock North Sill` | The order will go, but the run crosses a charted rock field, which may stop the torpedo. See [Torpedoes and rock](#torpedoes-and-rock). |
+| `seeker 800km` | A homing torpedo's seeker is set to switch on past the target, so it would run by deaf. `Enter` never offers this shot. See [The seeker setting](#the-seeker-setting). |
 | `solution` | No `FAIR` solution, or for a gun no fresh echo either. |
 | `reach` | The torpedo can't catch it on this run. |
 | `arc 41°` | Tube is 41° off, and it can't turn in time. |
@@ -455,7 +457,7 @@ The top line gives the exploder setting, the tubes and the magazine. Below that 
 
 The chosen contact's row opens below the grid: one line per weapon, saying what would clear the block, such as `load 2 mk2h` or `Close 840 km`. On a contact whose class the crew has called, a clear line also gives their count of good hits to sink it, as an estimate. `,` and `.` change the row while this window has the focus, and `info s1` and `check s1` choose it too. `Enter` puts the first clear shot on the conn line, and you still give the order. If nothing is clear, it offers the first order that would clear a block. Clicking a row in the focused window chooses it, and clicking a cell puts its order on the conn line: the shot, or the order that clears the block, such as `load 2 mk2h` or `bear s1`.
 
-The grid uses the same checks as your orders, and only fire control's own figures, so a cell can be wrong exactly when your solution is. **A moon in the way.** When you fire, fire control checks the run to the aim point against the chart. If it passes through a charted body, the launch line says so: `The run crosses Mere: it will strike it.` The grid does not show this, so read the log after a shot near a moon. A window too narrow for the grid shows the chosen contact alone, one line per weapon.
+The grid uses the same checks as your orders, and only fire control's own figures, so a cell can be wrong exactly when your solution is. **A moon in the way.** When you fire, fire control checks the run to the aim point against the chart. If it passes through a charted body, the launch line says so: `The run crosses Mere: it will strike it.` A charted rock field gets its own warning: `The run crosses the North Sill: rock may stop it.` The grid shows both. A window too narrow for the grid shows the chosen contact alone, one line per weapon.
 
 ### Survey
 
@@ -814,6 +816,7 @@ Orders are not case-sensitive. Contacts are named `s1`, `s2`, and so on.
 | `gauss s1` | Gauss gun burst at S1 |
 | `check s1` | Fire control's answer on S1 for each weapon, in the log, without firing |
 | `fire s1 mk2h`, `fire s1 contact`, `exploder contact`, `exploder prox` | Fire a named kind; set one salvo's exploder, or the standing setting |
+| `seeker 800`, `seeker narrow`, `seeker 800 narrow`, `seeker wide`, `seeker off` | A homing torpedo's seeker: switch on 800 km out, listen only ahead, or back to the standard (on at arming, all round). It stands until changed; see [The seeker setting](#the-seeker-setting) |
 | `load 2 mk2h`, `load 2 empty`, `load 2 rack` | Change what is in tube 2 now: a reload's time, and it is heard |
 | `reload 2 mk1`, `reload 2 same`, `reload 2 empty` | Choose what tube 2 takes next |
 | `ultra`, `rig for ultra-quiet`, `rig for silent running`, `rig for normal` | Rig the boat: ultra-quiet, silent, or back to normal |
@@ -1178,6 +1181,12 @@ Nebulas are charted clouds. They are on every chart, like moons. Each kind does 
 
 **The helm calls fields too.** If your course runs into a field faster than is safe, the helm calls a collision course, as for a moon. A tired crew takes more strikes, because nobody calls the big ones in time.
 
+#### Torpedoes and rock
+
+A torpedo is a small ship, and rock stops it too. It is small, so it is struck less often than a boat on the same path, but at a torpedo's speed one strike ends the run. An armed warhead goes off on the rock, and everyone near hears it; an unarmed one breaks up. A homing torpedo picks its way past what its seeker can, so it is stopped about half as often as a straight runner. Across 500 km of rock, about two straight runners in three are stopped, and about one homing torpedo in two. The field also hides the target from a seeker, as it hides any signal.
+
+So rock is torpedo cover as well as cover from ears. A boat tucked behind a field is hard to hit, and a good firing position has a clear line to the target. Fire control checks the run against the chart: the grid marks the cell `rock North Sill`, and the launch line warns. Your crew calls it when one of your torpedoes hits rock: `TORPEDO Tube 2: detonated on rock in the North Sill.`
+
 ## 13. Torpedoes
 
 Torpedoes are the main weapon, yours and the enemy's. A torpedo is a small, fast ship with a warhead: it is heard like a ship, it hides in dust like a ship, and its seeker goes deaf in an ion cloud like any array.
@@ -1194,7 +1203,7 @@ Torpedoes are the main weapon, yours and the enemy's. A torpedo is a small, fast
 
 **Fire control** aims a shot at a contact from *your* TMA solution, the way a WWII attack team set up a torpedo data computer. It needs at least a `FAIR` solution. A `GOOD` one is usually a hit; a `FAIR` one wants a spread (`salvo 3 s1`). The log reports each shot's course, run and time to impact, and the contacts table counts it down.
 
-**Arming distance.** Like American WWII torpedoes, a warhead arms only after the torpedo is 40 km from the boat that fired it, so the blast can't reach the launcher. **Inside that distance a hit is a dud.** Torpedoes are useless at close range; fire control warns you when the meeting point is too close. It also warns when the run to the meeting point passes through a charted moon or planet: "The run crosses Mere: it will strike it."
+**Arming distance.** Like American WWII torpedoes, a warhead arms only after the torpedo is 40 km from the boat that fired it, so the blast can't reach the launcher. **Inside that distance a hit is a dud.** Torpedoes are useless at close range; fire control warns you when the meeting point is too close. It also warns when the run to the meeting point passes through a charted moon or planet ("The run crosses Mere: it will strike it.") or a rock field ("rock may stop it").
 
 - **Boost, then coast.** `fire s1 burn 30` burns for 30 seconds and then coasts silently: a straight runner coasting is heard only from a few tens of km. Fire control allows for the shorter burn.
 - **A launch has an edge.** A ghost launches cold, and a torpedo's motor is small: both are heard to about 600 km, no farther than the boat itself. Fire from beyond that and nobody hears you shoot, but a straight runner reaches only about 1,200 km flat out and a homing torpedo about 1,000, so the band is narrow, and a solution is worse the farther off you are. Inside it, the launch is a transient anyone listening can hear, with its bearing. A warship's tubes are far louder.
@@ -1210,6 +1219,15 @@ A torpedo does damage in **hull points**, set by its warhead and how close it pa
 - **Small hulls still die to one good hit.** A ghost, a hauler, a raider or a freighter goes with one. A near miss can leave any of them afloat, hurt and angry.
 - **Big hulls do not.** A destroyer takes one good hit and is usually crippled by it. A cruiser takes three or four, and a fleet tanker four or five. Bring the salvo the target needs, and count what is left in the racks before you start.
 - **A hull that lives knows.** Its captain knows which way the torpedo came from and goes back down that line. Its mates go to the blast as they would to a sinking, and merchants run. Only a sinking counts for tonnage and goals, so a crippled ship left behind pays nothing.
+
+**What the crew can tell you.** A hit that leaves a hull afloat says nothing of what it broke. For a quarter of an hour after the hit, the sensor station watches the contact and reports what changes, once each, in the log and on the vessel panel's `READS AS` line:
+
+- **She lit her drive:** she is under power, whatever the hit broke.
+- **She is quieter by so many dB:** her drive or reactor may be hurt.
+- **She has not been heard since the hit:** she may be crippled and dark.
+- **She has not pinged since the hit**, when she was pinging before: her pinger may be out.
+
+Every one is an estimate. A captain who cuts her drive and goes silent reads exactly as a hurt one does, and the crew says so. They report only what the boat's own sensors heard.
 
 **Sizing a salvo.** Fire control's default spread covers your solution's error, so that one torpedo in the fan reaches the hull. Against a ship you can sink in one, that is what you want. Against a cruiser or a tanker, a tight salvo on a `GOOD` solution puts more warheads on one hull: give the degrees yourself (`salvo 4 s1 0.2`). Once the crew has called a class, the fire control window's chosen row and `check s1` give the crew's count of good hits to sink it. It is an estimate, and only as good as the call.
 
@@ -1259,6 +1277,17 @@ You choose how each salvo's warheads go off.
 | Choose it for | a shot you can't afford to miss, at the cost of more near misses | a good solution on a big hull, or when an early blast would give you away |
 
 `fire s1 contact` or `salvo 3 s1 contact` sets one salvo. `exploder contact` and `exploder prox` set fire control's standing setting, and the `FIRE CONTROL` window shows it. Fire control sizes a spread for the setting, so a contact spread is tighter. The computer captains use proximity.
+
+### The seeker setting
+
+A homing torpedo's seeker normally switches on as the warhead arms, and listens all round for the loudest enemy. Against a target behind an escort, that is the escort. Two settings change it:
+
+- **`seeker 800`:** the seeker stays off until the torpedo has run 800 km. Until then it holds the course fire control gave it, and a ship it passes on the way is never heard.
+- **`seeker narrow`:** once on, the seeker listens only in a cone 20° either side of the torpedo's nose. A ship off to the side is ignored, however loud.
+
+Together, `seeker 800 narrow` shoots past a screen at the ship behind it: aim at the target, and set the seeker to switch on beyond the escort. `seeker wide` widens the cone again, and `seeker off` goes back to the standard: on at arming, all round. Straight runners have no seeker and ignore the setting. The computer captains use the standard.
+
+**The setting stands until you change it,** like the exploder setting. The `FIRE CONTROL` window shows it beside the exploder setting whenever it is not the standard. A homing shot whose meeting point is nearer than the seeker's distance would run past its target deaf: its cell reads `seeker 800km` in amber, `Enter` never offers it, and the launch line warns you if you fire it anyway. Set it for the shot, and give `seeker off` after (`seeker 800 narrow; fire s1; seeker off`).
 
 ### Choosing what's in the tubes
 
@@ -1789,6 +1818,8 @@ A win at Nightmare stands apart in the records: on the title screen it counts ab
 **The attack.** Hear first, get a solution by leg changes while you are still quiet, and fire from between the arming distance and a few hundred km. Decide before you shoot what the target will take: one good hit sinks a merchant of ordinary size and only cripples a destroyer, and a cruiser or tanker is a whole salvo. Fire too far out and the target has time to change course; too close and the warhead never arms.
 
 **Think in three dimensions.** Every display is flat and every habit is too, yours and the enemy's. A ship that has your bearing comes down it, on the plane it last saw you on. Pitch out of that plane, cut the drive and let it pass: it arrives in your array before you arrive in its, and it leaves with you in its baffles. The enemy knows the move: a captain that had you and lost you close in steps out of your plane and waits, so a bearing that has gone quiet is a place not to be, not a place to go. Clear your baffles up and down as well as round. In a cloud, where nothing hears far and homing seekers are deaf, a straight runner from below is the quiet kill. Crews call the drop itself a *Quirk's Standoff*: you hang under the other ship's plane, cold and silent, and whoever speaks first loses. Naval 2 teaches it.
+
+**The burn knuckle.** A hard turn under a hard burn (half your turn rate or more, at three quarters of full burn or more) leaves your plume hanging where you turned, and it fades over about two and a half minutes. The helm says so when you lay one. Infrared sees whichever is hotter, you or the knuckle, and takes it for you. So burn, put the helm hard over, cut the drive and coast away: a hunter watching you on infrared keeps its eye on the knuckle while you go cold. It is neither the decoy nor going quiet, and it is paid for in fuel and in the drive's noise, which the array still hears. One knuckle a minute at most. The enemy can lay one too: a contact that jumps on infrared after a hard turn may be leaving you its plume.
 
 ## 20. Goals and scoring
 

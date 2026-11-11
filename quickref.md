@@ -31,7 +31,7 @@ Any key skips the sign-in. `C` on the title screen (or Options, then Captain and
 |---|---|
 | `←` `→` | Dial a heading, 5° a step (`Shift` for 1°) |
 | `Shift+↑` `Shift+↓` | Dial a pitch, 5° a step |
-| `↑` `↓` | Dial the engine telegraph: all stop, ahead slow, half, standard, full |
+| `↑` `↓` | Dial the engine telegraph: all stop, ahead one third, two thirds, standard, full, flank |
 | `Enter` | Give the dialled order (`Esc` drops it) |
 | `x` | All stop, without `Enter` |
 
@@ -67,8 +67,9 @@ Any key skips the sign-in. `C` on the title screen (or Options, then Captain and
 
 | Key | Does |
 |---|---|
-| `Space` | Pause |
+| `Space` | Pause; resume at x1 (iron mode: back to x1 first) |
 | `+` `-` | Time compression, x1 to x100k. Drops to x1 when something happens |
+| `=` | Back to x1 |
 | `Tab` `v` `z` `L` | Focus a window, change what it shows, swap it into the main window, next layout |
 | `F2` to `F10` | Console setups: bridge, sensors, nav, engineering, comms, science, damage, stealth, travel. `setup weapons` has no key. |
 | `s` or `☰` | Menus of every station and every action (the mouse works too) |
@@ -78,7 +79,7 @@ Any key skips the sign-in. `C` on the title screen (or Options, then Captain and
 | `W` | The plotting menu: filters, layers, shadows, zones |
 | `r` | When the engagement is over: the replay, true tracks and a debrief on a map you can turn and tilt |
 | `i` | After a failure with an instructor's note: the replay at the moment it blames. Also jumps there inside the replay |
-| `t` `e` `m` | Theme, color effects, sound |
+| `t` `T` `e` `m` | Theme (next, back), color effects, sound |
 
 ## The conn
 
@@ -87,13 +88,15 @@ Press `Enter` with nothing dialled (or `:`) and type an order. `↑` brings back
 | Order | Does |
 |---|---|
 | `helm 045`, `helm 045 +10` | Come to a heading (and elevation) |
+| `helm cse` | Point along your own course |
 | `helm s090`, `helm p045` | Turn by a bearing off the bow |
 | `reverse` | Helm only: end for end, the drive left as it is |
+| `clear baffles`, `clear baffles right` | End for end, or 90° to that side |
 | `helm quiet`, `helm full` | Turns held under the MAG rate (slow, silent), or full rate again |
 | `match s1` | In testing: the helm points for the burn that matches s1's velocity and says how much; you give the throttle |
 | `reverse half`, `reverse 50` | End for end with the drive cut, then the drive at half (or full, standard, slow, or a percentage) |
 | `point 100,-50,20` | Point at a chart position, km |
-| `ahead half`, `thr 40`, `all stop` | Drive orders |
+| `all ahead one third`, `two thirds`, `standard`, `full`, `flank`; `thr 40`; `all stop` | Drive orders. Flank pushes the drive |
 | `burn to 2.5`, `burn 30` | A controlled burn, then coast |
 | `full stop`, `slow to 0.5` | Turn end for end and burn down to rest, or to a speed |
 | `beam s1`, `steer s1`, `away s1` | Turn to put a contact abeam, ahead, astern |
@@ -142,7 +145,11 @@ Press `Enter` with nothing dialled (or `:`) and type an order. `↑` brings back
 | `call me on ping`, `call me pause on contact`, `call me never on lost` | What reaches you. Torpedoes, hits and the end always do |
 | `call me at 02:00`, `call me battery 30`, `call me waypoint`, `call me off` | Your own calls |
 | `call s3 hostile`, `name s3 fat one`, `ignore s3`, `pin s3` | Your own call on a contact, beside the crew's |
+| `red`, `blue`, `yellow`, `white` | Set the condition by its colour |
+| `tune 045`, `tune s1`, `tune t2`, `tune off` | Listen down one bearing, a contact's or your own torpedo's |
+| `all stop; silent` | Several orders on one line |
 | `help` | List every order |
+| `help fire` | Just that order, and what it does |
 
 ## Reading the contacts table
 

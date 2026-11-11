@@ -177,7 +177,7 @@ Two **dynamic windows** open over the main window by themselves, then close:
 | `GST 3127.214 06:41:09` | Galactic Standard Time: year, day of the year, time of day. The galaxy's one clock. Each engagement starts on its own date, drawn inside its era in the campaign and anywhere in the war in free play; it never stops in iron mode. |
 | `T+00:02:09` | Mission time, with days (`T+2d 04:10:00`) past the first. |
 | `T2 ⏱00:42` / `T2 +00:03` / `T2 past 00:20` | A torpedo clock for each of yours running, as WWII boats timed every run with a stopwatch: time to impact while fire control has a solution, else time since launch. Amber `past` means the meeting time has gone by with the torpedo still running: it has probably missed. |
-| `COND` | The boat's condition, shown by its lighting (as in *Das Boot*): **RED** combat (a torpedo in the black, yours or theirs, or a master warning; you can set another condition over it with `condition`, and it holds until something new goes wrong; once the alarm is over your setting stays), **BLUE** silent running, **YELLOW** caution, raised by the first ping heard or a new vessel that is unidentified or hostile, and held until you stand it down, **WHITE** all clear. Your own group is friendly, and so is a ship broadcasting its transponder unless intelligence says otherwise; neither raises YELLOW. Set the condition yourself with `condition red`, `blue`, `yellow` or `white` (which also stands down a raised YELLOW), and hand it back with `condition auto`. A torpedo turns the boat RED whatever you set. Damage, heat and bad air have their own warnings. With effects on, the console's text and lines take on the light. The condition is also your crew's stance, and it has real effects: **WHITE** answers slower than normal (a quarter again), **YELLOW** is normal, **BLUE** and **RED** answer faster (15% and 25%). Anything but WHITE tires the crew (YELLOW over a day, BLUE in half that, RED in eight hours), and only WHITE rests them (six hours from spent to fresh), so stand down between fights. You may order RED at any time, ahead of an alarm, and pay for it in fatigue. Computer-flown ships follow the same rules by what they have heard: a captain on patrol is at WHITE and slow to answer, one hunting is at YELLOW, one attacking is at RED, and a silent-running one searching with its reactor cold is at BLUE. |
+| `COND` | The boat's condition, shown by its lighting (as in *Das Boot*): **RED** combat (a torpedo in the black, yours or theirs, or a master warning; you can set another condition over it with `condition`, and it holds until something new goes wrong; once the alarm is over your setting stays), **BLUE** silent running (`silent` and `ultra` set it over a WHITE or YELLOW you set by hand, though not over RED, and `normal` hands it back to the boat), **YELLOW** caution, raised by the first ping heard or a new vessel that is unidentified or hostile, and held until you stand it down, **WHITE** all clear. Your own group is friendly, and so is a ship broadcasting its transponder unless intelligence says otherwise; neither raises YELLOW. Set the condition yourself with `condition red`, `blue`, `yellow` or `white` (which also stands down a raised YELLOW), and hand it back with `condition auto`. A torpedo turns the boat RED whatever you set. Damage, heat and bad air have their own warnings. With effects on, the console's text and lines take on the light. The condition is also your crew's stance, and it has real effects: **WHITE** answers slower than normal (a quarter again), **YELLOW** is normal, **BLUE** and **RED** answer faster (15% and 25%). Anything but WHITE tires the crew (YELLOW over a day, BLUE in half that, RED in eight hours), and only WHITE rests them (six hours from spent to fresh), so stand down between fights. You may order RED at any time, ahead of an alarm, and pay for it in fatigue. Computer-flown ships follow the same rules by what they have heard: a captain on patrol is at WHITE and slow to answer, one hunting is at YELLOW, one attacking is at RED, and a silent-running one searching with its reactor cold is at BLUE. |
 | `HOSTILE` | You are in hostile space. |
 | `DRIFT` | Nothing is firing. You are as quiet as your ship can be. |
 | `BURN` | The main drive is running. You are loud, and partly deaf. |
@@ -208,7 +208,7 @@ When a mission has goals, a **GOALS** line sits under the header: `○` still to
 
 What each kind of goal asks, and how a patrol is scored: [Goals and scoring](#20-goals-and-scoring).
 
-When the mission ends, a box says **MISSION COMPLETE** or **MISSION FAILED**, with the reason and the time taken. `l` reviews the log; `q` returns to the trainer.
+When the mission ends, a box says **MISSION COMPLETE** or **MISSION FAILED**, with the reason and the time taken. A third ending, **EXERCISE ENDED**, comes when a ship you had to sink gets clean away: unheard for an hour, over 10,000 km off and still opening, with too few left to make the count. It is neither won nor lost, and the records show it as `ended`. `l` reviews the log; `q` returns to the trainer.
 
 ### Bearing rose
 
@@ -408,7 +408,7 @@ The output of your passive array, the newest second at the top, older seconds sc
 
 **On the rose,** `w` hides or shows your own torpedoes in that window, for a crowded picture. `filter held`, `filter weapons`, `filter solved` (`FAIR` or better, or an echo) and `filter hostile` narrow what else that rose shows; give the order again to lift one, or `filter off` for them all. The title says `only held`. A filter hides a line and nothing more: the sensors keep working, the alarms still sound, and a contact called a torpedo stays on every rose. `W` opens the same choices as a menu. The title says when they are hidden, a setup remembers it, and enemy torpedoes always show.
 
-**Tuning:** like tuning a receiver to one frequency and listening, put a cursor on one bearing and hear everything from that direction. Click inside a focused waterfall, nudge with `,` and `.` (2° a press), or type `tune 045`, `tune s1` or `tune off`. Every waterfall draws the cursor, and the bottom border reads out each sensor's level on that bearing and any contact within 4° of it, with its track symbol and its range once known: `TUNED 034° · array +33 dB · IR — · EM — · ✣S1 at 034° 1082 km ±3`. Bearings follow the window's mode (`S034` when relative). A narrow window trims the readout from the right.
+**Tuning:** like tuning a receiver to one frequency and listening, put a cursor on one bearing and hear everything from that direction. Click inside a focused waterfall, nudge with `,` and `.` (2° a press), or type `tune 045`, `tune s1`, `tune t2` (along your own torpedo's track) or `tune off`. Every waterfall draws the cursor, and the bottom border reads out each sensor's level on that bearing and any contact within 4° of it, with its track symbol and its range once known: `TUNED 034° · array +33 dB · IR — · EM — · ✣S1 at 034° 1082 km ±3`. Bearings follow the window's mode (`S034` when relative). A narrow window trims the readout from the right.
 
 What you get depends on the ship.
 
@@ -444,6 +444,7 @@ The top line gives the exploder setting, the tubes and the magazine. Below that 
 | `OK 04:12 spr 3` | Clear, and a spread of three covers the solution's range error. It says nothing about how many hits the target takes. |
 | `OK 48km` | Clear to fire a gun, at fire control's range. |
 | `arming 38km` | The order will go, but the run is inside arming distance. It will not arm. |
+| `hits Mere` | The order will go, but the run crosses a body on the way and the torpedo will strike it. `Enter` never offers this shot. |
 | `solution` | No `FAIR` solution, or for a gun no fresh echo either. |
 | `reach` | The torpedo can't catch it on this run. |
 | `arc 41°` | Tube is 41° off, and it can't turn in time. |
@@ -475,10 +476,10 @@ The window titled with your vessel's own name (`NIGHTJAR`, `MUDLARK`).
 | `HDG` / `PTCH` | Heading and pitch of the nose, with the ordered values in amber while turning. |
 | `CSE` / `VEL` | Course (direction of travel: true bearing, bearing off the bow, and climb) and speed. `CSE 043° P019 +02°` means she is sliding 19° to port of where she points. |
 | `THR` | Main drive output, with the ordered value while it spools. With flight assist on, `SPD` shows the speed assist is holding instead. |
-| `EF` | How much you are radiating right now: watts on the real-physics engagements, a level in dB on the others. |
+| `EF` | How much you are radiating right now: watts on the real-physics engagements, a level in dB on the others. An amber `TX` beside it means you are transmitting this second: a datalink report, or a linked torpedo's guidance. On the engagements that read in dB the link is a radio signal of its own, which the level leaves out, and the enemy's ESM hears it on your true bearing. |
 | `ACT` | Active array: `ready`, seconds to recharge, or `none`. |
 | `ALT` | Altitude above the nearest body and how fast it is changing. Amber if you would hit within ten minutes, red within two. |
-| `TUBES` | Each tube and what is in it (`1:MK1`), and any kind ordered next (`1:MK1>MK2H`). Green when ready (the plain value colour in a single-hue theme); amber with seconds while reloading; dim when empty. What is left in the magazine (`MK1×6`) shows beside `THR`, or on its own `STOCK` row in a narrow panel. Shown only if you have tubes. |
+| `TUBES` | Each tube and what is in it (`1:MK1`), and any kind ordered next (`1:MK1>MK2H`). Green when ready (the plain value colour in a single-hue theme). The tube its room's crew is loading is amber, with the turning wheel and the time left (`2B:-- ⠋8:40`); a tube waiting its turn reads `wait`. Dim when empty. What is left in the magazine (`MK1×6`) shows beside `THR`, or on its own `STOCK` row in a narrow panel. Shown only if you have tubes. |
 | `DECK` | **On a carrier, in place of the tubes,** and above `SIG`, so a short window keeps it. Each kind of craft and how many are ready (`F×6` fighters, `S×4` strike fighters, green), with those being refuelled and rearmed after a `+` in amber; `Q2` launches waiting; and `AIR 3`, craft aloft. Below it, as the window has room, a row for each craft: its short name (`Picket 1`, red when it can no longer make the deck in time), its mission, its Δv and endurance bars, and its range from you. `show deck` opens the full window. |
 | `MINES` | Mines left to lay, by kind. |
 | `GUNS` | Gauss gun slugs left (`GAUSS×200`) and seconds to recharge; the beam, `ready` or `charging 42s` (with several, `1/2 42s`: charged, and the wait for the next). |
@@ -486,9 +487,9 @@ The window titled with your vessel's own name (`NIGHTJAR`, `MUDLARK`).
 | `EW` | Electronic warfare: your jammer (`ON 045` or `off`) if fitted, and the strongest jamming you hear (`JAMMED 012 +48 dB`). Amber while jammed; red once the displays break up. |
 | `POS` | Your position in the fleet frame, in km. |
 | `SIG` | **Stealth:** what you're giving away on each channel, as a bar from the quietest your boat can be to the loudest, green, amber, red. `EF` (electric field: what the passive array hears), `IR` heat, `MAG` magnetism. Every real manoeuvre costs magnetism: turning, pitching or flight-assist corrections beyond 10% of the boat's ability drive the attitude motors, up to double the field at full rate. Small movements are free. |
-| `BATT` | **Vitals, in the right-hand column** (below the other gauges in a narrow window). The battery's charge, and while it drains, how long until it is flat. Topped up, it reads `FULL`. Otherwise, when it isn't draining, the time is how long the charge would carry the present load alone. Amber under 30%, red under 15%. |
+| `BATT` | **Vitals, in the right-hand column** (below the other gauges in a narrow window). The battery's charge, and which way it is going. Draining, an amber `▼` and how long until it is flat (`62% ▼ 41m`). Charging, a green `▲ charging`. Topped up, it reads `FULL`. Holding steady, a dim time: how long the charge would carry the present load alone. The bar is amber under 30% and red under 15%. |
 | `SINK` | How full the heat sink is, as a gauge running blue to red and a percent. Amber over 70%, red over 90% or overheating. |
-| `FUEL` | Reactor fuel left, to a tenth of a percent, and how long it lasts at this burn, in days, hours or minutes (`99.8% · 41d`). Amber under 10%, red under 2%, `DRY` at zero. With Nerd Font icons on, the label carries a fuel cell. Propellant moves the boat; fuel runs the reactor and generator. Engineering shows how long it lasts at this burn. |
+| `FUEL` | Reactor fuel left, to a tenth of a percent, and, while the reactor burns it, an amber `▼` and how long it lasts at this burn, in days, hours or minutes (`99.8% ▼ 41d`). Amber under 10%, red under 2%, `DRY` at zero. With Nerd Font icons on, the label carries a fuel cell. Propellant moves the boat; fuel runs the reactor and generator. Engineering shows how long it lasts at this burn. |
 | `PROP` | Propellant left. Amber under 25%, red under 10%. At zero the engineer calls it, and the helm answers any burn order with `Tanks dry`. |
 | `AIR` | Carbon dioxide and oxygen, and while the air is getting worse, how long the crew has before it kills them (`· 57m`). Each gas has its own colour. `CO₂` turns amber over 1% and red over 4%; `O₂` turns amber under 19% and red under 16%. |
 | `CABIN` | Cabin temperature. Amber under 16 °C, red under 10 °C. |
@@ -523,7 +524,7 @@ The fire-control computer keeps working after a contact goes quiet: range, and a
 
 Timestamped reports in plain language: new contacts, transients, solutions, pings, and anything else the boat wants you to know. Time compression drops to x1 whenever something important happens.
 
-**Crew reports.** The crew says what the gauges show, each station in its own voice, so you can run the boat from the console. Engineering calls the battery as it passes 50%, 30%, 15% and 5%, the heat sink at 50%, 70% and 90%, fuel at 50% and 25%, and a channel turning loud on the `SIG` bars. The helm calls propellant at 50%, 25% and 10%, `Steady on 045°` when a turn is done, the drive answering an order, and acceleration near or past the crew's limit. Navigation calls your height as you sink into a well. Damage control calls the hull after a hit. The chief of the boat calls the cabin cooling. Weapons calls a tube loaded, the gauss and the beam ready, and a torpedo's last minute and last ten seconds to run. Sonar calls a contact's bearing once it has moved 10°, a torpedo's bearing every 30 seconds while it runs, the pinger ready, and jamming. A reading is called once as it crosses a line, and again only once it has come well back, and no report repeats within 30 seconds. Choose how much you hear with `reports`: `reports normal` (the default) gives what needs a decision and what is urgent; `reports quiet` keeps only the urgent; `reports all` adds the routine. The choice is kept for the next exercise.
+**Crew reports.** The crew says what the gauges show, each station in its own voice, so you can run the boat from the console. Engineering calls the battery as it passes 50%, 30%, 15% and 5%, the heat sink at 50%, 70% and 90%, fuel at 50% and 25%, and a channel turning loud on the `SIG` bars. The helm calls propellant at 50%, 25% and 10%, `Steady on 045°` when a turn is done, the drive answering an order, and acceleration near or past the crew's limit. Navigation calls your height as you sink into a well. Damage control calls the hull after a hit. The chief of the boat calls the cabin cooling. Weapons calls a tube loaded, the gauss and the beam ready, and a torpedo's last minute and last ten seconds to run. Sensors call a contact's bearing once it has moved 10°, a torpedo's bearing every 30 seconds while it runs, the pinger ready, and jamming. A reading is called once as it crosses a line, and again only once it has come well back, and no report repeats within 30 seconds. Choose how much you hear with `reports`: `reports normal` (the default) gives what needs a decision and what is urgent; `reports quiet` keeps only the urgent; `reports all` adds the routine. The choice is kept for the next exercise.
 
 Every gauge also has an answer at the console. Type its name: `battery`, `heat`, `fuel`, `prop`, `hull`, `air`, `cabin`, `crew`, `helm` (heading, course, speed and drive), `pos`, `alt`, `accel`, `tubes`, `guns`, `pinger`, `cm` or `sig`. The station answers from its own instruments, not from the gauge.
 
@@ -682,7 +683,7 @@ Started with `--dev`, the menu also has a **Dev** item, just above Quit, that li
 
 **Choosing ships.** Some engagements, such as *Duel*, let you pick your ship, the opponent's ship and its captain. On the setup page, `↑`/`↓` move between the choices, `←`/`→` change one, `Enter` begins and `Esc` goes back. Under each ship is a one-line summary: acceleration, EF drifting and burning, how quiet its array is ("ears", lower is better), whether it pings, and its tubes.
 
-**Themes** live in `data/themes.ron`: thirteen come with the trainer (Deep Signal, Phosphor Plus, Neon Tactical, Solar Punk Solarized, Amber Terminal, Red Light, the red lighting of a control room at night, Polaris, the cool Nord palette on a darker ground, Graveyard Watch, the Dracula palette on a darker ground, Field Service, in the blue of an old PC, Boldly Go, orange and lilac panels on black, and Letter of Marque, a sea chart in tar and gold, which comes up by itself when a privateer signs in, and Cold Steel, gunmetal and frost for a flight deck, and Imperial Bridge, grey deck plate with red and green panel lights). Copy one, change its colors and restart to make your own. If the file has a mistake, the trainer says so and uses its built-in themes.
+**Themes** live in `data/themes.ron`: sixteen come with the trainer (Deep Signal, Phosphor Plus, Neon Tactical, Solar Punk Solarized, Amber Terminal, Red Light, the red lighting of a control room at night, Polaris, the cool Nord palette on a darker ground, Graveyard Watch, the Dracula palette on a darker ground, Field Service, in the blue of an old PC, Boldly Go, orange and lilac panels on black, and Letter of Marque, a sea chart in tar and gold, which comes up by itself when a privateer signs in, and Cold Steel, gunmetal and frost for a flight deck, and Imperial Bridge, grey deck plate with red and green panel lights, and Full Dress, the Pride flag's colours, after the rainbow of signal flags a ship strings bow to stern on a day of celebration, Yamamoto, deep indigo with soft blue text and pastel signals, and Breadbin, the light blue on blue of an old home computer). Copy one, change its colors and restart to make your own. If the file has a mistake, the trainer says so and uses its built-in themes.
 
 **Scanlines** (`s`) darken every other row a little, like an old CRT.
 
@@ -704,12 +705,13 @@ If the colors look garish or wrong, press `c` for 256-color mode. Terminals reac
 |---|---|
 | `Enter` or `:` | Open the `CONN>` line to type an order (see below) |
 | `s` | Stations: pick a console setup from a menu |
-| `Space` | Pause and resume |
+| `Space` | Pause, and resume at x1. In iron mode it first brings time back to x1, and pauses (where iron allows it) only at x1 |
+| `=` | Back to x1 at once |
 | `+` / `-` | Time compression, x1 to x100k: x1, x2, x5, x10, x30, x100, x300, x1k, x3k, x10k, x30k, x100k. It drops back to x1 by itself whenever something happens. Engagements at real distances take hours or days; compression is how you cross the empty ones. If the machine can't keep up, the header shows the rate actually reached: `x100k (x17.4k max)`. |
 | Click the plan | Arm a course toward that point, on any hull; `Enter` gives it and `Esc` drops it |
 | `←` / `→` | Warship: dial in a heading 5° left or right; nothing turns until you press `Enter` (or `Shift+Enter`) to give the order, and `Esc` drops it. Civilian hull: steer 5° at once. Hold `Shift` for 1° steps |
 | `Shift+↑` / `Shift+↓` (or `PgUp` / `PgDn`) | Dial in pitch 5° up or down; `Enter` gives the order |
-| `↑` / `↓` | Dial the engine telegraph: all stop, ahead slow (20%), half (50%), standard (75%), full (100%). With flight assist on, dial a speed 0.1 km/s up or down. `Enter` gives the order |
+| `↑` / `↓` | Dial the engine telegraph: all stop, ahead one third (25%), two thirds (50%), standard (75%), full (100%), flank (full, pushed). With flight assist on, dial a speed 0.1 km/s up or down. `Enter` gives the order |
 | `x` | All stop, without `Enter`: cut the drive and release flight assist, and the engine room answers in its own time. On a civilian hull's autopilot, it stays on and brings the ship to rest; `c` is what hands you manual control |
 | `c` | Civilian hull: autopilot on or off (off is manual control). Any hull with a compensator: flight assist on or off. The log records the order and the helm's answer, as for `assist on` |
 | `P` | Ping with active array. It takes a Shift, because a ping tells everyone where you are |
@@ -734,7 +736,7 @@ If the colors look garish or wrong, press `c` for 256-color mode. Terminals reac
 | `L` | Next window layout |
 | `F2`–`F10` | Console setups: bridge, sensors, nav, engineering, comms, science, damage, stealth, travel. See [Setting up the console](#4-setting-up-the-console). |
 | `[` / `]` | Nav plot zoom in / out |
-| `t` | Next color theme |
+| `t`, `T` | Next color theme, or the one before |
 | `e` | Color effects on or off |
 | `m` | Sound on or off |
 | `r` | Reload the data files into the running scenario |
@@ -776,8 +778,10 @@ Orders are not case-sensitive. Contacts are named `s1`, `s2`, and so on.
 | `helm 045`, `come to 045` | Come to a heading |
 | `helm s090`, `helm p045`, `come to s090` | Turn by a bearing off the bow, starboard or port, as the rose writes it |
 | `helm 045 +10`, `helm 045 mark 10` | Point along a bearing and elevation at once |
+| `helm cse`, `come to cse` | Point the nose along your own course, the bearing and elevation CSE shows: back onto your track after a turn, or lined up with your drift before you go quiet |
 | `burn to 2.5`, `burn 30`, `burn off` | A controlled burn: to a speed along the nose (km/s) or for a time (s), then coast; or stop it |
 | `reverse` | Helm only: come to the reciprocal of your heading. The drive stays as it is |
+| `clear baffles`, `clear the baffles` | The same turn as `reverse`, by its drill name. `clear baffles right` (or `left`) turns 90° instead: the shorter drill, which keeps you closer to your track |
 | `helm quiet`, `helm full` | The quiet helm holds every turn and pitch just under the rate that shows on MAG, so a turn costs time and nothing else. The TURN gauge shows `QUIET` while it is set. `helm full` turns at the boat's full rate again |
 | `match s1` | **In testing.** The helm points the nose along the burn that would match s1's velocity, by your solution, and reports how much velocity there is to take up and roughly how long at full drive. You give the throttle (`burn 30`, `thr 50`). The helm never burns for you, and a match is only as good as your solution: on FAIR expect to correct, on POOR it is a guess. Every burn to match is heard |
 | `reverse half`, `reverse 50` | End for end, then drive. The drive is cut while she comes round, so no thrust goes sideways, and once she is round the drive runs at half (or `full`, `standard`, `slow`, or a percentage) and stays there. Steering by hand during the turn cancels it |
@@ -785,7 +789,7 @@ Orders are not case-sensitive. Contacts are named `s1`, `s2`, and so on.
 | `point 100,-50,20` | Point the bow at a chart position, in km as `POS` shows it |
 | `right 20`, `left 15` | Turn by that many degrees |
 | `pitch 10`, `pitch +10`, `up 10`, `down 5` | Set or change pitch |
-| `ahead full`, `ahead half`, `ahead slow`, `thr 40` | Drive output (full 100%, half 50%, slow 20%) |
+| `ahead one third`, `ahead two thirds`, `ahead standard`, `ahead full`, `ahead flank`, `thr 40` | Drive output: 25%, 50%, 75% and 100%. Flank is full with the drive pushed past its rating (see `push`); any other step brings it back. `all ahead ...` works too, and `slow` and `half` are the older names for one third and two thirds |
 | `all stop` | Cut the drive and release assist: drift. A civilian hull's autopilot stays on and brings the ship to rest |
 | `speed 1.5`, `assist on`, `assist off` | Flight assist (needs a compensator) |
 | `ping` | Active array |
@@ -794,7 +798,7 @@ Orders are not case-sensitive. Contacts are named `s1`, `s2`, and so on.
 | `away s1` | Turn your stern to a contact (it goes into your baffles) |
 | `x8`, `pause`, `resume`, `step 5m`, `step tti` | Time. `step` runs that long at the current rate, or to your next torpedo's time to impact, then pauses (`30s`, `5m` or `2h`). An alert cuts it short. Full iron mode has no steps, and each one costs a pause in limited iron mode. |
 | `radio silence`, `datalink on` | Hold radio silence (no datalink sharing, nothing to hear) or lift it. A pack you lead holds cold while you keep silence; lifting it is their signal to attack. |
-| `condition red`, `condition blue`, `condition yellow`, `condition white`, `condition auto` | Set the boat's condition, or let it set itself |
+| `condition red`, `condition blue`, `condition yellow`, `condition white`, `condition auto` | Set the boat's condition, or let it set itself. The colour alone does the same: `red`, `blue`, `yellow`, `white` |
 | `nav rose`, `nav plan`, `nav profile`, `nav 3d`, `zoom 2000`, `rose relative`, `rose true`, `waterfall relative`, `waterfall true`, `contacts relative`, `contacts true` | Displays |
 | `fire s1`, `fire 2 s1`, `fire s1 homing`, `fire s1 burn 30` | Fire at a contact through fire control: any ready tube, or tube 2; a homing or `straight` torpedo; burn 30 s, then coast silently |
 | `fire 045` | Fire straight down a bearing, with no solution |
@@ -848,7 +852,9 @@ Orders are not case-sensitive. Contacts are named `s1`, `s2`, and so on.
 | `call me at 02:00`, `call me battery 30`, `call me waypoint`, `call me off` | Your own calls, or none |
 | `call s3 hostile`, `name s3 fat one`, `ignore s3`, `pin s3` | The captain's own call on a contact |
 | `save`, `save before the attack` | Save the exercise, under a name or the exercise clock (not in iron mode) |
+| `all stop; silent; helm 090` | Several orders on one line, separated by `;`. Each goes out and is answered in turn, as if typed alone. A `log` entry keeps its semicolons |
 | `help` | List the orders in the log |
+| `help fire`, `help clear baffles` | Only the orders that start with those words, and what the manual says about each. `help baffles` finds the orders that mention a word |
 
 **Nerd Font icons.** Ghost Boat needs no special font. If your terminal uses a [Nerd Font](https://www.nerdfonts.com/), press `f` on the title screen for icons in the window titles, the goals, the bars (`HULL`, `BATT`, `SINK`, `FUEL`, `PROP`), the torpedo stopwatch, and on waypoints (` WPT`), mines, notes and the plots' countermeasures. The `SIG` bars become joined capsule gauges, and a small spinner turns on the `TUBES` line while a tube reloads and beside a system under repair, if effects are on. These need Nerd Fonts 3.0 or later. A symbol means the same either way, and contact symbols (`○ ◇ □ ✣`, and a fighter's `◠ ⋀ ⊓ ⌒`) always stay as they are: they follow the military standard. If icons show as boxes, your terminal isn't using a Nerd Font: press `f` again, or choose one, preferably a `Nerd Font Mono`, in your terminal's settings. iTerm can keep your usual font and use a Nerd Font just for symbols, under **Profiles > Text > Non-ASCII Font**. The replay viewer stays plain.
 
@@ -916,7 +922,7 @@ These are under Options on the main menu, and their keys work on every page of t
 
 | Key | Setting |
 |---|---|
-| `t` | Next theme |
+| `t`, `T` | Next theme, or the one before |
 | `c` | Colors: 24-bit, or 256 if 24-bit looks wrong |
 | `e` | Effects: the living color (shimmer, pulse, glow) on or off |
 | `m` | Sound: the terminal bell for pings and torpedoes |
@@ -1053,7 +1059,7 @@ Standard ways to do the common jobs. The keys are in brackets; any of it can als
 3. As it passes, rig for silent running (`b`), or ultra-quiet (`ultra`) if the battery and air allow.
 4. A `PING` or a transient means it suspects you. Stay quiet unless it is clearly coming for you.
 
-**Clear your baffles.** Every few minutes, turn 60 to 90° (`right 60`), listen for a minute, and turn back. Anything that was hiding astern shows up.
+**Clear your baffles.** Every few minutes, turn 60 to 90° (`right 60`, or `clear baffles right`), listen for a minute, and turn back. `clear baffles` alone turns you end for end. Anything that was hiding astern shows up.
 
 **Run a minefield.** Rig for silent running before you enter (`b`): quiet beats acoustic and captor mines, and a cold reactor shrinks magnetic ones. Don't burn inside. Drop a static buoy on any torpedo. Pinging finds mines, but tells everyone where you are.
 
@@ -1192,7 +1198,7 @@ Torpedoes are the main weapon, yours and the enemy's. A torpedo is a small, fast
 
 - **Boost, then coast.** `fire s1 burn 30` burns for 30 seconds and then coasts silently: a straight runner coasting is heard only from a few tens of km. Fire control allows for the shorter burn.
 - **A launch has an edge.** A ghost launches cold, and a torpedo's motor is small: both are heard to about 600 km, no farther than the boat itself. Fire from beyond that and nobody hears you shoot, but a straight runner reaches only about 1,200 km flat out and a homing torpedo about 1,000, so the band is narrow, and a solution is worse the farther off you are. Inside it, the launch is a transient anyone listening can hear, with its bearing. A warship's tubes are far louder.
-- **Tubes reload** from the magazine, with the same kind if any is left, or the kind you ordered. Reloading takes minutes. See [Choosing what's in the tubes](#choosing-whats-in-the-tubes).
+- **Tubes reload** from the magazine, with the same kind if any is left, or the kind you ordered. Reloading takes minutes, and each torpedo room's crew loads one tube at a time: fire all three bow tubes and the last is ready three reloads later. The stern tube has a room and a crew of its own. See [Choosing what's in the tubes](#choosing-whats-in-the-tubes).
 - **A hit is heard:** a detonation, and breaking-up noises if it sank her. There is no sound in space: the crew keeps the old name for the burst of EF and heat as her reactor and power fail and her air vents. With none, the torpedo reached a hull that stayed afloat. See [What a hit does](#what-a-hit-does). A torpedo that runs out its time without a hit scuttles itself, and the log says so.
 - **Gravity is not in fire control's sums.** Near a moon, a straight runner curves and misses.
 
@@ -1402,7 +1408,7 @@ Every ship runs on a reactor and a battery, makes heat, and shows up on more tha
 
 **Power.** The reactor's output can only change slowly, and it gets louder as it works harder. A reactor that has gone cold must also run through a start before it makes any power: about 90 seconds on a warship, and longer on a merchant. The start can be heard. The battery covers what the reactor can't yet supply and charges from any surplus. On AUTO the reactor tops the battery up whenever it is under 95%, but once the heat sink is over half full it charges only as fast as the hull sheds the heat, so a warm boat recharges slowly. `reactor 100` charges faster and heats the boat. It hums a little while it discharges hard. The drive is by far the biggest load; if supply can't meet demand, the drive browns out first (engineering shows how far).
 
-**The board.** Every load has a breaker and a place on a priority list: life support, sensors, tubes, pinger, weapons, jammer, drive. When power runs short, the board feeds that list from the top. The drive and the weapon capacitors can run on part of what they ask for. Any other load gets all of it or trips, and a tripped breaker stays open for 10 seconds. A dark load's work stands still: tubes stop reloading and the pinger stops recharging.
+**The board.** Every load has a breaker and a place on a priority list: life support, sensors, tubes, pinger, weapons, jammer, drive. When power runs short, the board feeds that list from the top. The drive and the weapon capacitors can run on part of what they ask for. Any other load gets all of it or trips, and a tripped breaker stays open for 10 seconds. A dark load's work stands still: tubes stop reloading and the pinger stops recharging. The attitude motors that turn and pitch the boat ride the drive's breaker: a turn under the quiet-helm rate costs nothing, and a hard one draws up to a tenth of the drive's power, from the battery when the reactor is down. A hard turn also shows a little on EF, and how much a hunter makes of it grows through the war: nothing early, a little mid war, a noticeable tell close in by late war. A turn under the quiet-helm rate shows nothing in any era. Set your course before you go dark.
 
 - `board` lists the board's named settings, and `board patrol` sets one. You never need to touch them: a ship sails on **Standard Running**, and the crew minds it. A capped reactor also runs its pumps slower, so the hull hums a little quieter: the tighter the cap, the more. **Long Patrol** caps the reactor at 30% to save fuel, but has no pinger or jammer and answers slowly when the shooting starts. **Rig for Quiet** saves battery and EF but has no pinger, jammer or reloads, and the drive starves first. **Battle Stations** puts the weapons first with the plant at full, at a cost in fuel and EF. Engineering's `SETTING` line names the one you're on, and says `By hand` once you change something yourself.
 - `S` shows what each setting would do on your boat, from her own plant figures at their rating. `REACTOR` is the most the setting lets the reactor make. `DRIVE` is the share of full drive it can hold with the battery flat. `FUEL` is fuel for each second of drive against Standard Running: a reactor burns less per MW at low output, so a gentle burn goes further. `SHOWS` is how much more the whole boat shows at this throttle. `ANSWER` is how long the reactor takes to reach full. Choose a row to read its cost, and `Enter` sets it. `board preview patrol` gives the same on the conn.
@@ -1676,7 +1682,7 @@ You won't be told. What you have is what the crew hears: the pings stop, the bea
 
 ### Reading the escort
 
-A hunter's quality is hidden. It shows in how the hunter behaves, and the crew reports what they notice. These lines appear in the log as `SONAR`, and in the vessel window as `READS AS`. Every one is an estimate.
+A hunter's quality is hidden. It shows in how the hunter behaves, and the crew reports what they notice. These lines appear in the log as `SENSORS`, and in the vessel window as `READS AS`. Every one is an estimate.
 
 - **Habits.** After a few pings they call its style. A fast beat with no stopping to listen reads as a green crew. Sprint and drift reads as a drilled one. A slow beat reads as a careful one. A good crew in a hurry can look like a green one.
 - **Counting.** The crew counts the torpedoes they hear and the gauss bursts they feel. Once they have called a class, they set that count against what the book says it carries. A hunter that has fired most of its load may be running short.
@@ -1850,7 +1856,7 @@ Every engagement at every difficulty gets a verdict as well as a result: **Defea
 | Draw | 15 to 34 |
 | Defeat | under 15 |
 
-**The instructor's note.** After a failed exercise, at every level, the end-of-mission box may carry an `INSTRUCTOR'S NOTE`: one blunder, and what to try next time. The instructor finds the point the fight turned against you, usually the first time a hunter tracked you, and names your last action that could answer for it: a burn near a hunter, an early ping, holding course on the firing bearing, a shot without a good solution, a straight runner fired on less than GOOD, emptied tubes, a contact held on one leg, or speed through a rock field. A note says no more than the debrief does, and if nothing clear stands out there is no note. A won exercise gets a note for one thing only: a straight runner fired on less than a GOOD solution that missed, so a miss is blamed on the solution, not the weapon. Press `i` on the box, or point at `i the moment`, to open the replay at the moment it blames. In the replay, `i` or a click on the note goes back there, and a `◆` marks it on the timeline. The note stays in a kept replay.
+**The instructor's note.** After a failed exercise, at every level, the end-of-mission box may carry an `INSTRUCTOR'S NOTE · THE BLATHER`: one blather, and what to try next time. The instructor finds the point the fight turned against you, usually the first time a hunter tracked you, and names your last action that could answer for it: a burn near a hunter, an early ping, holding course on the firing bearing, a shot without a good solution, a straight runner fired on less than GOOD, emptied tubes, a contact held on one leg, or speed through a rock field. A note says no more than the debrief does, and if nothing clear stands out there is no note. A won exercise gets a note for one thing only: a straight runner fired on less than a GOOD solution that missed, so a miss is blamed on the solution, not the weapon. Press `i` on the box, or point at `i the moment`, to open the replay at the moment it blames. In the replay, `i` or a click on the note goes back there, and a `◆` marks it on the timeline. The note stays in a kept replay.
 
 A band doesn't change whether you won or what unlocks next. It says how well it went: sinking two destroyers and dying is not a Defeat. The verdict shows on the end-of-mission box and in the replay, and goes into your records. At Nightmare, the band is the point.
 
@@ -1955,7 +1961,7 @@ The Scenarios page shows each challenge's rating, from Routine through Testing, 
 | The Narrows | `the_narrows.ron` | A charted enemy minefield across the only way to the exit: acoustic, magnetic and captor mines. Teaches silent running and minefields. |
 | The Veil | `the_veil.ron` | Goals: reach the exit 6,000 km north, undetected. A dust cloud lies across your route, with an ion cloud and a storm either side and a patrol beyond. Burn in the near half of the dust; drifting all the way also works, slowly. |
 | Duel | `duel.ron` | **Choose both ships and the enemy captain.** One on one in open space: attack boat, destroyer, cruiser or (for yourself) a carrier, against any of the first three, under a seasoned, green or silent captain. Sink the other ship. |
-| Dry Tanks | `dry_tanks.ron` | **Why a ghost goes home.** The patrol ran long and the tanks hold a tenth of a percent of fuel. Depot Twelve lies 800 km off, and a destroyer patrols the approach. Burn briefly and coast, keep fuel to stop with, and run on the battery if you must. Come alongside, stopped, and take on fuel with `refuel`. Teaches: fuel, the generator's thirst, and matching a base. |
+| Dry Tanks | `dry_tanks.ron` | **Why a ghost goes home.** The patrol ran long: the tanks hold a twentieth of a percent of fuel and the battery a tenth of its charge, too little to make the trip on it alone. Depot Twelve lies 800 km off, and a destroyer patrols the approach. Burn gently and coast on a capped reactor (`board patrol`): the stop costs as much as the start, and a fast burn arrives with nothing left to stop. Come alongside, stopped, and take on fuel with `refuel`. Teaches: fuel, the generator's thirst, and matching a base. |
 | First Shot | `first_shot.ron` | **Torpedo school.** Get a FAIR solution on a crossing target hulk, then sink it. Teaches fire control, `f`, spreads and time to impact. |
 | Gauntlet | `gauntlet.ron` | Sink a cruiser crossing your front with a destroyer on each bow. The group shares what it hears, and the cruiser's ears are better than yours. |
 | The Flattop | `the_flattop.ron` | **A carrier group.** The carrier *Empyrean* crosses your front with a destroyer on each bow and pickets flying far out. Sink her, then get clear. Her craft are loud and half deaf, and you will hear them long before they hear you. When one comes near, go dark and let it pass: a picket that hears you calls the destroyers down. Teaches: launch transients, going dark under air cover, and a long stalk on a loud prize. |
@@ -2087,7 +2093,7 @@ A bounty crew's ship, built to run pirates down on the civilian scale. It is qui
 | Passive array | floor 70 dB, threshold 5 dB, bearings ±2.5° at the threshold, baffles 60° astern |
 | Active array | 165 dB ping, ranges ±10 km, recharge 20 s |
 | Flight assist | holds up to 3.0 km/s, corrects at 0.003 km/s², thrusters 128 dB |
-| Torpedo tubes | 2, reload 120 s; carries 4 × MK2H, 2 × MK1; launch 152 dB |
+| Torpedo tubes | 2, reload 600 s; carries 4 × MK2H, 2 × MK1; launch 152 dB |
 | Power | reactor 15 MW, 150 s from cold; generator 1.0 MW; battery 5000 MJ in two banks (2381 min at hotel load); idle draw 0.0 MW; drive 12 MW at full; fuel 6000 GJ |
 | Heat | sink 20000 MJ; hull sheds 0 MW, radiators 12 MW; silent running 3 dB quieter |
 | Time to go cold | 2.6 h to shed half a five-minute burn, radiators in |
@@ -2232,7 +2238,7 @@ The flagship of a battle group: the best ears in the fleet, the loudest ping, si
 | Passive array | floor 50 dB, threshold 3 dB, bearings ±1.0° at the threshold, baffles 70° astern |
 | Active array | 185 dB ping, ranges ±2 km, recharge 12 s |
 | Flight assist | none |
-| Torpedo tubes | 6, reload 75 s; carries 8 × MK2H, 4 × MK3L, 6 × MK1; launch 155 dB |
+| Torpedo tubes | 6, reload 360 s; carries 8 × MK2H, 4 × MK3L, 6 × MK1; launch 155 dB |
 | Power | reactor 80 MW, 120 s from cold; generator 8.0 MW; battery 40000 MJ in two banks (392 min at hotel load); idle draw 1.7 MW; drive 64 MW at full; fuel 32000 GJ |
 | Heat | sink 150000 MJ; hull sheds 5 MW, radiators 80 MW; silent running 5 dB quieter |
 | Time to go cold | 6.5 h to shed half a five-minute burn, radiators in |
@@ -2272,7 +2278,7 @@ The navy's hunter of ghosts: fast, loud, nimble and well armed, with torpedoes, 
 | Passive array | floor 55 dB, threshold 3 dB, bearings ±1.5° at the threshold, baffles 50° astern |
 | Active array | 180 dB ping, ranges ±2 km, recharge 10 s |
 | Flight assist | none |
-| Torpedo tubes | 2, reload 90 s; carries 6 × MK2H, 4 × MK1; launch 155 dB |
+| Torpedo tubes | 2, reload 480 s; carries 6 × MK2H, 4 × MK1; launch 155 dB |
 | Power | reactor 60 MW, 90 s from cold; generator 6.0 MW; battery 20000 MJ in two banks (476 min at hotel load); idle draw 0.7 MW; drive 50 MW at full; fuel 24000 GJ |
 | Heat | sink 60000 MJ; hull sheds 3 MW, radiators 60 MW; silent running 4 dB quieter |
 | Time to go cold | 2.5 h to shed half a five-minute burn, radiators in |
@@ -2379,7 +2385,7 @@ The ghost, a submarine in space: small, cold and very quiet, with sharp ears, fo
 | Passive array | floor 58 dB, threshold 4 dB, bearings ±2.0° at the threshold, baffles 60° astern |
 | Active array | 172 dB ping, ranges ±3 km, recharge 15 s |
 | Flight assist | none |
-| Torpedo tubes | 4, reload 120 s; carries 6 × MK1, 4 × MK2H, 2 × CAR; launch 112 dB |
+| Torpedo tubes | 4, reload 600 s; carries 6 × MK1, 4 × MK2H, 2 × CAR; launch 112 dB |
 | Power | reactor 20 MW, 90 s from cold; generator 1.5 MW; battery 20000 MJ in two banks (1961 min at hotel load); idle draw 0.2 MW; drive 16 MW at full; fuel 8000 GJ |
 | Heat | sink 100000 MJ; hull sheds 1 MW, radiators 20 MW; silent running 8 dB quieter |
 | Time to go cold | 3.5 h to shed half a five-minute burn, radiators in |
@@ -2417,7 +2423,7 @@ The attack boat rebuilt to lose heat: a lagged reactor space and a hull that she
 | Passive array | floor 58 dB, threshold 4 dB, bearings ±2.0° at the threshold, baffles 60° astern |
 | Active array | 172 dB ping, ranges ±3 km, recharge 15 s |
 | Flight assist | none |
-| Torpedo tubes | 4, reload 120 s; carries 5 × MK1, 3 × MK2H; launch 112 dB |
+| Torpedo tubes | 4, reload 600 s; carries 5 × MK1, 3 × MK2H; launch 112 dB |
 | Power | reactor 20 MW, 90 s from cold; generator 1.5 MW; battery 20000 MJ in two banks (1961 min at hotel load); idle draw 0.2 MW; drive 16 MW at full; fuel 8000 GJ |
 | Heat | sink 100000 MJ; hull sheds 2 MW, radiators 20 MW; silent running 8 dB quieter |
 | Time to go cold | 1.8 h to shed half a five-minute burn, radiators in |
@@ -2455,7 +2461,7 @@ The attack boat with a thicker pressure hull and a bigger heat sink. It carries 
 | Passive array | floor 58 dB, threshold 4 dB, bearings ±2.0° at the threshold, baffles 60° astern |
 | Active array | 172 dB ping, ranges ±3 km, recharge 15 s |
 | Flight assist | none |
-| Torpedo tubes | 4, reload 120 s; carries 8 × MK1, 4 × MK2H; launch 112 dB |
+| Torpedo tubes | 4, reload 600 s; carries 8 × MK1, 4 × MK2H; launch 112 dB |
 | Power | reactor 20 MW, 90 s from cold; generator 1.5 MW; battery 20000 MJ in two banks (1961 min at hotel load); idle draw 0.2 MW; drive 16 MW at full; fuel 8000 GJ |
 | Heat | sink 120000 MJ; hull sheds 1 MW, radiators 20 MW; silent running 8 dB quieter |
 | Time to go cold | 5.7 h to shed half a five-minute burn, radiators in |
@@ -2493,7 +2499,7 @@ A boat from the last war, kept in service because the yards are full: worn, shor
 | Passive array | floor 64 dB, threshold 4 dB, bearings ±3.0° at the threshold, baffles 60° astern |
 | Active array | 172 dB ping, ranges ±3 km, recharge 15 s |
 | Flight assist | none |
-| Torpedo tubes | 3, reload 150 s; carries 7 × MK0; launch 112 dB |
+| Torpedo tubes | 3, reload 720 s; carries 7 × MK0; launch 112 dB |
 | Power | reactor 12 MW, 180 s from cold; generator 1.5 MW; battery 9000 MJ in two banks (882 min at hotel load); idle draw 0.2 MW; drive 10 MW at full; fuel 3000 GJ |
 | Heat | sink 100000 MJ; hull sheds 1 MW, radiators 12 MW; silent running 4 dB quieter |
 | Time to go cold | 10.3 h to shed half a five-minute burn, radiators in |
@@ -2531,7 +2537,7 @@ A pirate's converted trader, a little quieter than the ships it preys on and arm
 | Passive array | floor 80 dB, threshold 6 dB, bearings ±4.0° at the threshold, baffles 70° astern |
 | Active array | 165 dB ping, ranges ±10 km, recharge 20 s |
 | Flight assist | holds up to 3.0 km/s, corrects at 0.003 km/s², thrusters 128 dB |
-| Torpedo tubes | 2, reload 180 s; carries 4 × MK1; launch 152 dB |
+| Torpedo tubes | 2, reload 900 s; carries 4 × MK1; launch 152 dB |
 | Power | reactor 15 MW, 150 s from cold; generator 1.0 MW; battery 5000 MJ in two banks (2381 min at hotel load); idle draw 0.0 MW; drive 12 MW at full; fuel 6000 GJ |
 | Heat | sink 20000 MJ; hull sheds 0 MW, radiators 12 MW; silent running 3 dB quieter |
 | Time to go cold | 2.6 h to shed half a five-minute burn, radiators in |
@@ -2965,40 +2971,41 @@ These apply in engagements with the physical channels on (Thermal Range, Shadow 
 
 | Term | Meaning |
 |---|---|
-| Baffles | The deaf cone astern of a passive array. |
-| Band | The verdict on an engagement, from Defeat to Decisive. |
-| The black | Space, in the fleet's slang. A torpedo "in the black" has been launched and is running; "underway" means away from a dockyard. |
-| Beam weapon | A weapon of light: instant, strong close in, weak with range, loud on EM. |
-| Bearing | Compass direction to something, 0° to 360°, measured clockwise from north. |
-| Course | The direction you are actually moving. |
-| dB | Decibel. A logarithmic scale: +10 dB is ten times the power, +3 dB about double. |
-| Echo | The return of a ping off a hull. |
-| Damage control | The crew that repairs systems underway, one at a time, back to 90% at best. |
-| Decoy | A drone that sounds like your ship and runs off on its own course. |
-| Elevation | Angle above (+) or below (−) the reference plane. |
-| ESM | Electronic support measures: a receiver that hears other ships' transmissions. |
-| Heading | The direction the nose points. |
 | Annunciator | The master alarm: MASTER CAUTION for damage, MASTER WARNING for a failure. Acknowledge with `a`. |
 | Arming distance | How far a torpedo must run from the tube before its warhead can explode. Closer than that, a hit is a dud. |
+| Baffles | The deaf cone astern of a passive array. |
+| Band | The verdict on an engagement, from Defeat to Decisive. |
+| Beam weapon | A weapon of light: instant, strong close in, weak with range, loud on EM. |
+| Bearing | Compass direction to something, 0° to 360°, measured clockwise from north. |
+| The black | Space, in the fleet's slang. A torpedo "in the black" has been launched and is running; "underway" means away from a dockyard. |
+| Blather | A tactical error that loses an engagement or puts the boat at risk. The term is fleet usage, after an ensign of that name. The instructor's note after a failed exercise names the blather that decided it. |
 | Captor mine | A mine that listens, and launches a homing torpedo at what it hears. |
-| COB | Chief of the boat: the senior rating, who runs the air on AUTO and reports it. |
+| COB | Chief of the boat: the senior rating, who runs the air on AUTO and reports it. The title is a holdover from the wet navies, where a submarine's senior enlisted man was its chief of the boat. |
+| Course | The direction you are actually moving. |
 | Craft | A small crewed ship flown from a carrier's deck: a fighter or a strike fighter. Loud, fast and half deaf. |
 | Cross-fix | A position found where bearings from two places cross. A hunting group gets one from two ships at once. |
+| Damage control | The crew that repairs systems underway, one at a time, back to 90% at best. |
+| dB | Decibel. A logarithmic scale: +10 dB is ten times the power, +3 dB about double. |
+| Decoy | A drone that sounds like your ship and runs off on its own course. |
 | Difficulty | How hard the trainer plays: Standard, Hard or Nightmare. Chosen before you sail. |
+| Echo | The return of a ping off a hull. |
+| Elevation | Angle above (+) or below (−) the reference plane. |
+| ESM | Electronic support measures: a receiver that hears other ships' transmissions. |
 | Fire control | The computer that aims torpedoes and guns from your TMA solution or ping echoes. |
-| Hull integrity | How much damage the hull can still take, 100% to 0. |
-| Flaw | A weakness on a captain's sheet, such as Hothead or Timid. One captain in four has one. |
 | Flagship | The ship in a hunting group with the strongest active array: it does the group's pinging. |
+| Flaw | A weakness on a captain's sheet, such as Hothead or Timid. One captain in four has one. |
+| Gauss gun | A gun that fires unguided slugs at 10 km/s, silent in flight. |
 | Grade | How good a captain and crew are: Green, Regular, Seasoned or Veteran. |
+| Heading | The direction the nose points. |
 | Hold | At Nightmare, a hunting group spread in lanes around your last fix, waiting for your battery and air to run out. |
+| Hull integrity | How much damage the hull can still take, 100% to 0. |
 | Influence mine | A mine set off by a ship's emissions (an acoustic fuze, named for the WWII original) or magnetic field (magnetic), without touching it. |
 | Leg change | A change of course made to let TMA find range. |
 | Magnetometer | Feels a hull's magnetic field, at very short range. |
 | Nebula | A charted cloud that changes what sensors hear: dust, ion or storm. |
 | Ping | A pulse of active array. |
-| Role | What a captain is for: Line, Silent, Escort, Pirate or Hunter. A good roll never changes it. |
 | Radiators | Panels that shed heat fast, and glow in infrared while they do. |
-| Gauss gun | A gun that fires unguided slugs at 10 km/s, silent in flight. |
+| Role | What a captain is for: Line, Silent, Escort, Pirate or Hunter. A good roll never changes it. |
 | Sail | To put out on a voyage. Nothing out here has sails: *sail*, *boat*, *tubes*, *convoy* and the like are nautical holdovers, kept by tradition. |
 | Salvo, spread | Several torpedoes fanned across the target's track, to cover the uncertainty in a solution. |
 | Scram | Shutting the reactor down at once. |

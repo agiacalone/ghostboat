@@ -1,12 +1,12 @@
 # Ghost Boat quick reference
 
-One page to keep beside the console. The full [captain's manual](manual.md) is on the console too: press `?`.
+One page to keep beside the console. This card is on the console too: press `?`, and `h` in it for the full [captain's manual](manual.md) (or `F1` straight to it).
 
 ## First minutes
 
-1. Power up the trainer, choose **Training** on the main menu, and run **Civilian 1: The Console**. The ten civilian tutorials take about two hours and teach one idea each; then **Naval 1: Taking Command** teaches the navy's orders. The Ghost lessons teach the attack boat's weapons: the solution, straight runners, homing torpedoes, the line-up, jamming and the beam, each with when to use it.
-2. `Space` pauses at any time. `?` opens the manual and pauses the trainer.
-3. `q` leaves an exercise and saves it; **Continue** on the main menu picks it up again. `Esc` never quits.
+1. Power up the trainer, choose **Training** on the main menu, and run **Civilian 1: The Console**. The eleven civilian tutorials take about two hours and teach one idea each; then **Naval 1: Taking Command** teaches the navy's orders. The Ghost lessons teach the attack boat's weapons: the solution, straight runners, homing torpedoes, the line-up, jamming and the beam, each with when to use it.
+2. `Space` pauses at any time. `?` opens this card and pauses the trainer; `h` in it opens the manual, `q` goes back.
+3. `q` leaves an exercise and saves it, after asking (`q` again to leave; Options turns the question off); **Continue** on the main menu picks it up again. `Esc` never quits.
 4. On the title screen, `↑`/`↓` choose, `Enter` opens, and `Esc` goes back to the main menu. Scenarios holds the challenges, War Campaign the war, and Options the theme, colours and sign-in.
 
 ## Signing in
@@ -103,6 +103,13 @@ Press `Enter` with nothing dialled (or `:`) and type an order. `↑` brings back
 | `fire s1`, `salvo 3 s1`, `fire s1 homing`, `fire s1 mk2h` | Torpedoes |
 | `fire s1 contact`, `exploder contact`, `exploder prox` | Exploder for one salvo, or standing |
 | `seeker 800 narrow`, `seeker off` | Homing seeker on 800 km out, looking ahead only; back to the standard. Stands until changed |
+| `track s1 1200 090 0.6`, `track s1 off` | Your own track: range, course, speed; the vessel window shows the fit |
+| `classify s1 destroyer`, `classify s1 crew` | Overrule the crew's call on a contact's class, from its lines |
+| `o` (launch page) | The bare conn: no gauges, rose or plot, only the console and the watch |
+| `contacts` | The watch reads out every contact held: bearing, solution, call |
+| `hail s1`, `reply` | Call a contact on 16; answer the last station that called. On the air, and heard |
+| `grav on`, `grav off` | Gravitic thrusters: silent, slow course corrections; MAG shows while they push |
+| `sweep on`, `sweep off` | Minesweeping gear: a 20 km lane on a sweeper craft, quiet; 6 km on a destroyer, loud |
 | `check s1` | Fire control's answer for each weapon, without firing |
 | `drop s1` | Take a silent contact off the table until it is heard again |
 | `mark 045`, `mark s1`, `mark b off`, `mark off` | Up to three bearing marks on the rose |

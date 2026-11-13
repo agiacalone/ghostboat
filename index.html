@@ -61,13 +61,15 @@ title: Fleet Tactical Trainer
 <section class="window" aria-labelledby="posters">
   <h2 id="posters">Recruiting posters</h2>
   <p>Posters are available at your nearest recruitment office. Hang one in the mess. The trainer hangs one on its title screen each time it starts.</p>
-  <p>To hang one on your own wall, open <em>Hang this poster</em> under it and copy the code into your page or forum post. The poster links back here, to the recruiting office. Each poster also comes as JPEG banners in the common sizes, or <a href="{{ '/assets/banners/ghost-boat-banners.zip' | relative_url }}">take all fifty in one bundle</a>.</p>
+  <p>To hang one on your own wall, open <em>Hang this poster</em> under it and copy the code into your page or forum post. The poster links back here, to the recruiting office. Each poster comes full size to print, at a size for a bulletin board, as a square avatar, and as JPEG banners in the common sizes. Or <a href="{{ '/assets/banners/ghost-boat-banners.zip' | relative_url }}">take every one in a single bundle</a>.</p>
   <ul class="posters">
 {%- for p in site.data.posters %}
-    {%- capture src %}{{ '/assets/posters/poster-' | append: p.n | append: '.png' | absolute_url }}{% endcapture %}
-    {%- capture html %}<a href="{{ '/' | absolute_url }}"><img src="{{ src }}" alt="{{ p.alt | replace: '"', '&quot;' }}" width="405" height="230"></a>{% endcapture %}
+    {%- assign base = '/assets/posters/poster-' | append: p.n %}
+    {%- capture full %}{{ base | append: '.png' | absolute_url }}{% endcapture %}
+    {%- capture src %}{{ base | append: '-board.png' | absolute_url }}{% endcapture %}
+    {%- capture html %}<a href="{{ '/' | absolute_url }}"><img src="{{ src }}" alt="{{ p.alt | replace: '"', '&quot;' }}" width="774" height="432"></a>{% endcapture %}
     <li>
-      <a href="{{ src }}"><img src="{{ src }}" alt="{{ p.alt | escape }}" loading="lazy" width="405" height="230"></a>
+      <a href="{{ full }}"><img src="{{ src }}" alt="{{ p.alt | escape }}" loading="lazy" width="774" height="432"></a>
       <details class="hang">
         <summary>Hang this poster</summary>
         <p>HTML, for a web page:</p>
@@ -76,6 +78,8 @@ title: Fleet Tactical Trainer
         <pre><code>[![{{ p.alt }}]({{ src }})]({{ '/' | absolute_url }})</code></pre>
         <p>BBCode, for an older forum:</p>
         <pre><code>[url={{ '/' | absolute_url }}][img]{{ src }}[/img][/url]</code></pre>
+        <p>The poster: <a href="{{ full }}">full size, 1548&times;864</a>, to print or download; <a href="{{ src }}">bulletin board, 774&times;432</a>, the size the codes above post.</p>
+        <p>An avatar, the boat cut square: <a href="{{ base | append: '-avatar-256.png' | relative_url }}">256&times;256</a>, <a href="{{ base | append: '-avatar-128.png' | relative_url }}">128&times;128</a>.</p>
         <p>JPEG banners, to post with a link to {{ '/' | absolute_url }}:
           {%- assign b = '/assets/banners/poster-' | append: p.n %}
           <a href="{{ b | append: '-social.jpg' | relative_url }}">link preview, 1200&times;630</a>,

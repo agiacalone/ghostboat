@@ -130,7 +130,7 @@ figcaption { color: var(--label); font-size: 0.9em; margin-top: 0.4em; }
   display: grid; grid-template-columns: repeat(2, 1fr); gap: 2ch;
 }
 .posters li { margin: 0; }
-.posters img { display: block; width: 100%; height: auto; border: 1px solid var(--frame); image-rendering: pixelated; }
+.posters img { display: block; width: 100%; height: auto; border: 1px solid var(--frame); }
 
 .papers { display: grid; grid-template-columns: max-content 1fr; gap: 0.3em 3ch; }
 .papers dt { margin: 0; }

@@ -43,7 +43,7 @@ strong { color: var(--value); font-weight: 700; }
 .skip:focus { left: 16px; top: 8px; background: var(--bg); padding: 4px 8px; z-index: 2; }
 
 /* The console: one column, the width of the trainer's title screen. */
-.console { max-width: 62rem; margin: 0 auto; padding: 0 16px; }
+.console { max-width: 62rem; margin: 0 auto; padding: 0 16px; container-type: inline-size; }
 
 /* The top line: the mark, and the papers as the trainer's key hints. */
 .bar {
@@ -60,16 +60,26 @@ kbd {
   margin-right: 0.6ch;
 }
 
-/* The title screen, as text: GHOST BOAT (54 cells) and, beside it, one of
-   the ten posters (44 cells), 98 cells in all, scaled to fit the column.
-   JetBrains Mono's advance is 0.6 em, so 98 cells are 58.8 em. On a phone
-   the poster hangs under the title and each is scaled to the full width. */
-.hero { margin: 28px 0 0; overflow: hidden; display: flex; align-items: flex-start; }
+/* The title screen, as text: GHOST BOAT (48 cells) and, beside it, one of
+   the ten posters (43 cells). The art runs from cell 2 of the title to the
+   last cell but one of the poster, 88 cells, and is scaled so those fill
+   the column exactly, lining up with the windows below: the two blank
+   cells before the title hang into the margin, and the poster's blank last
+   cell is clipped. JetBrains Mono's advance is 0.6 em, so 88 cells are
+   52.8 em. On a phone the poster hangs under the title and each is scaled
+   to the full width. */
+.hero {
+  /* 100cqi is the column itself (scrollbar excluded, unlike 100vw). */
+  --cell: calc((min(100vw, 62rem) - 50px) / 52.8);
+  --cell: calc((100cqi - 1px) / 52.8);
+  margin: 28px 0 0 calc(var(--cell) * -1.2);
+  overflow: hidden; display: flex; align-items: flex-start;
+}
 .screen {
   display: none;
   margin: 0;
   font-family: var(--mono);
-  font-size: min(15.2px, calc((100vw - 34px) / 58.8));
+  font-size: var(--cell);
   line-height: 1.2;
   white-space: pre;
   color: var(--value);
@@ -162,7 +172,7 @@ figcaption { color: var(--label); font-size: 0.9em; margin-top: 0.4em; }
   .window { padding: 1.4em 1.5ch 1em; }
   .pair, .window .posters { grid-template-columns: 1fr; }
   .window .posters { gap: 1.6em; }
-  .hero { flex-direction: column; align-items: center; gap: 1em; }
+  .hero { flex-direction: column; align-items: center; gap: 1em; margin-left: 0; }
   .screen.title { font-size: min(18px, calc((100vw - 34px) / 32.4)); }
   .screen.poster { font-size: min(18px, calc((100vw - 34px) / 26.4)); }
   .ready { text-align: center; }

@@ -62,19 +62,25 @@ kbd {
 
 /* The title screen, as text: GHOST BOAT (48 cells) and, beside it, one of
    the ten posters (43 cells). The art runs from cell 2 of the title to the
-   last cell but one of the poster, 88 cells, and is scaled so those fill
-   the column exactly, lining up with the windows below: the two blank
-   cells before the title hang into the margin, and the poster's blank last
-   cell is clipped. JetBrains Mono's advance is 0.6 em, so 88 cells are
-   52.8 em. On a phone the poster hangs under the title and each is scaled
-   to the full width. */
+   last cell of the poster, with a gap of two cells between them so no
+   poster touches the title's last letter: 91 cells, scaled so those fill
+   the column exactly, lining up with the windows below. The two blank
+   cells before the title hang into the margin. JetBrains Mono's advance is
+   0.6 em, so 91 cells are 54.6 em. On a phone the poster hangs under the
+   title and each is scaled to the full width. */
 .hero {
   /* 100cqi is the column itself (scrollbar excluded, unlike 100vw). */
-  --cell: calc((min(100vw, 62rem) - 50px) / 52.8);
-  --cell: calc((100cqi - 1px) / 52.8);
+  --cell: calc((min(100vw, 62rem) - 50px) / 54.6);
+  --cell: calc((100cqi - 1px) / 54.6);
   margin: 28px 0 0 calc(var(--cell) * -1.2);
   overflow: hidden; display: flex; align-items: flex-start;
+  column-gap: calc(var(--cell) * 1.2);
 }
+/* Neither part shrinks, and the poster is set against the right edge. If
+   the text ever comes out wider than planned, the gap stays two cells and
+   the poster loses cells at the right; the two never overlap. */
+.hero > * { flex: none; }
+.hero > .wall { margin-left: auto; }
 .screen {
   display: none;
   margin: 0;
@@ -84,11 +90,19 @@ kbd {
   white-space: pre;
   color: var(--value);
   background: var(--bg);
+  /* Keep each advance at exactly 0.6 em. Without this, Chrome on Linux
+     rounds each advance to a whole pixel, and at 800 px the 48-cell title
+     comes out about a cell and a half too wide. */
+  text-rendering: geometricPrecision;
 }
 .screen.title, .screen.on { display: block; }
 /* Every styled run is a block one line tall, so painted rows meet with no
    seam (block glyphs arrive as painted spaces; see frame2html.py). */
 .screen span { display: inline-block; height: 1.2em; vertical-align: top; }
+/* A glyph the font lacks (the posters' stars) is drawn from another font,
+   often wider. Each one sits in a box one cell wide, centred, so the rest
+   of its line stays on the grid. */
+.screen .g { display: inline-flex; justify-content: center; width: 1ch; }
 .ready { color: var(--label); margin: 0.4em 0 0; font-size: 0.93em; }
 
 /* A window: the frame, with its title set into the top edge. */
@@ -173,6 +187,7 @@ figcaption { color: var(--label); font-size: 0.9em; margin-top: 0.4em; }
   .pair, .window .posters { grid-template-columns: 1fr; }
   .window .posters { gap: 1.6em; }
   .hero { flex-direction: column; align-items: center; gap: 1em; margin-left: 0; }
+  .hero > .wall { margin-left: 0; }
   .screen.title { font-size: min(18px, calc((100vw - 34px) / 32.4)); }
   .screen.poster { font-size: min(18px, calc((100vw - 34px) / 26.4)); }
   .ready { text-align: center; }

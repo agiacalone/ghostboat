@@ -1891,7 +1891,7 @@ A game of patience. Run silent, run dark. Every system here pays the captain who
 
 ### Your boat
 
-**The ghost.** An attack boat drifting gives off 110 dB. A destroyer drifting gives off 148, and a cruiser 150. That gap is the whole game. You hear them long before they hear you because they are loud, not because your ears are better: a cruiser's array is finer than yours. Keep the gap. Every burn, ping, transmission and hard turn spends some of it.
+**The ghost.** Your boat is the quietest ship in the fleet. An attack boat drifting gives off 110 dB. A destroyer drifting gives off 148, and a cruiser 150. That gap is the whole game. You hear them long before they hear you because they are loud, not because your ears are better: a cruiser's array is finer than yours. Keep the gap. Every burn, ping, transmission and hard turn spends some of it.
 
 **The weaker ship.** If you are the weaker ship, and as a civilian you always are, being identified and located is close to death. Stay quiet, stay far away, and let them give themselves away.
 

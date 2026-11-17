@@ -1887,7 +1887,13 @@ A win at Nightmare stands apart in the records: on the title screen it counts ab
 
 ## 19. Tactics
 
-**The ghost.** If you are the weaker ship, and as a civilian you always are, being identified and located is close to death. Stay quiet, stay far away, and let them give themselves away.
+A game of patience. Run silent, run dark. Every system here pays the captain who waits, listens and closes quietly, and charges the one who hurries. Patience is not doing nothing: the patient captain still has to act when the moment comes.
+
+### Your boat
+
+**The ghost.** An attack boat drifting gives off 110 dB. A destroyer drifting gives off 148, and a cruiser 150. That gap is the whole game. You hear them long before they hear you because they are loud, not because your ears are better: a cruiser's array is finer than yours. Keep the gap. Every burn, ping, transmission and hard turn spends some of it.
+
+**The weaker ship.** If you are the weaker ship, and as a civilian you always are, being identified and located is close to death. Stay quiet, stay far away, and let them give themselves away.
 
 - Drift. Burn only when you must, and briefly.
 - Never ping unless you are willing to be found.
@@ -1895,15 +1901,41 @@ A win at Nightmare stands apart in the records: on the title screen it counts ab
 - Clear your baffles now and then.
 - Listen for transients and pings: they tell you what the hunter is doing.
 
-**The destroyer.** A warship hunts by finding you, closing in and killing you up close. It pings freely, because it can afford to be heard. A good captain sprints and then drifts to listen. Expect it to come down your bearing when it hears you.
+**Plan the leg, then go quiet.** A coasting boat goes where her last burn sent her, and every correction afterwards costs battery, a little magnetism and noise. Think the leg through before you go dark. Set your standing orders (`standing`) and night orders (`night`) before the fight, so the crew answers a torpedo while you think.
+
+**Heat is the clock.** Nothing hides in space for ever. A drifting boat sheds her heat through the hull, slowly. A burn, a hard charge or a jammer fills the heat sink, and radiators empty it only by glowing on infrared from thousands of km. So hiding is a budget. Burn early, while nobody is near, and arrive cold. If the sink is filling and a hunter is close, choose: radiators out and be seen, or silent running.
+
+**Silent running** (`b`) drops an attack boat's hum from 110 to 102 dB, which cuts a destroyer's hearing range on her by more than half, and cuts her magnetic field to about a tenth. It is for the last half hour, not the whole patrol: the battery is short, and restarting the reactor is a transient a listener may call.
+
+**Close in, magnetism.** Silence does not hide the hull's field. A destroyer's magnetometer feels an attack boat at about 14 km with the reactor running, and at about 6 to 7 km with it shut down. A cold reactor and gentle turns shrink it. Do not let a hunter pass that close if you can help it.
+
+### The hunters
+
+**The destroyer.** The navy's hunter of ghosts: fast (1.2 g), nimble, two tubes, and gauss guns to 60 km. It hunts by sprint and drift: it burns towards you, then cuts the drive to listen. The drift is your chance to move, because its ears are open but it is not closing. It hears a drifting ghost at over 200 km, and its ping finds one within about 150 km. Expect it to come down your bearing when it hears you, and to step out of your plane and wait when it loses you close in. After you fire, a seasoned or escort captain sweeps out along the launch bearing, pinging as it drifts, and a drilled one may fire straight runners straight back down it. Beat it by hearing it far off, staying out of its ping, and shooting from outside what it can hear.
 
 **Hunting groups.** Warships that hunt together share every bearing over a datalink. Two of them hearing you is a cross-fix: they have your range at once, with no leg change. A group staggers its sprints, so one ship is always listening, and only its lead pings while the others listen in silence. If it loses you, the ships spread out and search their own lanes. The ship with the strongest active array is the group's **flagship** and does all the pinging; a cruiser always takes that job. Group-mates know where each other are over the datalink, so they are never contacts: your own group shows on the nav plot and the chart as `▲` with each ship's name. Against a group, stay far beyond its hearing while you manoeuvre, and slip through the gaps between ships rather than past any one of them. A lone ship's faint blip is easy to doubt; the same blip from three ships is not.
 
+**Read their transmissions.** Every bearing a group shares is a transmission. A group that was quiet and is suddenly loud on EM has found something, perhaps you. A jammer is a confession: inside its cone it is the loudest thing in the sky, on its true bearing. Jam only once you have been found anyway, and remember it floods your own array along its cone.
+
 **Captains differ.** A green captain charges, pings constantly and fires on a FAIR solution; a seasoned one sprints, drifts, listens, plans an intercept, and waits for a GOOD solution inside 300 km before it shoots. A **silent** captain flies an attack boat the way you should: it never pings, creeps at low throttle with long drifts to listen, and shoots from up to 500 km on a GOOD solution. Same hull, different danger.
 
-**The cruiser.** The quietest ears in the fleet (a towed array, though with a wide deaf arc astern), the loudest active array, six tubes, and a big, loud hull that turns slowly. It can't hide like an attack boat or sprint like a destroyer. It wins by hearing first, shooting from range, and leading a group whose ears feed its tracker.
+**The cruiser.** The flagship of a battle group, with the finest array in the fleet, the loudest ping (185 dB), six tubes, gauss guns to 60 km, and two beams that reach 200 km and hit hardest inside 50. It rarely misses what it holds, and it takes a whole salvo to sink. Its weaknesses are size and noise: it gives off 150 dB drifting, turns at under 1° a second, and is deaf in a wide arc astern (70°). Its linked torpedoes are steered by its latest solution, so while one runs the cruiser is transmitting. A quiet boat can choose its moment against a cruiser. Its escorts are the real problem.
 
-**The attack.** Hear first, get a solution by leg changes while you are still quiet, and fire from between the arming distance and a few hundred km. Decide before you shoot what the target will take: one good hit sinks a merchant of ordinary size and only cripples a destroyer, and a cruiser or tanker is a whole salvo. Fire too far out and the target has time to change course; too close and the warhead never arms.
+**The carrier.** The biggest, loudest hull in the fleet, and the best prize a ghost can take. It has no tubes and only short-range guns (40 km), and its own array hears a quiet boat only a few hundred km off. Its craft are its eyes and its reach. Pickets fly out past 1,000 km and listen, strikes carry homing torpedoes, and screens stay close and shoot down what comes in. Every launch is a loud transient that tells you where the deck is. Craft have short legs: a craft ranges only within a radius of its carrier, so know where the deck is and you know where they can reach. When craft come near, go dark: silent running, radio silence, drift. A craft finds what is loud; the destroyers it calls in find what is careless. A loud craft can draw off a homing spread, so use straight runners on the carrier. Sink it and its craft have nowhere to land.
+
+**Escorts and convoys.** An escort stays within about 200 km of its convoy, and with a threat in hand it jams it and moves between it and the merchants. Merchants that hear trouble turn their sterns to you and run flat out, so plan for a stern chase, and when one goes up the rest scatter. In late war two escorts sail together and share every bearing.
+
+### Cover
+
+**Terrain hides both sides.** A moon or a planet blocks every sensor, for you and for the hunter. Dust swallows signal, about 20 dB for every 1,000 km of path inside it; cut the drive well inside a cloud, not at its edge. An ion cloud deafens whatever is inside it, so let a hunter follow you in. A storm's cracks mask every array near them for a second: move under the crackle. A rock field hides you and stops torpedoes, but it strikes you by the square of your speed: creep through, or raise the shield and be heard. In a wreck field you are one warm line among many while you hold still, and the only one that creeps when you move. The chart is not complete, for you or the enemy.
+
+### The attack
+
+**Hear first, shoot first.** Get a solution by leg changes while you are still quiet, and fire from between the arming distance and a few hundred km. Decide before you shoot what the target will take: one good hit sinks a merchant of ordinary size and only cripples a destroyer, and a cruiser or tanker is a whole salvo. Fire too far out and the target has time to change course; too close and the warhead never arms.
+
+**Then leave.** Your firing point is on a line every escort that heard the launch now knows. Move off the bearing, quietly, before they arrive. Fire from well above or below a drilled captain, so it cannot answer down your bearing.
+
+**When a torpedo comes.** Turn away and push the drive (`push`: a quarter more thrust, 3 dB louder, and about four minutes before something gives). A decoy (`d`) along your old course draws a homing torpedo while you turn away, and a jammer breaks a seeker's lock. Nothing jams a straight runner: get off its line. Set a standing order for a lure before the fight, so the first call is answered at once.
 
 **Think in three dimensions.** Every display is flat and every habit is too, yours and the enemy's. A ship that has your bearing comes down it, on the plane it last saw you on. Pitch out of that plane, cut the drive and let it pass: it arrives in your array before you arrive in its, and it leaves with you in its baffles. The enemy knows the move: a captain that had you and lost you close in steps out of your plane and waits, so a bearing that has gone quiet is a place not to be, not a place to go. Clear your baffles up and down as well as round. In a cloud, where nothing hears far and homing seekers are deaf, a straight runner from below is the quiet kill. Crews call the drop itself a *Quirk's Standoff*: you hang under the other ship's plane, cold and silent, and whoever speaks first loses. Naval 2 teaches it.
 

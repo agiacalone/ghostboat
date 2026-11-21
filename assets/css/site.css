@@ -215,3 +215,6 @@ figcaption { color: var(--label); font-size: 0.9em; margin-top: 0.4em; }
   border: 1px solid var(--frame); padding: 0 1ch; margin-top: 0.3em; cursor: pointer;
 }
 .hang button:hover { border-color: var(--value); }
+
+/* A signal's header and its break (BT), as a message form prints them. */
+.signal { margin: 0 0 0.8em; color: var(--label); font-family: var(--mono); white-space: pre; }

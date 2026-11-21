@@ -10,6 +10,13 @@
 
 *Out of uniform:* Ghost Boat is a real-time submarine game set in space and played in the terminal, with the physics taken seriously. Ghosts are called boats by tradition, as submarines are. It runs on Linux, macOS and Windows. Every action has a key, and the mouse is optional. It plays over mosh, or over plain SSH with `--metered`. The rest of this page is the fleet talking.
 
+> ```
+> FM COMGHOSTFLT
+> TO ALL GHOST BOATS
+> INFO FLEET TRAINING COMMAND
+> BT
+> ```
+>
 > **FLOTILLA NOTICE 1. POSTED AT ALL DEPOTS.**
 >
 > **CAPTAINS WANTED** for long patrols in the black. Hazardous duty. Small boat, seventy crew, four tubes, and no one coming for you. Ability to sit very still is required. Ability to count bearings is preferred.
@@ -19,6 +26,8 @@
 > Applications: [recruitment@ghost-boat.net](mailto:recruitment@ghost-boat.net)
 >
 > By order of RADM A. Giacalone, Commander, Ghost Fleet (COMGHOSTFLT).
+>
+> `BT`
 
 ## Service in the black
 
@@ -115,6 +124,12 @@ The trainer runs in any modern terminal, as large as the room allows. 160 column
 [![The PF3 theme, after the IBM 3270's green screen: the same convoy hunt in phosphor green on black](screenshots/pf3.png)](screenshots/pf3.png)
 
 *PF3, a 3270's green screen.*
+
+## Report for duty
+
+Ghost Boat is in play-testing. Builds of 0.11.0 are issued for Linux, macOS and Windows: write to [recruitment@ghost-boat.net](mailto:recruitment@ghost-boat.net) and say which you sail on. Play-testers whose reports help shape the game get a free copy when 1.0 ships.
+
+It runs in any modern terminal, 160 columns by 45 rows or larger. A keyboard is all you need.
 
 ## Buy war bonds
 

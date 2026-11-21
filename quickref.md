@@ -83,7 +83,7 @@ Any key skips the sign-in. `C` on the title screen (or Options, then Captain and
 | `s` | When the engagement is over: keep the play, the save from just before the end, the end itself and the replay |
 | `k` | When the engagement is over: keep playing. The result stands as recorded |
 | `i` | After a failure with an instructor's note: the replay at the moment it blames. Also jumps there inside the replay |
-| `t` `T` `e` `m` | Theme (next, back), colour effects, sound |
+| `T` `e` `m` | Theme menu (each shown as you move to it; `Enter` keeps, `Esc` puts back), colour effects, sound |
 
 ## The conn
 
@@ -102,6 +102,7 @@ Press `Enter` with nothing dialled (or `:`) and type an order. `↑` brings back
 | `match s1` | In testing: the helm points for the burn that matches s1's velocity and says how much; you give the throttle |
 | `reverse two thirds`, `reverse 50` | End for end with the drive cut, then the drive at two thirds (or one third, standard, full, or a percentage) |
 | `point 100,-50,20` | Point at a chart position, km |
+| `helm wpt`, `helm wpt2` | Point at the next waypoint, or the second, bearing and pitch |
 | `all ahead one third`, `two thirds`, `standard`, `full`, `flank`; `thr 40`; `all stop` | Drive orders. Flank pushes the drive |
 | `burn to 2.5`, `burn 30` | A controlled burn, then coast |
 | `full stop`, `slow to 0.5` | Turn end for end and burn down to rest, or to a speed |
@@ -267,7 +268,7 @@ Symbols: `○` friendly, `◇` hostile, `□` neutral, `✣` unknown. A fighter 
 
 ## The career
 
-New Game starts a career: one captain, one boat and one war, in patrols from base. At sea the console shows the patrol chart, north up: the bodies with their wells' edges dashed, the places, our boat, and each contact report (`◇r1`) inside the circle of its error, which grows as it ages. Traffic nobody reported is not drawn. The strip under the chart holds the three clocks: fuel against the bingo line `│` (the fuel home at standard warp plus a 10% reserve; `BINGO` below it), food (water rations included) and crew wear. None is restored at sea.
+New Game starts a career: one captain, one boat and one war, in patrols from base. At sea the console shows the patrol chart, north up: the bodies with their wells' edges dashed, the places, our boat, and each contact report (`◇r1`) inside the circle of its error, which grows as it ages. The arrow keys or a drag move the chart, and `h` brings it home. Traffic nobody reported is not drawn. The strip under the chart holds the three clocks: fuel against the bingo line `│` (the fuel home at standard warp plus a 10% reserve; `BINGO` below it), food (water rations included) and crew wear. None is restored at sea.
 
 After each patrol comes the yard: the refit is paid in days, by the jobs chosen. The essentials take 30 and the hull is always mended. A damaged system is repaired, or patched for 2 days and capped at 90% until a later refit. From Commander a quirk fixed (10) and fresh torpedoes (3); from Captain new equipment (15). Standing above +2 cuts every job's days, up to a quarter. A hull past about 180 days' work pays the boat off.
 
@@ -282,11 +283,12 @@ Each war keeps a diary, by patrol, with a war patrol report for each patrol: **W
 | `[` `]` | Zoom the chart |
 | `c` | The crew in the side column, or the patrol again |
 | `Enter` or `:` | A chart order |
+| `d` | Drop in: the tactical console where the boat is |
 | `q` | Save and go back to the title |
 
 | Order | Does |
 |---|---|
-| `warp to anvil station`, `warp to base`, `warp to zone` | Course for a place, the base or the ordered zone, round a star's well by a waypoint. Out of warp at each planet's well's edge, normal space until clear. Heading for base before the station time is kept records the reason the facts give, or none |
+| `warp to anvil station`, `warp to base`, `warp to zone` | Course for a place, the base or the ordered zone, round a star's well by a waypoint. Out of warp at each planet's well's edge, normal space until clear. Heading for base before the station time is kept records the reason the facts give, or none. Still at base, before the zone, `warp to base` asks first: the same order again confirms |
 | `warp to wreck` | Course for the nearest wreck still marked (`✕ wreck`, kept three days) |
 | `warp speed 3000` | 500 to 4000 km/s. Faster burns fuel steeply and is easier to notice. An ion storm halves it while it lasts |
 | `drop in` | Into the tactical console where the boat is, with any marked wreck in reach. A well's edge with traffic in reach, a hunter that notices the boat, a ship calling MAYDAY in reach, or an unseen contact in reach drops it in without an order |

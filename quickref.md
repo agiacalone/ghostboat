@@ -62,6 +62,7 @@ Any key skips the sign-in. `C` on the title screen (or Options, then Captain and
 | `a` | Acknowledge the master alarm |
 | `,` `.` | On the fire control window: choose a contact |
 | `Enter` | On the fire control window: put the shot on the conn line |
+| `i` | On the fire control window: the torpedo room, each torpedo with her practice runs (`MK1  23 runs`). In a career the worn fail a little more often |
 
 ## Time and the console
 
@@ -72,21 +73,23 @@ Any key skips the sign-in. `C` on the title screen (or Options, then Captain and
 | `=` | Back to x1 |
 | `step 5m`, `step tti` | Run that long (`30s`, `5m`, `2h`) or to your torpedo's impact, then pause. An alert cuts it short; full iron mode has no steps |
 | `Tab` `v` `V` `z` `L` | Focus a window, change what it shows (`V` steps back; one choice is the chart, fixed to space), swap it into the main window, next layout |
-| `F2` to `F10` | Console setups: bridge, sensors, nav, engineering, comms, science, damage, stealth, travel. `setup weapons` has no key. |
+| `F2` to `F10` | Console setups: bridge, sensors, nav, engineering, comms, science, damage, stealth, travel. `setup weapons` has no key, nor has `setup patrol` (a career fight: the patrol chart). |
 | `s` or `☰` | Menus of every station and every action (the mouse works too) |
 | `l` | The whole ship's log: `1`-`8` kinds, `f` or `c` one contact, `/` search, `Enter` detail, `p` show on the plot. Also in the replay |
 | `N` | Night orders: what wakes you |
 | `S` | Standing orders: what the crew does before you answer, and what each board setting buys |
 | `W` | The plotting menu: filters, layers, shadows, zones |
 | `r` | When the engagement is over: the replay, true tracks and a debrief on a map you can turn and tilt |
-| `s` | When the engagement is over: keep the play, the save from just before the end and the replay |
+| `s` | When the engagement is over: keep the play, the save from just before the end, the end itself and the replay |
 | `k` | When the engagement is over: keep playing. The result stands as recorded |
 | `i` | After a failure with an instructor's note: the replay at the moment it blames. Also jumps there inside the replay |
-| `t` `T` `e` `m` | Theme (next, back), color effects, sound |
+| `t` `T` `e` `m` | Theme (next, back), colour effects, sound |
 
 ## The conn
 
 Press `Enter` with nothing dialled (or `:`) and type an order. `↑` brings back earlier ones.
+
+### Helm and drive
 
 | Order | Does |
 |---|---|
@@ -103,70 +106,130 @@ Press `Enter` with nothing dialled (or `:`) and type an order. `↑` brings back
 | `burn to 2.5`, `burn 30` | A controlled burn, then coast |
 | `full stop`, `slow to 0.5` | Turn end for end and burn down to rest, or to a speed |
 | `beam s1`, `steer s1`, `away s1` | Turn to put a contact abeam, ahead, astern |
+| `put s1 starboard 30`, `put s1 red 045` | Mark the heading that puts s1 that far off the bow (`port`, `green`); `Enter` gives it |
+| `close s1`, `open s1`, `station s1 astern`, `intercept s1` | Mark a course on s1 from your solution: straight at her, away, on station (`abeam`, `ahead`, km), or the lead at your speed; `Enter` gives it |
+| `grav on`, `grav off` | Gravitic thrusters: silent, slow course corrections; MAG shows while they push |
+| `push`, `push off` | Drive past its rating, at a risk |
+
+### Sensors and contacts
+
+| Order | Does |
+|---|---|
+| `contacts` | The watch reads out every contact held: bearing, solution, call |
+| `track s1 1200 090 0.6`, `track s1 off` | Your own track: range, course, speed; the vessel window shows the fit |
+| `classify s1 destroyer`, `classify s1 crew` | Overrule the crew's call on a contact's class, from its lines |
+| `call s3 hostile`, `name s3 fat one`, `ignore s3`, `pin s3` | Your own call on a contact, beside the crew's |
+| `drop s1` | Take a silent contact off the table until it is heard again |
+| `tune 045`, `tune s1`, `tune t2`, `tune off` | Listen down one bearing, a contact's or your own torpedo's |
+| `sensors off`, `sensors on` | Passive sensors: off saves a little power and leaves you deaf |
+
+### Weapons
+
+| Order | Does |
+|---|---|
 | `fire s1`, `salvo 3 s1`, `fire s1 homing`, `fire s1 straight`, `fire s1 mk2h` | Torpedoes: homing, or a straight runner |
 | `fire 045`, `fire 045 +10` | Straight down a bearing by hand, level or at an elevation |
 | `fire s1 burn 30`, `fire s1 speed 2` | Burn 30 s then coast silently; or set the speed, km/s over yours, and fire control sets the burn |
 | `fire s1 contact`, `exploder contact`, `exploder prox` | Exploder for one salvo, or standing |
 | `seeker 800 narrow`, `seeker off` | Homing seeker on 800 km out, looking ahead only; back to the standard. Stands until changed |
-| `track s1 1200 090 0.6`, `track s1 off` | Your own track: range, course, speed; the vessel window shows the fit |
-| `classify s1 destroyer`, `classify s1 crew` | Overrule the crew's call on a contact's class, from its lines |
-| `o` (launch page) | The bare conn: no gauges, rose or plot, only the console and the watch |
-| `contacts` | The watch reads out every contact held: bearing, solution, call |
-| `hail s1`, `reply` | Call a contact on 16; answer the last station that called. On the air, and heard |
-| `radio silence`, `datalink on` | Hold radio silence, or lift it and share the picture with your group |
-| `transponder on`, `transponder off` | Broadcast your beacon, or go dark. `xpdr` for short; header shows `XPDR ON` |
-| `grav on`, `grav off` | Gravitic thrusters: silent, slow course corrections; MAG shows while they push |
-| `sweep on`, `sweep off` | Minesweeping gear: a 20 km lane on a sweeper craft, quiet; 6 km on a destroyer, loud |
 | `check s1` | Fire control's answer for each weapon, without firing |
-| `drop s1` | Take a silent contact off the table until it is heard again |
-| `mark 045`, `mark s1`, `mark b off`, `mark off` | Up to three bearing marks on the rose, the plan and the 3-D plot |
 | `load 2 mk2h`, `load 2 empty`, `load 2 rack` | Change a tube now: a reload's time, and it is heard |
 | `reload 2 mk1`, `reload 2 same`, `reload 2 empty` | Choose what a tube takes next: silent |
+| `lase s1` | One beam shot at S1 |
+| `carrier s1 40m` | A cold carrier: it coasts, then releases two torpedoes |
+| `overload on`, `overload off` | Guns over their rating, at a risk |
+
+### Defence and jamming
+
+| Order | Does |
+|---|---|
 | `jam s1`, `jam s1 60%`, `jam +`, `jam off` | Jamming, at a share of full power |
 | `eccm on`, `eccm 60%`, `eccm +`, `eccm off` | Counter-jamming, likewise |
 | `jammer`, `jammer 090` | Launch a jammer drone along your course, or on a bearing |
-| `lase s1` | One beam shot at S1 |
-| `carrier s1 40m` | A cold carrier: it coasts, then releases two torpedoes |
+| `sweep on`, `sweep off` | Minesweeping gear: a 20 km lane on a sweeper craft, quiet; 6 km on a destroyer, loud |
+
+### Power and engineering
+
+| Order | Does |
+|---|---|
+| `silent`, `ultra`, `normal` | Rig the boat |
+| `reactor auto`, `reactor cap 30`, `reactor 40`, `scram` | Run the reactor: automatic, capped (a little quieter), held, or shut down |
+| `board`, `board patrol` | List or set the board's named settings: `standard`, `patrol`, `quiet`, `battle` |
+| `board preview patrol` | What a setting would buy and cost on your boat |
+| `shed tubes`, `restore tubes`, `restore all` | Open or close a breaker |
+| `priority tubes 3`, `priority auto` | Reorder the board |
+| `aux on`, `aux off`, `aux auto` | Run the generator |
+| `bank a off`, `bank a on` | Isolate a battery bank |
+| `refuel`, `refuel stop` | Take fuel from a tanker or base alongside |
+| `mag status` | The boat's magnetic field, what makes it, and how close a magnetometer must come to feel it |
+
+### Air and damage control
+
+| Order | Does |
+|---|---|
+| `scrubbers off`, `electrolysis off`, `candle`, `air auto` | The air by hand; `air auto` gives it back to the chief |
+| `dc quiet`, `dc work` | Stand the damage parties down, or send them back |
+| `battery`, `heat`, `fuel`, `prop`, `hull`, `air`, `cabin`, `crew`, `helm`, `pos`, `alt`, `accel`, `turn`, `tubes`, `guns`, `pinger`, `cm`, `sig` | The crew reads that gauge from its own instruments: the cross-check for a broken gauge |
+| `gauges` | The gauges damage control knows are broken |
+
+### Radio
+
+| Order | Does |
+|---|---|
+| `hail s1`, `reply` | Call a contact on 16; answer the last station that called. On the air, and heard |
+| `radio silence`, `datalink on` | Hold radio silence, or lift it and share the picture with your group |
+| `transponder on`, `transponder off` | Broadcast your beacon, or go dark. `xpdr` for short; header shows `XPDR ON` |
+
+### Flight deck
+
+| Order | Does |
+|---|---|
 | `launch picket`, `launch picket 2`, `launch screen`, `launch sweep` | A carrier's flight deck: craft that listen far out, guard you close in, or sweep a lane through a charted minefield |
 | `launch strike s3`, `launch strike 4 s3` | Strike craft at a contact with a solution: two unless you say |
 | `recall`, `recall picket`, `recall all` | Call craft home; launches still waiting are struck off |
 | `deck`, `sorties` | The hangar and the launch queue; each craft's mission, Δv, time left and where it is |
 | `show deck` | The flight deck window: every craft with its Δv and endurance bars |
-| `push`, `push off` | Drive past its rating, at a risk |
-| `overload on`, `overload off` | Guns over their rating, at a risk |
-| `dc quiet`, `dc work` | Stand the damage parties down, or send them back |
+
+### Plots and displays
+
+| Order | Does |
+|---|---|
+| `o` (launch page) | The bare conn: no gauges, rose or plot, only the console and the watch |
+| `mark 045`, `mark s1`, `mark b off`, `mark off` | Up to three bearing marks on the rose, the plan and the 3-D plot |
 | `shadow s1`, `shadow own`, `shadow off` | Shade what a contact cannot see, by your estimate of it |
 | `filter held`, `filter off` | What a rose shows (also `weapons`, `solved`, `hostile`, `torpedoes`, `courses`) |
 | `layer reach`, `layer loud`, `layer reset` | What a plot draws (also `lob`, `ellipses`, `vectors`, `trail`, `rings`, `labels`, `bands`, and `craft`, our craft's rings home) |
 | `vectors 30`, `vectors auto` | The plot's vector time |
 | `zone`, `zone alpha 500`, `zone off alpha`, `zones` | A tripwire box: the crew calls when a contact's estimate enters |
 | `guard port 270 330` | A guard arc off the bow: the crew calls a bearing on it |
-| `silent`, `ultra`, `normal` | Rig the boat |
-| `reactor auto`, `reactor cap 30`, `reactor 40`, `scram` | Run the reactor: automatic, capped (a little quieter), held, or shut down |
-| `scrubbers off`, `electrolysis off`, `candle`, `air auto` | The air by hand; `air auto` gives it back to the chief |
-| `sensors off`, `sensors on` | Passive sensors: off saves a little power and leaves you deaf |
+| `ruler s1`, `ruler us 045/500`, `leg s2`, `rulers` | The navigator's ruler: true bearing, distance, and time to run at your speed; a chain sums. `ruler off`, `rulers clear`. `R` lays one point to point |
+| `lop 045 10m`, `lop s1` | A line of position from where you were, or along a contact's bearing. Two cross at a fix |
+| `sheet attack`, `sheet show nav`, `sheet clear` | Sheets of glass, one per job: nav, attack, search, or your own. `G` takes up the next; `F4` brings up nav |
+
+### Crew and reports
+
+| Order | Does |
+|---|---|
 | `shield status`, `reactor status` | Any system reports its setting: also the transponder, assist, radiators, sensors, generator, scrubbers, electrolysis and jammer |
-| `battery`, `heat`, `fuel`, `prop`, `hull`, `air`, `cabin`, `crew`, `helm`, `pos`, `alt`, `accel`, `turn`, `tubes`, `guns`, `pinger`, `cm`, `sig` | The crew reads that gauge from its own instruments: the cross-check for a broken gauge |
-| `gauges` | The gauges damage control knows are broken |
 | `reports all`, `reports normal`, `reports quiet` | How much the crew reports on its own. Kept for the next exercise |
-| `mag status` | The boat's magnetic field, what makes it, and how close a magnetometer must come to feel it |
-| `board`, `board patrol` | List or set the board's named settings: `standard`, `patrol`, `quiet`, `battle` |
-| `board preview patrol` | What a setting would buy and cost on your boat |
 | `standing`, `standing lure decoy`, `standing off` | The crew's reactions. Rows: `lure`, `evade`, `array`, `jam`, `pinged`, `battery` |
-| `shed tubes`, `restore tubes`, `restore all` | Open or close a breaker |
-| `priority tubes 3`, `priority auto` | Reorder the board |
-| `aux on`, `aux off`, `aux auto` | Run the generator |
-| `bank a off`, `bank a on` | Isolate a battery bank |
-| `refuel`, `refuel stop` | Take fuel from a tanker or base alongside |
-| `save`, `save before the attack` | Save the exercise (not in iron mode) |
+| `red`, `blue`, `yellow`, `white` | Set the condition by its colour |
 | `log <text>` | Write your own line in the log, handy for play-test notes |
 | `filter s1`, `filter eng`, `filter off` | Narrow the log window |
+
+### Time and saves
+
+| Order | Does |
+|---|---|
 | `night`, `night transit`, `night patrol`, `night ambush`, `night standing` | Night orders |
 | `call me on ping`, `call me pause on contact`, `call me never on lost` | What reaches you. Torpedoes, hits and the end always do |
 | `call me at 02:00`, `call me battery 30`, `call me waypoint`, `call me off` | Your own calls |
-| `call s3 hostile`, `name s3 fat one`, `ignore s3`, `pin s3` | Your own call on a contact, beside the crew's |
-| `red`, `blue`, `yellow`, `white` | Set the condition by its colour |
-| `tune 045`, `tune s1`, `tune t2`, `tune off` | Listen down one bearing, a contact's or your own torpedo's |
+| `save`, `save before the attack` | Save the exercise (not in iron mode) |
+
+### Using the conn
+
+| Order | Does |
+|---|---|
 | `all stop; silent` | Several orders on one line |
 | `help` | List every order |
 | `help fire` | Just that order, and what it does |
@@ -182,7 +245,7 @@ Press `Enter` with nothing dialled (or `:`) and type an order. `↑` brings back
 | `SIG` | dB above your threshold. Rising: closing or getting louder. Falling: opening or going quiet |
 | Rose `HEARD AT ~` | How far off you could be heard now, by your own estimate. A red-shaded contact is inside it |
 | Course | Click the focused plan to arm one; `Enter` gives it, `Esc` drops it, and it lapses after 8 s |
-| Overlay | `p` takes up the pencil: click a note, drag a line, click a mark to rub out. Pencil down: drag a note to move it |
+| Overlay | `p` takes up the pencil: click a note, drag a line, click a mark to rub out. Pencil down: drag a note to move it. `R` takes up the ruler, `G` the next sheet |
 | Plot marks | `⊗ launch 12m` is where you were loud: a ring grows at your speed. It never says whether anyone heard |
 | Plot | Drag to pan; `centre s1` follows a contact, `c` comes home at the standard range |
 | `HEAR` | Which sensors have it: `P` passive array, `I` infrared, `X` beacon (it is announcing itself), `x` beacon gone silent, `E` EM (it is transmitting), `M` magnetic (it is close) |
@@ -201,3 +264,63 @@ Symbols: `○` friendly, `◇` hostile, `□` neutral, `✣` unknown. A fighter 
 - **A jammer blinds a seeker.** Against jamming escorts, fire straight runners on a `GOOD` solution: on `GOOD` the fan closes.
 - **Jamming is a confession.** It hides you inside its cone and tells everyone else exactly where you are.
 - **Civilians and the navy are not equals.** A civilian hull is heard far off and hears little. A warship is the reverse.
+
+## The career
+
+New Game starts a career: one captain, one boat and one war, in patrols from base. At sea the console shows the patrol chart, north up: the bodies with their wells' edges dashed, the places, our boat, and each contact report (`◇r1`) inside the circle of its error, which grows as it ages. Traffic nobody reported is not drawn. The strip under the chart holds the three clocks: fuel against the bingo line `│` (the fuel home at standard warp plus a 10% reserve; `BINGO` below it), food (water rations included) and crew wear. None is restored at sea.
+
+After each patrol comes the yard: the refit is paid in days, by the jobs chosen. The essentials take 30 and the hull is always mended. A damaged system is repaired, or patched for 2 days and capped at 90% until a later refit. From Commander a quirk fixed (10) and fresh torpedoes (3); from Captain new equipment (15). Standing above +2 cuts every job's days, up to a quarter. A hull past about 180 days' work pays the boat off.
+
+Each war keeps a diary, by patrol, with a war patrol report for each patrol: **War diary** at base, or `diary` at base or on the chart. When the war ends it is written to `diaries/` beside the saves, as plain text and Markdown, and **War diaries** on the main menu reads it again.
+
+### On the chart
+
+| Key | Does |
+|---|---|
+| `Space` | Run or stop chart time. Outside iron mode it opens stopped; full iron never stops it, limited iron three times for 30 s |
+| `+` `-` `=` | Chart time faster, slower, slowest: 10 minutes to a day a second. It drops to the slowest when something happens |
+| `[` `]` | Zoom the chart |
+| `c` | The crew in the side column, or the patrol again |
+| `Enter` or `:` | A chart order |
+| `q` | Save and go back to the title |
+
+| Order | Does |
+|---|---|
+| `warp to anvil station`, `warp to base`, `warp to zone` | Course for a place, the base or the ordered zone, round a star's well by a waypoint. Out of warp at each planet's well's edge, normal space until clear. Heading for base before the station time is kept records the reason the facts give, or none |
+| `warp to wreck` | Course for the nearest wreck still marked (`✕ wreck`, kept three days) |
+| `warp speed 3000` | 500 to 4000 km/s. Faster burns fuel steeply and is easier to notice. An ion storm halves it while it lasts |
+| `drop in` | Into the tactical console where the boat is, with any marked wreck in reach. A well's edge with traffic in reach, a hunter that notices the boat, a ship calling MAYDAY in reach, or an unseen contact in reach drops it in without an order |
+| `intercept r1` | Course to just clear of the well edge a lane near report r1's estimate crosses, or for the estimate with no lane near; the contact may cross elsewhere, or never come. A report from one of our boats bears her name |
+| `orders`, `news` | The order and its date; the news heard this patrol, newest first, each with its age at arrival. At base `news` opens the briefing |
+| `order 1`, `order 2` | At base, keep one of command's two orders |
+| `yard` | At base, the refit waiting: each job and its days, and the day she sails. Command's orders come once it is confirmed |
+| `diary` | The war diary, by patrol, at base or on the chart. On the chart, chart time runs on behind it, and anything that stops the chart closes it. `j` `k` move, `PgUp` `PgDn` jump a patrol, `Enter` on a sailing or a return opens that patrol's report, and on a fight opens it at that fight's attack data (`Enter` again, its chart log), `n` writes a note, `w` writes the diary's file, `Esc` goes back |
+| `note <text>` | A line of your own in the war diary, under today's date, at most 120 characters. At base or on the chart; in a fight, `note` writes on the plot |
+| `send report` | The boat's sightings to command by the relay in reach. A transmission: hunters near enough hear it. Out of reach, refused: the report goes home with the boat |
+| `intel`, `intel lanes off`, `intel areas on`, `intel sightings off` | The overlays held, with source and age; hide or show a kind. A bearing is a line from where it was heard |
+
+Radio is light: every message is late by the light time, and it fades beyond a system. The column's `RADIO` line says which relay is in reach and how late command's word arrives, `Enemy system: their traffic only.`, or `No signal.`. An order missed at sea is learned at the next port. Drift Station is a port: fuel and a briefing, no food or rest. People aboard beyond the crew eat: the column gives the days of food they cost.
+
+### In a career fight
+
+| Order | Does |
+|---|---|
+| `warp out` | Leave the fight for the chart: clear of every well's edge, no warship held (a contact the crew has classed as one), for the whole spin-up (`warp_spinup_s`, 15 minutes by default). A warship heard only by her pings does not count, unless the crew think she may have us |
+| `recover` | Bring aboard a lifeboat's or pod's people as survivors, of any side: within 2 km and all but stopped, 10 minutes. How many is unknown until they are aboard. An order to pick up survivors counts them. In a lesson, the same order brings aboard a practice shot adrift by her beacon |
+| `land` | Put the operatives ashore at the ordered point: within 5 km and all but stopped, 30 minutes |
+| `search s3` | Search a crippled merchant: within 2 km and all but stopped, three hours. Finds her cargo, papers or dispatches, and a passenger who matters, brought off as a prisoner |
+| `confirm fire` | Fire on a contact the crew call a pod or lifeboat, within 30 s of their query. A torpedo whose line or spread passes one is queried too. A grave breach: the patrol fails and the captain is relieved |
+
+`setup patrol` shows the patrol chart as it stood at the drop. A career fight ends only when you warp out or the boat is lost; inside a well, the goal "Clear the well." is where warp becomes possible, and meeting it ends nothing. While the fight runs, `q` does not leave it. `Q` saves the fight and goes back to the title. Tonnage counts only once the boat is home.
+
+### The crew
+
+Nine named crew, mixed, and the hands. Skill reads Green, Qualified, Steady, Seasoned or Expert; wear Fresh, Tired, Worn or Spent; how well they know the boat none, some, good or full. The base's **Crew** screen shows them (`Space` picks two, `s` trades their watches, `w` the scheme); while command has taken the exec, or offers a newer boat, the base lists the choices. **Shore leave**: 14 days ashore, slower wear for three patrols.
+
+| Order | Does |
+|---|---|
+| `watch three`, `watch port` | Three sections, or port and starboard (twice the load, two sensor operators on the array). Never in a fight |
+| `swap nav weps`, `swap exec okafor` | Trade two watches, by post or family name: two officers or two sensor operators |
+| `drill`, `drill off` | Drill on station: everyone learns, and tires faster |
+| `exec attack`, `exec attack off` | The exec leads the next attack: on duty all fight, helm and engine orders about 15% slower, learning twice as fast |
+| `show crew` | The crew window in a career fight: `▸` marks who has the watch |

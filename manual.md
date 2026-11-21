@@ -2,7 +2,7 @@
 
 *Issued with every registered vessel. Read it before the hull is breached, not after.*
 
-**Reading this at the console:** press `F1` at any time, or `?` for the quick reference card and then `h` for this manual. The trainer pauses while you read. `↑`/`↓` scroll a line; `PgUp`/`PgDn`, `Shift+↑`/`Shift+↓`, or `b`/space scroll a page; `g`/`G` jump to the start and end; `←`/`→` jump between sections, and `?` or `Esc` closes the manual and puts the exercise back as it was.
+**Reading this at the console:** press `F1` at any time, or `?` for the quick reference card and then `h` for this manual. The trainer pauses while you read. `↑`/`↓` scroll a line; `PgUp`/`PgDn`, `Shift+↑`/`Shift+↓`, or `b`/space scroll a page; `g`/`G` jump to the start and end; `←`/`→` jump between sections (on the quick reference, also between the groups of conn orders), and `?` or `Esc` closes the manual and puts the exercise back as it was.
 
 You command a ship by its instruments. A ghost boat has no portholes: at a kilometre a second, the dust of space would sandblast the glass in minutes, and a ship worth seeing is hundreds of kilometres off and dark. You will never see a map of where the enemy is. You will see bearings, signal strengths and estimates, and you will decide what they mean. This manual explains every instrument, every control and every rule the trainer uses. The spec sheets near the end come straight from the fleet's own data, so they are always current.
 
@@ -46,10 +46,11 @@ Sink 'em all, skipper. Then bring my boat back.
 19. [Tactics](#19-tactics)
 20. [Goals and scoring](#20-goals-and-scoring)
 21. [The war campaign](#21-the-war-campaign)
-22. [Scenarios](#22-scenarios)
-23. [Ship registry and specifications](#23-ship-registry-and-specifications)
-24. [Glossary](#24-glossary)
-25. [Enclosures](#25-enclosures)
+22. [The career](#22-the-career)
+23. [Scenarios](#23-scenarios)
+24. [Ship registry and specifications](#24-ship-registry-and-specifications)
+25. [Glossary](#25-glossary)
+26. [Enclosures](#26-enclosures)
 
 ## 1. How the trainer works
 
@@ -72,7 +73,7 @@ flowchart LR
   C --> L
   F -. "the launch is heard" .-> E["The enemy hunts<br/>down your bearing"]
   E -. "you are tracked" .-> X["Found"]
-  style X fill:#ffdce0,stroke:#cf222e,color:#1a1a1a
+  style X fill:#ffdce0,stroke:#cf222e,colour:#1a1a1a
 ```
 
 1. **Listen.** Drift with the drive off. A drifting ship is quiet and its own array is at its best.
@@ -139,7 +140,7 @@ The civilian tutorials teach the autopilot; the naval ones teach orders. See [Co
 └ key bar ─────────────────────────────────────────────────────────────────── ┘
 ```
 
-Instruments follow one rule: **labels are dim, values carry the color, and color means something is wrong.** A quiet, green board is a good board. Look for the one reading that has changed color.
+Instruments follow one rule: **labels are dim, values carry the colour, and colour means something is wrong.** A quiet, green board is a good board. Look for the one reading that has changed colour.
 
 ### You are the captain
 
@@ -154,12 +155,12 @@ The console is a frame that never moves (the header, the goals and the key bar) 
 | Key | Does |
 |---|---|
 | `Tab` / `Shift-Tab` | Move the focus to the next or previous window. The focused window's frame is bright, with a `◆` in its corner. |
-| `v` | Change what the focused window shows: waterfall, rose, nav plan, nav profile, 3-D, chart, engineering, damage, contacts, status, log, comms, survey, vessel, fire control, and on a carrier the flight deck. Only the focused window changes, and it skips instruments already on screen. `V` steps back the other way. `show NAME` on the conn puts one in a second window on purpose. |
+| `v` | Change what the focused window shows: waterfall, rose, nav plan, nav profile, 3-D, chart, engineering, damage, contacts, status, log, comms, survey, vessel, fire control, on a carrier the flight deck, and in a career fight the patrol chart and the crew. Only the focused window changes, and it skips instruments already on screen. `V` steps back the other way. `show NAME` on the conn puts one in a second window on purpose. |
 | `z` | Swap the focused window into the main window. Press `z` again (the focus follows it) to put it back. |
 | `L` | Next layout: **Bridge** (main window top left, two beside it, two below), **Tactical** (main window across the top, four below), **Focus** (main window takes most of the screen, four in a column beside it). |
 | `n` | Step the focused window through rose, plan, profile and 3-D, if it is one of those. |
 | `o` | True or relative bearings on every bearing display at once (rose, waterfalls, contacts). A window you switch to, and each built-in setup, takes up the same frame. For a mixed setup, set windows one by one on the conn: `rose relative`, `waterfall true`, `contacts relative`; a setup you save keeps the mix. |
-| `i` | The focused window between the captain's summary and the detail (engineering, damage control). |
+| `i` | The focused window between the captain's summary and the detail (engineering, damage control), or fire control between its grid and the torpedo room. |
 
 The bottom strip holds the log by default. Your windows and layout carry from one engagement to the next.
 
@@ -196,7 +197,7 @@ Two **dynamic windows** open over the main window by themselves, then close:
 | `HULL 70%` | You have been hit: hull integrity left. |
 | `MASTER CAUTION` / `MASTER WARNING` | The annunciator. Caution: a system has been damaged. Warning: one has failed, or the hull is below 30%. Flashes until you acknowledge it with `a`; a worse alarm relights it. |
 | `ASSIST` | Lit when flight assist is engaged. Shown only if you have a compensator. |
-| `DUST` `ION` `STORM` | You are inside a nebula of that kind, shown in its color. See [Nebulas](#12-nebulas). |
+| `DUST` `ION` `STORM` | You are inside a nebula of that kind, shown in its colour. See [Nebulas](#12-nebulas). |
 | `LOST` | Your ship has been sunk. |
 | `T+HH:MM:SS  xN` | Mission clock and time compression. `PAUSED` when paused. A challenge starts running at x1. A resumed save opens paused, as may a lesson that asks you to read something first. |
 
@@ -208,7 +209,7 @@ When a mission has goals, a **GOALS** line sits under the header: `○` still to
 
 What each kind of goal asks, and how a patrol is scored: [Goals and scoring](#20-goals-and-scoring).
 
-When the mission ends, a box says **MISSION COMPLETE** or **MISSION FAILED**, with the reason and the time taken. A third ending, **EXERCISE ENDED**, comes when a ship you had to sink gets clean away: unheard for an hour, over 10,000 km off and still opening, with too few left to make the count. It is neither won nor lost, and the records show it as `ended`. `l` reviews the log, and `r` opens the replay. `s` keeps this play: the save from just before the end, as a named save to retry from, and the replay, safe from pruning. `k` keeps playing: the result stands as recorded, the box goes, and the boat sails on for as long as you like, saved as any game is (not after your boat is lost). `q` leaves at once. If you don't keep it, the autosave from before the end goes when you leave, so finished games don't pile up and **Continue** never takes you back into a fight already decided. In iron mode the save goes at the end, and `s` keeps the replay only.
+When the mission ends, a box says **MISSION COMPLETE** or **MISSION FAILED**, with the reason and the time taken. A third ending, **EXERCISE ENDED**, comes when a ship you had to sink gets clean away: unheard for an hour, over 10,000 km off and still opening, with too few left to make the count. It is neither won nor lost, and the records show it as `ended`. `l` reviews the log, and `r` opens the replay. `s` keeps this play: the save from just before the end, as a named save to retry from; the end itself, as a named save to come back to; and the replay, safe from pruning. Loading the end shows this box again, and `k` plays on from there. The result is recorded once, however often you load it. `k` keeps playing: the result stands as recorded, the box goes, and the boat sails on for as long as you like, saved as any game is (not after your boat is lost). `q` leaves at once. If you don't keep it, the autosave from before the end goes when you leave, so finished games don't pile up and **Continue** never takes you back into a fight already decided. In iron mode the save goes at the end, and `s` keeps the replay only.
 
 ### Bearing rose
 
@@ -222,13 +223,13 @@ The galactic centre is a fixed direction, but where an engagement lies against i
 The waterfall has the same two settings (`o` with the others, or `waterfall relative` / `waterfall true` on their own); see [Passive waterfall](#passive-waterfall). The contacts table can show relative bearings too (`o` with the others, or `contacts relative` / `contacts true`). Each window keeps its own setting, so one waterfall can be true and another relative. Console setups save them.
 
 - **Solid line from the centre:** your heading, where the nose points, with its number at the tip (`045°`).
-- **Your own torpedoes** have their own lines, in the threat color, tagged with tube, time to impact and range (`T1 02:32 ~180 km`). They come from fire control, not your sensors: `~` marks dead reckoning from the launch, and a torpedo on a guidance link shows where it really is. Everything else on the rose is what your sensors hold.
-- **Dotted line, in its own color (lime in the default theme):** your velocity, where you are actually going. Its length shows your speed, and its tag gives your course and speed (`012° 0.60 km/s`). Under the centre, `z +0 km` is your own height in the fleet's frame. When it parts from the heading line, you are sliding.
+- **Your own torpedoes** have their own lines, in the threat colour, tagged with tube, time to impact and range (`T1 02:32 ~180 km`). They come from fire control, not your sensors: `~` marks dead reckoning from the launch, and a torpedo on a guidance link shows where it really is. Everything else on the rose is what your sensors hold.
+- **Dotted line, in its own colour (lime in the default theme):** your velocity, where you are actually going. Its length shows your speed, and its tag gives your course and speed (`012° 0.60 km/s`). Under the centre, `z +0 km` is your own height in the fleet's frame. When it parts from the heading line, you are sliding.
 - **Short amber tick outside the ring:** the heading you have ordered, with its number, while the helm is still turning.
 - **Lines toward the ring, labelled `S1`, `S2`…:** contacts, drawn at their last bearing. They all stop at the ring, because the passive array gives no range. Each line carries a tag: the ID, bearing and elevation (`S1 321° +04°`). Once you know the range, from a `FAIR` or `GOOD` solution or a ping echo in the last minute, the tag adds it with its error, how far above (`↑`) or below (`↓`) you it is, and whether it is closing or opening and how fast in km/s: `S1 321° +04° 550 km ±53 ↑38 km closing 0.40`. Ranges are straight lines in 3-D. Without a solution, a held contact's tag says `louder` or `fainter` when its signal has changed over the last half minute. A small rose shows only the ID and range. When many contacts lie in one direction, their tags spread out along their lines and step up or down a row, so none covers another; the most urgent (torpedoes, then anything closing, then `GOOD` solutions, then the nearest) keep their full tags, and the rest shorten to ID and range, or the bare ID. The contacts table always has every number. Held contacts pulse; lost ones are faint.
 - **Hatched wedge astern:** your baffles, the arc your array cannot hear.
 - **Hatched sector with a short name:** a charted body, such as a moon, covering that part of the sky.
-- **Shimmering band inside the ring:** a nebula, across the bearings it covers, in its kind's color. Inside one, the band runs all the way round.
+- **Shimmering band inside the ring:** a nebula, across the bearings it covers, in its kind's colour. Inside one, the band runs all the way round.
 - **Bright ray that fades:** a ping you just heard, pointing at the ship that sent it.
 - **Ring spreading from the centre:** your own ping going out.
 - **`HEARD AT ~` in the top corner:** your own estimate of how far off you could be detected now, by channel (`P 1,240 km · I 310 km · M 12 km`). It takes what you are giving off against a typical hunter's sensors (a destroyer's if you are a warship, a pirate raider's if you are a civilian), drifting quietly, as a boat's own-emissions monitor would. It allows for the cloud you are in, as if the hunter shared your weather; a backdrop, or dust between you and a hunter in clear space, it cannot know. The real listener may be better or worse, so treat it as a guide. Burn, ping, transmit or run the autopilot and the numbers jump.
@@ -277,7 +278,7 @@ A mark's label carries what is known: its range and error once a solution or an 
 
 The **nav plot** can go in any window (see [Windows](#windows)); `n` steps a nav display from the rose to the plot, then its side view, then the 3-D view, then back. `[` and `]` zoom in and out; the title shows the scale (half the plot's height).
 
-**The plotting overlay:** think of a sheet of glass over the map, and a grease pencil. **Click** the focused plan to arm a course toward that point: a pulsing arm runs out from your boat with its bearing, as the helm dial's does on the rose (the 3-D plot shows it too, and both show the ordered heading while the helm swings to it), and `ORDER` shows in the header. Click again to move it, `Enter` gives the order and `Esc` drops it. A clicked course lapses after 8 seconds, with the countdown in the `ORDER` pill, so a stray click can't lie in wait for your next `Enter`; touch the arrows and it becomes a dialled order, which stays. Any movement of the mouse makes it a pan, not a click. If `Enter` gave a clicked course when you meant to open the conn, a letter in the next 2 seconds goes to the conn rather than to a hotkey. Only the bearing is used, and the order is a heading: as with any helm order, on a warship it turns the nose and your course changes when you burn. Press **`p`** to take up the pencil, and the plot's title says `PENCIL`: then **click** to write a note, **drag** to draw a line (a track, a boundary, an intended course), and **click a mark** to rub it out. Press `p` again to put it down. With the pencil down, **left-drag** moves a note. The **right button** works as the pencil at any time, if your terminal passes it to the trainer; iTerm keeps it for its menu unless you change that in its settings. On the keyboard, `note TEXT` on the conn writes at the plot's centre, `overlay undo` takes back the last mark, and `overlay clear` wipes the glass. Marks stay where you put them on the map, show on the plots and the chart, and the ship keeps them with the save, the bearing mark too. They are yours alone: they add nothing the boat doesn't know, and nothing in the simulation reads them.
+**The plotting overlay:** think of a sheet of glass over the map, and a grease pencil. **Click** the focused plan to arm a course toward that point: a pulsing arm runs out from your boat with its bearing, as the helm dial's does on the rose (the 3-D plot shows it too, and both show the ordered heading while the helm swings to it), and `ORDER` shows in the header. Click again to move it, `Enter` gives the order and `Esc` drops it. A clicked course lapses after 8 seconds, with the countdown in the `ORDER` pill, so a stray click can't lie in wait for your next `Enter`; touch the arrows and it becomes a dialled order, which stays. Any movement of the mouse makes it a pan, not a click. If `Enter` gave a clicked course when you meant to open the conn, a letter in the next 2 seconds goes to the conn rather than to a hotkey. Only the bearing is used, and the order is a heading: as with any helm order, on a warship it turns the nose and your course changes when you burn. Press **`p`** to take up the pencil, and the plot's title says `PENCIL`: then **click** to write a note, **drag** to draw a line (a track, a boundary, an intended course), and **click a mark** to rub it out. Press `p` again to put it down. With the pencil down, **left-drag** moves a note. The **right button** works as the pencil at any time, if your terminal passes it to the trainer (see [Mouse, touch and menus](#mouse-touch-and-menus) for iTerm). On the keyboard, `note TEXT` on the conn writes at the plot's centre, `overlay undo` takes back the last mark, and `overlay clear` wipes the glass, every sheet of it. Marks stay where you put them on the map, show on the plots and the chart, and the ship keeps them with the save, the bearing mark too. They are yours alone: they add nothing the boat doesn't know, and nothing in the simulation reads them. The pencil writes on the sheet of glass in hand; there is one for each job (see [Sheets of glass](#sheets-of-glass)), and a ruler to measure with (see [The navigator's ruler](#the-navigators-ruler)).
 
 **Move the plot:** drag it with the mouse to look elsewhere. It stays where you put it, on the map, and its title says `off centre`. `centre s1` on the conn follows a contact you have a position for, at the position your solution or fix gives, and holds its last place if you lose it; its title says `on S1`. `centre` alone comes back to your boat, and `c` goes home: the plots on your boat, and the plots and rose at the standard range, ±2,000 km. All the nav plots share one centre. Clicking a focused plot's title bar swaps it into the main window.
 
@@ -286,13 +287,14 @@ The **nav plot** can go in any window (see [Windows](#windows)); `n` steps a nav
 - **You** are the `◆` at the centre, with a solid heading line, a dotted vector showing where your velocity carries you, tagged with your course and speed, and a fading trail behind.
 - **Vectors** run for a standard time, shown in the plot's title (`vectors 30 min`): 1, 2, 5, 10, 20, 30, 60 minutes and up, as on a ship's radar plot. The plot chooses the step from its zoom and your speed, so your own line stays inside the window as you zoom; at a close zoom and a hauler's best, even a minute's line runs long. Every vector on the plot runs for the same time, so a longer line is a faster ship.
 - **Charted bodies** are drawn to scale, with their names.
+- **Waypoints** (`⊕ WPT 1h25`) are drawn with their arrival ring and the time to reach the ring at your present speed, as a navigator pencils the time against a mark. The time changes as your speed does, and with no way on it is not shown.
 - **Nebulas** are shimmering clouds, to scale, with a name and kind (`the Veil · DUST`).
 - **Lines of bearing** run from where you were when you heard each bearing. If you fly straight they stay parallel and never meet. After a leg change they cross, and **the crossing is the target**. This is TMA, drawn.
-- **TMA estimates** appear as an ellipse (2σ, so the target is very likely inside) with the contact's ID, and a dotted vector showing where its estimated course takes it. Amber means `FAIR`; threat color means `GOOD`. The ellipse shrinks as the solution improves.
+- **TMA estimates** appear as an ellipse (2σ, so the target is very likely inside) with the contact's ID, and a dotted vector showing where its estimated course takes it. Amber means `FAIR`; threat colour means `GOOD`. The ellipse shrinks as the solution improves.
 - **Ping echoes** appear as small amber circles.
 - **The red dotted ring** is your heard-at range, the farthest of the `HEARD AT` estimates on the rose. Anything inside it can probably hear you.
 - **Labels** step aside when they would cover one another; the most urgent (torpedoes, then held contacts, then the nearest) keep their full text.
-- **Your torpedoes** are `•` in the threat color (orange in the default theme) with their tube and time to impact (`T1 02:32`), and a dotted line to the `×` where fire control expects them to meet the target. Your gauss gun slugs are grey dots. Enemy torpedoes are red contacts, with red lines of bearing.
+- **Your torpedoes** are `•` in the threat colour (orange in the default theme) with their tube and time to impact (`T1 02:32`), and a dotted line to the `×` where fire control expects them to meet the target. A practice shot drifting by her beacon after her run reads `T1 adrift`, with no line (see [Practice shots](#practice-shots)). Your gauss gun slugs are grey dots. Enemy torpedoes are red contacts, with red lines of bearing.
 
 ![The 3-D view in Hunter-Killer, turned to put north on the right and tilted 35°. One attack boat sits above your level and one below, each on its drop line; your group's destroyers sit on the rings at your level.](screenshots/three-d-view.png)
 
@@ -343,12 +345,38 @@ A tripwire reads only the sensor picture. It will not call a ship you have not h
 
 `zones` lists them, `zone off alpha` takes one down, `zones clear` wipes them, and with the pencil up a click on a box's edge rubs it out. Zones go with the save. `overlay clear` wipes them with your other marks.
 
+### The navigator's ruler
+
+A submarine's navigator worked the chart with parallel rules, dividers and a protractor. The ruler does the same on the plots: the plan, the side view and the 3-D view. Lay it from one point to another and it reads the **true bearing**, the **distance**, and the **time to run it** at your present speed (`093° 2566 km 1h25`). With no way on, it reads no time.
+
+- **With the pointer:** press **`R`** to take up the ruler, and the plot's title says `RULER`. Click a point, then the next, and each click lays a leg. A click on the last point again ends the chain. `R` again puts the ruler down. The ruler and the pencil take turns: `p` puts the ruler down.
+- **On the conn:** `ruler s1` lays one from your boat to S1. `ruler us 045/500` runs from your boat to a point 500 km out on 045°. `ruler io europa` runs between two bodies; for a name of more than one word, put `to` between the points (`ruler us to Old Wreck`). `leg s2` walks the latest ruler on by another leg. `ruler` alone takes up the ruler for the pointer, as `R` does.
+
+**A chain of legs** sums its distance and time (`total 3566 km 1h58`), as dividers walk off a route. At each joint the ruler reads the turn from one leg to the next (`87° stbd`), for planning a dogleg round a moon, a belt or a field.
+
+**Its ends hold fast.** An end laid on your boat follows the boat. An end on a contact follows the boat's estimate of it, its solution or its last fix, and never the ship itself: with no estimate, that leg is not drawn until you have one again. An end on a body or a pencil note stays on it. Any other end is a point on the map, and stays there while the plot moves.
+
+**Lines of position.** `lop 045` lays a line on 045° from where you are. `lop 045 10m` lays it from where you were 10 minutes ago, from your own track (it goes back two hours). `lop s1` lays one along S1's latest bearing, from where you were when you heard it; `lop s1 10m` takes its bearing from 10 minutes ago. Two lines cross at a **fix**, marked `✕ FIX` with its bearing and distance from you. Two bearings on a body from two of your positions fix it. Two bearings on a contact from two positions fix it only if it has not moved between them, as in TMA.
+
+`rulers` reads out every ruler on the glass in the log, with any fix. `ruler off` takes off the latest, and `rulers clear` takes them all off the sheet in hand. The ruler measures only what is on the plot. It adds nothing the boat doesn't know, and nothing in the simulation reads it.
+
+### Sheets of glass
+
+The plot has a sheet of glass for each job: **nav** (the route, its rulers and legs, notes on hazards), **attack** (bearing lines, the firing ruler, the torpedo's track) and **search**. You may name more. The pencil and the ruler draw on the sheet in hand.
+
+- `sheet attack` takes up the attack sheet, and puts the one in hand aside with its marks. `sheet mine` takes up a sheet you name, clean the first time. **`G`** takes up the next sheet.
+- `sheet show nav` lays the nav sheet under the one in hand, so both show; the one under is fainter. `sheet hide nav` takes it away.
+- `sheet clear` wipes the sheet in hand, and `sheet clear attack` wipes that one. The others keep their marks. `overlay clear` wipes every sheet.
+- `sheet` alone names the sheet in hand, any laid under, and every sheet.
+
+The plot's title names the sheet in hand, and any laid under it: `SHEET ATTACK+NAV`. A console setup brings up the sheet for its job: `nav` (`F4`) and `travel` the nav sheet, `sensors` and `science` the search sheet, and `weapons` the attack sheet. The others leave the sheet in hand alone. A setup you save keeps the sheet in hand. Every sheet goes with the save. Only the pencil's marks and rulers are on a sheet: bearing marks, zones and loud marks show on every sheet.
+
 ### Chart
 
 The chart is the plotting table's paper copy: north up, **fixed to space**, and it remembers. It is not on screen at first; put it in a window with `v` (it pairs well with the main window, `z`).
 
 - **Your whole track**, and `◆` where you are now.
-- **The charted world:** bodies, nebulas (outlined in their kind's color) and waypoints `⊕ WPT`. A waypoint is a place in your orders, with an exact bearing and range. Nothing is there to hear.
+- **The charted world:** bodies, nebulas (outlined in their kind's colour) and waypoints `⊕ WPT`. A waypoint is a place in your orders, with an exact bearing and range. Nothing is there to hear.
 - **A mark `✕` for every contact you have had a position for**, from its latest FAIR or better solution or its latest ping echo, with a ring showing the 2σ uncertainty. The label gives its age in minutes (`S1 12m`), and marks fade as they age. A mark stays where you last knew the contact was, even after you lose it, until something newer moves it. That is how far old knowledge can be trusted.
 - The frame grows to take in new marks but never scrolls or shrinks, so the marks stay put on screen while you move.
 - **Every label sits beside its mark**, clear of the other labels, the symbols and your track. In a crowd a contact's label shortens to its number (`S4`).
@@ -364,7 +392,7 @@ The output of your passive array, the newest second at the top, older seconds sc
 - **A brighter vertical streak** is a ship. Faint ones come and go; a steady trace is a contact you can follow. You may spot a trace before the tracker calls it a contact.
 - **A trace that slants** is a bearing that is changing.
 - **A neutral grey band** is your baffles, the arc astern where your own engine deafens the array. It is grey on every theme, so it never reads as a contact. It moves when you turn.
-- **Tinted hiss** is a nebula's bearing, in its kind's color. Inside an ion cloud the speckle turns coarse: that is the static. A sharp **white-hot crack** that is gone in a second is a storm's discharge.
+- **Tinted hiss** is a nebula's bearing, in its kind's colour. Inside an ion cloud the speckle turns coarse: that is the static. A sharp **white-hot crack** that is gone in a second is a storm's discharge.
 - **A white-hot mark** is a ping. **A whole row lighting up** is your own ping: you are deaf for that second.
 - **Markers above the data** (`▼S1`) show held contacts. **Below the data**, `▲` is your heading and `△` your ordered heading.
 
@@ -410,7 +438,7 @@ The output of your passive array, the newest second at the top, older seconds sc
 **Layers** (`w` on a focused waterfall, again for the next) lay more over the picture, as a ham radio's panadapter sits over its waterfall:
 
 1. **Spectrum and guides.** A strip on top shows the last few seconds as bars across bearing, with two reference lines: the **floor** (the background) and the **threshold** (the level at which the tracker can call a contact). A peak poking above the threshold is something you can hold. Guide lines run down the waterfall every 30°, your own heading is traced over time (a turn shows as a step), and time ticks run down the right edge.
-2. **The other sensors** (warships): infrared, EM and magnetic returns tinted over the picture in their own colors, so one window shows which sensor sees what.
+2. **The other sensors** (warships): infrared, EM and magnetic returns tinted over the picture in their own colours, so one window shows which sensor sees what.
 3. **The tracker's picks:** a dot at every bearing the tracker measured, over the raw trace.
 
 **Estimated courses.** With a `FAIR` or `GOOD` solution on a moving contact, a small arrow at the end of its line points along the estimated course: dim on `FAIR`, bright on `GOOD`, fading once the contact is lost. It shows direction only, and it is the boat's estimate, so a wrong solution draws a wrong arrow.
@@ -434,12 +462,28 @@ A station built for a warship, opened on a ship without those sensors, fills the
 
 ### Comms
 
-The comms station's window: who can hear us, and who we are talking to.
+The comms station's window: who can hear us, and who we are talking to. Its top is the **radio stack**, a row of sets with their channels and lamps, as on an aircraft's panel. Each figure is one the boat already knows.
 
-- **TRANSPONDER:** off in hostile space; nothing announces you.
-- **DATALINK:** your group, the link's health, and whether you are **TRANSMITTING** this second. Sharing a contact with the group is an EM transmission, and EM intercept hears it.
+```
+┌ RADIO ───────────────────────────────────────────────────────────────┐
+│COM 1  CH 16  156.800  DW ▸ CH 72  156.625                   RX ● TX ○│
+│COM 2  CH 23  157.150  fleet net                                      │
+│LINK   Pack · up · SILENT                                         TX ○│
+│XPDR   [ 1251 ] ▸STBY  ON  ALT                                        │
+│SIG    ▁▂▃▄▁▁▁ +19 dB · CH 72 · 00:54 ago         AIR 00:10 this watch│
+└──────────────────────────────────────────────────────────────────────┘
+```
+
+- **COM 1:** your voice set. It guards channel 16, and dual-watches (`DW`) the working channel your last call was on, as a marine set does. Each channel shows its frequency from the band plan. The **RX** lamp lights green while a call comes in, and the **TX** lamp amber while you send one. The set is half duplex, so they never light together.
+- **COM 2:** in a group, your second set guards the fleet net. Nothing passes on it yet.
+- **LINK:** the datalink: your group's net, the link's health, and whether you keep radio silence (`SILENT`) or share. Its **TX** lamp lights in each second the link sends to the group.
+- **XPDR:** your beacon, as a transponder. The four-digit code is your hull's own and never changes. The switch reads **STBY** while the beacon is off, and **ALT** while it broadcasts your name and position, as an aircraft's transponder adds its altitude (**ON** where beacons give a name and no position). A warship carries none.
+- **SIG:** the last call your set took, as a signal meter: one bar for each 5 dB it came in over your receiver's floor, with its channel and how long ago.
+- **AIR:** how long you have transmitted this watch, by any means: calls, the datalink, a linked torpedo's guidance. It is what an enemy's ESM could have heard of you. Watches turn every four hours on the galactic clock (00, 04, 08, 12, 16 and 20).
 - **The group:** each ship with its class, bearing and range, from the datalink.
-- **TRAFFIC:** your orders, and every report about the group or the link, newest at the bottom.
+- **TRAFFIC:** the calls your set took or sent, each tagged with its channel; your orders; and every report about the group or the link. The newest is at the bottom.
+
+A small window keeps the rows that matter most: COM 1 first, then the beacon (if you carry one), the link, the signal and the air time.
 
 ### Fire control
 
@@ -465,6 +509,8 @@ The top line gives the exploder setting, the seeker setting when it is not the s
 | `range 900` | Beyond the gun's reach, at fire control's range. |
 
 The chosen contact's row opens below the grid: one line per weapon, saying what would clear the block, such as `load 2 mk2h` or `Close 840 km`. On a contact whose class the crew has called, a clear line also gives their count of good hits to sink it, as an estimate. `,` and `.` change the row while this window has the focus, and `info s1` and `check s1` choose it too. `Enter` puts the first clear shot on the conn line, and you still give the order. If nothing is clear, it offers the first order that would clear a block. Clicking a row in the focused window chooses it, and clicking a cell puts its order on the conn line: the shot, or the order that clears the block, such as `load 2 mk2h` or `bear s1`.
+
+**The torpedo room.** `i` turns the window to its detail: each tube and what it holds, then each torpedo in the magazine and on the racks, every one with her log of practice runs (`MK1  23 runs`, `MK1  1 run`). The crew load the freshest of each kind first. In a career the depot issues torpedoes already run; outside a career every torpedo reads 0 runs. See [Torpedo wear](#torpedo-wear). `i` again brings back the grid. While the torpedo room shows, `Enter` and `,` `.` leave the grid alone: `Enter` opens an empty conn line.
 
 The grid uses the same checks as your orders, and only fire control's own figures, so a cell can be wrong exactly when your solution is. **A moon in the way.** When you fire, fire control checks the run to the aim point against the chart. If it passes through a charted body, the launch line says so: `The run crosses Mere: it will strike it.` A charted rock field gets its own warning: `The run crosses the North Sill: rock may stop it.` The grid shows both. A window too narrow for the grid shows the chosen contact alone, one line per weapon.
 
@@ -529,7 +575,7 @@ The window titled with your vessel's own name (`NIGHTJAR`, `MUDLARK`).
 
 The fire-control computer keeps working after a contact goes quiet: range, and a lost contact's bearing, come from its last solution carried forward to now. Their colour says how old that solution is: the track's own colour within a minute, amber up to ten minutes, faint after that.
 
-**Your own torpedoes** are listed below the contacts as `T1`, `T2`… (by tube), in your own color. Torpedoes are fire-and-forget: a guidance link is a transmitter, and a quiet boat will not run one. So these numbers are fire control's **dead reckoning** from the launch (`est` in the `HEAR` column), not truth: a homing torpedo that turns on its own is not where they say. A **linked** torpedo (`link`, the cruiser's Mk 3) reports its true position and takes course corrections, at the price of the launcher transmitting for the whole run, on a beam that points at the target. The columns: bearing, range in km, course, speed relative to you, `BURN` or `COAST`, `SAFE` or `ARMD` (armed), and in the last column the time to the meeting point fire control aimed it at.
+**Your own torpedoes** are listed below the contacts as `T1`, `T2`… (by tube), in your own colour. Torpedoes are fire-and-forget: a guidance link is a transmitter, and a quiet boat will not run one. So these numbers are fire control's **dead reckoning** from the launch (`est` in the `HEAR` column), not truth: a homing torpedo that turns on its own is not where they say. A **linked** torpedo (`link`, the cruiser's Mk 3) reports its true position and takes course corrections, at the price of the launcher transmitting for the whole run, on a beam that points at the target. The columns: bearing, range in km, course, speed relative to you, `BURN` or `COAST`, `SAFE` or `ARMD` (armed), and in the last column the time to the meeting point fire control aimed it at. A practice shot whose run is over is listed faint, as `shot adrift`: `bcn` in the `HEAR` column, for her beacon, and `DRIFT` where a running torpedo shows `BURN` or `COAST`.
 
 ### Log
 
@@ -559,7 +605,7 @@ The panel shows the newest entries, and the wheel scrolls it back. In a window a
 
 The mouse works here too: click a toggle or a word along the foot, click a line to put the cursor on it, and click it again to open it. A line that names a contact counts as being about it, so `Ping. Echoes: S1...; S2...` shows under both.
 
-Entries are colored by what they say: your orders, your own `log` lines (bold), contacts, pings, transients and system notes. Lines that night orders keep off the running log show here, faint.
+Entries are coloured by what they say: your orders, your own `log` lines (bold), contacts, pings, transients and system notes. Lines that night orders keep off the running log show here, faint.
 
 **After the fight.** Press `l` in the replay for the same log over the whole encounter, and every filter works. It opens at the replay's moment. `p` closes it and moves the replay to the moment of that line, so you can read what the boat knew and then see what was true. The filter stays for the next time you open it.
 
@@ -626,6 +672,19 @@ The `TYPE` column is the crew's opinion, and the crew can be wrong. These orders
 
 Your view shows in a `CAPT` column when the contacts table is wide, and after the `TYPE` when it is not. The vessel window shows it too. **An ignored contact's alarms still sound.** Setting something aside is a real risk, so a torpedo from it reaches you as any other does. A torpedo itself never dims.
 
+### A crew of friends
+
+Ghost Boat has one captain at one keyboard, but no boat was ever run by one person. Gather round one screen with friends, the way people once crowded round a single computer to play together, and share the boat out:
+
+- **The captain** has the keys and gives the orders. Only the captain's word moves the boat.
+- **Sensors** watch the waterfalls and call what they hear: a new trace, a bearing drifting, a ping.
+- **The navigator** keeps the plot and the chart, measures with the ruler, and calls the turns.
+- **Weapons** watch fire control and the tubes, and say when a solution is good enough to shoot.
+
+Call your reports out loud, as a real crew does, and let the captain decide: the computer reports, the crew makes its call, and the captain decides, around the screen as in the game. On a long career, take the captain's seat in turns, a patrol each. The war diary keeps one record of the whole war, and each captain can add a note to mark their patrol. In iron mode nobody can pause, so the crew earns its keep.
+
+It works at any age, and in a classroom too: two to a screen, one at the keys as captain and one as navigator, swapping seats each patrol. Working out an intercept or a range from bearings goes better argued aloud with a partner than done alone.
+
 ### Signing in
 
 The trainer signs you in each time you power up the console. It opens a secure line, checks your clearance and greets you, with your hours on the trainer as an officer's record. This takes under two seconds, and any key or click skips it. The sequence does not run for a replay. Over a metered link it is one still frame, held for a second.
@@ -664,16 +723,22 @@ The list and these keys can be clicked as well. To skip sign-in for one run, sta
 
 The **Fleet Tactical Trainer** opens on its main menu when you power up the console, after the sign-in. `↑`/`↓` (or `k`/`j`) choose an item, `Enter` opens it, `Esc` or `q` comes back from any page to the menu, `?` opens this manual, and `q` on the menu quits. The menu holds, in order:
 
-- **New Game:** a career in a generated galaxy. It is not built yet, so it is shown faint and does nothing.
-- **Continue:** your newest saved exercise, paused where you left off. It is listed only when there is a save. Its details show beside it; `x` opens the saves and replays page at its delete question (below).
+- **New Game:** a career: one captain, one boat and one war, in patrols from base. `Enter` opens the commission, which shows the captain, the first boat, the war's code and its first year, and the iron mode. `i` steps the iron mode, `Enter` commissions and `Esc` goes back. Each captain has one career at a time: while one is in progress, New Game does not start another and says so. Retiring at base ends it. Continue opens it when it is your newest save still in play; otherwise **Saved Exercises** does. A saved career always opens under the captain it belongs to. With nobody signed in, only a career kept under no captain's name is listed, so another captain's career neither stops New Game nor opens with Continue. Outside iron mode the career is saved on sailing, at each drop into a fight and each return from one, every 5 minutes in a fight, on coming home and on leaving; in iron mode it has one save, written on leaving and used up by continuing. A career that ends goes to the records once its ending is saved; if the game stops between the two, the title puts it there the next time it opens. Continue opens a career where it was left: at base, on the patrol chart or mid-fight. At sea the career runs on the patrol chart: see [The career](#22-the-career).
+  - **The base** shows command's orders, or the two it offers, with the date it issued them, and anyone who comes aboard for them; the boat as fitted out with its fuel, food and crew; the record: patrols sailed and passed, tonnage, rank, standing and time in service; the crew's news since the boat came in; and as much of command's briefing as fits. Its orders are **Sail**, which fits out the boat and puts to sea on those orders; **Briefing**, the briefing in full; **War diary**, the war so far (see [The war diary](#the-war-diary)); **Crew**, the crew screen; **Shore leave**; and **Retire**, which asks first (`y` retires) and then ends the career with its record banked. While command offers two orders, **Order 1** and **Order 2** keep one, and the boat cannot sail until one is kept. While command has taken the exec, or offers a newer boat, the base also lists the choices that answer it (see [The crew](#the-crew)), and the boat cannot sail until a new exec is chosen; a refusal to sail says why. `↑`/`↓` choose an order, `Enter` gives it, `:` opens a conn line for the typed orders at base (see [Orders and the briefing](#orders-and-the-briefing)), and `q` saves and goes back to the title. The orders are drawn once a visit, so leaving and coming back does not change them.
+  - **The briefing** is command's word at base, dated: the orders, the news with each item's age when it reached base, the mess's talk, the crew's mail, and the chart overlays handed over, each with its source and date. `↑`/`↓` scroll it, and `q` goes back to base.
+  - **The patrol report** follows each patrol home, dated the day the boat came in: the order and command's verdict on it, command's verdict on the patrol with its reason, whether the boat reached its place and how long it kept station, what it sank and what command learned each ship carried, what any search found, who came home aboard, any reason it left station early, news that settled an earlier mission, the tonnage banked, the change in standing and rank, and what became of the crew. `↑`/`↓` scroll it, and `Enter` goes back to base.
+  - **The record** comes up when a career ends: how it ended, the figures, each patrol's order and command's verdict on it, every boat the captain commanded with her history, and everyone who served. `↑`/`↓` scroll it, and `q` goes back to the title.
+  - A career that ends (lost, relieved, retired or at the war's end) is written once to `careers.tsv` beside the records, and its save is kept as a finished game that Continue skips.
+- **Continue:** your newest saved exercise that is still in play, paused where you left off. A finished game, such as the snapshot `s` keeps at the end, is skipped; it stays on the saves and replays page. Continue is listed only when there is a game to continue. Its details show beside it; `x` opens the saves and replays page at its delete question (below).
 - **Training:** the lessons, under CIVILIAN, NAVAL and GHOST, in teaching order. See [Tutorials](#tutorials).
 - **Scenarios:** the challenges, under the kind of boat you sail: CIVILIAN, NAVAL or PRIVATEER.
 - **War Campaign:** the war in order: nine engagements in three eras, each opened by winning the one before. See [The war campaign](#21-the-war-campaign).
 - **Saved Exercises:** every save and kept replay (below).
-- **Options:** the theme, colors (24-bit or 256), effects, sound, CRT scanlines, Nerd Font icons, how much the crew reports, whether `q` asks before leaving, **Wild Spaceland**, and the captain and sign-in. `↑`/`↓` choose a row; `→` or `Enter` steps it on and `←` steps it back. The keys `t` theme, `c` colors, `e` effects, `m` sound, `s` scanlines and `f` icons work on every page, and `C` opens the captains page. Settings carry into the exercise and back, and are kept for the next launch. Over SSH or mosh the effects start off whatever was kept, and a privateer's theme is not kept.
+- **War diaries:** the diary of each war, as last written, newest first, each shown by its heading: the captain, the boat, the war's dates, In service or how it ended, and the tonnage. A war ends by writing its diary, and `w` in the diary writes it at any time. `Enter` reads one, and `Esc` goes back. See [The war diary](#the-war-diary).
+- **Options:** the theme, colours (24-bit or 256), effects, sound, CRT scanlines, Nerd Font icons, how much the crew reports, whether `q` asks before leaving, **Wild Spaceland**, and the captain and sign-in. `↑`/`↓` choose a row; `→` or `Enter` steps it on and `←` steps it back. The keys `t` theme, `c` colours, `e` effects, `m` sound, `s` scanlines and `f` icons work on every page, and `C` opens the captains page. Settings carry into the exercise and back, and are kept for the next launch. Each captain keeps their own, so two people sharing a machine each find their own console. A captain signing in for the first time since settings became each captain's own takes the machine's settings as they stood. With nobody signed in (`--no-signin`), the machine's settings apply: the last ones any captain kept. Over SSH or mosh the effects start off whatever was kept, and turning them on there does not change what is kept. A privateer signs in to Letter of Marque until choosing another theme, which is then kept.
 - **Manual** and **Quit.**
 
-Started with `--dev`, the menu also has a **Dev** item, just above Quit, that lists the test bench (see [Scenarios](#22-scenarios)).
+Started with `--dev`, the menu also has a **Dev** item, just above Quit, that lists the test bench (see [Scenarios](#23-scenarios)).
 
 ![The main menu, with Training chosen: its lessons by track, and how many are won.](screenshots/title.png)
 
@@ -681,13 +746,21 @@ Started with `--dev`, the menu also has a **Dev** item, just above Quit, that li
 
 **Training, Scenarios and War Campaign** each list their exercises with the chosen one's briefing and best result. `↑`/`↓` choose one, and `Enter` begins it (or, for an exercise that offers a choice of ships, opens its setup page). A locked campaign step says which win opens it. Under the list are the choices for the next launch: `d` difficulty, `l` [the load to sail with](#choosing-the-load-before-sailing), `i` iron mode, `o` [the bare conn](#the-bare-conn), `b` the boat and `w` the war.
 
+**Launch codes.** Each launch is drawn fresh: the crews and captains you meet, the fuel and food aboard, who is out there and where, the moons and clouds of a scenario that places them fresh, how the layout is turned, and the date. One draw decides all of them, and its code is the serial on the patrol orders: twelve characters in three groups of four, such as `7F3A-91C2-K4M0`. A career's war has a code of the same kind, shown on the New Game page as its war code. It shows dim at the right of the briefing's heading, on the first line of the log (`ORDERS  Patrol orders, serial 7F3A-91C2-K4M0.`) and on the saves and replays page. A new serial each launch means the run was set for you, not played from a script. To play a launch again, or to quote one in a report, start the trainer with the code and the scenario file:
+
+```
+ghostboat --launch 7F3A-91C2-K4M0 data/scenarios/run_home.ron
+```
+
+The code fixes what is drawn, not what you choose. From the command line the scenario starts as a free engagement with its default choices: Standard, the first ships offered, and no war set. A code uses the digits and the letters other than I, L, O and U, so no character looks like another; case and the hyphen don't matter. The trainer reads a code by its own version's rules, and the log says so: a code from another version may set a different exercise.
+
 #### The bare conn
 
 `o` on a launch page sets the conn **bare**. An exercise at the bare conn has no gauges, rose, plot or waterfall: the screen is the header, the goals and the log, with the conn line under it. You run the boat by orders, by `status` reports from each system (`reactor status`, `battery status`, `hull status`, `helm status` and the rest), by **`contacts`**, which has the watch read out every contact held (bearing, the solution if there is one, and the crew's call), and by what the watch reports. Window orders such as `info` and `show` are refused. Set **Crew reports** to `all` on the Options page for a talkative watch. The header says `BARE CONN`. Your record marks a bare-conn result, a bare win ranks above a dressed one, and the fleet notices. A resumed exercise keeps the conn it was started with.
 
 The misconception to drop: the bare conn is not a harder sim. The ships, sensors and odds are the same. Only what you are shown changes, so it is a test of how well you know the boat.
 
-**Saves and replays.** Saved Exercises, or `a` on any page of the title screen, opens a page listing every saved exercise and kept replay together, newest first: its name, scenario, date (UTC), level, outcome and, for a replay, the verdict band. (`m` is the sound setting, so the page is on `a`.) `↑`/`↓` choose, `Enter` continues a save or watches a replay, and `Esc` goes back.
+**Saves and replays.** Saved Exercises, or `a` on any page of the title screen, opens a page listing every saved exercise and kept replay together, newest first: its name, scenario, date (UTC), level, outcome, for a replay the verdict band, and the launch's serial ([launch codes](#title-screen)). A save or replay from before launch codes shows no serial. (`m` is the sound setting, so the page is on `a`.) `↑`/`↓` choose, `Enter` continues a save or watches a replay, and `Esc` goes back.
 
 - `r` renames a save you named, or a replay. A replay keeps its date and outcome in its file name, so it still lists and plays; an autosave or the iron save can't be renamed.
 - `k` keeps a replay, so it is never pruned (the trainer keeps the newest 50 otherwise, and a kept one isn't counted among them); `k` again lets it go.
@@ -700,7 +773,7 @@ The misconception to drop: the bare conn is not a harder sim. The ships, sensors
 
 **Choosing ships.** Some engagements, such as *Duel*, let you pick your ship, the opponent's ship and its captain. On the setup page, `↑`/`↓` move between the choices, `←`/`→` change one, `Enter` begins and `Esc` goes back. Under each ship is a one-line summary: acceleration, EF drifting and burning, how quiet its array is ("ears", lower is better), whether it pings, and its tubes.
 
-**Themes** live in `data/themes.ron`: nineteen come with the trainer (Deep Signal, Phosphor Plus, Palette One, the four colours of an early PC's graphics card, Solarpunk, Amber Terminal, Red Light, the red lighting of a control room at night, Polaris, the cool Nord palette on a darker ground, Graveyard Watch, the Dracula palette on a darker ground, Field Service, in the blue of an old PC, Boldly Go, orange and lilac panels on black, and Letter of Marque, a sea chart in tar and gold, which comes up by itself when a privateer signs in, and Cold Steel, gunmetal and frost for a flight deck, and Imperial Bridge, grey deck plate with red and green panel lights, and Full Dress, the Pride flag's colours, after the rainbow of signal flags a ship strings bow to stern on a day of celebration, Yamamoto, deep indigo with soft blue text and pastel signals, and Breadbin, the light blue on blue of an old home computer, HGR and HGR2, the two colour sets of another's high-resolution screen, and YG-80 (Garbage Scow), the bluish white of a third, which its owners nicknamed after rubbish). Copy one, change its colors and restart to make your own. If the file has a mistake, the trainer says so and uses its built-in themes.
+**Themes** live in `data/themes.ron`. Twenty-nine come with the trainer, in four groups, and the Options page shows each theme's group beside its name. First comes the house colour, Deep Signal, the default. Then the fleet's own looks: Polaris, the cool Nord palette on a darker ground; Graveyard Watch, the Dracula palette on a darker ground; Cold Steel, gunmetal and frost for a flight deck; Imperial Bridge, grey deck plate with red and green panel lights; Boldly Go, orange and lilac panels on black; Letter of Marque, a sea chart in tar and gold, which comes up by itself when a privateer with no theme of their own signs in; Full Dress, the Pride flag's colours, after the rainbow of signal flags a ship strings bow to stern on a day of celebration; Yamamoto, deep indigo with soft blue text and pastel signals; Solarpunk, the Solarized palette; Red Light, the red lighting of a control room at night; and Luna, deep purple from a plum ground to pale lilac. Then the terminals: PF3, a mainframe terminal's green screen; No Scroll, the white phosphor of a famous minicomputer terminal; and Gold Key, the amber of its successor. Then the home computers, oldest first: HGR and HGR2, the two colour sets of one machine's high-resolution screen; YG-80 (Garbage Scow), the bluish white of another, which its owners nicknamed after rubbish; Player Missile, the single blue of a home computer named for its sprites; Palette One, the four colours of an early PC's graphics card; Field Service, in the blue of an old PC; Solid State, the fifteen colours of a machine whose title screen opened with a band of colour bars; Mode 7, the teletext colours of a school computer; Rubber Keys, the bright colours on black of a small computer with a rubber keyboard; Breadbin, the light blue on blue of an old home computer; Screen 1, the white on blue of a home computer standard; Locomotive, the yellow on deep blue of one that came with its own monitor; Jackintosh, the green desktop and white windows of an early 16-bit machine; and Workbench, the royal blue, white and orange of its rival. Copy one, change its colours and restart to make your own. If the file has a mistake, the trainer says so and uses its built-in themes.
 
 **Scanlines** (`s`) darken every other row a little, like an old CRT.
 
@@ -714,7 +787,7 @@ The misconception to drop: the bare conn is not a harder sim. The ships, sensors
 
 **Records.** Each finished engagement is saved: won or lost, the time, the mode, ships sunk, hull left, the level, the [verdict band](#verdict-bands) and the tons sunk. A Nightmare run is marked as one. The title screen shows each engagement's best (a win in a stricter mode beats a faster one in a gentler mode, and at the same mode a harder level beats a faster easier one), and at its head your heaviest bag and your running total of tons. Records live in `~/.local/share/ghostboat/records.tsv` (or under `$XDG_DATA_HOME`).
 
-If the colors look garish or wrong, press `c` for 256-color mode. Terminals reached over SSH often can't say whether they support 24-bit color, so the trainer may start in 256-color mode; press `c` to try 24-bit. The trainer remembers your choice for the next launch.
+If the colours look garish or wrong, press `c` for 256-colour mode. Terminals reached over SSH often can't say whether they support 24-bit colour, so the trainer may start in 256-colour mode; press `c` to try 24-bit. The trainer remembers your choice for the next launch, for the captain signed in.
 
 ## 3. Controls
 
@@ -748,6 +821,8 @@ If the colors look garish or wrong, press `c` for 256-color mode. Terminals reac
 | `o` | True or relative bearings: every bearing display at once |
 | `c` | Home: centre the nav plots on your boat, and put the plots and rose back at the standard range (±2,000 km) |
 | `p` | Take up the grease pencil, or put it down |
+| `R` | Take up the navigator's ruler, or put it down: click point to point to lay legs |
+| `G` | The next sheet of glass: nav, attack, search, and any you named |
 | `W` | The plotting menu: filters, layers, shadows, zones. `w` on a focused plot opens it too |
 | `Tab` / `Shift-Tab` | Focus the next or previous window |
 | `v` | Change what the focused window shows |
@@ -756,8 +831,8 @@ If the colors look garish or wrong, press `c` for 256-color mode. Terminals reac
 | `L` | Next window layout |
 | `F2`–`F10` | Console setups: bridge, sensors, nav, engineering, comms, science, damage, stealth, travel. See [Setting up the console](#4-setting-up-the-console). |
 | `[` / `]` | Nav plot zoom in / out |
-| `t`, `T` | Next color theme, or the one before |
-| `e` | Color effects on or off |
+| `t`, `T` | Next colour theme, or the one before |
+| `e` | Colour effects on or off |
 | `m` | Sound on or off |
 | `r` | Reload the data files into the running scenario |
 | `l` | The full ship's log, for review (pauses the trainer) |
@@ -788,6 +863,8 @@ Every action has a key, and every action can also be reached by pointing, so the
 
 With the mouse on, most terminals need a modifier to select text (in iTerm, hold `⌥ Option`). Start with `--no-mouse` to keep the terminal's own selection.
 
+**Right-click in iTerm.** iTerm opens its own menu on a right-click unless you tell it otherwise. Tick **Settings → Pointer → Right-click reported to apps, does not open menu**, and the right button (or a two-finger tap on a trackpad) reaches the trainer: a contact's orders in the table, and the grease pencil on a plot.
+
 ### The conn
 
 Press `Enter` (or `:`) and the bottom line becomes `CONN>`. Type an order and press `Enter`; the boat answers in the log. `Esc` cancels, and `↑`/`↓` bring back earlier orders. The exercise keeps running while you type, but time compression drops to x1. Every important action also has a single key, so you never have to type a sentence while something is closing on you.
@@ -817,6 +894,10 @@ Orders are not case-sensitive. Contacts are named `s1`, `s2`, and so on.
 | `steer s1` | Turn bow on to a contact |
 | `beam s1` | Turn to put a contact abeam: the classic leg change for TMA, and it stays out of your baffles |
 | `away s1` | Turn your stern to a contact (it goes into your baffles) |
+| `put s1 starboard 30`, `put s1 port 45`, `put s1 green 045`, `put s1 red 045` | Mark the heading that puts S1 that many degrees off the bow, 0 to 180: starboard or green, port or red. `put s1 on the starboard beam` and `put s1 astern` work too. It only marks, and `Enter` gives it. See [Orders relative to a target](#orders-relative-to-a-target) |
+| `close s1`, `open s1` | Mark the course straight at S1, or straight away from her, by your solution |
+| `station s1 astern`, `station s1 abeam`, `station s1 ahead`, `station s1 astern 300` | Mark the course to take station on S1 by her course: astern, abeam on your side, or ahead, at your present range or the km given. Once on station, it marks her own course |
+| `intercept s1` | Mark the lead course that meets S1 at your speed, and say when |
 | `x10`, `pause`, `resume`, `step 5m`, `step tti` | Time. `step` runs that long at the current rate, or to your next torpedo's time to impact, then pauses (`30s`, `5m` or `2h`). An alert cuts it short. Full iron mode has no steps, and each one costs a pause in limited iron mode. |
 | `radio silence`, `datalink on` | Hold radio silence (no datalink sharing, nothing to hear) or lift it. A pack you lead holds cold while you keep silence; lifting it is their signal to attack. |
 | `condition red`, `condition blue`, `condition yellow`, `condition white`, `condition auto` | Set the boat's condition, or let it set itself. The colour alone does the same: `red`, `blue`, `yellow`, `white` |
@@ -832,6 +913,9 @@ Orders are not case-sensitive. Contacts are named `s1`, `s2`, and so on.
 | `zone`, `zone alpha 500`, `zone off alpha`, `zones`, `zones clear` | Tripwire boxes: drawn with the pencil, or set at the plot's centre; take one down; list or wipe them |
 | `guard port 270 330`, `guard off port` | A guard arc, degrees clockwise off the bow |
 | `loud clear` | Wipe the loud marks |
+| `ruler`, `ruler s1`, `ruler us 045/500`, `ruler io to europa`, `leg s2`, `ruler off`, `rulers`, `rulers clear` | The navigator's ruler: take it up for the pointer, or lay one from us, from point to point, or between bodies and notes by name; walk it on a leg; take off the latest; read them all out; take them all off. See [The navigator's ruler](#the-navigators-ruler) |
+| `lop 045`, `lop 045 10m`, `lop s1`, `lop s1 10m` | A line of position: a true bearing, or a contact's, from where you are or were. Two cross at a fix |
+| `sheet`, `sheet attack`, `sheet show nav`, `sheet hide nav`, `sheet clear`, `sheet clear attack` | Sheets of glass: name them, take one up, lay one under, take it away, wipe one. See [Sheets of glass](#sheets-of-glass) |
 | `gauss s1` | Gauss gun burst at S1 |
 | `check s1` | Fire control's answer on S1 for each weapon, in the log, without firing |
 | `fire s1 mk2h`, `fire s1 contact`, `exploder contact`, `exploder prox` | Fire a named kind; set one salvo's exploder, or the standing setting |
@@ -880,13 +964,19 @@ Orders are not case-sensitive. Contacts are named `s1`, `s2`, and so on.
 | `call me at 02:00`, `call me battery 30`, `call me waypoint`, `call me off` | Your own calls, or none |
 | `call s3 hostile`, `name s3 fat one`, `ignore s3`, `pin s3` | The captain's own call on a contact |
 | `save`, `save before the attack` | Save the exercise, under a name or the exercise clock (not in iron mode) |
+| `recover` | Bring aboard what lies close aboard: within 2 km and all but stopped, for 10 minutes. In a lesson, a practice shot adrift by her beacon (see [Practice shots](#practice-shots)); in a career fight, the people of a lifeboat or pod (see [Dropping in](#dropping-in)) |
+| `yard` | In a career, at base: open the yard, the refit waiting, with each job's days and the day she sails (see [The yard](#the-yard)) |
+| `diary` | In a career, at base or on the patrol chart: open the war diary (see [The war diary](#the-war-diary)) |
+| `note <text>` | In a career, at base or on the patrol chart: write a line of your own in the war diary, at most 120 characters. In a fight, `note` writes on the plot instead (see [Nav plot](#nav-plot)) |
 | `all stop; silent; helm 090` | Several orders on one line, separated by `;`. Each goes out and is answered in turn, as if typed alone. A `log` entry keeps its semicolons |
 | `help` | List the orders in the log |
 | `help fire`, `help clear baffles` | Only the orders that start with those words, and what the manual says about each. `help baffles` finds the orders that mention a word |
 
 **Nerd Font icons.** Ghost Boat needs no special font. If your terminal uses a [Nerd Font](https://www.nerdfonts.com/), press `f` on the title screen for icons in the window titles, the goals, the bars (`HULL`, `BATT`, `SINK`, `FUEL`, `PROP`), the torpedo stopwatch, and on waypoints (` WPT`), mines, notes and the plots' countermeasures. The `SIG` bars become joined capsule gauges, and a small spinner turns on the `TUBES` line while a tube reloads and beside a system under repair, if effects are on. These need Nerd Fonts 3.0 or later. A symbol means the same either way, and contact symbols (`○ ◇ □ ✣`, and a fighter's `◠ ⋀ ⊓ ⌒`) always stay as they are: they follow the military standard. If icons show as boxes, your terminal isn't using a Nerd Font: press `f` again, or choose one, preferably a `Nerd Font Mono`, in your terminal's settings. iTerm can keep your usual font and use a Nerd Font just for symbols, under **Profiles > Text > Non-ASCII Font**. The replay viewer stays plain.
 
-**Sound.** The trainer uses your terminal's bell: once when you are pinged, hear a torpedo, or are hit by a beam or slugs, and three times, the klaxon, when the boat goes to condition RED, whether you call it or the boat sets it. Every sound has an on-screen twin (the `PING` and `TORPEDO` pills, the rose flash, `COND RED` in the header, the log line), so you lose nothing with sound off. In iTerm you can choose the bell's sound under *Settings → Profiles → Terminal*; a sonar ping works well.
+**Sound.** The trainer uses your terminal's bell: once when you are pinged, hear a torpedo, or are hit by a beam or slugs, and three times, the klaxon, when the boat goes to condition RED, whether you call it or the boat sets it. Every sound has an on-screen twin (the `PING` and `TORPEDO` pills, the rose flash, `COND RED` in the header, the log line), so you lose nothing with sound off. In iTerm you can choose the bell's sound under *Settings → Profiles → Terminal*; the stock macOS sound *Submarine* suits the boat, and *Ping* gives a sharper note.
+
+**Music.** There is none, on purpose. Anthony, who made Ghost Boat, recommends that you pick your favourite CD from the 1980s or 1990s and play it while you hunt. That is the intended soundtrack. It is how he and his friends played DOS games together in the 1990s. Unless you think a destroyer's pings are music. Then carry on, sailor.
 
 ## 4. Setting up the console
 
@@ -904,7 +994,7 @@ There are six windows: a large **main window** and five smaller ones. Any window
 | `show NAME` | (on the conn) Put an instrument in the focused window even if another window has it: two waterfalls, one true and one relative, say |
 | `z` | Swap the focused window into the main window; `z` again puts it back. The quick way to blow up the waterfall for fine tuning, then return to the rose |
 | `L` | Next layout |
-| `i` | The focused window between the captain's summary and the detail (engineering, damage control) |
+| `i` | The focused window between the captain's summary and the detail (engineering, damage control), or fire control between its grid and the torpedo room |
 | `o` | True or relative bearings on every bearing display at once (the conn sets them one by one) |
 | `n` | Step the focused window through rose, plan, profile and 3-D |
 | `[` / `]` | Zoom the nav plot |
@@ -927,16 +1017,17 @@ A **setup** is a whole arrangement under a name: the layout, what every window s
 | `F3` | **sensors** | passive array waterfall, with its spectrum layer | infrared waterfall, contacts, rose, status, log | the sensor watch: two waterfalls big enough to read, `w` for more layers, tune to listen |
 | `F4` | **nav** | nav plot | profile, chart, rose, status, log | pilotage, traffic in friendly space, and finding your way in three dimensions |
 | `F5` | **engineering** | engineering (detail) | damage control, status, contacts, rose, log | the plant: power, heat, signatures, air |
-| `F6` | **comms** | comms window | chart, log, status, rose, contacts | the datalink, the group, and the traffic |
+| `F6` | **comms** | comms window | chart, log, status, rose, contacts | the radio stack, the group, and the traffic |
 | `F7` | **science** | survey | chart, waterfall, infrared, profile, contacts | how each contact gives itself away, the surroundings, your own signature |
 | `F8` | **damage** | damage control (detail) | engineering (detail), contacts, rose, status, log | after a hit |
 | `F9` | **stealth** | waterfall, true | engineering, survey (what we show the world on each channel), status, contacts, log | running quiet: the waterfall, and what your plant is giving away |
 | `F10` | **travel** | chart | plot, engineering (detail), rose, status, log | long passages: where you are going, and how long the plant and air last |
 | none | **weapons** | fire control | contacts, rose, status, plot, log | the attack: which weapon can reach what, and what is stopping the rest. `setup weapons`, or `s` and pick it |
+| none | **patrol** | the patrol chart | plot, contacts, rose, status, log | a career fight: the chart the boat dropped in from. `setup patrol`; in an exercise the chart's window gives way to another |
 
 The trainer starts on a console like **bridge** but with true bearings: the rose large, the sensors beside it.
 
-**Make your own.** Arrange the console the way you like it and type `setup save NAME` on the conn (for example `setup save attack`). `setup attack` brings it back; `setups` lists every setup with its key. Your own setups are recalled by name (`setup attack`); the function keys are all taken by the built-ins. Saving under a built-in's name (`setup save combat`) replaces that built-in with yours. Setups are kept between sessions in `~/.config/ghostboat/setups.tsv` (or under `$XDG_CONFIG_HOME`).
+**Make your own.** Arrange the console the way you like it and type `setup save NAME` on the conn (for example `setup save attack`). `setup attack` brings it back; `setups` lists every setup with its key. Your own setups are recalled by name (`setup attack`); the function keys are all taken by the built-ins. Saving under a built-in's name (`setup save combat`) replaces that built-in with yours. A setup also brings up its sheet of glass: `nav` the nav sheet, `weapons` the attack sheet (see [Sheets of glass](#sheets-of-glass)). One you save keeps the sheet in hand when you save it. Setups are kept between sessions in `~/.config/ghostboat/setups.tsv` (or under `$XDG_CONFIG_HOME`).
 
 **Some arrangements worth trying:**
 
@@ -952,14 +1043,14 @@ These are under Options on the main menu, and their keys work on every page of t
 | Key | Setting |
 |---|---|
 | `t`, `T` | Next theme, or the one before |
-| `c` | Colors: 24-bit, or 256 if 24-bit looks wrong. Remembered between launches |
-| `e` | Effects: the living color (shimmer, pulse, glow) on or off |
+| `c` | Colours: 24-bit, or 256 if 24-bit looks wrong. Remembered between launches |
+| `e` | Effects: the living colour (shimmer, pulse, glow) on or off |
 | `m` | Sound: the terminal bell for pings, torpedoes and hits, and the klaxon at condition RED |
 | `s` | CRT scanlines |
 | `f` | Nerd Font icons, remembered between exercises |
 | `i` | Iron mode: off, limited or iron |
 
-**Your own theme.** Themes are in `data/themes.ron`. Copy a block, give it a new name, change the colors (`#rrggbb`), and restart. Every role needs a color; keep the roles' meanings (threats stand out, faint things recede, warnings are unmistakable), because color means the same thing in every theme. If the file has a mistake, the trainer says which theme and which color, and uses its built-in themes.
+**Your own theme.** Themes are in `data/themes.ron`. Copy a block, give it a new name, change the colours (`#rrggbb`), and restart. Every role needs a colour; keep the roles' meanings (threats stand out, faint things recede, warnings are unmistakable), because colour means the same thing in every theme. If the file has a mistake, the trainer says which theme and which colour, and uses its built-in themes.
 
 ## 5. Reading the instruments
 
@@ -992,7 +1083,7 @@ The waterfall is signal strength by bearing (across) against time (down, newest 
 | A white-hot mark that is gone in a second | A ping (theirs), or a storm discharge (`Static discharges` in the log). | A ping means they may have you: see the drills. |
 | The **whole row** lights up for a moment | Your own ping. You are deaf for that second. | Expected. |
 | A neutral grey band | Your baffles, the deaf arc astern. It turns with your nose. | Clear your baffles now and then (drills). |
-| A tinted band | A nebula's bearings, in its kind's color. Inside an ion cloud the speckle turns coarse: that is the static. | See Nebulas. |
+| A tinted band | A nebula's bearings, in its kind's colour. Inside an ion cloud the speckle turns coarse: that is the static. | See Nebulas. |
 | Static blocks and `NO SIGNAL` | Your array is damaged or failed. | Damage control; `repair array`. |
 
 ### The bearing rose
@@ -1141,6 +1232,21 @@ The header shows the burn as it runs (`BURN TO 2.50 · 1.83 km/s`), and the log 
 
 **Flight assist.** If your ship has a compensator, `C` engages flight assist: it fires thrusters to keep your velocity along the nose at a set speed, so the ship flies the way you point it. A civilian hull's thrusters are movable: they swivel to push from any side, so the autopilot can hold a course, cancel a drift or stop her without turning end for end. They are slow, about three quarters of a hauler's main drive, and loud: quieter than the drive, but far louder than a drifting hull, and the autopilot's radar radiates the whole time it is on. It is real thrust. It costs propellant, it can be heard, and near a moon it has to fight gravity the whole time. Use it to get somewhere; switch it off to hide.
 
+### Orders relative to a target
+
+The conn can work out a course on a contact for you, as a navy's plotter does:
+
+- `put s1 starboard 30` marks the heading that puts S1 30° off the starboard bow. `port`, and the navy's `green` (starboard) and `red` (port), work the same way, from 0 to 180.
+- `close s1` marks the course straight at her, and `open s1` the course straight away.
+- `station s1 astern` marks the course to take station astern of her, by her own course, at your present range. `abeam` is on your side of her, and `ahead` is ahead of her. Add km to set the distance: `station s1 astern 300`. Once you are on station, it marks her own course.
+- `intercept s1` marks the lead course: the one that meets her at your speed. The plotter says how long it takes.
+
+**These orders only mark.** Each one arms the helm dial, the steering line, as a click on the plan does. The arm shows on the rose and the plots, and `ORDER` shows in the header. Nothing turns until you press `Enter`. `Esc` drops it, and it lapses after 8 seconds, as a click does. They are not `match s1`, which points for the burn that matches her velocity.
+
+**A mark is only as good as your solution.** The plotter works from fire control's solution, carried forward to now, and says its grade. On FAIR, expect to correct. On POOR, the mark is a guess, but it is still marked, because the call is yours. If the crew grade the solution lower than fire control, they say so too. With no solution, `put`, `close` and `open` work from her last bearing heard, and the plotter says so. A station or an intercept needs a solution, so without one nothing is marked.
+
+**Your speed** is what flight assist holds, or else what you are making now. When no course at that speed can meet her, or you have no way on, the plotter says so plainly and marks nothing. On a warship the mark turns the nose, as any helm order does. Your course changes only when you burn.
+
 ## 8. Passive array
 
 Your passive array listens. It gives you a **bearing** and a **signal strength**, and nothing else. It never tells you how far away something is.
@@ -1171,9 +1277,9 @@ Near zero excess a contact fades in and out. Well above zero it is held steadily
 Target motion analysis turns a series of bearings into a range, course and speed. Each bearing says "it was somewhere on this line, at this moment". If the target holds a steady velocity, only one track fits all the lines. In space a coasting ship really does hold a steady velocity, so TMA here is very good, if you give it what it needs.
 
 > [!IMPORTANT]
-> **You must maneuver.** If you fly a straight line, range cannot be worked out, however long you listen. Change course (a *leg change*), burn briefly, drift again, and the solution firms up. Watch it happen on the nav plot: the lines of bearing start to cross.
+> **You must manoeuvre.** If you fly a straight line, range cannot be worked out, however long you listen. Change course (a *leg change*), burn briefly, drift again, and the solution firms up. Watch it happen on the nav plot: the lines of bearing start to cross.
 
-**Quality** is the uncertainty compared with the range: `GOOD` under 10%, `FAIR` under 30%, otherwise `POOR`. `POOR` solutions show no numbers, because they mean nothing yet. If the target maneuvers (a transient), its solution starts over. Before it calls a solution `GOOD`, fire control also works the bearings again from a nearer and a farther start. If another track at a different range fits them about as well, the range is not known, and the grade drops to match. The grade is fire control's own and nobody else changes it. The crew judge it separately: they will not call a target that maneuvered better than `FAIR` until she has run steady for five minutes (a ping echo skips the wait), and they say when they doubt a solution for that or another reason. Fire control will fire on its own grade; whether to wait for the crew is your call (see [The computer, the crew and you](#the-computer-the-crew-and-you)).
+**Quality** is the uncertainty compared with the range: `GOOD` under 10%, `FAIR` under 30%, otherwise `POOR`. `POOR` solutions show no numbers, because they mean nothing yet. If the target manoeuvres (a transient), its solution starts over. Before it calls a solution `GOOD`, fire control also works the bearings again from a nearer and a farther start. If another track at a different range fits them about as well, the range is not known, and the grade drops to match. The grade is fire control's own and nobody else changes it. The crew judge it separately: they will not call a target that manoeuvred better than `FAIR` until she has run steady for five minutes (a ping echo skips the wait), and they say when they doubt a solution for that or another reason. Fire control will fire on its own grade; whether to wait for the crew is your call (see [The computer, the crew and you](#the-computer-the-crew-and-you)).
 
 **A solution is an estimate, never the truth.** Fire control works from bearings, and every bearing carries a little error, so even a GOOD solution can be off, and now and then badly off. That is how tracking by ear works, and the trainer keeps it so on purpose: the debrief's true picture shows how far off you were. Another leg sharpens a solution. A straight runner trusts it completely, so it pays to wait for GOOD; a homing torpedo corrects its own aim on the way.
 
@@ -1205,6 +1311,8 @@ A ping finds things. It sends out a pulse and listens for the echo, which gives 
 **The catch.** The echo has to travel out and back; the ping only has to travel out. So **a ping is heard far beyond the range at which it finds anything.** The registry's active array table shows the gap: a destroyer's ping finds a hauler at about 2,400 km, and that hauler hears the ping from more than 45,000 km.
 
 - **When you are pinged:** the `PING` pill flashes, the rose shows the pinger's bearing, and the log says so. The pinger now knows roughly where you are, if the echo reached it, and you can't tell whether it did. Assume it did.
+- **How the crew call pings.** The first ping from a contact, or the first after five minutes without one, gets a full call: `PING. Active array, S3, bearing 270°.` After that they call it short, with what they can hear change: `PING. S3, 268°, louder.` or `fainter`, a change of 3 dB or more, and `pinging faster` when the beat quickens, which is how an attack run starts. Pings with nothing new fold into one line every three minutes or so, with a count: `PING x6. S3, 265°, same strength.` is six pings since the last line. When the pinging stops, the pings still folded are told three minutes after the last, or at once if the fight ends, with the trend as it stood, so the log keeps the end of an attack. The `PING` pill and the bell still mark every one.
+- **"They may have us"** is the crew's judgement, and they say it only on something they heard: a strong ping (70 dB over threshold, which a warship's ping reaches well before its echo off a ghost has a fair chance), the beat quickening, or a contact closing on a constant bearing. Each is said once a run, and each quickening. They can be wrong both ways. A ping sounds fainter while your own drive is loud, though the pinger's echo is no weaker for it, and a civilian hull's array hears pings so faintly that its crew rarely calls one strong.
 - **When you ping:** your own waterfall whites out for a second, and every ship within a very long range now knows exactly where you are.
 - **Recharge:** after a ping, active array needs time to recharge (`ACT` on the own-ship panel).
 - **Target strength, by hull shape:** a fat cargo hull returns a big echo; a lean warship less; a ghost's long, skinny hull hardly any. That is why a ghost is built like an old WWII submarine. A destroyer's ping finds a silent ghost at only about 150 km, inside the ghost's torpedo reach, so a ghost can close on a convoy without being pinged out first.
@@ -1219,9 +1327,9 @@ Moons and planets pull on every ship, by the real inverse-square law.
 
 ## 12. Nebulas
 
-Nebulas are charted clouds. They are on every chart, like moons. Each kind does one thing to your sensors, and its color tells you which:
+Nebulas are charted clouds. They are on every chart, like moons. Each kind does one thing to your sensors, and its colour tells you which:
 
-| Color | Kind | Effect | Use it to |
+| Colour | Kind | Effect | Use it to |
 |---|---|---|---|
 | Brown | **Dust** | Swallows signal. Anything heard through the cloud loses about 20 dB for every 1,000 km of the path inside it. Pings pay twice, out and back. | Burn inside it unheard, or put it between you and a hunter. |
 | Electric blue | **Ion** | Static. A sensor *inside* the cloud hears a much louder background, so it goes deaf. Signals pass through it freely. | Avoid it, unless you want a hunter to follow you in and go deaf too. Quiet military arrays suffer most. |
@@ -1309,6 +1417,22 @@ Torpedoes fail, as WWII's did. Each one is rolled at launch for one flaw, at mos
 | **Circular** | Once armed it comes back, flat out, for the boat that fired it. The log warns you. Run, drop a decoy, or both. | 1% | 2% | 1% |
 
 The log reports a dud, a premature and a circular run on your own torpedoes. Fire a spread when it matters, and never wait in the path of your own shot.
+
+### Torpedo wear
+
+In a career each torpedo carries her log: the practice runs she has made in exercises since she was built. Each run raises all four of her flaw odds by about 1 per cent of the figures above, so a torpedo with 30 runs is about 30 per cent likelier to fail. A career's torpedoes carry the figures above in every era, and wear is the only addition: the war campaign's higher early-war odds do not apply in a career.
+
+The depot issues them already run: about 20 runs each in the early war, some over 40; about 8 in the mid war; and about 2 late, when most are new from the factory. The crew load the freshest of each kind first and leave the worn ones for later shots, and each torpedo keeps her runs from the depot to the tube to the shot. Fire control's detail lists every torpedo in the tubes, the magazine and the racks with her runs (`MK1  23 runs`): see [Fire control](#fire-control). The runs are her log, and nothing more: whether she carries a flaw shows only when she runs.
+
+Outside a career a torpedo carries no practice runs, so none adds to her odds. At base the yard can draw fresher torpedoes: see [The yard](#the-yard).
+
+### Practice shots
+
+In a lesson your torpedoes are practice shots, the way the earliest submarine crews trained: fired at a real ship, then hoisted back aboard to fire again. A practice shot carries an inert head as heavy as the warhead. She runs exactly as a warshot would, on the same solution, the same run and the same hit test. A shot that would have hit registers a training hit: the log reads `Training hit: she counts as sunk.`, and the target counts as sunk for the lesson's goals, so a lesson won by sinking her is won the same way. The target takes no harm. She acknowledges the hit and stands out of the exercise. The header reads `TRAINING`, and so do the log and the debrief. A training hit is never counted as a sinking, on the ladder or in any record.
+
+At the end of her run a practice shot stops her motor, lights her beacon and drifts. The plot labels her `T1 adrift`, and the contacts table lists her as `shot adrift`. `recover` brings her aboard: close within 2 km of her, all but stop, and hold steady for 10 minutes, as for a life pod. A lesson won on a kill ends at once, and the debrief lists the shots left to be recovered. A shot lost on her run, to rock, a mine, a body or a gun, or one still out when a lesson ends without a win, costs the exercise a torpedo.
+
+The debrief judges each practice shot by how close she passed the target: a training hit, a near pass, a loose pass, or wide.
 
 ### Carriers
 
@@ -1410,7 +1534,7 @@ Destroyers carry a **gauss gun**; cruisers carry a gauss gun and two **beams**; 
 | Destroyer | heavy steel | about half | about 5/8 |
 | Cruiser | ceramic laminate | half | about 2/5 |
 
-- **Gauss gun** (`g`, or `gauss s1`; `rail s1` still works): a coilgun. A row of coils pulls an iron slug down the barrel and fires a burst at 10 km/s, aimed where the target will be and spread across its uncertainty. Slugs are silent in flight, but the coils leave them magnetised: a ship with a magnetometer feels a burst passing within a few tens of km. It gets a log line (`MAG  Gauss slugs passing, bearing 045°, 18 km`), short marks on the rose's ring and `∴` marks on the plot in the magnetic color. That is a second or two before they pass, too late to dodge, but it tells you someone has a solution on you and roughly where from. The burst itself thumps on sound and flashes on EM. Fire control needs a ping echo from the last 30 seconds or a FAIR solution, and won't shoot beyond 60 km: very short range, but rapid fire with no long charge, and it chews through a ghost's bare hull in a single burst. Ping, then fire.
+- **Gauss gun** (`g`, or `gauss s1`; `rail s1` still works): a coilgun. A row of coils pulls an iron slug down the barrel and fires a burst at 10 km/s, aimed where the target will be and spread across its uncertainty. Slugs are silent in flight, but the coils leave them magnetised: a ship with a magnetometer feels a burst passing within a few tens of km. It gets a log line (`MAG  Gauss slugs passing, bearing 045°, 18 km`), short marks on the rose's ring and `∴` marks on the plot in the magnetic colour. That is a second or two before they pass, too late to dodge, but it tells you someone has a solution on you and roughly where from. The burst itself thumps on sound and flashes on EM. Fire control needs a ping echo from the last 30 seconds or a FAIR solution, and won't shoot beyond 60 km: very short range, but rapid fire with no long charge, and it chews through a ghost's bare hull in a single burst. Ping, then fire.
 - **Beam** (`lase s1`): one shot from a capacitor, which then takes a long time and a lot of power to charge: a cruiser's two each take 60 s and between them the whole reactor; a ghost's one takes 90 s and most of its reactor. Light arrives at once, so nothing dodges it. It hits if your aim is good, which takes a sharp bearing and a fresh echo: easy close in, hopeless at the limit of its reach (200 km for a cruiser, 60 km for a ghost). A miss wastes the charge. Its damage falls with the square of range. Every shot lights you up on every ESM receiver for thousands of km, and the `BEAM` pill shows while a capacitor charges. A hit also heats the target's hull: a ship under a beam glows on infrared for minutes afterwards, which makes it easier to find again. A beam is light, so the ship it hits sees where it comes from: `BEAM ON US from bearing 180`, with a flash on the rose. Fire it again and again and the shooter's bearings pile up.
 - **Beam against a torpedo:** a beam can shoot down a torpedo, and any hit kills it. The sum is how late you find it against how long a shot takes to come round: hold your fire until it is close, because a shot at long range is usually wasted. A cruiser that does stops most single torpedoes, but it has two shots, so a spread of three gets through. A ghost's deck gun is a lucky shot, no more. A torpedo that coasts in from far off may not be found in time at all.
 
@@ -1430,7 +1554,7 @@ Mines wait. They are nearly silent, cold, small and still, and they never go off
 
 **Finding them is hard, but not impossible.** Passive array and infrared won't find a mine. A ping will, out to about 120 km from an attack boat, but a ping tells everyone where you are. A magnetometer feels one within about 2 km. Found mines show as `✱` in the contacts table (`MINE`), on the plot and on the chart, where they stay. Charted minefields are drawn as boxes.
 
-**Laying mines** (`lay`, `lay acoustic`, `lay magnetic`, `lay captor`): an attack boat carries two of each. A mine stops dead where it is laid; yours are drawn as `✱` in your own color and never go off for you. The `MINES` line shows what is left.
+**Laying mines** (`lay`, `lay acoustic`, `lay magnetic`, `lay captor`): an attack boat carries two of each. A mine stops dead where it is laid; yours are drawn as `✱` in your own colour and never go off for you. The `MINES` line shows what is left.
 
 **Clearing mines.** A mine is as deadly to a destroyer as to a ghost, so the navy sweeps. The sweeper craft (`mil-sweeper`) does the job: a small craft from a carrier's deck with a crew of two, a pure ceramic hull a magnetic mine barely feels, and a quiet sweep. A destroyer carries loud gear as a stopgap. `sweep on` streams the gear and `sweep off` recovers it. It works only at its speed or under, and the crew tells you when you are too fast.
 
@@ -1520,7 +1644,7 @@ Every ship runs on a reactor and a battery, makes heat, and shows up on more tha
 
 - `board` lists the board's named settings, and `board patrol` sets one. You never need to touch them: a ship sails on **Standard Running**, and the crew minds it. A capped reactor also runs its pumps slower, so the hull hums a little quieter: the tighter the cap, the more. **Long Patrol** caps the reactor at 30% to save fuel, but has no pinger or jammer and answers slowly when the shooting starts. **Rig for Quiet** saves battery and EF but has no pinger, jammer or reloads, and the drive starves first. **Battle Stations** puts the weapons first with the plant at full, at a cost in fuel and EF. Engineering's `SETTING` line names the one you're on, and says `By hand` once you change something yourself.
 - `S` shows what each setting would do on your boat, from her own plant figures at their rating. `REACTOR` is the most the setting lets the reactor make. `DRIVE` is the share of full drive it can hold with the battery flat. `FUEL` is fuel for each second of drive against Standard Running: a reactor burns less per MW at low output, so a gentle burn goes further. `SHOWS` is how much more the whole boat shows at this throttle. `ANSWER` is how long the reactor takes to reach full. Choose a row to read its cost, and `Enter` sets it. `board preview patrol` gives the same on the conn.
-- **The chief engineer may mention the board.** He speaks in the log, when nothing is happening, and only to a captain still on Standard Running. He raises each subject once, and at most once an hour: tanks under a quarter, or a defect the crew has found that the board can answer. A word from him never slows the clock, and you can ignore it.
+- **The chief engineer may mention the board.** The chief speaks in the log, when nothing is happening, and only to a captain still on Standard Running. Each subject is raised once, and at most once an hour: tanks under a quarter, or a defect the crew has found that the board can answer. A word from the chief never slows the clock, and you can ignore it.
 - `shed tubes` opens a breaker, and `restore tubes` closes it. `restore all` closes every breaker. Shedding `life` secures the scrubbers and electrolysis.
 - `priority tubes` puts a load first, `priority tubes 3` puts it third, and `priority auto` restores the list.
 - What you power is what you show. Dark sensors make the boat a little quieter and cut its EF, and tubes, pinger and guns show while they draw, even on the battery.
@@ -1663,7 +1787,7 @@ A hull from the last war breaks down by age: about once an hour of running, some
 
 ## 18. How the enemy thinks
 
-Computer captains play by your rules. Each has its own sensor picture, built from what its own ship hears; none of them knows where you really are. They fly with the same controls, through crews that take the same time to answer. What differs is **doctrine**: how a captain decides what to do with what it hears. Doctrine is in `data/captains.ron`, and the spec sheet lists every captain under [Captains](#23-ship-registry-and-specifications).
+Computer captains play by your rules. Each has its own sensor picture, built from what its own ship hears; none of them knows where you really are. They fly with the same controls, through crews that take the same time to answer. What differs is **doctrine**: how a captain decides what to do with what it hears. Doctrine is in `data/captains.ron`, and the spec sheet lists every captain under [Captains](#24-ship-registry-and-specifications).
 
 > [!NOTE]
 > **The misconception:** that the enemy knows where you are once it is coming for you. It knows a bearing, perhaps a rough range. A destroyer charging down your bearing is guessing, and a ghost that moves off that line, quietly, is often lost to it.
@@ -1715,7 +1839,7 @@ flowchart LR
   B --> C["Sweeps out along the line,<br/>pinging while drifting"]
   C -->|"echo"| D["Attack"]
   C -->|"nothing for 15 min"| E["Back to the convoy"]
-  style D fill:#ffdce0,stroke:#cf222e,color:#1a1a1a
+  style D fill:#ffdce0,stroke:#cf222e,colour:#1a1a1a
 ```
 
 **What it means for you:** after you fire, your firing point is on a line the escort knows. Don't stay on it. Move off the bearing, quietly, before she arrives; a ping finds a drifting ghost only within about 150 km.
@@ -1769,7 +1893,7 @@ A **carrier** is the heart of a battle group: the biggest, loudest hull in the f
 
 ### Commanding a carrier
 
-A carrier's captain fights with the deck. Her own hull is the loudest in the fleet and hears a quiet boat only a few hundred km off, so her craft are her ears and her reach. Choose a carrier in the Duel, learn the deck in the guided exercise *The Flight Deck*, and take a carrier group against a ghost in *Flight Quarters*. The console takes on the carrier's colours, Cold Steel, when you sail one; `t` changes them, and your own come back afterwards.
+A carrier's captain fights with the deck. Her own hull is the loudest in the fleet and hears a quiet boat only a few hundred km off, so her craft are her ears and her reach. Choose a carrier in the Duel, learn the deck in the guided exercise *The Flight Deck*, and take a carrier group against a ghost in *Flight Quarters*. On the house colour, the console takes on the carrier's colours, Cold Steel, when you sail one; if you chose another theme, you keep it. `t` changes them, and your own come back afterwards.
 
 **The deck.** `deck` gives the hangar: each kind of craft, what it flies, how many are ready, and how many are being refuelled and rearmed with the time to the next. It also gives what is waiting to launch and how many are aloft. The `DECK` row in your status window says the same in short, where a torpedo boat shows its tubes.
 
@@ -1972,7 +2096,7 @@ flowchart LR
   B -->|"third sinking"| C["Get clear<br/>20 minutes unheld"]
   C --> W["Patrol complete"]
   A -->|"tracked before firing"| L["Patrol failed"]
-  style L fill:#ffdce0,stroke:#cf222e,color:#1a1a1a
+  style L fill:#ffdce0,stroke:#cf222e,colour:#1a1a1a
 ```
 
 ### The replay
@@ -2013,7 +2137,7 @@ Every engagement at every difficulty gets a verdict as well as a result: **Defea
 
 A band doesn't change whether you won or what unlocks next. It says how well it went: sinking two destroyers and dying is not a Defeat. The verdict shows on the end-of-mission box and in the replay, and goes into your records. At Nightmare, the band is the point.
 
-**Tonnage.** The end-of-mission box and the replay also show the tons you sank and the tons there to sink: each ship's dry mass, not counting your own side or a ship you were told to spare. A ship counts as yours if your weapons sank her, or if she was lost to rock, a body or a mate's torpedo while hunting you: you led her there, and the box lists those apart (`2 wrecked chasing you`). A ship that wrecks herself on patrol is nobody's. Tons are raw, as WWII aces were ranked. The level and iron mode are shown beside them and never multiplied in, and a boat that was lost keeps what it sank.
+**Tonnage.** The end-of-mission box and the replay also show the tons you sank and the tons there to sink: each ship's dry mass, not counting your own side or a ship you were told to spare. A ship counts as yours if your weapons sank her, or if she was lost to rock, a body or a mate's torpedo while hunting you: you led her there, and the box lists those apart (`2 wrecked chasing you`). A ship that wrecks herself on patrol is nobody's. In a career fight a wrecked hunter counts only if she had heard you in that fight: one hunting something else was not led there by you. Tons are raw, as WWII aces were ranked. The level and iron mode are shown beside them and never multiplied in, and a boat that was lost keeps what it sank.
 
 **Records.** Each finished engagement is recorded: won or lost, the time, the iron mode, ships sunk, hull left, the level, the band and the tons sunk. The title screen shows each engagement's best, and your heaviest bag and running total of tons; a win in a stricter iron mode beats a faster one in a gentler mode, and at the same mode a harder level beats an easier one. See [Title screen](#title-screen).
 
@@ -2042,11 +2166,11 @@ flowchart LR
 
 **War news.** The enemy's guns grow more lethal in 3130, in the middle of the mid war. From then on destroyer and cruiser guns do 20% more damage. An engagement dated 3129 opens with a warning on the wireless, and one dated 3130 with the news. Plan your hull margins by the date.
 
-The era's changes apply only when you play an engagement from the campaign; the same engagement in free play is the mid-war version. The campaign lives in `data/campaign.ron`, so you can write your own.
+In free play the same engagement is the mid-war version. The campaign lives in `data/campaign.ron`, so you can write your own.
 
 ### Choosing a boat
 
-The **boat** setting on the title screen (`b`) puts you in a different hull wherever an engagement gives you the standard attack boat. All of them do the same job. They differ in how much room for error they give you, and the sheet for each is in the [ship registry](#23-ship-registry-and-specifications).
+The **boat** setting on the title screen (`b`) puts you in a different hull wherever an engagement gives you the standard attack boat. All of them do the same job. They differ in how much room for error they give you, and the sheet for each is in the [ship registry](#24-ship-registry-and-specifications).
 
 | Boat | Room for error | What it costs |
 |---|---|---|
@@ -2059,7 +2183,301 @@ The **boat** setting on the title screen (`b`) puts you in a different hull wher
 
 Pick the war to suit. In the **early** war the old boat fights a matched fight: green hunters with straight runners and no jammers, and merchants that still broadcast. In the **late** war it is simply a harder boat than the one the hunters were built to catch.
 
-## 22. Scenarios
+## 22. The career
+
+A career is one captain, one boat and one war, fought in patrols from base. **New Game** on the main menu starts one (see [Title screen](#title-screen)). The war lasts about five and a half years, in three eras. The career ends when the boat is lost, after a third failed patrol in a row, when the captain retires at base, or when the war ends.
+
+Each patrol starts at base with orders: a zone to patrol and the days to keep station there. Command sends a boat only to a zone it can reach and come back from on half a tank, and orders as many days on station as the other half lasts. Drift Station, a station of ours on the way to the enemy's system, refuels a boat on the way out and on the way home. It does not feed or rest the crew: only base does. Command orders places beyond it reckoning the fuel from the station. When the fuel for base runs short, `warp to base` lays the course by the station. The sector has five zones. A quiet zone sees less traffic than a busy one, and some patrols meet nothing at all. A patrol may meet convoys, some with escorts; lone merchants, among them stragglers, fast ships and tankers; and warships hunting alone or in groups. **Sail** fits out the boat (full tanks, the class's food, a rested crew and the standard load, drawn from the depot) and puts to sea. After each patrol the boat goes into the yard before the next orders. The refit is paid in days, by the jobs the captain chooses there: the essentials alone take 30, and every other job adds its own (see [The yard](#the-yard)). The longer the refit, the fewer patrols the war has left. The navy names the first boat from its class's names on her first patrol. A lesser boat after a relief, or a better boat accepted, comes with her name the day the captain takes her over, and the crew screen shows it at once.
+
+### The patrol chart
+
+At sea the console shows the patrol chart: the sector, north up and fixed to space, as the Chart window is in a fight. It shows what the boat knows and nothing more:
+
+- the bodies, each with the edge of its gravity well dashed round it;
+- the places: our base and Drift Station, the enemy's harbours, the convoy lanes, a lone trader's lane and the patrol zones;
+- our boat, its name and its course;
+- each contact report as an estimate: `◇r1` at the reported position, inside a circle of its error. The circle grows as the report ages. A report can be stale, or wrong;
+- each wreck the boat has found, as `✕ wreck`, for three days;
+- the chart overlays the boat holds, each as a layer labelled with what it shows, who gave it and its age (see [Charts shared](#charts-shared)).
+
+Traffic nobody has reported is not drawn. Beside the chart, the patrol column lists the orders by their own place (a watch names its site, not the zone nearest it), the days kept on station or the watch time left, anyone aboard beyond the crew and the days of food they cost, the course, the warp speed set, the radio, the reports with their age and error, the news heard this patrol with each item's age, and the patrol log. Command sends up to two reports as the boat sails; more come by radio at sea.
+
+**Warp and the wells.** The boat crosses the chart in a warp bubble, in a straight line. A bubble cannot hold inside a gravity well. At a well's edge it drops to normal space, and the boat sails on at 2 km/s, on fuel, until it is clear of the well and goes back to warp. The edge lies farther out for a stronger body: a star's well is wide, a moon's small. A base, a station or a harbour inside a well is reached in normal space from the edge. Well edges are where traffic is pulled out of warp, so they are where most fights are found.
+
+**The three clocks.** The strip under the chart shows them. None is restored at sea, except fuel at Drift Station; the base restores all three.
+
+| Clock | Spent by | When it runs low |
+|---|---|---|
+| Fuel | Distance in warp (fuel an hour grows with the square of the speed), time in normal space, keeping station in the zone (at the normal-space rate), and manoeuvring in a fight | The navigator keeps the fuel to reach the nearer of base and Drift Station at standard warp, plus a reserve of 10%, reckoned as the course would be laid: round a star's well rather than through it. The strip marks that line with `│`. When fuel falls below it, the navigator calls bingo and the strip shows `BINGO`. On most patrols the bingo call is what sends the boat home. Below the line, getting home is the captain's gamble. |
+| Food, which includes the water rations | Every day at sea, faster with people aboard beyond the crew: everyone aboard eats, and the strip gives the days it lasts for all of them | When it runs out the crew goes on emergency rations. After 14 days of them the boat is lost. |
+| Crew wear | Every day at sea, and a share of each fight's fatigue | A worn crew hears less and reacts more slowly in a fight. Wear falls only at base. |
+
+**Events.** As the hours pass, things turn up at sea. Each is logged as the boat learns of it, and nothing the boat cannot know is logged.
+
+| Event | What happens |
+|---|---|
+| Breakdown | A system the boat has fitted fails on its own and works at 50% until damage control mends it. The log names it. |
+| Ion storm | For some hours warp runs at half the speed set, for the boat and for all traffic. Time and fuel follow the slower speed. The strip shows `ION STORM` and the hours left. |
+| Wreck | Found near the boat and marked on the chart for three days. `drop in` within reach of it builds a fight that holds the wreck. It never forces a drop. |
+| Lone trader | A single merchant, out of reach and bound for a harbour. The sensors give its bearing and nothing more. It never forces a drop by itself. |
+| MAYDAY | A ship in distress, holed and adrift. Her call comes in on channel 16 in the distress form: her name, her position from the nearest body, the nature of her distress, and the persons on board. When she is within reach, the boat drops in. |
+| Unseen contact | A warship nobody saw coming. Nothing is logged. When it is within reach, the boat drops in. |
+
+**Chart time.** The war moves on the chart an hour at a step. Outside iron mode the chart opens paused. Chart time runs in every iron mode, and pausing follows the exercise's rule: never in full iron, and three pauses of 30 seconds each in limited iron. `Space` runs or stops it, and `+` and `-` choose how fast: 10 minutes, an hour, 6 hours or a day for each real second. Chart time drops to its slowest when something happens: a report, an event, a well's edge, the bingo call, reaching the zone, keeping the station time. It keeps running whatever the boat is doing, adrift included.
+
+| Key | Does |
+|---|---|
+| `Enter` or `:` | Open the conn line for a chart order. `↑` brings back earlier ones |
+| `Space` | Run or stop chart time |
+| `+` `-` `=` | Chart time faster, slower, slowest |
+| `[` `]` | Zoom the chart in and out |
+| `c` | Show the crew in the side column, or the patrol again |
+| `q` | Save and go back to the title |
+
+| Order | Does |
+|---|---|
+| `warp to anvil station`, `warp to base`, `warp to zone` | Set course for a place on the chart by its name, for the base, or for the zone in the orders, at the warp speed set. A course set inside a well starts in normal space. `warp to zone` steers for the ordered place; reach the forward station by its name, `warp to drift station`. When the fuel for base, with the reserve, is more than the boat holds, `warp to base` lays the course for Drift Station and says so; order it again there. A refuel at the station puts the orders back in force: a bingo call no longer excuses leaving station. If station time is still owed, go back to the zone; going home instead fails the patrol unless another sound reason has come up |
+| `warp to wreck` | Set course for the nearest wreck still marked |
+| `warp speed 3000` | The warp speed, from 500 to 4000 km/s; standard is 2000. A fast bubble burns fuel steeply and is easier for hunters to notice, and so is a loud boat: an older class, a drive rattling from damage, a hull that hums. A slow one costs days, and days cost food and wear |
+| `drop in` | Leave the chart for the tactical console, where the boat is |
+| `intercept r1` | Set course to wait just clear of the well edge where a convoy lane near report r1's estimate crosses it, the crossing nearest the estimate. With no lane near, the course is for the estimate itself. The contact may cross elsewhere, or never come |
+| `pause`, `resume`, `x3k` | Chart time, by order: `x1k` runs 10 minutes a second, `x3k` an hour, `x30k` 6 hours, `x100k` a day |
+| `orders` | Read the order the boat is under and the date command issued it. A diversion is dated when the boat heard it |
+| `news` | Read the news heard this patrol, by radio and at Drift Station, newest first, each item with its age when it arrived |
+| `send report` | Send the boat's report to command now, by the relay in reach: her sightings since the last signal, each with its time. The first signal goes even with nothing seen. Every signal is a transmission, heard on its bearing; an enemy hunting group near enough to hear it comes looking. Out of every relay's reach it is refused, and the report goes home with the boat |
+| `intel`, `intel lanes off`, `intel areas on`, `intel sightings off` | List the overlays held, each with its source, its date and its age, and whether it is shown; or hide or show one kind of them |
+
+The navigator lays a course the way its fuel is reckoned: round a star's well, by a waypoint wide of it, rather than through it, and says so: `NAV  The course skirts Hearth's well.` A planet's well is crossed. The `COURSE` line names where the course ends, how far that is along it, and the wells it goes round, and the chart draws each leg.
+
+A course never ends, or passes, where the drive cannot hold the boat. When the end of a course lies inside a body, nearer its surface than 1,000 km, or deeper in its pull than half the boat's full drive can hold, the navigator cuts it back along the line to the first point clear and says how high over the body it now ends: `NAV  Course ends 19,386 km clear of Kindle.` A course whose line would pass that near a body on the way is cut the same way, where it first comes that near. From where a course was cut, an order that heads further in makes no way and is refused: `NAV  No course: the line to r1's estimate runs deeper into Kindle's pull than the drive can hold.` An order that heads out is laid as usual. A base, a station or a harbour is a berth and is never moved; each lies where even the lesser boat's drive can hold her, and the way in to one is not cut short by the body it lies at. The boat does not steer round a body on the chart, so a course whose straight line passes through one is refused, and nothing changes: `NAV  No course: the line to r1's estimate passes through Kindle.` Set course first for a place whose line clears the body.
+
+### Radio and news
+
+Radio is light. Every message arrives late by the time light takes to cross the gap, and it fades beyond a system. Command reaches its relays by fixed links between our stations, but a boat hears a relay only within its reach. Between systems news travels by ship: a port is where a boat learns it, always as old as the voyage that carried it.
+
+It is the same light-speed delay the sensors obey in a fight. A relay's broadcast reaches about the breadth of a system, 200 million km. Our relays are at Anvil Station and Drift Station; command's word goes to Drift Station by a fixed link, about 32 minutes of light, and is broadcast from there. The patrol column's `RADIO` line states the radio as a fact: `In reach of Anvil Station, 6 min light time.` gives the relay the boat hears and how late command's word is when it arrives; `Enemy system: their traffic only.` means the boat hears the enemy's transmissions and nothing of ours; `No signal.` means she is between systems and hears nothing.
+
+In reach, the radio brings command's orders (a recall, or a diversion to new orders), command's contact reports, our other boats' sightings, and, in the enemy's system, the enemy's traffic: its bearing, elevation and strength, enciphered. One of our boats' sightings is a report like command's, marked with her name, so the boat can `intercept` it. An order sent while the boat was out of reach is never heard at sea: she learns it at the next port. A recall learned there binds her from then. A diversion binds while its window runs, and after that it is only news.
+
+The ports are Anvil Station and Drift Station. At either the boat gets a briefing: the news she missed and command's news since, the war's news and command's bulletins, the mess's talk and the mail, each item dated. At Drift Station our boats' sightings are handed over too, and those she had not heard join her reports. The chart keeps the news when the radio falls silent: `news` reads it, and the patrol column lists the latest.
+
+### Charts shared
+
+Charts are shared like news. An overlay is a layer on the chart: the traffic lanes, the enemy's hunter patrol areas, or sightings. Each names its source and the date it stood as of, and shows its age. Command hands over its overlays at base, in place of all the boat held. Drift Station hands over its own and our boats' sightings, as far as they have reached it. Our boats within 10 million km share theirs by datalink, late by the light time. An overlay is only as good as its source: command may not know every lane, a patrol area is where a group patrols and not where it is, and a sighting says where a contact was when she was seen. A contact heard on a bearing only is drawn as a line from where she was heard, since a bearing gives no range.
+
+The captain's sheets of glass stay the captain's own: an overlay is a layer to show or hide with `intel`, never a sheet to draw on. When the boat reports in, by `send report` or at base, her own sightings go to command, and later briefings carry them.
+
+### Dropping in
+
+`drop in` builds a fight where the boat is: the bodies near it, the terrain rolled for the well it is in, every group within reach, and the boat itself with its fuel, food, torpedoes, damage and wear. The fight is dated by the war's calendar. Four things drop the boat in without an order: reaching a well's edge with traffic in reach, being noticed by a hunting group in reach, a ship calling MAYDAY within reach, and an unseen contact within reach. A wreck or a lone trader never does: dropping in on them is the captain's choice. The briefing gives the place and the boat's own state, never who else is there; only the sensors can say that. A convoy or a lone trader within the array's hearing gives its bearing as it comes into hearing, and a louder ship is heard further off. Hunting groups run quiet and give none.
+
+The fight is played in the full tactical console, with its setups, windows and themes. `setup patrol` puts the patrol chart, as it stood at the drop, in the main window. A career fight ends in one of two ways: the boat warps out, or the boat is lost. Nothing else ends it, whoever is or is not out there. Inside a well the goals line reads "Clear the well.", because warp needs clear space; meeting it ends nothing. In open space there is no goal. If the boat is lost, `q` goes back to the record. While the fight runs, `q` does not leave it: the way out is to warp out.
+
+| Order | Does |
+|---|---|
+| `warp out` | Spin up the warp bubble and leave the fight for the chart. It starts only clear of every well's edge with no warship held; inside a well the reply names the well. A warship is a contact the crew has classed as one, rightly or wrongly. A merchant, or a contact not yet classed, does not stop the bubble. Nor does a warship heard only by her pings: a ping carries far beyond the range its echo finds anything, so she may be much too far off to hear you. She stops it once she is heard by anything more, once the crew have said "They may have us" in her present run of pings, or once they have heard a weapon from her. While your array is damaged, her pings stop it too: the crew cannot hear well enough to judge them faint. The bubble takes the spin-up time (`warp_spinup_s` in `tuning.ron`, 15 minutes by default), and a warship held or a well entered meanwhile stops it |
+| `recover` | Bring aboard the people of the lifeboat or pod close aboard: within 2 km of her and all but stopped beside her. It takes 10 minutes, the boat holding close and steady all that time. How many she holds is unknown until they are aboard. Those the boat has no room for stay in the pod. In a lesson the same order brings aboard a practice shot (see [Practice shots](#practice-shots)) |
+| `land` | Put the operatives ashore at the ordered landing point: within 5 km of it and all but stopped. It takes 30 minutes |
+| `search s3` | Send a party across to search crippled merchant s3: afloat at under half her hull, the boat within 2 km of her and all but stopped beside her. It takes three hours. The party learns her cargo, takes any papers, or a mail packet's dispatches, and brings off a passenger who matters, as a prisoner: the one kind of prisoner the boat takes. There is no fighting aboard |
+| `confirm fire` | Carry out an order to fire on a contact the crew have called a life pod or lifeboat. The crew query any such order, by key or at the conn, and time drops to x1. A torpedo fired at another ship, or down a bearing, whose line passes within 5 degrees of one is queried the same way; for a spread, the 5 degrees are counted from each wing. So is a carrier sent at one. Only this order, typed within 30 seconds, fires; no key does. Any other order, or the time running out, withdraws it. Hitting a pod is a breach of the rules of war. Firing on one on purpose is a grave breach: the patrol fails, the captain is relieved on return, and a second ends the career |
+
+Every life pod carries a distress beacon. Any ship with an EM intercept receiver hears it: a warship out to about 630 km, a cruiser out to about 790 km, and the few merchants that carry one out to about 60 km. Most merchants, the minesweeper and fighters carry none, and hear a pod only by her hum. The beacon is never heard from the patrol chart. A ghost hears a pod's faint hum now and then out to a few hundred km, so a warship hears the beacon farther than the hum. An ion cloud's static costs the beacon no more than it costs the array. So while your sensors are sound, wherever the crew can hear a pod, they hear her beacon too. Damage to the sensors shortens the beacon's reach, as damage to the array shortens the hum's, and a pod heard only by her hum may be taken for something else. The crew know a pod heard on her beacon for a lifeboat at once and for certain, so they never call her a torpedo, and she reads as neutral whoever's people she carries. Hunters within reach hear her too, and never take her for a target. No ship passes her on over the datalink.
+
+`Q` saves the fight as it stands and goes back to the title; Continue opens it again. In a career fight, `save` and the end box's `s` keep nothing apart: the career has its one save.
+
+Back on the chart, the fight's time has passed on the calendar. If the fight took the fuel below the line for home, the navigator calls bingo then. The boat is where the fight left it, on the course it had, or adrift on the fight's last velocity if it had none. It keeps what the fight left of it: fuel, food, torpedoes, hull and system damage, and a quarter of the fatigue the fight added. Damage control goes on mending damaged systems on the chart, slowly and one at a time: the engineer the drive, reactor and radiators, the COB the rest. A tired, green or short-handed crew mends slower. Nothing is mended past what can be done at sea, and the hull is mended only at base. Ships sunk leave the chart. A ship left under half its hull limps on alone, slowly. A group that lost a ship, or had one hit, stays alert for two days. A group that lost nothing stays quiet, even one that saw the boat. A convoy or a lone trader that was hit radios the hunting groups in its system. The call travels at the speed of light, so a group in that system hears it within minutes and answers within the hour, and a group in another system never hears it. A group that has heard sweeps the area where the attack was reported for those two days, in a widening square, and notices a boat more readily and from further off. Tonnage sunk is pending: it counts only once the boat is home, and it is lost with the boat. Losing the boat ends the career.
+
+### Station and coming home
+
+Time on station counts while the boat is inside the zone, on the chart or in a fight begun there. Keeping station is a patrol under way, so it burns fuel at the normal-space rate. Command judges a patrol when the boat comes home. It passes when the boat reached its zone, kept station for the ordered days or left for a sound reason, and came home. Leaving the zone before the station time is kept, by `warp to base` or by any course out of it, records the sound reason the facts give at that moment, in this order: the bingo call, tubes and racks empty, damage (the hull, or any system, under half), or a worn-out crew (80% wear or more). With none of them, command fails the patrol for leaving early, and a reason that comes later, a bingo called while chasing a convoy beyond the zone, say, does not excuse it. A refuel at Drift Station spends a bingo call, as it would a reason to leave, so the station time owed is owed again; any other reason stands. On arrival at base the patrol report comes up, then the yard, then the base, with new orders once the refit is confirmed.
+
+**Rank.** The career's rank comes from patrols passed, time in service and standing together. Standing rises with tonnage, in proportion to what command expects for the era, and with warships sunk, and falls with each failed patrol. A relief costs a rank.
+
+| Rank | Patrols passed | Time in service | Standing at least |
+|---|---|---|---|
+| Lieutenant | 0 | 0 | none |
+| Lieutenant Commander | 4 | 1 year | -1 |
+| Commander | 9 | 2½ years | 1 |
+| Captain | 15 | 4 years | 3 |
+
+A Captain with outstanding standing when the war ends is made Commodore. Keeping station and sinking nothing passes a patrol, but it never earns more than Lieutenant Commander. Standing only holds back a promotion: a rank once earned is kept when standing falls, and only a relief takes one away. At the yard, rank sets what the yard will do and standing how fast it works: see [The yard](#the-yard).
+
+### The yard
+
+After the patrol report the boat goes into the yard, before command's orders are drawn. The yard screen lists each job the yard offers, with its days, then the total and the day she sails if the choice stands. `↑` and `↓` move, and `Enter` chooses a job or drops it. The last row, **Confirm the refit**, confirms it: its days pass, and command's orders come dated for the day she sails, since a boat in dock does not know her next orders. `Esc` goes back to the base with the refit still waiting, and the boat cannot sail until it is confirmed. **Yard** on the base menu, or `yard` on the conn line, opens it again. While command's offer of a newer boat stands, the yard will not confirm the refit: accept the offer or decline it first, so the refit is done to the boat that sails.
+
+| Job | Days | Who may order it |
+|---|---|---|
+| The essentials: fuel, stores, torpedoes from the depot and rest for the crew | 30 | Always done |
+| Mend the hull | By the damage. The days grow fast as the damage grows | Always done |
+| Repair a damaged system in full | By the damage | Everyone |
+| Patch a damaged system | 2 | Everyone |
+| Fix one known quirk | 10 | Commander and above |
+| Fresh torpedoes: the least worn the depot holds | 3 | Commander and above |
+| Fit new equipment | 15 | Captain and above |
+
+**Rank opens jobs.** A job above the captain's rank is shown greyed, with the rank that opens it (`from Commander`), so the screen shows what a promotion brings. One quirk and one fit a refit.
+
+**Yard priority.** Standing above +2 moves the boat up the yard's queue. Every job's days are cut, more the higher the standing, up to a quarter at the highest. The rows show the days after the cut, and `YARD PRIORITY` says how many days it saved. Shore leave is never cut: its 14 days come on top. A captain relieved of command serves the months ashore first, and the work is done within them.
+
+**Patch or repair.** The hull is always mended before the boat sails. Each damaged system is set to a full repair, and `Enter` on its row patches it instead: 2 days, but the system works no better than 90% until a later refit repairs it. Damage control mends it at sea and in a fight, up to that cap and no further. The base and the patrol column show each patched system with its cap: `The drive patched: 90% at best until a refit repairs it.`
+
+**Paid off.** A boat whose hull would take more than about 180 days to mend is paid off. She goes out of service, her history is closed, and her fits and patched systems go with her. Command gives the captain another boat at once, by the same steps as an accepted offer: the newer class if command had offered one, otherwise another of her class. It cannot be declined. Name who comes to her, then the yard fits her out.
+
+**Worn torpedoes and the depot.** At each return the boat's torpedoes go back to the depot, and she sails with a new issue. Each torpedo comes with her log of practice runs: about 20 in the early war, some over 40, about 8 in the mid war and about 2 late, mostly new from the factory. Standing above +2 buys better stocks: the depot draws each torpedo twice and issues the fresher. From Commander, **Fresh torpedoes** takes the least worn the depot holds. A worn torpedo is a little likelier to fail: see [Torpedo wear](#torpedo-wear).
+
+**New equipment.** From Captain the yard may fit new equipment, one fit a refit. Each enters service through the war, as the newer classes do, and changes a figure the boat already has. A fit brings an older boat part of the way toward the newer classes, never past them.
+
+| Fit | In service | What it changes |
+|---|---|---|
+| Resilient mounts | Mid war | Her own noise: she is a little quieter |
+| Array processing | Mid war | The array hears a fainter ship |
+| Reload gear | Mid war | The tubes reload faster |
+| Cold-running fit | Late war | The hull sheds heat faster, so she goes cold sooner after a burn |
+
+A fit stays with the boat and is in her history. A new fit may show a small fault on its first patrol: a new quirk the crew find, as quirks are found. If the boat is paid off, her fits go with her, and the next boat starts without them.
+
+**The record.** The patrol report names the boat's fits. The career's record lists, for each boat, her fits, her patched systems and every refit: the day the yard took her, its days and the jobs done.
+
+### The crew
+
+The boat has nine named crew and the hands, the rest of her company taken together. Crews are mixed: each crew member is a person with a name and their own pronoun, and nothing about who they are changes what they can do. The named crew are:
+
+| Post | Watch | Skill | What it changes |
+|---|---|---|---|
+| Executive officer (the exec), navigator, weapons officer | Take turns as officer of the deck, in charge of the watch | Ship handling | How quickly helm and engine orders are carried out |
+| Three sensor operators | One on each watch | Sensors | How faint a contact is heard, and how often a class call is wrong |
+| Chief of the boat (COB) | Day worker | Damage control | Repair speed |
+| Engineer | Day worker | Machinery | Repairs to the drive, the reactor and the radiators |
+| Torpedo petty officer | Day worker | Torpedoes | Reload time |
+
+**Skill and wear in words.** Skill runs from Green through Qualified, Steady and Seasoned to Expert. A Steady crew member does the job exactly as every exercise in the trainer assumes; a Green one is slower and hears less, an Expert one quicker and sharper. Each crew member also carries their own patrol wear: Fresh, Tired, Worn or Spent. Wear rests only at base.
+
+**Watches.** The captain chooses the watch scheme, at base or on the chart:
+
+- **Three sections**, the default. Each crew member stands four hours in twelve: one officer of the deck and one sensor operator at a time, while the others rest.
+- **Port and starboard.** Two of the three sections are on watch at a time, eight hours in twelve. Two sensor operators share the array: the better one sets what the boat hears, and the second pair of ears adds a little. The crew tire about twice as fast.
+
+The COB, the engineer and the torpedo petty officer are day workers: they tire when they work. From 0200 to 0600 ship's time, the middle watch, those on watch work as if a little more tired than they are. Who stands it is the captain's choice: `swap` trades two crew members' watches. **Battle stations** (condition red) puts everyone at their post, and the best sensor operator takes the array. In a fight battle stations is the only change: watches are changed between fights.
+
+**Learning.** A crew member gets better at their own job by doing it: a sensor operator with each new contact heard on their watch, the torpedo petty officer with each reload, the COB and the engineer with each repair, an officer with each hour in charge of the watch in a fight. Gains shrink as skill rises. On station the captain may order **drill**: everyone improves slowly, and everyone, the hands too, tires faster. `exec attack` gives the exec the next attack. The exec has the conn for the whole fight, whatever the watch, and does not rest until it is over, even at WHITE. Helm and engine orders take about 15% longer in the exec's hands, and the exec learns at twice the rate.
+
+**Losses.** A hit on a system can hurt or kill the crew member working it: a sensor operator on watch at the array, the officer of the deck in the control room, a day worker where they are working. At battle stations everyone at their post is exposed. A hit can also kill or hurt some of the hands. The log says so plainly, and the patrol report names those killed and hurt. A crew member who is hurt misses the next patrol. Until base one of the hands covers their post; for the next patrol a newcomer stands in, and leaves when they come back. Losses are not made good at sea: below the boat's full complement every reload and repair, and every helm and engine order, takes longer, and the crew tire faster, in proportion to those lost. The killed no longer eat or breathe; the hurt still do. At base the boat is brought back to full strength, by newcomers who are mostly Green or Qualified.
+
+**At base.** Command moves people as the war goes on:
+
+- At each refit a crew member may be transferred to another boat, about one in twenty, and never more than two at once. A newcomer takes their post and watch.
+- Command may take the exec for a command of their own, more often for a skilled exec under a captain in good standing. The captain cannot refuse, and must choose the new exec before sailing: the navigator promoted, with a new navigator joining, or the officer command sends, likely Qualified.
+- A relieved captain asks the exec to come to the lesser boat. The longer they have served together, the likelier the exec is to come; a Seasoned or Expert exec would sooner wait for a boat of their own. The rest of the crew stay with the old boat.
+
+**Knowing the boat.** Each crew member, and the hands as a group, come to know the boat patrol by patrol: none, some, good, and full after about ten patrols. It shows in her routine, not in a fight's outcome: reloads a little quicker, faults the crew have met before mended a little faster, fewer slips when running quiet, and a warning before a fault they know cuts out. Newcomers start knowing nothing of her.
+
+**A crew's character.** Most crews have none. Some stick together: fewer ask to leave, and the exec is likelier to follow the captain. Some do not stay long. Nobody says which until it shows in what they do; then the COB remarks on it, and the boat's history keeps it. It never changes how well anyone works in a fight.
+
+**A newer boat.** From mid war, command may offer a Commander or above in good standing a newer class: the heavy hull from mid war, the cold hull from late war. The base lists **Accept** and **Decline** while the offer stands. Declining costs nothing, and command may offer again at a later refit. The offer comes as the boat goes into the yard, and the yard confirms no refit until you answer it. Accepting asks the exec and up to two others you pick to come; the rest stay with the old boat. The navy names the new boat, her history opens, and nobody aboard knows her yet. A crew who do not stay long may refuse to come.
+
+**Shore leave.** At base, **Shore leave** sends the crew ashore for 14 days beyond the refit. For the next three patrols their wear builds a quarter more slowly. Leave at two refits running costs a little standing.
+
+| At base | Does |
+|---|---|
+| **Yard** | The refit waiting: each job and its days, and the day she sails (see [The yard](#the-yard)). Listed first until the refit is confirmed |
+| **Crew** | The crew screen: each crew member's post, name, skill, wear, watch and how well they know the boat, then the hands and the watch scheme. `Space` picks a crew member, `s` trades the watches of the two picked, `w` changes the scheme |
+| **Promote the navigator**, **Take command's officer** | Choose the new exec, while command has taken the old one |
+| **Accept**, **Decline** | Answer command's offer of a newer boat, while it stands. Accept opens a pick of up to two to come along |
+| **Shore leave** | Leave for the crew, once a refit |
+
+On the chart, `c` shows the crew in the side column, with `▸` against those on watch and the sections who have it. In a fight, `show crew` puts the crew window in the focused window, as the fight has them.
+
+| Order | Does |
+|---|---|
+| `watch three`, `watch port` | Three sections, or port and starboard. At base or on the chart |
+| `swap nav weps`, `swap exec okafor` | Trade two crew members' watches, each named by post (`exec`, `nav`, `weps`) or family name. Both must stand watch, both officers or both sensor operators, and both be fit for it; the reply says why not |
+| `drill`, `drill off` | Drill on station, or stop it. Leaving the zone stops it |
+| `exec attack`, `exec attack off` | The exec leads the next attack, or the captain does |
+| `show crew` | The crew window, in a career fight |
+
+**The report and the record.** The patrol report names the killed and the hurt, the hands lost, and what happened at base: transfers, the exec taken, a relief or an offer. When the career ends, its record lists every boat the captain commanded, with her history, and everyone who served, with their posts, their boats and what became of them.
+
+### Orders and the briefing
+
+At base command issues the orders for the next patrol, dated. With standing above +2, command offers two orders and the captain keeps one; a special mission is never offered beside another. The order says what to do and where: patrol a zone, sink a tonnage there, watch a place and report what is seen, or a mission. A mail run has no station time: it names where the dispatches are collected and where they are delivered, or where to meet our mail packet. Operatives for a landing come aboard as the boat sails.
+
+The briefing gives everything else command and the port have for the boat, each item dated. A contact report says where the contact was when she was seen, and its error has grown since; its age is how old it was when it reached base. The mess's talk is word from other crews, sometimes rumour and sometimes wrong. The mail is letters for the crew, or none, and the crew say what they think of either.
+
+The patrol report gives command's verdict on the order on its own terms: an order met or not, a mission done or failed, a lifeguard station graded by how many of those adrift came home, or a landing made whose outcome is not yet known. That news comes later, in the report of the patrol that hears it. The report lists each ship sunk with the cargo command learned she carried; the rest are "cargo unknown". The record lists each patrol's order and verdict, and says plainly when a patrol failed and why, and when the captain was relieved.
+
+| At base | Does |
+|---|---|
+| **Order 1**, **Order 2** | Keep one of command's two orders, while two are offered |
+| **Briefing** | The briefing in full |
+
+| Order | Does |
+|---|---|
+| `orders` | Read command's order, or the two offered, and the date issued. At base, or on the chart |
+| `order 1`, `order 2` | Keep one of command's two orders. At base, while two are offered |
+| `news` | Read the news, each item with its age: at base, the briefing in full; on the chart, the news heard this patrol |
+
+**The orders.** Each order says what command asks, and command judges the patrol on it:
+
+| Order | What it asks | Done when |
+|---|---|---|
+| Patrol | Keep station in a zone for the days ordered | The station time is kept, or the boat left for a sound reason |
+| Sink | Sink a tonnage in a zone, keeping station there | The tonnage is sunk; short of it, it is judged as a patrol |
+| Watch | Keep watch on a place (where a lane crosses a well's edge, or a harbour's approaches) for the days ordered, and report what is seen | The watch is kept and the report delivered, by `send report` or carried home. A quiet watch honestly reported is a success |
+| Pick up survivors | Take survivors, of any side, from lifeboats and pods in a zone, after a sinking or wherever the boat finds them, and bring home a number of them | That many come home alive. A prisoner taken off a searched merchant is not a survivor and does not count |
+| Lifeguard | Stand by a place where command expects crews adrift, of any side, and bring home whom the boat can | Graded by how many of those adrift came home |
+| Landing | Put the operatives ashore at a place near an enemy body or harbour | The landing is made. Whether it went well comes later, as news |
+| Mail run | Collect dispatches at one port and deliver them at another, or meet our mail packet at a place and bring her dispatches home | The dispatches are delivered. It has no station time |
+
+**People aboard.** Survivors, operatives and prisoners all eat and breathe. On the chart the food runs down faster, and in a fight the air fouls faster. A boat takes aboard no more than half her class's crew. The patrol column lists who is aboard and the days of food they cost.
+
+**Cargo.** Every merchant carries a cargo, and the contacts list never shows it. It shows in three ways. A hit may set off a volatile cargo, warp crystals or munitions, in a flash the sensors see; the crew say what they make of it, and they can be wrong. A search of a cripple finds it. And at base the patrol report says what command learned each ship sunk carried; the rest are "cargo unknown". Command values crystal tankers and mail packets most.
+
+**Mail.** Between systems only a ship carries news, and mail packets are the ships that carry it. An enemy packet carries the enemy's dispatches between systems: sinking her delays the enemy's news, and searching her takes the dispatches. Our own mail reaches the boat only at base or Drift Station, as letters for the crew, or none, and the crew have something to say about either.
+
+### The war diary
+
+Each career keeps a war diary: one dated record of the war, entered as things happen, in the terse voice of an official log. It holds the patrols (sailing, reaching station, a call at a port or station, leaving early and why, a mission's outcome, and the return with command's verdict), each fight (where, what was met, the ships sunk, and the hands hurt or killed), the crew's changes (wounded, killed, transferred, newcomers, those who stay with a boat you leave, the exec taken, shore leave, a promotion or a relief), the boat's (commissioned, an offer made, declined or accepted, the near-loss, each refit with its jobs and days, paid off), command's news on the day it was heard with the day it was sent (orders changed by radio among it), your own notes, and the war's end.
+
+The diary holds only what you were shown. A contact the crew never identified stays as they called it, a quirk is entered only once the crew find it, and command's private opinion of you is never entered. Keeping the diary changes nothing in play.
+
+**Opening it.** At base, **War diary** on the base menu, or `diary` on the conn line. At sea, `diary` on the patrol chart's conn line. The diary never stops the chart: chart time runs on behind it, in iron mode or not. Anything that would stop the chart (a drop into a fight, an arrival, news, an alarm) closes the diary back to the chart, so you see what happened. A note you were typing goes to the chart's conn line, to be finished there. If the boat came home, it waits on the base's conn line after the patrol report. In a fight the diary does not open: the fight's own log serves, and the diary enters the fight when it ends.
+
+**The page.** One scrolling page under a heading of two lines: the captain and the boat, then the war's first and latest dates, In service or how the war ended, and the tonnage. A heading opens each patrol (`Patrol 2: Lantern Reach`) and each spell at base (`At base: Gantry`). Each entry is a line or two under its date.
+
+| Key | Does |
+|---|---|
+| `j` `k`, `↑` `↓` | Move |
+| `PgUp` `PgDn` | The previous or next patrol |
+| `Home` `End` | The war's start, or today |
+| `Enter` | On a sailing or a return: open that patrol's report. On a fight: open it at that fight's attack data. In the report: its chart log |
+| `n` | Write a note |
+| `w` | Write the diary's files now |
+| `Esc` | Back a level, then out of the diary. `q` does the same |
+
+**Notes.** `n` opens a note line at the foot of the diary: type the note, then `Enter` enters it, or `Esc` drops it. `note <text>` on the conn line does the same at base or on the chart. A note is one line of at most 120 characters, entered under today's date and marked as yours. An empty note is not entered. A note that is too long is refused, and the line stays open with your text so you can shorten it. Notes made at sea are the patrol report's remarks.
+
+**The war patrol report.** Each patrol has a report, laid out after the real form. It is kept while the patrol runs and closed when the boat comes home, or when the war ends at sea. Its heading gives the patrol's number, the boat, the zone, the orders and the verdict. Then:
+
+| Section | What it holds |
+|---|---|
+| SHIP CONTACTS | Each contact met in a fight, as the crew called it: the day, the range if the crew had a solution, and what was done (`attacked`, `attacked, presumed sunk` or `met`) |
+| ATTACK DATA | For each fight, each torpedo fired: the tube, the type, her practice runs, the target and the result. A target is named only where the debrief named her, for a hit or a dud |
+| DAMAGE AND DEFECTS | The systems damaged or patched, and the hull at the return |
+| PERSONNEL | The crew's changes this patrol |
+| ENDURANCE LEFT | Fuel, food and torpedoes at the return |
+| DURATION | Days at sea, and days on station |
+| REMARKS | Your notes made during the patrol |
+
+`↑` `↓` scroll the report, `PgUp` `PgDn` page it, `Enter` opens the patrol's chart log, every line of it, and `Esc` goes back. The patrol at sea has no report yet: it is written when the boat comes home.
+
+**The files.** When the war ends, however it ends, the diary is written to two files in `ghostboat/diaries/` beside the saved exercises (`$XDG_DATA_HOME`, or `~/.local/share`), named by the war's code: `7F3A-91C2-K4M0.txt`, plain text laid out for 80 columns, and `7F3A-91C2-K4M0.md`, the same in Markdown. `w` in the diary writes them at any time, and a later write replaces the earlier. Each holds the whole diary in date order, then every patrol report with its chart log. If the files cannot be written, a notice says so and the game goes on.
+
+**The War diaries list.** **War diaries** on the main menu lists the diaries written, newest first, each by its two heading lines. `↑` `↓` choose, `PgUp` `PgDn` page, and `Enter` opens one in the game's reader, where `↑` `↓` scroll, `PgUp` `PgDn` page, `Home` `End` go to either end and `Esc` goes back. A finished war is read from its file, so its diary outlasts its save.
+
+**A war from before the diary.** A career saved before the diary existed begins one on the day it next loads: "The diary begins here.", after what its save lets the diary rebuild: the orders sailed on, the refits and the boats commissioned, each on its own date. The patrols rebuilt have no reports, and `Enter` on one says so.
+
+## 23. Scenarios
 
 Lessons live in `data/tutorials/`, one folder per track (`civilian/`, `naval/`, `ghost/`, `hunter/`), and challenges in `data/scenarios/`. The title screen lists the lessons under **Training** and the challenges under **Scenarios**. Choose one there, or start one directly with `cargo run --release -- data/tutorials/<track>/<file>` or `cargo run --release -- data/scenarios/<file>`. A third folder, `data/testbench/`, holds physics and sensor checks. They are not exercises for a captain: start the trainer with `--dev` and a **Dev** item on the main menu lists them, or load one by path (see the development guide).
 
@@ -2133,12 +2551,13 @@ The Scenarios page shows each challenge's rating, from Routine through Testing, 
 | Behind the Rock | `behind_the_rock.ron` | **A duel among the rocks.** A destroyer works through the Cinders, rock clumps in a debris haze, placed fresh each time and more than 4,000 km off. Rock stops a torpedo, hers and yours, so a clean line to the target is worth waiting for, and a clump between you is cover. Fire control marks a run through rock. |
 | Mines Among the Rocks | `mines_among_the_rocks.ron` | **A minefield sown through rock**, laid fresh each time, with high rock either side and one clump the chart leaves out. A burn wakes the acoustic mines and a hard turn the magnetic ones: set your line before the field, and cross it silent on the quiet helm or the gravitic thrusters. |
 | The Swept Channel | `the_swept_channel.ron` | **Our field, their sweepers.** Our side has mined the Gate, the one passage between two rock sills, and an enemy carrier group is bound through it. The navy will not enter a charted field unswept: the group waits short of it while the carrier's two sweeper craft clear a lane, then comes down the lane. Sink the carrier, or turn her back: with both sweepers gone and no lane, she cannot pass. Sweepers are quiet craft that hear a dark boat a few hundred km off, and a torpedo will not find one: hunting them takes the deck gun, close in. Rated Severe: a carrier and her fighters are meant to frighten a lone ghost. Teaches: the enemy's sweeping, a chokepoint, and choosing between the sweepers and the ambush. |
-| Casual Patrol | `casual_patrol.ron` | **Nobody home.** Cruise an empty enemy sector, its moons, its belt and its debris, with no goal but the patrol and no clock. A shakedown cruise for a new captain or a new boat: leave with `q` when you like. |
+| Casual Patrol | `casual_patrol.ron` | **Nobody home.** Cruise an empty enemy sector, its moons, its belt and its debris, with no goal but the patrol and no clock. A shakedown cruise for a new captain or a new boat: leave with `q` when you like. Its friendly twin is *The Cozy Well*. |
+| The Cozy Well | `the_cozy_well.ron` | **Fine weather, good company.** A quiet well on the home side of the war, in the hauler. Friendly traders work its orbits and talk on the working channels, so it is a gentle place to practise hailing (`hail s1`). Its moons, belts, debris and dust are placed fresh each time, so there is always something new to steer round. No combat, no goal and no clock: only the rocks can hurt you. Leave with `q` when you like. |
 | Datum | `datum.ron` | **The hunt, from the destroyer.** A freighter blew up ten minutes ago; you have the destroyer *Vigilant* and the cruiser *Ardent*, and the datum. The ghost has a start, placed fresh each time somewhere round the wreck. Find her and sink her, or drive her off. |
 | Hold the Line | `hold_the_line.ron` | **Escort, from the escort's bridge.** Four freighters, four hours, and you in the destroyer *Kestrel* with *Merlin* on the far side. An attack boat waits ahead, placed fresh each time, and you will hear her only when she fires. Bring all four through. |
 | Distress Call | `distress_call.ron` | **No clean answer.** On patrol under radio silence, ordered to stay unseen, you hear a MAYDAY from the freighter *Halcyon*, off a debris haze in pirate waters. She may be what she says, or a raider calling a false MAYDAY, and there may be raiders lying near her; it changes every time. Help her and risk your orders, or hold your line and leave her. A hail tests her story, but only after you lift radio silence. |
 
-## 23. Ship registry and specifications
+## 24. Ship registry and specifications
 
 <!-- specs:start -->
 
@@ -2311,6 +2730,32 @@ A mass-built wartime freighter: a third of a bulk carrier, welded fast and sent 
 | Thermal | hull 10,000 m², emissivity 0.90; plume 177 MW at full |
 | Rocket | 17,500 t dry + 7,500 t propellant; thrust 38 MN; exhaust 150 km/s; Δv 54 km/s; 0.15 g loaded (crew limit 1.0 g) |
 | Life support | 20 crew; cabin loses 80 W per kelvin; 20 oxygen candles |
+
+### Life pod (`civ-pod`)
+
+An escape pod or lifeboat, a hull a few metres long that a crew takes to when their ship is lost. It has no drive to speak of and no weapons, so it drifts on the way its ship was going, and its distress beacon tells any ship with an intercept receiver that it is a lifeboat, out to about 630 km for a warship. To take its people aboard, close within 2 km, all but stop and order recover.
+
+| | |
+|---|---|
+| Drive | 0.000 km/s² (0.00 g), full power in 1 s |
+| 0 to 1 km/s | inf s at full throttle |
+| Propellant | 0 s of full burn: 0.0 km/s of velocity change in all |
+| Turning | up to 0.0°/s, reached in 0 s |
+| Crew | answers the helm in 3.0 s and the engines in 4.0 s (1.0× a navy crew; under the computer, its captain's crew) |
+| EF, drifting | 100.0 dB |
+| EF, full burn | 100.0 dB |
+| Target strength | 5 dB (how well its hull returns a ping) |
+| Passive array | none |
+| Active array | none |
+| Flight assist | none |
+| Torpedo tubes | none |
+| Size | 0.01 km hull radius (what a slug must pass within) |
+| Countermeasures | none |
+| Radar cross-section | 20 m² |
+| EF given off | drive 0.0 yW, reactor 0.0 yW, idle 10 mW, datalink 1.0 kW |
+| Thermal | hull 40 m², emissivity 0.90; plume 32 W at full |
+| Rocket | 20 t dry + 0 t propellant; thrust 1.0 kN; exhaust 1 km/s; Δv 0 km/s; 0.01 g loaded (crew limit 0.0 g) |
+| Life support | 12 crew; cabin loses 20 W per kelvin; 10 oxygen candles |
 
 ### Tanker, fleet (`civ-tanker`)
 
@@ -2798,6 +3243,7 @@ Good hits to sink each hull, by the warhead figure in the torpedo table: proximi
 | Hauler, civilian | 90 | 1 | 1 | 1 | 2 / 1 |
 | Hunter, civilian | 80 | 1 | 1 | 1 | 2 / 1 |
 | Freighter, war standard | 90 | 1 | 1 | 1 | 2 / 1 |
+| Life pod | 10 | 1 | 1 | 1 | 1 |
 | Tanker, fleet | 500 | 5 / 4 | 5 / 4 | 5 | 7 / 6 |
 | Carrier, military | 320 | 3 | 3 | 4 / 3 | 5 / 4 |
 | Cruiser, military | 390 | 4 / 3 | 4 / 3 | 4 | 6 / 5 |
@@ -2837,18 +3283,18 @@ Good hits to sink each hull, by the warhead figure in the torpedo table: proximi
 
 Range in km at which the listener (row), drifting, has an even chance each second of hearing the target (column). Baffles and moons ignored.
 
-| Listener | civ-freighter | civ-hauler | civ-hunter | mil-carrier | mil-cruiser |
-|---|---|---|---|---|---|
-| civ-freighter | 550 | 11 | 5 | 620 | 440 |
-| civ-hauler | 1,820 | 36 | 18 | 2,040 | 1,450 |
-| civ-hunter | 7,020 | 140 | 70 | 7,880 | 5,580 |
-| mil-carrier | 18,220 | 360 | 180 | 20,440 | 14,470 |
-| mil-cruiser | 43,690 | 870 | 440 | 49,020 | 34,700 |
-| mil-destroyer | 28,960 | 580 | 290 | 32,490 | 23,000 |
-| mil-fighter | 6,670 | 130 | 67 | 7,490 | 5,300 |
-| mil-ghost | 31,610 | 630 | 320 | 35,470 | 25,110 |
-| mil-sweeper | 19,570 | 390 | 200 | 21,950 | 15,540 |
-| pir-raider | 1,880 | 38 | 19 | 2,110 | 1,490 |
+| Listener | civ-freighter | civ-hauler | civ-hunter | civ-pod | mil-carrier | mil-cruiser |
+|---|---|---|---|---|---|---|
+| civ-freighter | 550 | 11 | 5 | 1 | 620 | 440 |
+| civ-hauler | 1,820 | 36 | 18 | 5 | 2,040 | 1,450 |
+| civ-hunter | 7,020 | 140 | 70 | 18 | 7,880 | 5,580 |
+| mil-carrier | 18,220 | 360 | 180 | 46 | 20,440 | 14,470 |
+| mil-cruiser | 43,690 | 870 | 440 | 110 | 49,020 | 34,700 |
+| mil-destroyer | 28,960 | 580 | 290 | 73 | 32,490 | 23,000 |
+| mil-fighter | 6,670 | 130 | 67 | 17 | 7,490 | 5,300 |
+| mil-ghost | 31,610 | 630 | 320 | 79 | 35,470 | 25,110 |
+| mil-sweeper | 19,570 | 390 | 200 | 49 | 21,950 | 15,540 |
+| pir-raider | 1,880 | 38 | 19 | 5 | 2,110 | 1,490 |
 
 | Listener | mil-destroyer | mil-fighter | mil-ghost | mil-sweeper | pir-raider |
 |---|---|---|---|---|---|
@@ -2867,18 +3313,18 @@ Range in km at which the listener (row), drifting, has an even chance each secon
 
 Range in km at which the listener (row), drifting, has an even chance each second of hearing the target (column). Baffles and moons ignored.
 
-| Listener | civ-freighter | civ-hauler | civ-hunter | mil-carrier | mil-cruiser |
-|---|---|---|---|---|---|
-| civ-freighter | 1,230 | 140 | 120 | 2,820 | 2,230 |
-| civ-hauler | 4,070 | 460 | 410 | 9,360 | 7,400 |
-| civ-hunter | 15,680 | 1,770 | 1,570 | 36,070 | 28,510 |
-| mil-carrier | 40,660 | 4,590 | 4,080 | 93,570 | 73,960 |
-| mil-cruiser | 97,500 | 11,010 | 9,790 | 224,360 | 177,340 |
-| mil-destroyer | 64,630 | 7,300 | 6,490 | 148,730 | 117,560 |
-| mil-fighter | 14,890 | 1,680 | 1,500 | 34,270 | 27,080 |
-| mil-ghost | 70,560 | 7,970 | 7,080 | 162,370 | 128,340 |
-| mil-sweeper | 43,670 | 4,930 | 4,380 | 100,490 | 79,430 |
-| pir-raider | 4,200 | 470 | 420 | 9,660 | 7,630 |
+| Listener | civ-freighter | civ-hauler | civ-hunter | civ-pod | mil-carrier | mil-cruiser |
+|---|---|---|---|---|---|---|
+| civ-freighter | 1,230 | 140 | 120 | 1 | 2,820 | 2,230 |
+| civ-hauler | 4,070 | 460 | 410 | 5 | 9,360 | 7,400 |
+| civ-hunter | 15,680 | 1,770 | 1,570 | 18 | 36,070 | 28,510 |
+| mil-carrier | 40,660 | 4,590 | 4,080 | 46 | 93,570 | 73,960 |
+| mil-cruiser | 97,500 | 11,010 | 9,790 | 110 | 224,360 | 177,340 |
+| mil-destroyer | 64,630 | 7,300 | 6,490 | 73 | 148,730 | 117,560 |
+| mil-fighter | 14,890 | 1,680 | 1,500 | 17 | 34,270 | 27,080 |
+| mil-ghost | 70,560 | 7,970 | 7,080 | 79 | 162,370 | 128,340 |
+| mil-sweeper | 43,670 | 4,930 | 4,380 | 49 | 100,490 | 79,430 |
+| pir-raider | 4,200 | 470 | 420 | 5 | 9,660 | 7,630 |
 
 | Listener | mil-destroyer | mil-fighter | mil-ghost | mil-sweeper | pir-raider |
 |---|---|---|---|---|---|
@@ -2945,6 +3391,7 @@ Range in km at which the listener, drifting, has an even chance each second of h
 | civ-hauler | civ-freighter | 400 | 2,460 |
 | civ-hauler | civ-hauler | 230 | 8,140 |
 | civ-hauler | civ-hunter | 230 | 31,380 |
+| civ-hauler | civ-pod | 96 | never |
 | civ-hauler | mil-carrier | 320 | 81,380 |
 | civ-hauler | mil-cruiser | 250 | 195,130 |
 | civ-hauler | mil-destroyer | 170 | 129,350 |
@@ -2955,6 +3402,7 @@ Range in km at which the listener, drifting, has an even chance each second of h
 | civ-hunter | civ-freighter | 750 | 2,460 |
 | civ-hunter | civ-hauler | 420 | 8,140 |
 | civ-hunter | civ-hunter | 420 | 31,380 |
+| civ-hunter | civ-pod | 180 | never |
 | civ-hunter | mil-carrier | 590 | 81,380 |
 | civ-hunter | mil-cruiser | 470 | 195,130 |
 | civ-hunter | mil-destroyer | 310 | 129,350 |
@@ -2965,6 +3413,7 @@ Range in km at which the listener, drifting, has an even chance each second of h
 | mil-carrier | civ-freighter | 3,020 | 10,970 |
 | mil-carrier | civ-hauler | 1,700 | 36,350 |
 | mil-carrier | civ-hunter | 1,700 | 140,150 |
+| mil-carrier | civ-pod | 720 | never |
 | mil-carrier | mil-carrier | 2,400 | 363,490 |
 | mil-carrier | mil-cruiser | 1,910 | 871,630 |
 | mil-carrier | mil-destroyer | 1,270 | 577,810 |
@@ -2975,6 +3424,7 @@ Range in km at which the listener, drifting, has an even chance each second of h
 | mil-cruiser | civ-freighter | 7,420 | 24,570 |
 | mil-cruiser | civ-hauler | 4,170 | 81,380 |
 | mil-cruiser | civ-hunter | 4,170 | 313,750 |
+| mil-cruiser | civ-pod | 1,760 | never |
 | mil-cruiser | mil-carrier | 5,890 | 813,760 |
 | mil-cruiser | mil-cruiser | 4,680 | 1,951,350 |
 | mil-cruiser | mil-destroyer | 3,130 | 1,293,550 |
@@ -2985,6 +3435,7 @@ Range in km at which the listener, drifting, has an even chance each second of h
 | mil-destroyer | civ-freighter | 4,270 | 13,810 |
 | mil-destroyer | civ-hauler | 2,400 | 45,760 |
 | mil-destroyer | civ-hunter | 2,400 | 176,440 |
+| mil-destroyer | civ-pod | 1,010 | never |
 | mil-destroyer | mil-carrier | 3,400 | 457,610 |
 | mil-destroyer | mil-cruiser | 2,700 | 1,097,320 |
 | mil-destroyer | mil-destroyer | 1,800 | 727,420 |
@@ -2995,6 +3446,7 @@ Range in km at which the listener, drifting, has an even chance each second of h
 | mil-ghost | civ-freighter | 2,820 | 5,500 |
 | mil-ghost | civ-hauler | 1,580 | 18,220 |
 | mil-ghost | civ-hunter | 1,580 | 70,240 |
+| mil-ghost | civ-pod | 670 | never |
 | mil-ghost | mil-carrier | 2,240 | 182,180 |
 | mil-ghost | mil-cruiser | 1,780 | 436,850 |
 | mil-ghost | mil-destroyer | 1,190 | 289,590 |
@@ -3005,6 +3457,7 @@ Range in km at which the listener, drifting, has an even chance each second of h
 | pir-raider | civ-freighter | 410 | 2,460 |
 | pir-raider | civ-hauler | 230 | 8,140 |
 | pir-raider | civ-hunter | 230 | 31,380 |
+| pir-raider | civ-pod | 97 | never |
 | pir-raider | mil-carrier | 330 | 81,380 |
 | pir-raider | mil-cruiser | 260 | 195,130 |
 | pir-raider | mil-destroyer | 170 | 129,350 |
@@ -3019,18 +3472,18 @@ These apply in engagements with the physical channels on (Thermal Range, Shadow 
 
 **EF array hears a ship, reactor running, drifting.**
 
-| Listener | civ-freighter | civ-hauler | civ-hunter | mil-carrier | mil-cruiser |
-|---|---|---|---|---|---|
-| civ-freighter | 305k km | 136k km | 86k km | 68k km | 61k km |
-| civ-hauler | 316k km | 141k km | 89k km | 70k km | 63k km |
-| civ-hunter | 708k km | 316k km | 200k km | 158k km | 141k km |
-| mil-carrier | 10.0 Mkm | 4.5 Mkm | 2.8 Mkm | 2.2 Mkm | 2.0 Mkm |
-| mil-cruiser | 0.1 AU | 8.2 Mkm | 5.2 Mkm | 4.1 Mkm | 3.7 Mkm |
-| mil-destroyer | 10.0 Mkm | 4.5 Mkm | 2.8 Mkm | 2.2 Mkm | 2.0 Mkm |
-| mil-fighter | 1.0 Mkm | 448k km | 283k km | 223k km | 200k km |
-| mil-ghost | 10.0 Mkm | 4.5 Mkm | 2.8 Mkm | 2.2 Mkm | 2.0 Mkm |
-| mil-sweeper | 1.0 Mkm | 448k km | 283k km | 224k km | 200k km |
-| pir-raider | 317k km | 141k km | 89k km | 71k km | 63k km |
+| Listener | civ-freighter | civ-hauler | civ-hunter | civ-pod | mil-carrier | mil-cruiser |
+|---|---|---|---|---|---|---|
+| civ-freighter | 305k km | 136k km | 86k km | 4,300 km | 68k km | 61k km |
+| civ-hauler | 316k km | 141k km | 89k km | 4,450 km | 70k km | 63k km |
+| civ-hunter | 708k km | 316k km | 200k km | 9,980 km | 158k km | 141k km |
+| mil-carrier | 10.0 Mkm | 4.5 Mkm | 2.8 Mkm | 141k km | 2.2 Mkm | 2.0 Mkm |
+| mil-cruiser | 0.1 AU | 8.2 Mkm | 5.2 Mkm | 258k km | 4.1 Mkm | 3.7 Mkm |
+| mil-destroyer | 10.0 Mkm | 4.5 Mkm | 2.8 Mkm | 141k km | 2.2 Mkm | 2.0 Mkm |
+| mil-fighter | 1.0 Mkm | 448k km | 283k km | 14k km | 223k km | 200k km |
+| mil-ghost | 10.0 Mkm | 4.5 Mkm | 2.8 Mkm | 141k km | 2.2 Mkm | 2.0 Mkm |
+| mil-sweeper | 1.0 Mkm | 448k km | 283k km | 14k km | 224k km | 200k km |
+| pir-raider | 317k km | 141k km | 89k km | 4,460 km | 71k km | 63k km |
 
 | Listener | mil-destroyer | mil-fighter | mil-ghost | mil-sweeper | pir-raider |
 |---|---|---|---|---|---|
@@ -3047,18 +3500,18 @@ These apply in engagements with the physical channels on (Thermal Range, Shadow 
 
 **EF array hears a ship, burning at full.**
 
-| Listener | civ-freighter | civ-hauler | civ-hunter | mil-carrier | mil-cruiser |
-|---|---|---|---|---|---|
-| civ-freighter | 703k km | 344k km | 284k km | 1.8 Mkm | 1.6 Mkm |
-| civ-hauler | 728k km | 356k km | 294k km | 1.8 Mkm | 1.7 Mkm |
-| civ-hunter | 1.6 Mkm | 798k km | 659k km | 4.1 Mkm | 3.7 Mkm |
-| mil-carrier | 0.2 AU | 11.3 Mkm | 9.3 Mkm | 0.4 AU | 0.4 AU |
-| mil-cruiser | 0.3 AU | 0.1 AU | 0.1 AU | 0.7 AU | 0.6 AU |
-| mil-destroyer | 0.2 AU | 11.3 Mkm | 9.3 Mkm | 0.4 AU | 0.4 AU |
-| mil-fighter | 2.3 Mkm | 1.1 Mkm | 933k km | 5.8 Mkm | 5.3 Mkm |
-| mil-ghost | 0.2 AU | 11.3 Mkm | 9.3 Mkm | 0.4 AU | 0.4 AU |
-| mil-sweeper | 2.3 Mkm | 1.1 Mkm | 933k km | 5.8 Mkm | 5.3 Mkm |
-| pir-raider | 729k km | 357k km | 295k km | 1.8 Mkm | 1.7 Mkm |
+| Listener | civ-freighter | civ-hauler | civ-hunter | civ-pod | mil-carrier | mil-cruiser |
+|---|---|---|---|---|---|---|
+| civ-freighter | 703k km | 344k km | 284k km | 4,300 km | 1.8 Mkm | 1.6 Mkm |
+| civ-hauler | 728k km | 356k km | 294k km | 4,450 km | 1.8 Mkm | 1.7 Mkm |
+| civ-hunter | 1.6 Mkm | 798k km | 659k km | 9,980 km | 4.1 Mkm | 3.7 Mkm |
+| mil-carrier | 0.2 AU | 11.3 Mkm | 9.3 Mkm | 141k km | 0.4 AU | 0.4 AU |
+| mil-cruiser | 0.3 AU | 0.1 AU | 0.1 AU | 258k km | 0.7 AU | 0.6 AU |
+| mil-destroyer | 0.2 AU | 11.3 Mkm | 9.3 Mkm | 141k km | 0.4 AU | 0.4 AU |
+| mil-fighter | 2.3 Mkm | 1.1 Mkm | 933k km | 14k km | 5.8 Mkm | 5.3 Mkm |
+| mil-ghost | 0.2 AU | 11.3 Mkm | 9.3 Mkm | 141k km | 0.4 AU | 0.4 AU |
+| mil-sweeper | 2.3 Mkm | 1.1 Mkm | 933k km | 14k km | 5.8 Mkm | 5.3 Mkm |
+| pir-raider | 729k km | 357k km | 295k km | 4,460 km | 1.8 Mkm | 1.7 Mkm |
 
 | Listener | mil-destroyer | mil-fighter | mil-ghost | mil-sweeper | pir-raider |
 |---|---|---|---|---|---|
@@ -3075,16 +3528,16 @@ These apply in engagements with the physical channels on (Thermal Range, Shadow 
 
 **Magnetometer feels a ship.** Reactor running / shut down.
 
-| Listener | civ-freighter | civ-hauler | civ-hunter | mil-carrier | mil-cruiser |
-|---|---|---|---|---|---|
-| civ-freighter | 613 m / 508 m | 326 m / 172 m | 346 m / 119 m | 672 m / 384 m | 618 m / 336 m |
-| civ-hauler | 613 m / 508 m | 326 m / 172 m | 346 m / 119 m | 672 m / 384 m | 618 m / 336 m |
-| civ-hunter | 3 km / 2 km | 2 km / 799 m | 2 km / 554 m | 3 km / 2 km | 3 km / 2 km |
-| mil-carrier | 28 km / 24 km | 15 km / 8 km | 16 km / 6 km | 31 km / 18 km | 29 km / 16 km |
-| mil-cruiser | 36 km / 30 km | 19 km / 10 km | 20 km / 7 km | 39 km / 22 km | 36 km / 20 km |
-| mil-destroyer | 28 km / 24 km | 15 km / 8 km | 16 km / 6 km | 31 km / 18 km | 29 km / 16 km |
-| mil-ghost | 28 km / 24 km | 15 km / 8 km | 16 km / 6 km | 31 km / 18 km | 29 km / 16 km |
-| pir-raider | 2 km / 2 km | 1 km / 554 m | 1 km / 384 m | 2 km / 1 km | 2 km / 1 km |
+| Listener | civ-freighter | civ-hauler | civ-hunter | civ-pod | mil-carrier | mil-cruiser |
+|---|---|---|---|---|---|---|
+| civ-freighter | 613 m / 508 m | 326 m / 172 m | 346 m / 119 m | never | 672 m / 384 m | 618 m / 336 m |
+| civ-hauler | 613 m / 508 m | 326 m / 172 m | 346 m / 119 m | never | 672 m / 384 m | 618 m / 336 m |
+| civ-hunter | 3 km / 2 km | 2 km / 799 m | 2 km / 554 m | never | 3 km / 2 km | 3 km / 2 km |
+| mil-carrier | 28 km / 24 km | 15 km / 8 km | 16 km / 6 km | never | 31 km / 18 km | 29 km / 16 km |
+| mil-cruiser | 36 km / 30 km | 19 km / 10 km | 20 km / 7 km | never | 39 km / 22 km | 36 km / 20 km |
+| mil-destroyer | 28 km / 24 km | 15 km / 8 km | 16 km / 6 km | never | 31 km / 18 km | 29 km / 16 km |
+| mil-ghost | 28 km / 24 km | 15 km / 8 km | 16 km / 6 km | never | 31 km / 18 km | 29 km / 16 km |
+| pir-raider | 2 km / 2 km | 1 km / 554 m | 1 km / 384 m | never | 2 km / 1 km | 2 km / 1 km |
 
 | Listener | mil-destroyer | mil-fighter | mil-ghost | mil-sweeper | pir-raider |
 |---|---|---|---|---|---|
@@ -3103,6 +3556,7 @@ These apply in engagements with the physical channels on (Thermal Range, Shadow 
 |---|---|---|---|
 | civ-hauler | civ-freighter | 1,330 km | 0.3 AU |
 | civ-hauler | civ-hunter | 470 km | 0.7 AU |
+| civ-hauler | civ-pod | 240 km | never |
 | civ-hauler | mil-carrier | 990 km | 9.4 AU |
 | civ-hauler | mil-cruiser | 830 km | 17.3 AU |
 | civ-hauler | mil-destroyer | 630 km | 9.5 AU |
@@ -3112,6 +3566,7 @@ These apply in engagements with the physical channels on (Thermal Range, Shadow 
 | civ-hauler | pir-raider | 470 km | 0.3 AU |
 | civ-hunter | civ-freighter | 2,000 km | 0.3 AU |
 | civ-hunter | civ-hauler | 700 km | 0.3 AU |
+| civ-hunter | civ-pod | 350 km | never |
 | civ-hunter | mil-carrier | 1,480 km | 9.4 AU |
 | civ-hunter | mil-cruiser | 1,240 km | 17.3 AU |
 | civ-hunter | mil-destroyer | 940 km | 9.5 AU |
@@ -3122,6 +3577,7 @@ These apply in engagements with the physical channels on (Thermal Range, Shadow 
 | mil-carrier | civ-freighter | 89k km | 40.7 AU |
 | mil-carrier | civ-hauler | 31k km | 42.1 AU |
 | mil-carrier | civ-hunter | 31k km | 94.3 AU |
+| mil-carrier | civ-pod | 16k km | never |
 | mil-carrier | mil-cruiser | 56k km | 2439.9 AU |
 | mil-carrier | mil-destroyer | 42k km | 1336.5 AU |
 | mil-carrier | mil-fighter | 16k km | 133.6 AU |
@@ -3131,6 +3587,7 @@ These apply in engagements with the physical channels on (Thermal Range, Shadow 
 | mil-cruiser | civ-freighter | 134k km | 49.8 AU |
 | mil-cruiser | civ-hauler | 47k km | 51.6 AU |
 | mil-cruiser | civ-hunter | 47k km | 115.5 AU |
+| mil-cruiser | civ-pod | 24k km | never |
 | mil-cruiser | mil-carrier | 99k km | 1636.8 AU |
 | mil-cruiser | mil-destroyer | 63k km | 1636.9 AU |
 | mil-cruiser | mil-fighter | 24k km | 163.6 AU |
@@ -3140,6 +3597,7 @@ These apply in engagements with the physical channels on (Thermal Range, Shadow 
 | mil-destroyer | civ-freighter | 75k km | 28.8 AU |
 | mil-destroyer | civ-hauler | 26k km | 29.8 AU |
 | mil-destroyer | civ-hunter | 26k km | 66.7 AU |
+| mil-destroyer | civ-pod | 13k km | never |
 | mil-destroyer | mil-carrier | 56k km | 945.0 AU |
 | mil-destroyer | mil-cruiser | 47k km | 1725.2 AU |
 | mil-destroyer | mil-fighter | 13k km | 94.5 AU |
@@ -3149,6 +3607,7 @@ These apply in engagements with the physical channels on (Thermal Range, Shadow 
 | mil-fighter | civ-freighter | 7,510 km | 2.9 AU |
 | mil-fighter | civ-hauler | 2,630 km | 3.0 AU |
 | mil-fighter | civ-hunter | 2,630 km | 6.7 AU |
+| mil-fighter | civ-pod | 1,340 km | never |
 | mil-fighter | mil-carrier | 5,560 km | 94.5 AU |
 | mil-fighter | mil-cruiser | 4,670 km | 172.5 AU |
 | mil-fighter | mil-destroyer | 3,550 km | 94.5 AU |
@@ -3158,6 +3617,7 @@ These apply in engagements with the physical channels on (Thermal Range, Shadow 
 | mil-ghost | civ-freighter | 42k km | 9.1 AU |
 | mil-ghost | civ-hauler | 15k km | 9.4 AU |
 | mil-ghost | civ-hunter | 15k km | 21.1 AU |
+| mil-ghost | civ-pod | 7,510 km | never |
 | mil-ghost | mil-carrier | 31k km | 298.8 AU |
 | mil-ghost | mil-cruiser | 26k km | 545.6 AU |
 | mil-ghost | mil-destroyer | 20k km | 298.8 AU |
@@ -3167,6 +3627,7 @@ These apply in engagements with the physical channels on (Thermal Range, Shadow 
 | mil-sweeper | civ-freighter | 5,560 km | 1.6 AU |
 | mil-sweeper | civ-hauler | 1,950 km | 1.6 AU |
 | mil-sweeper | civ-hunter | 1,950 km | 3.7 AU |
+| mil-sweeper | civ-pod | 990 km | never |
 | mil-sweeper | mil-carrier | 4,110 km | 51.8 AU |
 | mil-sweeper | mil-cruiser | 3,460 km | 94.5 AU |
 | mil-sweeper | mil-destroyer | 2,630 km | 51.8 AU |
@@ -3176,6 +3637,7 @@ These apply in engagements with the physical channels on (Thermal Range, Shadow 
 | pir-raider | civ-freighter | 1,330 km | 0.3 AU |
 | pir-raider | civ-hauler | 470 km | 0.3 AU |
 | pir-raider | civ-hunter | 470 km | 0.7 AU |
+| pir-raider | civ-pod | 240 km | never |
 | pir-raider | mil-carrier | 990 km | 9.4 AU |
 | pir-raider | mil-cruiser | 830 km | 17.3 AU |
 | pir-raider | mil-destroyer | 630 km | 9.5 AU |
@@ -3200,7 +3662,7 @@ These apply in engagements with the physical channels on (Thermal Range, Shadow 
 
 <!-- specs:end -->
 
-## 24. Glossary
+## 25. Glossary
 
 | Term | Meaning |
 |---|---|
@@ -3210,8 +3672,10 @@ These apply in engagements with the physical channels on (Thermal Range, Shadow 
 | Band | The verdict on an engagement, from Defeat to Decisive. |
 | Beam weapon | A weapon of light: instant, strong close in, weak with range, loud on EM. |
 | Bearing | Compass direction to something, 0° to 360°, measured clockwise from north. |
+| Bingo | The navigator's call that fuel has fallen to the line for home: the fuel to reach base at standard warp, plus a reserve. |
 | The black | Space, in the fleet's slang. A torpedo "in the black" has been launched and is running; "underway" means away from a dockyard. |
 | Blather | A tactical error that loses an engagement or puts the boat at risk. The term is fleet usage, after an ensign of that name. The instructor's note after a failed exercise names the blather that decided it. |
+| Briefing | Command's word to a boat at a port, each item dated: the orders, contact reports, war news, the mess's talk, the mail and chart overlays. |
 | Captor mine | A mine that listens, and launches a homing torpedo at what it hears. |
 | COB | Chief of the boat: the senior rating, who runs the air on AUTO and reports it. The title is a holdover from the wet navies, where a submarine's senior enlisted man was its chief of the boat. |
 | Course | The direction you are actually moving. |
@@ -3225,6 +3689,7 @@ These apply in engagements with the physical channels on (Thermal Range, Shadow 
 | Elevation | Angle above (+) or below (−) the reference plane. |
 | ESM | Electronic support measures: a receiver that hears other ships' transmissions. |
 | Fire control | The computer that aims torpedoes and guns from your TMA solution or ping echoes. |
+| Fit | New equipment the yard fits a boat at a refit, from Captain. It stays with her, and is lost if she is paid off. |
 | Flagship | The ship in a hunting group with the strongest active array: it does the group's pinging. |
 | Flaw | A weakness on a captain's sheet, such as Hothead or Timid. One captain in four has one. |
 | Gauss gun | A gun that fires unguided slugs at 10 km/s, silent in flight. |
@@ -3232,12 +3697,23 @@ These apply in engagements with the physical channels on (Thermal Range, Shadow 
 | Heading | The direction the nose points. |
 | Hold | At Nightmare, a hunting group spread in lanes around your last fix, waiting for your battery and air to run out. |
 | Hull integrity | How much damage the hull can still take, 100% to 0. |
+| Hunting group | Warships that hunt together and share every bearing over a datalink. |
 | Influence mine | A mine set off by a ship's emissions (an acoustic fuze, named for the WWII original) or magnetic field (magnetic), without touching it. |
 | Leg change | A change of course made to let TMA find range. |
+| Light time | How late a message or a signal arrives: the time light takes to cross the gap, about 5.6 minutes over 100 million km. |
 | Magnetometer | Feels a hull's magnetic field, at very short range. |
+| Mess's talk | Word from other crews at a port. Sometimes rumour, sometimes wrong. |
 | Nebula | A charted cloud that changes what sensors hear: dust, ion or storm. |
+| Overlay (chart) | A layer on the patrol chart handed over by command, a port or one of our boats: traffic lanes, hunter patrol areas or sightings, each with its source and age. Not a sheet of glass: `intel` shows or hides it. |
+| Paid off | Taken out of service: a boat whose hull would take too long to mend. The captain is given another. |
+| Patch | A quick repair at the yard. The system works, but no better than 90% until a later refit repairs it. |
+| Patrol chart | A career's map of the sector at sea, north up: the bodies and their wells, the places, our boat, and contact reports as estimates. |
 | Ping | A pulse of active array. |
+| Practice runs | A torpedo's log: how many times she has been fired in exercises and recovered. Each run makes her a little likelier to fail. |
+| Practice shot | A torpedo with an inert head, fired in a lesson. A hit counts, and sinks nothing; afterwards she drifts by her beacon, to be recovered. |
 | Radiators | Panels that shed heat fast, and glow in infrared while they do. |
+| Refit | The boat's time in the yard between patrols, paid in days by the jobs chosen. |
+| Relay | A station of ours that broadcasts command's word to boats within its reach, about the breadth of a system. Command reaches each by a fixed link. |
 | Role | What a captain is for: Line, Silent, Escort, Pirate or Hunter. A good roll never changes it. |
 | Sail | To put out on a voyage. Nothing out here has sails: *sail*, *boat*, *tubes*, *convoy* and the like are nautical holdovers, kept by tradition. |
 | Salvo, spread | Several torpedoes fanned across the target's track, to cover the uncertainty in a solution. |
@@ -3249,13 +3725,19 @@ These apply in engagements with the physical channels on (Thermal Range, Shadow 
 | Sink | To destroy a ship. Nothing sinks in space. The fleet kept the word from naval tradition, along with tonnage and torpedoes. |
 | Speciality | A warship captain's standout habit, such as Ambusher or Listener. |
 | Static buoy | A countermeasure that roars, masking nearby bearings and luring homing torpedoes. |
+| Straggler | A merchant fallen behind her convoy, alone or with one escort. |
 | Target strength | How strongly a hull returns a ping. |
 | TMA | Target motion analysis: range, course and speed from bearings. |
 | Transient | A sudden rise in a contact's emissions, usually a drive lighting up or a torpedo launch. |
 | TTI | Time to impact: how long until a torpedo reaches the point fire control aimed it at. |
+| War diary | A career's dated record of the war, in the official log's voice: the patrols, fights, the crew's and the boat's changes, command's news and the captain's notes. Written as things happen, and to a file when the war ends. |
+| War patrol report | A patrol's report in the diary, after the real form: contacts, attack data, damage, personnel, endurance, duration, remarks and the chart log. |
+| Warp bubble | How a boat crosses the patrol chart. It cannot hold inside a gravity well. |
 | Waterfall | The display of passive array output over time. |
+| Well edge | Where a warp bubble drops to normal space: farther out for a stronger body. |
+| Yard priority | High standing's place in the yard's queue: every job's days cut, up to a quarter. |
 
-## 25. Enclosures
+## 26. Enclosures
 
 *Papers issued with this manual. Keep them with it.*
 

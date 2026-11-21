@@ -22,11 +22,13 @@ Nobody out here can see anyone. Hulls are painted black, and starlight shows not
 
 So you drift, and listen. A bearing comes up on the waterfall: a convoy, six merchants and one escort, crossing your patrol line. You don't know how far off they are. You have a bearing, and patience. Change course, let the bearings cross, and the range comes out of the geometry. When the solution firms to GOOD, you fire, and everyone hears you.
 
-[![Torpedo in the black: condition red, an enemy torpedo inbound on its bearing, and the boat turning away to run](screenshots/torpedo-in-the-black.png)](screenshots/torpedo-in-the-black.png)
+[![Torpedo in the black: the destroyer's torpedo heard on 204°, close behind its launcher, and the boat turning away and burning flat out to run](screenshots/torpedo-in-the-black.png)](screenshots/torpedo-in-the-black.png)
 
-*Condition red: a torpedo in the black, and the boat turning away to run.*
+*A torpedo in the black, close behind its launcher, and the boat turning away to run.*
 
-## The fleet's most accurate simulator
+*Out of uniform for a moment:* Ghost Boat is a real-time tactical game in the terminal. It is a submarine war set in space, with the physics taken seriously. Ghosts are called boats by tradition, as submarines are. It runs on Linux, macOS and Windows. Every action has a key, and the mouse is optional. It plays over mosh, or over plain SSH with `--metered`.
+
+## What the trainer teaches
 
 The Fleet Tactical Trainer simulates war in the black as it is fought, with nothing simplified for the recruit. What you learn on it is what will keep your boat alive.
 
@@ -49,7 +51,18 @@ The Fleet Tactical Trainer simulates war in the black as it is fought, with noth
 
 [![The sensors station: the passive array and the infrared waterfall side by side, one target on both](screenshots/sensors-station.png)](screenshots/sensors-station.png)
 
-*The sensors station: the passive array and infrared on one target.*
+*The sensors station: the passive array and infrared, one target on both.*
+
+## Sign on for the war
+
+New Game signs you on for one war. One captain, one boat, and patrols from base until the war ends, you retire, command relieves you, or the boat doesn't come home.
+
+- **Command gives the orders.** A zone and days on station, or a job: sink a tonnage, watch a site, land operatives, carry the mail, pick up survivors. Sometimes it offers two and you choose.
+- **The patrol chart runs in hours.** Warp out to your zone, mind the fuel line home, and drop into a fight when something comes within reach. What you meet depends on the year, and nobody tells you the war has moved on.
+- **Nine named crew** stand their posts and get better at them. They tire, they take shore leave, and some don't come back.
+- **The yard costs days.** Every day of a refit is a day of the war.
+- **Rank is command's opinion** of your patrols. Do well and it may offer you a better boat.
+- **Every war keeps a diary,** written out as plain text and Markdown when it ends. Iron mode, if you want it, means no reloads.
 
 ## Recruiting posters
 
@@ -65,7 +78,9 @@ Posters are available at your nearest recruitment office. Hang one in the mess.
 
 ## The training programme
 
-The trainer runs on any modern console, as large as the room allows: 160 columns by 45 rows is comfortable, and a smaller one shows fewer windows. Training lessons teach one idea each, the challenges are rated from Routine to Severe, and every lost fight can be replayed from the true positions. Sixteen colour schemes are fitted, from Deep Signal to Polaris.
+Recruits begin with lessons of one idea each, then qualify on challenges rated from Routine to Severe, then fight the war campaign through its three eras. Every lost fight can be replayed from the true positions, so you see what really happened.
+
+The trainer runs in any modern terminal, as large as the room allows. 160 columns by 45 rows is comfortable; a smaller one shows fewer windows. Thirty-five themes are fitted: the house blue-teal, green and amber phosphor, the home computers and terminals you grew up on, and five light ones for a bright room.
 
 [![The Scenarios page: the challenges by kind of boat, easiest first, each with its rating](screenshots/scenarios.png)](screenshots/scenarios.png)
 
@@ -73,11 +88,15 @@ The trainer runs on any modern console, as large as the room allows: 160 columns
 
 [![The replay of a lost fight: true positions on a turned and tilted map, the moments of the fight, and the log](screenshots/replay-viewer.png)](screenshots/replay-viewer.png)
 
-*The replay shows what really happened.*
+*A lost fight, replayed: true positions, the moments that mattered, and the log.*
 
-[![The Polaris scheme: a convoy hunt in frost on polar night](screenshots/polaris.png)](screenshots/polaris.png)
+[![The Polaris theme: a convoy hunt in frost on polar night, five contacts tagged on the rose and the convoy on the waterfall](screenshots/polaris.png)](screenshots/polaris.png)
 
-*One of sixteen colour schemes fitted to the trainer: Polaris.*
+*Polaris, frost on polar night.*
+
+[![The Via Lactea theme, one of five light ones: a convoy hunt in dark bronze on pale verdigris, the contacts tagged in ochre and the convoy's trace dark on a pale waterfall](screenshots/via-lactea.png)](screenshots/via-lactea.png)
+
+*Via Lactea, one of the five light themes.*
 
 ## Buy war bonds
 

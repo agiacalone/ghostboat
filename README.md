@@ -33,9 +33,9 @@
 
 Nobody out here can see anyone. Hulls are painted black, and starlight shows nothing. A ship is found by what it cannot help giving off: the heat of its hull, the radio of its machinery, the pull of its magnetism. The enemy finds you the same way. Can anything hide in space? For a while. A boat hides only as long as she can hold her heat, and her drive gives her away.
 
-[![The Barrier: three destroyers hunting line abreast across the boat's route, two flanking her with GOOD solutions and one dead ahead and closing, its range unsolved; the boat drifts in condition blue, rigged for silent, and none of them has heard her yet](screenshots/the-barrier.png)](screenshots/the-barrier.png)
+[![Run Home: four destroyers working back along the hurt boat's track, two flanking her with GOOD solutions and two dead ahead lighting their drives, the nearer nine kilometres off and getting louder; hull 45%, propellant 5%, the boat silent and still unheard](screenshots/run-home.png)](screenshots/run-home.png)
 
-*Three destroyers hunt line abreast. One is dead ahead and closing. The boat drifts, silent, and none of them has heard her. Yet.*
+*Four destroyers on her track. Two dead ahead are lighting their drives, the nearer nine kilometres off and getting louder. The boat is hurt, silent, and still unheard.*
 
 So you drift, and listen. A bearing comes up on the waterfall: a convoy, six merchants and one escort, crossing your patrol line. You don't know how far off they are. You have a bearing, and patience. Change course, let the bearings cross, and the range comes out of the geometry. When the solution firms to GOOD, you fire, and everyone hears you.
 

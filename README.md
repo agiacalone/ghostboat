@@ -142,7 +142,7 @@ It runs in any modern terminal, 160 columns by 45 rows or larger. A keyboard is 
 
 ## Buy war bonds
 
-Back the fleet. In plain words: Ghost Boat will be sold direct from us and through stores such as Steam. Buy it once and every update after is free. There will be no paid expansions and no DLC. The requisition office opens soon.
+Back the fleet. In plain words: Ghost Boat will be sold direct from us and through stores such as Steam. Buy it once and every update after is free. There will be no paid expansions and no DLC. No DRM, no accounts, and nothing collected: the trainer never goes online, your saves stay on your own machine, and every release comes with its source. The requisition office opens soon.
 
 Citizens who wish to support the trainer programme may do so on Patreon. That office opens soon too.
 

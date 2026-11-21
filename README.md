@@ -138,6 +138,10 @@ Back the fleet. In plain words: Ghost Boat will be sold direct from us and throu
 
 Citizens who wish to support the trainer programme may do so on Patreon. That office opens soon too.
 
+## Out of uniform: inspirations
+
+*Spacewar!*, *Objects in Space*, *Space Rogue* (1989), *Super Star Trek*, *Star Control 2*, *Microsoft Space Simulator* (1994), *Star Fleet I*, *Star Fleet Battles* (the Deluxe Edition), *Star Fleet Command: Orion Pirates* (2000), *Silent Service II*, *Silent Hunter 4* and its Fall of the Rising Sun mod, *Das Boot*, and *Gato* (1984), the sub-sim where Anthony started. Nightmare, the hardest setting, is a nod to *DOOM*. Ghost Boat borrows their feel, never their text, art or names.
+
 ## Papers issued to recruits
 
 | Paper | Contents |

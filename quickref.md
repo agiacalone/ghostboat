@@ -307,7 +307,7 @@ Radio is light: every message is late by the light time, and it fades beyond a s
 
 | Order | Does |
 |---|---|
-| `warp out` | Leave the fight for the chart: clear of every well's edge, no warship held (a contact the crew has classed as one), for the whole spin-up (`warp_spinup_s`, 15 minutes by default). A warship heard only by her pings does not count, unless the crew think she may have us |
+| `warp out` | Leave the fight for the chart: clear of every well's edge, no warship held (a contact the crew has classed as one), drive cold, for the whole spin-up (`warp_spinup_s`, 15 minutes by default, WARP on the top bar). A warship heard only by her pings does not count, unless the crew think she may have us. While it spins up, magnetometers feel you hundreds of kilometres off and your array is deaf |
 | `recover` | Bring aboard a lifeboat's or pod's people as survivors, of any side: within 2 km and all but stopped, 10 minutes. How many is unknown until they are aboard. An order to pick up survivors counts them. In a lesson, the same order brings aboard a practice shot adrift by her beacon |
 | `land` | Put the operatives ashore at the ordered point: within 5 km and all but stopped, 30 minutes |
 | `search s3` | Search a crippled merchant: within 2 km and all but stopped, three hours. Finds her cargo, papers or dispatches, and a passenger who matters, brought off as a prisoner |

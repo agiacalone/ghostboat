@@ -8,6 +8,8 @@
 
 *The trainer's title screen. It hangs a different recruiting poster each time it starts.*
 
+*Out of uniform:* Ghost Boat is a real-time submarine game set in space and played in the terminal, with the physics taken seriously. Ghosts are called boats by tradition, as submarines are. It runs on Linux, macOS and Windows. Every action has a key, and the mouse is optional. It plays over mosh, or over plain SSH with `--metered`. The rest of this page is the fleet talking.
+
 > **FLOTILLA NOTICE 1. POSTED AT ALL DEPOTS.**
 >
 > **CAPTAINS WANTED** for long patrols in the black. Hazardous duty. Small boat, seventy crew, four tubes, and no one coming for you. Ability to sit very still is required. Ability to count bearings is preferred.
@@ -25,8 +27,6 @@ So you drift, and listen. A bearing comes up on the waterfall: a convoy, six mer
 [![Torpedo in the black: the destroyer's torpedo heard on 204°, close behind its launcher, and the boat turning away and burning flat out to run](screenshots/torpedo-in-the-black.png)](screenshots/torpedo-in-the-black.png)
 
 *A torpedo in the black, close behind its launcher, and the boat turning away to run.*
-
-*Out of uniform for a moment:* Ghost Boat is a real-time tactical game in the terminal. It is a submarine war set in space, with the physics taken seriously. Ghosts are called boats by tradition, as submarines are. It runs on Linux, macOS and Windows. Every action has a key, and the mouse is optional. It plays over mosh, or over plain SSH with `--metered`.
 
 ## What the trainer teaches
 
@@ -100,7 +100,7 @@ The trainer runs in any modern terminal, as large as the room allows. 160 column
 
 ## Buy war bonds
 
-Back the fleet. In plain words: Ghost Boat will be sold on Steam. Buy it once and every update after is free. There will be no paid expansions and no DLC. The requisition office opens soon.
+Back the fleet. In plain words: Ghost Boat will be sold direct from us and through stores such as Steam. Buy it once and every update after is free. There will be no paid expansions and no DLC. The requisition office opens soon.
 
 Citizens who wish to support the trainer programme may do so on Patreon. That office opens soon too.
 

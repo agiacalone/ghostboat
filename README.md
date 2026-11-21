@@ -31,7 +31,7 @@
 
 ## Service in the black
 
-Nobody out here can see anyone. Hulls are painted black, and starlight shows nothing. A ship is found by what it cannot help giving off: the heat of its hull, the radio of its machinery, the pull of its magnetism. The enemy finds you the same way.
+Nobody out here can see anyone. Hulls are painted black, and starlight shows nothing. A ship is found by what it cannot help giving off: the heat of its hull, the radio of its machinery, the pull of its magnetism. The enemy finds you the same way. Can anything hide in space? For a while. A boat hides only as long as she can hold her heat, and her drive gives her away.
 
 So you drift, and listen. A bearing comes up on the waterfall: a convoy, six merchants and one escort, crossing your patrol line. You don't know how far off they are. You have a bearing, and patience. Change course, let the bearings cross, and the range comes out of the geometry. When the solution firms to GOOD, you fire, and everyone hears you.
 
@@ -48,7 +48,8 @@ The Fleet Tactical Trainer simulates war in the black as it is fought, with noth
 - **You are the captain, not the helmsman.** You give orders on the telegraph and the helm, and your crew carries them out, at the pace of a crew. All ahead one third.
 - **The enemy plays by your rules.** Every captain out there has a sensor picture and a doctrine of its own. Green escorts search the wreck. Seasoned ones run down your torpedo's bearing to the firing point.
 - **Every trick has a price.** Jam a seeker and you tell the world where you are. A homing torpedo forgives a poor solution; a straight runner needs a good one, and can't be jammed.
-- **The physics do not care.** Newtonian flight in three dimensions, heat and radio in real units, gravity wells that hide whole ships, and light-speed delay at astronomical range.
+- **The physics do not care.** Newtonian flight in three dimensions, gravity wells that hide whole ships, magnetism in real units, and light-speed delay at astronomical range. Heat and radio still run on a stand-in scale in most fights; their real-unit models are built and on their way to the rest.
+- **Real practice where it counts.** The radio follows marine practice: every ship guards channel 16, and a trader in trouble calls MAYDAY in full. Range comes from target motion analysis, worked from bearings as a fire-control party did it. The torpedoes are modelled on the early submarines' own, duds, prematures and circular runs included.
 - **The boat is yours to run.** The board, the battery, the air, the fuel and the damage parties. Leave them to the crew, or reach in and nurse a hurt boat home.
 - **The war changes.** Three eras: the happy time, the counters, and the hunters' war. Every technique arrives with its answer.
 

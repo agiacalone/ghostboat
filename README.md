@@ -8,7 +8,7 @@
 
 *The trainer's title screen. It hangs a different recruiting poster each time it starts.*
 
-*Out of uniform:* Ghost Boat is a real-time submarine game set in space and played in the terminal, with the physics taken seriously. Ghosts are called boats by tradition, as submarines are. It runs on Linux, macOS and Windows. Every action has a key, and the mouse is optional. It plays over mosh, or over plain SSH with `--metered`. The rest of this page is the fleet talking.
+*Out of uniform:* Ghost Boat is a real-time submarine game set in space and played in the terminal, with the physics taken seriously. You find the enemy by bearings alone, work out its range, course and speed from them by target motion analysis, and fire on a GOOD solution. Ghosts are called boats by tradition, as submarines are. It runs on Linux, macOS and Windows. Every action has a key, and the mouse is optional. It plays over mosh, or over plain SSH with `--metered`. The rest of this page is the fleet talking.
 
 > ```
 > FM COMGHOSTFLT

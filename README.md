@@ -17,6 +17,8 @@
 > Every recruit qualifies on the Fleet Tactical Trainer before taking a boat. Time on the trainer does not count toward time in the black.
 >
 > Applications: [recruitment@ghost-boat.net](mailto:recruitment@ghost-boat.net)
+>
+> By order of RADM A. Giacalone, Commander, Ghost Fleet.
 
 ## Service in the black
 
@@ -132,4 +134,4 @@ Every issue of the trainer comes with its workings open to inspection: the sourc
 
 ---
 
-*Prepared for Fleet Training Command by A. Giacalone. Do not reply to this notice. Correspondence to Fleet Training Command: [command@ghost-boat.net](mailto:command@ghost-boat.net). Requisitions: [requisition@ghost-boat.net](mailto:requisition@ghost-boat.net).*
+*Issued by the recruiting office, Fleet Training Command, by order of RADM A. Giacalone, Commander, Ghost Fleet. Do not reply to this notice. Correspondence to Fleet Training Command: [command@ghost-boat.net](mailto:command@ghost-boat.net). Requisitions: [requisition@ghost-boat.net](mailto:requisition@ghost-boat.net).*

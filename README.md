@@ -61,6 +61,10 @@ The Fleet Tactical Trainer simulates war in the black as it is fought, with noth
 
 *A convoy on the rose, every contact tagged; the escort is pinging.*
 
+[![Knife Fight: a destroyer close astern and above, louder on the rose, her ping called in red, PING. Active array, S1, bearing 194, strong. They may have us; the boat coasts in condition blue, rigged for silent](screenshots/knife-fight-ping.png)](screenshots/knife-fight-ping.png)
+
+*A destroyer close astern and above, pinging. They may have us. The boat coasts, silent, and waits.*
+
 [![The 3-D plot: one boat above your level and one below, each on a drop line](screenshots/three-d-view.png)](screenshots/three-d-view.png)
 
 *Space has an up and a down. One boat above your level, one below.*

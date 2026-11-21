@@ -64,6 +64,14 @@ New Game signs you on for one war. One captain, one boat, and patrols from base 
 - **Rank is command's opinion** of your patrols. Do well and it may offer you a better boat.
 - **Every war keeps a diary,** written out as plain text and Markdown when it ends. Iron mode, if you want it, means no reloads.
 
+[![The patrol chart a week into a first patrol: the boat on station in Gantry Approaches, the traffic lanes and hunter areas from command, two old contact reports, Drift Station, and a new contact on the log](screenshots/career-chart.png)](screenshots/career-chart.png)
+
+*The patrol chart, a week out: on station, and a new contact on the log.*
+
+[![The war diary a week in: command's welcome letter, the boat commissioned, sailing for Gantry Approaches, the news heard, and on station](screenshots/career-diary.png)](screenshots/career-diary.png)
+
+*The war diary keeps the whole war, from command's welcome letter on.*
+
 ## Recruiting posters
 
 Posters are available at your nearest recruitment office. Hang one in the mess.
@@ -97,6 +105,14 @@ The trainer runs in any modern terminal, as large as the room allows. 160 column
 [![The Via Lactea theme, one of five light ones: a convoy hunt in dark bronze on pale verdigris, the contacts tagged in ochre and the convoy's trace dark on a pale waterfall](screenshots/via-lactea.png)](screenshots/via-lactea.png)
 
 *Via Lactea, one of the five light themes.*
+
+[![The Breadbin theme, after the C64: the same convoy hunt in pale blue on deep violet](screenshots/breadbin.png)](screenshots/breadbin.png)
+
+*Breadbin, for the C64 crowd.*
+
+[![The PF3 theme, after the IBM 3270's green screen: the same convoy hunt in phosphor green on black](screenshots/pf3.png)](screenshots/pf3.png)
+
+*PF3, a 3270's green screen.*
 
 ## Buy war bonds
 

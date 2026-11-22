@@ -24,7 +24,7 @@ Crews still say *hear*, *loud* and *quiet*, out of submarine habit. They mean EF
 
 **Why nobody looks.** A ghost has no portholes, and there is no lookout and no camera. Hulls are painted a non-reflective black, so a hull reflects almost no starlight, and its own heat outshines what little it does. Every rock and grain of dust catches the same light, so a glint could be anything at any range. And light is the easiest thing to fake. So the navies built their sensors for heat, EF and magnetism, and the telescopes aboard look in the infrared.
 
-**What runs in real units.** Gravity and magnetism are real in every fight: the inverse square, and fields in tesla. Light-speed delay is real everywhere. Heat and EF are measured in decibels on a stand-in scale in most fights. The trainer also carries both in real units, kelvin and watts, and a few engagements run on them.
+**What runs in real units.** Gravity and magnetism are real: the inverse square, and fields in tesla. Light-speed delay is real. Heat and EF are reckoned in decibels on a stand-in scale, and they fall off with range as real signals do.
 
 ## Signal and noise
 
@@ -88,7 +88,6 @@ Moons and planets pull on every ship by the inverse-square law.
 
 - **Coasting near a moon puts you in an orbit.** Holding a straight line there means fighting gravity, and that costs propellant.
 - **A body between you and a hunter blocks every sensor.** It is cover, for both of you.
-- **A planet behind you hides you too.** Its warm disk drowns the few watts of a hull. A burning drive shines through. A magnetised planet's field drowns the magnetometers near it.
 - **Hitting one destroys the ship.** Watch `ALT`.
 - **Rock bites by speed.** In a rock field, strikes come more often the faster you go, and each one hurts with the square of your speed. At 0.1 km/s you can creep through. At 3 km/s the field will break you.
 
@@ -113,7 +112,7 @@ Everything here travels at the speed of light: heat, radio, radar. At these dist
 
 **All the reactor's power ends up as heat.** It goes into a heat sink. Drifting, the hull sheds enough. Burning or charging hard fills the sink. Radiators shed heat fast, but they glow, and radiators out show in infrared from thousands of kilometres. If the sink fills, the reactor scrams itself to save the ship.
 
-**In real units, colder pays twice.** A hull radiates with the fourth power of its temperature (the Stefan-Boltzmann law), so a hull at 50 K is about 1,300 times dimmer than one at 300 K. The radiators are panels along the sides: from ahead, astern, above or below they are edge-on and hidden, so point your bow at the hunter. A telescope's bearings are set by diffraction, and in the infrared they are extraordinarily sharp, thousandths of a degree.
+**Who sees it.** Warships carry infrared sensors. They see a cool hull out to a few tens of kilometres, and radiators out or a burning drive's plume from thousands. A hull shows more as it heats, so silent running cools you as well as quietens you.
 
 ## Every quiet has its price
 

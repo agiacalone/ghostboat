@@ -139,7 +139,7 @@ The trainer runs in any modern terminal, as large as the room allows. 160 column
 
 Ghost Boat is in play-testing. Builds are issued for Linux, macOS and Windows: write to [recruitment@ghost-boat.net](mailto:recruitment@ghost-boat.net) and say which you sail on. Play-testers whose reports help shape the game get a free copy when 1.0 ships. [The road to 1.0](roadmap.md) shows what each release has brought and what comes next.
 
-It runs in any modern terminal of 80 columns by 24 rows or more; 160 by 45 is comfortable. A keyboard is all you need.
+It runs in any modern terminal of 80 columns by 24 rows or more; 160 by 45 is comfortable. A keyboard is all you need. [Accessibility](accessibility.md) says what works today for captains who play by keyboard alone, with low vision or with colour blindness, and what does not.
 
 ## Buy war bonds
 
@@ -159,6 +159,7 @@ Citizens who wish to support the trainer programme may do so on Patreon. That of
 | [Quick reference card](quickref.md) | one page of keys and orders, to keep beside the console |
 | [The physics](physics.md) | why a ghost can hide, and how she is found: signal and noise, bearings, wells and warp |
 | [The road to 1.0](roadmap.md) | what each release has brought, and what comes next |
+| [Accessibility](accessibility.md) | what works today for captains with a disability, what does not, and how to tell us |
 | [Terms of issue](LICENSE) | what you may do with the trainer and its workings |
 
 Every issue of the trainer comes with its workings open to inspection: the source of each release is issued beside it.
@@ -169,7 +170,7 @@ The site is built by GitHub Pages with Jekyll, straight from `main`. At each rel
 
 1. **Refresh the papers and the colours.** `scripts/refresh-from-game.sh v0.12.0` (a tag or a branch of the game's repository, which it expects at `../dev`) copies the game's `docs/manual.md`, `docs/quickref.md` and `docs/tokens.json`. The stylesheet takes Deep Signal's colours from the tokens when Jekyll builds the site. The body text keeps the site's own colour, `#5eafc7`.
 2. **Move the roadmap on.** In `roadmap.md`, the release in play-testing moves under *Shipped*, newest first, with its date. Its lines come from that release's section of the game's `CHANGELOG.md`. The next release takes its place, from the changelog's *Unreleased* section. *The plan to 1.0* follows the release plan in the game's `docs/roadmap.md`.
-3. **Check the physics page** against the game's `docs/physics.md` and the manual. It shows only what the game does now.
+3. **Check the physics and accessibility pages** against the game's `docs/physics.md`, `docs/design/accessibility.md` and the manual. They show only what a release build does.
 4. **Check the front page and this README** against the changelog, and retake any screenshot the release has made stale.
 
 The roadmap stays short and plain: short lines, no roadmap row numbers, and none of how the work is done. Every page describes the game as it is; only the roadmap's plan looks ahead.

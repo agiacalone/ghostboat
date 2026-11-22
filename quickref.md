@@ -322,7 +322,7 @@ Nine named crew, mixed, and the hands. Skill reads Green, Qualified, Steady, Sea
 
 | Order | Does |
 |---|---|
-| `watch three`, `watch port` | Three sections, or port and starboard (twice the load, two sensor operators on the array). Never in a fight |
+| `watch three`, `watch port` | Three sections, or port and starboard (twice the load; a second sensor operator reviews the waterfall's history). Never in a fight |
 | `swap nav weps`, `swap exec okafor` | Trade two watches, by post or family name: two officers or two sensor operators |
 | `drill`, `drill off` | Drill on station: everyone learns, and tires faster |
 | `exec attack`, `exec attack off` | The exec leads the next attack: on duty all fight, helm and engine orders about 15% slower, learning twice as fast |

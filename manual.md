@@ -715,7 +715,21 @@ The trainer signs you in each time you power up the console. It opens a secure l
 
 The list and these keys can be clicked as well. To skip sign-in for one run, start the trainer with `--no-signin`: it keeps the last captain and asks nothing.
 
-**Rank.** Every captain starts at the foot of their career's ladder and is promoted for missions completed. Lessons don't count. Each breach of the rules of war takes three missions off the count, so a captain can be reduced in rank, and the service record shows a reputation, from clean through noted and questioned to notorious. The navy runs from Ensign to Commodore, the merchant service from Third Mate to Commodore Master, and a privateer from Prize Crew to Commodore of the Free Company. Rank is a record of experience and conduct: it changes nothing in an exercise. The trainer shows it beside your name and announces a promotion when you next reach the console. The enemy wears the same ranks, and theirs say roughly how experienced they are.
+**Rank.** Every captain starts at the foot of their career's ladder. A promotion takes two things: credit for challenges won, and hours played. Each challenge counts once, at the best level you have won it at. It is worth its rating times its level: Routine 1, Testing 2, Demanding 3, Hard 4 and Severe 5, times 1 at Standard, 1.5 at Hard and 2 at Nightmare. So a Severe challenge won at Nightmare is worth 10, and winning it again adds nothing. A war campaign engagement is one of the challenges, and counts as that challenge. A win with no rating counts as Routine. Lessons don't count.
+
+Hours played count only while an exercise runs: not while it is paused, as it is while you read the manual outside iron mode, and not once it is over, unless you play on. Time on the title screen and its pages never counts. Of any stretch with no key pressed, at most 10 minutes count; a mouse click counts as a key. A career's time counts toward the career's own rank, not this one.
+
+| Navy | Merchant service | Privateer | Credit | Hours played |
+|---|---|---|---|---|
+| Ensign | Third Mate | Prize Crew | 0 | 0 |
+| Sub-Lieutenant | Second Mate | Gunner | 5 | 1 |
+| Lieutenant | First Mate | Quartermaster | 15 | 3 |
+| Lieutenant Commander | Skipper | Sailing Master | 30 | 6 |
+| Commander | Master | Captain | 55 | 12 |
+| Captain | | | 90 | 20 |
+| Commodore | Commodore Master | Commodore of the Free Company | 140 | 35 |
+
+Each breach of the rules of war takes 10 off your credit, which never falls below 0. A breach can reduce you in rank, and the service record shows a reputation, from clean through noted and questioned to notorious. A rank you already hold is yours until the ladder passes it: only a breach takes it away. Rank is a record of experience and conduct: it changes nothing in an exercise. The trainer shows it beside your name and announces a promotion when you next reach the console. The enemy wears the same ranks, and theirs say roughly how experienced they are.
 
 **Awards.** The fleet also notices outstanding work, once for each award, and lists them on your service record. Like rank, an award changes nothing in an exercise. Some are plain about what earns them and some are not; you will find out.
 
@@ -2288,7 +2302,7 @@ Traffic nobody has reported is not drawn. Beside the chart, the patrol column li
 |---|---|
 | `warp to anvil station`, `warp to base`, `warp to zone` | Set course for a place on the chart by its name, for the base, or for the zone in the orders, at the warp speed set. A course set inside a well starts in normal space. `warp to zone` steers for the ordered place; reach the forward station by its name, `warp to drift station`. When the fuel for base, with the reserve, is more than the boat holds, `warp to base` lays the course for Drift Station and says so; order it again there. A refuel at the station puts the orders back in force: a bingo call no longer excuses leaving station. If station time is still owed, go back to the zone; going home instead fails the patrol unless another sound reason has come up. Still at base, before the zone is reached, `warp to base` would end the patrol at once, failed, so it asks first: the same order again confirms it, and any other order drops the question |
 | `warp to wreck` | Set course for the nearest wreck still marked |
-| `warp speed 3000` | The warp speed, from 500 to 4000 km/s; standard is 2000. A fast bubble burns fuel steeply and is easier for hunters to notice, and so is a loud boat: an older class, a drive rattling from damage, a hull that hums. A slow one costs days, and days cost food and wear |
+| `warp speed 3000` | The warp speed, from 500 to 4000 km/s; standard is 2000. A fast bubble burns fuel steeply and is easier for hunters to notice: at twice the speed, four times as easy. So is a loud boat: an older class, a drive rattling from damage or run after it has failed, a hull that hums. A couple of decibels louder makes a boat several times as easy to notice. A boat lying adrift is ten times harder to notice than one at standard warp. A slow one costs days, and days cost food and wear |
 | `drop in` | Leave the chart for the tactical console, where the boat is (the key `d`) |
 | `intercept r1` | Set course to wait just clear of the well edge where a convoy lane near report r1's estimate crosses it, the crossing nearest the estimate. With no lane near, the course is for the estimate itself. The contact may cross elsewhere, or never come |
 | `pause`, `resume`, `x3k` | Chart time, by order: `x1k` runs 10 minutes a second, `x3k` an hour, `x30k` 6 hours, `x100k` a day |
@@ -2406,9 +2420,9 @@ The boat has nine named crew and the hands, the rest of her company taken togeth
 **Watches.** The captain chooses the watch scheme, at base or on the chart:
 
 - **Three sections**, the default. Each crew member stands four hours in twelve: one officer of the deck and one sensor operator at a time, while the others rest.
-- **Port and starboard.** Two of the three sections are on watch at a time, eight hours in twelve. Two sensor operators share the array: the better one sets what the boat hears, and the second pair of ears adds a little. The crew tire about twice as fast.
+- **Port and starboard.** Two of the three sections are on watch at a time, eight hours in twelve. Two sensor operators share the watch. The better one keeps the live array and sets what it hears. The second reviews the waterfall's history, a minute at a time, and can find a faint contact that holds steady, one the live watch keeps missing. A contact the second operator follows is lost only after two minutes of history have missed it too, so a faint one stays on your screen. The crew tire about twice as fast.
 
-The COB, the engineer and the torpedo petty officer are day workers: they tire when they work. From 0200 to 0600 ship's time, the middle watch, those on watch work as if a little more tired than they are. Who stands it is the captain's choice: `swap` trades two crew members' watches. **Battle stations** (condition red) puts everyone at their post, and the best sensor operator takes the array. In a fight battle stations is the only change: watches are changed between fights.
+The COB, the engineer and the torpedo petty officer are day workers: they tire when they work. From 0200 to 0600 ship's time, the middle watch, those on watch work as if a little more tired than they are. Who stands it is the captain's choice: `swap` trades two crew members' watches. **Battle stations** (condition red) puts everyone at their post, and the best sensor operator takes the array. Nobody reviews the history then. In a fight battle stations is the only change: watches are changed between fights.
 
 **Learning.** A crew member gets better at their own job by doing it: a sensor operator with each new contact heard on their watch, the torpedo petty officer with each reload, the COB and the engineer with each repair, an officer with each hour in charge of the watch in a fight. Gains shrink as skill rises. On station the captain may order **drill**: everyone improves slowly, and everyone, the hands too, tires faster. `exec attack` gives the exec the next attack. The exec has the conn for the whole fight, whatever the watch, and does not rest until it is over, even at WHITE. Helm and engine orders take about 15% longer in the exec's hands, and the exec learns at twice the rate.
 
@@ -2482,7 +2496,29 @@ The patrol report gives command's verdict on the order on its own terms: an orde
 
 **People aboard.** Survivors, operatives and prisoners all eat and breathe. On the chart the food runs down faster, and in a fight the air fouls faster. A boat takes aboard no more than half her class's crew. The patrol column lists who is aboard and the days of food they cost.
 
-**Cargo.** Every merchant carries a cargo, and the contacts list never shows it. It shows in three ways. A hit may set off a volatile cargo, warp crystals or munitions, in a flash the sensors see; the crew say what they make of it, and they can be wrong. A search of a cripple finds it. And at base the patrol report says what command learned each ship sunk carried; the rest are "cargo unknown". Command values crystal tankers and mail packets most.
+**Cargo.** Every merchant carries a cargo, and the contacts list never shows it. It shows in three ways. A hit may set off a volatile cargo in a flash the sensors see; the crew say what they make of it, and they can be wrong. A search of a cripple finds it. And at base the patrol report says what command learned each ship sunk carried; the rest are "cargo unknown".
+
+A merchant may carry any of these:
+
+- Warp crystals, which are to this war what oil was to the last. Volatile.
+- Munitions: ammunition, torpedoes and mines for the front. Volatile.
+- Fertiliser and chemicals. Volatile.
+- Priority cargo: what the war needs at once, such as machinery, spares and reactor parts.
+- Ore and ingots for the yards. This is the bulk trade.
+- Scrap for the smelters.
+- Water ice, for life support and oxygen.
+- Small craft on deck.
+- Food.
+- Consumer goods.
+- Medical supplies.
+- Crews and troops in passage.
+- A passenger who matters: an officer, or a defector.
+- Papers and cipher material.
+- Mail. Mail packets carry it.
+
+What the lanes carry changes with the war. Water ice is commoner early in the war, and scrap late.
+
+Mail and warp crystals are the war's two most valuable cargoes. On a patrol that passes, each ship sunk earns standing for her tonnage. When command learned what she carried, her cargo's value adds a little more: most for crystals and mail, then munitions and priority cargo, and a little for the trade cargoes. Tonnage still counts most. Whatever she carried, a ship sunk is another ship the other side doesn't have.
 
 **Mail.** Between systems only a ship carries news, and mail packets are the ships that carry it. An enemy packet carries the enemy's dispatches between systems: sinking her delays the enemy's news, and searching her takes the dispatches. Our own mail reaches the boat only at base or Drift Station, as letters for the crew, or none, and the crew have something to say about either.
 

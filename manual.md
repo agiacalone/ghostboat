@@ -4,6 +4,8 @@
 
 **Reading this at the console:** press `F1` at any time, or `?` for the quick reference card and then `h` for this manual. The trainer pauses while you read. `↑`/`↓` scroll a line; `PgUp`/`PgDn`, `Shift+↑`/`Shift+↓`, or `b`/space scroll a page; `g`/`G` jump to the start and end; `←`/`→` jump between sections (on the quick reference, also between the groups of conn orders), and `?` or `Esc` closes the manual and puts the exercise back as it was.
 
+**Searching it:** `/` opens a search line at the foot, as in vim and `less`. Type a word and press `Enter`: the reader jumps to the first match from the top of the screen and highlights it, and the foot counts the matches, such as `3 of 12`. `n` goes to the next match and `N` to the one before; both go round from the last to the first, and back. Case does not matter. A search that finds nothing says so at the foot. `Esc` closes the search line; `Esc` again closes the manual. The quick reference and the War diaries reader search the same way.
+
 You command a ship by its instruments. A ghost is called a boat, by tradition, as a submarine is, whatever her size. A ghost boat has no portholes: at a kilometre a second, the dust of space would sandblast the glass in minutes, and a ship worth seeing is hundreds of kilometres off and dark. You will never see a map of where the enemy is. You will see bearings, signal strengths and estimates, and you will decide what they mean. This manual explains every instrument, every control and every rule the trainer uses. The spec sheets near the end come straight from the fleet's own data, so they are always current.
 
 > [!IMPORTANT]
@@ -203,7 +205,9 @@ Three **dynamic windows** open over the main window by themselves, then close:
 
 ### Goals
 
-When a mission has goals, a **GOALS** line sits under the header: `○` still to do, `●` done, `✕` failed, with `(optional)` on goals that don't decide the result. A goal that means going somewhere shows its bearing and range, `⊕ 045° 1,200 km`, and the same `⊕` appears on the rose's ring and on the nav plot, with a circle showing how close you need to get. When the mission has advice for the current goal, it appears in a second line underneath.
+When a mission has goals, a **GOALS** line sits under the header: `○` still to do, `●` done, `✕` failed, with `(optional)` on goals that don't decide the result. A goal that means going somewhere shows its bearing and range, `⊕ 045° 1,200 km`, and the same `⊕` appears on the rose's ring and on the nav plot, with a circle showing how close you need to get. When the mission has advice for the current goal, it appears underneath, on as many lines as it needs.
+
+**The briefing, read again.** `t`, or the order `brief`, shows the exercise's name and briefing again, as the launch page gave it, with the goals under it. Each goal says in words whether it is open, done or failed, and the current goal's hint is written out in full under it. The clock stops while it shows, as it does for the manual (not in iron mode), and runs again as before when you close it with `t` or `Esc`. Every line is plain text, so a screen reader reads it as it stands. In a career fight there is no exercise briefing: the page gives command's orders for the patrol, the place and the boat's state as she dropped in, and the fight's goals; in a career lesson, the lesson's own briefing comes first. The `t` key is in testing and may change; the order `brief` will stay.
 
 *Stay undetected* means no hostile ship may **track** you: hear you several times within a minute. One lucky faint detection doesn't count, but the hunter may come looking. Civilian ships hearing you don't count.
 
@@ -838,7 +842,8 @@ If the colours look garish or wrong, press `c` for 256-colour mode. Terminals re
 | `l` | The full ship's log, for review (pauses the trainer) |
 | `N` | Night orders: what wakes you (stops the clock) |
 | `S` | Standing orders: what the crew does before you can answer (stops the clock) |
-| `?` | The quick reference card (pauses the trainer). In it, `h` opens this manual, and `q` or `Esc` goes back to the game |
+| `t` | The briefing again, with the goals: each goal open, done or failed, and the current hint. In a career fight, the patrol's orders and the boat as she dropped in. It stops the clock as the manual does; `t` or `Esc` closes it. In testing: the key may change |
+| `?` | The quick reference card (pauses the trainer). In it, `h` opens this manual, `/` searches it (`n` and `N` step through the matches), and `q` or `Esc` goes back to the game |
 | `F1` | This manual, straight away |
 | `q` | Leave the exercise for the title screen (on the title screen: back to the main menu, and on the main menu, quit). It asks first: `q` again leaves, any other key stays. **Ask before leaving** on the Options page turns the question off. `Esc` never quits |
 
@@ -961,6 +966,7 @@ Orders are not case-sensitive. Contacts are named `s1`, `s2`, and so on.
 | `jammer`, `jammer 090` | Launch a jammer drone along your course, or on bearing 090° |
 | `log <text>` | Write your own line in the log |
 | `filter s1`, `filter eng`, `filter off` | Narrow the log window to a contact, hide or show a kind, or clear the contact |
+| `brief` | The briefing again, with the goals and the current hint (`t`). See [Goals](#goals) |
 | `night`, `night transit` | Open the night orders, or set a preset: `standing`, `transit`, `patrol`, `ambush` |
 | `call me on ping`, `call me pause on contact`, `call me log on transient`, `call me never on lost` | How far a kind of event reaches you: x1, pause, log or record. The words are `contact`, `regained`, `lost`, `called`, `solution`, `transient`, `manoeuvre`, `ping`, `cloud`, `objective`, `mine`, `air`, `collision`, `calls`, `torpedo`, `hit`, `end` |
 | `call me at 02:00`, `call me battery 30`, `call me waypoint`, `call me off` | Your own calls, or none |
@@ -2518,7 +2524,7 @@ The diary holds only what you were shown. A contact the crew never identified st
 
 **The files.** When the war ends, however it ends, the diary is written to two files in `ghostboat/diaries/` beside the saved exercises (`$XDG_DATA_HOME`, or `~/.local/share`), named by the war's code: `7F3A-91C2-K4M0.txt`, plain text laid out for 80 columns, and `7F3A-91C2-K4M0.md`, the same in Markdown. `w` in the diary writes them at any time, and a later write replaces the earlier. Each holds the whole diary in date order, then every patrol report with its chart log. If the files cannot be written, a notice says so and the game goes on.
 
-**The War diaries list.** **War diaries** on the main menu lists the diaries written, newest first, each by its two heading lines. `↑` `↓` choose, `PgUp` `PgDn` page, and `Enter` opens one in the game's reader, where `↑` `↓` scroll, `PgUp` `PgDn` page, `Home` `End` go to either end and `Esc` goes back. A finished war is read from its file, so its diary outlasts its save.
+**The War diaries list.** **War diaries** on the main menu lists the diaries written, newest first, each by its two heading lines. `↑` `↓` choose, `PgUp` `PgDn` page, and `Enter` opens one in the game's reader, where `↑` `↓` scroll, `PgUp` `PgDn` page, `Home` `End` go to either end, `/` searches as the manual does (`n` and `N` step through the matches) and `Esc` goes back. A finished war is read from its file, so its diary outlasts its save.
 
 **A war from before the diary.** A career saved before the diary existed begins one on the day it next loads: "The diary begins here.", after what its save lets the diary rebuild: the orders sailed on, the refits and the boats commissioned, each on its own date. The patrols rebuilt have no reports, and `Enter` on one says so.
 

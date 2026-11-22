@@ -5,7 +5,7 @@ One page to keep beside the console. This card is on the console too: press `?`,
 ## First minutes
 
 1. Power up the trainer, choose **Training** on the main menu, and run **Civilian 1: The Console**. The eleven civilian tutorials take about two hours and teach one idea each; then **Naval 1: Taking Command** teaches the navy's orders. The Ghost lessons teach the attack boat's weapons: the solution, straight runners, homing torpedoes, the line-up, jamming and the beam, each with when to use it.
-2. `Space` pauses at any time. `?` opens this card and pauses the trainer; `h` in it opens the manual, `q` goes back.
+2. `Space` pauses at any time. `?` opens this card and pauses the trainer; `h` in it opens the manual, `q` goes back. `/` searches the card or the manual: `Enter` finds a word, `n` and `N` step through the matches.
 3. `q` leaves an exercise and saves it, after asking (`q` again to leave; Options turns the question off); **Continue** on the main menu picks it up again. `Esc` never quits.
 4. On the title screen, `↑`/`↓` choose, `Enter` opens, and `Esc` or `q` goes back to the main menu; `q` there quits. Scenarios holds the challenges, War Campaign the war, and Options the theme, colours and sign-in.
 
@@ -78,6 +78,7 @@ Any key skips the sign-in. `C` on the title screen (or Options, then Captain and
 | `l` | The whole ship's log: `1`-`8` kinds, `f` or `c` one contact, `/` search, `Enter` detail, `p` show on the plot. Also in the replay |
 | `N` | Night orders: what wakes you |
 | `S` | Standing orders: what the crew does before you answer, and what each board setting buys |
+| `t` or `brief` | The briefing again, with each goal open, done or failed, and the current hint. Stops the clock as the manual does (`t` in testing) |
 | `W` | The plotting menu: filters, layers, shadows, zones |
 | `r` | When the engagement is over: the replay, true tracks and a debrief on a map you can turn and tilt |
 | `s` | When the engagement is over: keep the play, the save from just before the end, the end itself and the replay |
@@ -307,7 +308,7 @@ Radio is light: every message is late by the light time, and it fades beyond a s
 
 | Order | Does |
 |---|---|
-| `warp out` | Leave the fight for the chart: clear of every well's edge, no warship held (a contact the crew has classed as one), drive cold, for the whole spin-up (`warp_spinup_s`, 15 minutes by default, WARP on the top bar). A warship heard only by her pings does not count, unless the crew think she may have us. While it spins up, magnetometers feel you hundreds of kilometres off and your array is deaf |
+| `warp out` | Leave the fight for the chart: at rest (`full stop` first, a loud burn), clear of every well's edge, drive cold, for the whole spin-up (`warp_spinup_s`, 15 minutes by default, WARP on the top bar). No contact stops it. While it spins up you radiate as hard as your drive at full power, magnetometers feel you hundreds of kilometres off, and your array is deaf |
 | `recover` | Bring aboard a lifeboat's or pod's people as survivors, of any side: within 2 km and all but stopped, 10 minutes. How many is unknown until they are aboard. An order to pick up survivors counts them. In a lesson, the same order brings aboard a practice shot adrift by her beacon |
 | `land` | Put the operatives ashore at the ordered point: within 5 km and all but stopped, 30 minutes |
 | `search s3` | Search a crippled merchant: within 2 km and all but stopped, three hours. Finds her cargo, papers or dispatches, and a passenger who matters, brought off as a prisoner |

@@ -115,9 +115,9 @@ BT</pre>
     {%- assign base = '/assets/posters/poster-' | append: p.n %}
     {%- capture full %}{{ base | append: '.png' | absolute_url }}{% endcapture %}
     {%- capture src %}{{ base | append: '-board.png' | absolute_url }}{% endcapture %}
-    {%- capture html %}<a href="{{ '/' | absolute_url }}"><img src="{{ src }}" alt="{{ p.alt | replace: '"', '&quot;' }}" width="774" height="432"></a>{% endcapture %}
+    {%- capture html %}<a href="{{ '/' | absolute_url }}"><img src="{{ src }}" alt="{{ p.alt | replace: '"', '&quot;' }}" width="774" height="540"></a>{% endcapture %}
     <li>
-      <a href="{{ full }}"><img src="{{ src }}" alt="{{ p.alt | escape }}" loading="lazy" width="774" height="432"></a>
+      <a href="{{ full }}"><img src="{{ src }}" alt="{{ p.alt | escape }}" loading="lazy" width="774" height="540"></a>
       <details class="hang">
         <summary>Hang this poster</summary>
         <p>HTML, for a web page:</p>
@@ -126,7 +126,7 @@ BT</pre>
         <pre><code>[![{{ p.alt }}]({{ src }})]({{ '/' | absolute_url }})</code></pre>
         <p>BBCode, for an older forum:</p>
         <pre><code>[url={{ '/' | absolute_url }}][img]{{ src }}[/img][/url]</code></pre>
-        <p>The poster: <a href="{{ full }}">full size, 1548&times;864</a>, to print or download; <a href="{{ src }}">bulletin board, 774&times;432</a>, the size the codes above post.</p>
+        <p>The poster: <a href="{{ full }}">full size, 1548&times;1080</a>, to print or download; <a href="{{ src }}">bulletin board, 774&times;540</a>, the size the codes above post.</p>
         <p>An avatar, the boat cut square: <a href="{{ base | append: '-avatar-256.png' | relative_url }}">256&times;256</a>, <a href="{{ base | append: '-avatar-128.png' | relative_url }}">128&times;128</a>.</p>
         <p>JPEG banners, to post with a link to {{ '/' | absolute_url }}:
           {%- assign b = '/assets/banners/poster-' | append: p.n %}
@@ -134,7 +134,7 @@ BT</pre>
           <a href="{{ b | append: '-header.jpg' | relative_url }}">profile header, 1500&times;500</a>,
           <a href="{{ b | append: '-leaderboard.jpg' | relative_url }}">leaderboard, 728&times;90</a>,
           <a href="{{ b | append: '-rectangle.jpg' | relative_url }}">rectangle, 300&times;250</a>,
-          <a href="{{ b | append: '-wide.jpg' | relative_url }}">the full title line, 1960&times;480</a>.</p>
+          <a href="{{ b | append: '-wide.jpg' | relative_url }}">the full title line, 1940&times;600</a>.</p>
       </details>
     </li>
 {%- endfor %}

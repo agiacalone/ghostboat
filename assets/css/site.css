@@ -1,18 +1,29 @@
-/* ghost-boat.com: the trainer's console, in its Deep Signal colours
-   (data/themes.ron in the game). One face, JetBrains Mono, as the trainer
-   draws in. Sections are the trainer's windows: a frame with its title set
-   into the top edge. The memorable thing is the title screen itself, as
-   text, with one of its ten posters. */
+---
+# Jekyll fills in the house colours below from _data/tokens.json, the
+# game's own docs/tokens.json copied in by scripts/refresh-from-game.sh.
+# No layout: _config.yml's defaults would wrap the stylesheet in the page.
+layout: null
+---
+{%- assign ds = site.data.tokens["deep-signal"] -%}
+/* ghost-boat.com: the trainer's console, in its Deep Signal colours.
+   They come from the game's colour tokens at the site's build, so a change
+   to the house colour reaches the site with the next refresh. One face,
+   JetBrains Mono, as the trainer draws in. Sections are the trainer's
+   windows: a frame with its title set into the top edge. The memorable
+   thing is the title screen itself, as text, with one of its ten posters. */
 
 :root {
-  --bg: #03101a;
-  --frame: #123f58;
-  --faint: #2e687f;
-  --label: #4386a0;
-  --text: #5eafc7;    /* body text: about 7.8:1 on the background */
-  --value: #7fe6ff;
-  --own: #a8ffe8;
-  --caution: #ffc04d;
+  --bg: {{ ds.bg["$value"].hex }};
+  --frame: {{ ds.frame["$value"].hex }};
+  --faint: {{ ds.faint["$value"].hex }};
+  --label: {{ ds.label["$value"].hex }};
+  --text: #5eafc7;    /* the site's own body text, not a token: about 7.8:1 on the background */
+  --value: {{ ds.value["$value"].hex }};
+  --own: {{ ds.own["$value"].hex }};
+  --caution: {{ ds.caution["$value"].hex }};
+  /* Two shades between the ground and the frames, for code and table rows. */
+  --well: color-mix(in srgb, var(--frame) 40%, var(--bg));
+  --stripe: color-mix(in srgb, var(--frame) 21%, var(--bg));
   --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
@@ -142,6 +153,9 @@ figure { margin: 1.6em 0 0; }
 figure img { display: block; width: 100%; height: auto; border: 1px solid var(--frame); }
 figcaption { color: var(--label); font-size: 0.9em; margin-top: 0.4em; }
 .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2ch; }
+/* A strip of the challenges: small shots, three to a row. */
+.strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 2ch; }
+.strip figcaption { font-size: 0.85em; }
 
 /* The posters, as they hang on the depot wall. */
 .window .posters {
@@ -172,24 +186,24 @@ figcaption { color: var(--label); font-size: 0.9em; margin-top: 0.4em; }
 .paper blockquote {
   margin: 1em 0; padding: 0.6em 2ch;
   border-left: 3px solid var(--frame);
-  background: rgba(18, 63, 88, 0.25);
+  background: color-mix(in srgb, var(--frame) 25%, transparent);
 }
 .paper blockquote.callout { border-left-color: var(--value); }
 .paper blockquote.warning, .paper blockquote.caution { border-left-color: var(--caution); }
-.paper code { color: var(--own); background: #0a2233; padding: 0 0.3ch; font-family: var(--mono); }
-.paper pre { background: #0a2233; border: 1px solid var(--frame); padding: 0.8em 2ch; overflow-x: auto; }
+.paper code { color: var(--own); background: var(--well); padding: 0 0.3ch; font-family: var(--mono); }
+.paper pre { background: var(--well); border: 1px solid var(--frame); padding: 0.8em 2ch; overflow-x: auto; }
 .paper pre code { padding: 0; }
 .paper table { border-collapse: collapse; display: block; overflow-x: auto; margin: 1em 0; }
 .paper th, .paper td { border: 1px solid var(--frame); padding: 0.3em 1ch; text-align: left; vertical-align: top; }
 .paper th { color: var(--value); }
-.paper tr:nth-child(2n) td { background: #061a28; }
+.paper tr:nth-child(2n) td { background: var(--stripe); }
 .paper img { max-width: 100%; height: auto; border: 1px solid var(--frame); }
 
 @media (max-width: 640px) {
   body { font-size: 14px; }
   .bar nav { margin-left: 0; }
   .window { padding: 1.4em 1.5ch 1em; }
-  .pair, .window .posters { grid-template-columns: 1fr; }
+  .pair, .strip, .window .posters { grid-template-columns: 1fr; }
   .window .posters { gap: 1.6em; }
   .hero { flex-direction: column; align-items: center; gap: 1em; margin-left: 0; }
   .hero > .wall { margin-left: 0; }
@@ -211,7 +225,7 @@ figcaption { color: var(--label); font-size: 0.9em; margin-top: 0.4em; }
 .hang summary:hover, .hang[open] summary { color: var(--value); }
 .hang p { margin: 0.6em 0 0.2em; color: var(--label); }
 .hang pre {
-  margin: 0; padding: 0.5em 1ch; background: #0a2233; border: 1px solid var(--frame);
+  margin: 0; padding: 0.5em 1ch; background: var(--well); border: 1px solid var(--frame);
   white-space: pre-wrap; word-break: break-all; color: var(--own);
 }
 .hang pre code { font-family: var(--mono); }

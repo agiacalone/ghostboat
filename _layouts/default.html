@@ -13,7 +13,7 @@
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:image" content="{{ '/screenshots/banner.png' | absolute_url }}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#03101a">
+  <meta name="theme-color" content="{{ site.data.tokens['deep-signal'].bg['$value'].hex }}">
   <link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,6 +28,9 @@
       <nav aria-label="Papers">
         <a href="{{ '/manual.html' | relative_url }}"><kbd>?</kbd> manual</a>
         <a href="{{ '/quickref.html' | relative_url }}"><kbd>q</kbd> quick reference</a>
+        <a href="{{ '/physics.html' | relative_url }}"><kbd>p</kbd> physics</a>
+        <a href="{{ '/roadmap.html' | relative_url }}"><kbd>r</kbd> roadmap</a>
+        <a href="{{ '/accessibility.html' | relative_url }}"><kbd>a</kbd> accessibility</a>
         <a href="{{ '/#requisition' | relative_url }}"><kbd>w</kbd> war bonds</a>
       </nav>
     </header>

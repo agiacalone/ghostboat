@@ -7,7 +7,7 @@ One page to keep beside the console. This card is on the console too: press `?`,
 1. Power up the trainer, choose **Training** on the main menu, and run **Civilian 1: The Console**. The eleven civilian tutorials take about two hours and teach one idea each; then **Naval 1: Taking Command** teaches the navy's orders. The 34 lessons run in four tracks: Civilian 1 to 11, Naval 1 to 7, Ghost 1 to 12 and Hunter 1 to 4. Ghost 1 to 7 teach the attack boat's weapons: silent running, the solution, straight runners, homing torpedoes, the line-up, jamming and the beam. Ghost 8 to 12 teach mines, pods and people aboard, base and orders, the patrol and the trip home. Hunter 1 to 4 teach the ping, the guns, the escort and the flight deck.
 2. `Space` pauses at any time. `?` opens this card and pauses the trainer; `h` in it opens the manual, `q` goes back. `/` searches the card or the manual: `Enter` finds a word, `n` and `N` step through the matches.
 3. `q` leaves an exercise and saves it, after asking (`q` again to leave; Options turns the question off); **Continue** on the main menu picks it up again. `Esc` never quits, and never leaves a fight, the base or the patrol chart.
-4. On the title screen, `↑`/`↓` choose, `Enter` opens, and `Esc` or `q` goes back to the main menu; `q` there quits. Scenarios holds the challenges, War Campaign the war, and Options the theme, colours, sign-in and Wild Spaceland (off by default). On a list of exercises, `d` sets the difficulty, `i` iron mode, `l` the loadout, `b` the boat, `w` the war, `n` the vessel's name (`r` draws one) and `o` the bare conn.
+4. On the title screen, `↑`/`↓` choose, `Enter` opens, and `Esc` or `q` goes back to the main menu; `q` there quits. Scenarios holds the challenges, War Campaign the war, and Options the theme, colours, sign-in and Wild Spaceland (off by default). On a list of exercises, `d` sets the difficulty, `i` iron mode, `l` the loadout, `b` the boat, `w` the war, `n` the vessel's name (`r` draws one) and `o` the bare conn. Shift steps a choice back: `D`, `I`, `L`, `B`, `W`.
 
 ## Signing in
 
@@ -25,7 +25,7 @@ Any key skips the sign-in. `C` on the title screen (or Options, then Captain and
 | `C` | Autopilot on, or manual control (civilian hulls; the navy has none). A Shift, because it radiates |
 | `x` | Cut the drive; on autopilot, come to rest |
 
-**A warship flies by orders.** The arrows **dial** an order; nothing happens until you press `Enter`, and the crew takes a few seconds to answer.
+**A warship flies by orders.** The arrows **dial** an order; nothing happens until you press `Enter`, and the crew takes a few seconds to answer. With a map in focus (a plot, or the patrol chart in a fight), the plain arrows move the map instead, as on the patrol screen; `c` brings it home.
 
 | Key | Order |
 |---|---|
@@ -47,10 +47,11 @@ Any key skips the sign-in. `C` on the title screen (or Options, then Captain and
 | `u` | Jury rig what has failed (an old boat) |
 | `n` | Rose, nav plot (plan), nav plot (profile), 3-D |
 | `<` `>` `{` `}` | Turn and tilt the 3-D view |
-| `[` `]` | Zoom the nav plot |
-| `o` | True or relative bearings |
-| `,` `.` | Tune the waterfall: move the listening bearing 2° a press, from the bow at first |
-| `w` | On a waterfall: step its layers. On the rose: show or hide your torpedoes |
+| `[` `]` | Zoom the nav plot, or the focused rose or patrol chart window. On a focused log window: scroll it, and `c` brings it to the newest |
+| `o` | True or relative bearings, on every bearing window |
+| `i` | On a bearing window: true or relative, for that window alone. The log says which |
+| `,` `.` | Tune the waterfall: move the listening bearing 2° a press, from the bow at first (on a window that lists contacts, they choose one) |
+| `w` | On a waterfall: step its layers. On the rose or the contacts table: show or hide your torpedoes. On a plot: the plotting menu |
 
 ## Weapons and defence
 
@@ -63,8 +64,8 @@ Any key skips the sign-in. `C` on the title screen (or Options, then Captain and
 | `d` | Launch a decoy that sounds like you |
 | `J` | Begin jamming: jam the loudest incoming torpedo |
 | `a` | Acknowledge the master alarm |
-| `,` `.` | On the fire control window: choose a contact |
-| `Enter` | On the fire control window: put the shot on the conn line |
+| `,` `.` | On fire control, the contacts table or the vessel window: choose a contact |
+| `Enter` | On the fire control window: put the shot on the conn line. On the contacts table, with a contact chosen: its menu of orders |
 | `i` | On the fire control window: the torpedo room, each torpedo with her practice runs (`MK1  23 runs`). In a career the worn fail a little more often |
 
 ## Time and the console
@@ -77,7 +78,7 @@ Any key skips the sign-in. `C` on the title screen (or Options, then Captain and
 | `step 5m`, `step tti` | Run that long (`30s`, `5m`, `2h`) or to your torpedo's impact, then pause. An alert cuts it short; full iron mode has no steps |
 | `Tab` `Shift+Tab` `v` `V` `z` `L` | Focus a window (`Shift+Tab` the one before), change what it shows (`V` steps back; one choice is the chart, fixed to space), swap it into the main window, next layout |
 | `F2` to `F10` | Console setups: bridge, sensors, nav, engineering, comms, science, damage, stealth, travel. `setup weapons` has no key, nor has `setup patrol` (a career fight: the patrol chart). |
-| `s` or `☰` | Menus of every station and every action (the mouse works too) |
+| `s` `M` | `s` the menu of stations, `M` the menu of every action (the mouse works too) |
 | `l` | The whole ship's log: `1`-`8` kinds, `f` or `c` one contact, `/` search, `Enter` detail, `p` show on the plot. Also in the replay |
 | `N` | Night orders: what wakes you |
 | `S` | Standing orders: what the crew does before you answer, and what each board setting buys |
@@ -86,7 +87,7 @@ Any key skips the sign-in. `C` on the title screen (or Options, then Captain and
 | `r` | When the engagement is over: the replay, true tracks and a debrief on a map you can turn and tilt |
 | `s` | When the engagement is over: keep the play, the save from just before the end, the end itself and the replay |
 | `k` | When the engagement is over: keep playing. The result stands as recorded |
-| Replay keys | `Space` plays, `←` `→` step, `n` `p` the next and previous moment, `Home` `End`, `a` `d` turn the map, `w` `s` tilt it, `+` `-` speed, `[` `]` zoom, `o` overhead, `c` centre on you, `l` the log, `q` back |
+| Replay keys | `Space` plays, `←` `→` step, `n` `p` the next and previous moment, `Home` `End`, `<` `>` turn the map, `{` `}` tilt it (or `a` `d`, `w` `s`), `+` `-` speed, `=` x1, `[` `]` zoom, `o` overhead, `c` centre on you, `l` the log, `q` back |
 | `i` | After a failure with an instructor's note: the replay at the moment it blames. Also jumps there inside the replay |
 | `T` `e` `m` | Theme menu (each shown as you move to it; `Enter` keeps, `Esc` puts back), colour effects, sound |
 
@@ -268,7 +269,7 @@ Press `Enter` with nothing dialled (or `:`) and type an order. `↑` brings back
 | `HEAR` | Which sensors have it: `P` passive array (`F` where the fight runs on real field units), `I` infrared, `X` beacon (it is announcing itself), `x` beacon gone silent, `E` EM (it is transmitting), `M` magnetic (it is close) |
 | `DZ km` | Height above (`+`) or below (`-`) you, once range is known. Ranges are 3-D |
 
-Symbols: `○` friendly, `◇` hostile, `□` neutral, `✣` unknown. A fighter wears the top half: `◠ ⋀ ⊓ ⌒`. `⊕ WPT` is a waypoint from your orders, not a contact.
+Symbols: `○` friendly, `◇` hostile, `□` neutral, `✣` unknown. A fighter wears the top half: `◠ ⋀ ⊓ ⌒`. `⊕ WPT` is a waypoint from your orders, not a contact. In a career fight, `⌂` is a berth from command's chart, and `EDGE` on the rose is the way out of a gravity well, with the range to its edge.
 
 ## Facts worth knowing
 
@@ -284,7 +285,7 @@ Symbols: `○` friendly, `◇` hostile, `□` neutral, `✣` unknown. A fighter 
 
 ## The career
 
-New Game starts a career: one captain, one boat and one war, in patrols from base. At sea the console shows the patrol chart, north up: the bodies with their wells' edges dashed, the places, our boat, and each contact report (`◇r1`) inside the circle of its error, which grows as it ages. The arrow keys or a drag move the chart, and `h` brings it home. Traffic nobody reported is not drawn. The strip under the chart holds the three clocks: fuel against the bingo line `│` (the fuel home at standard warp plus a 10% reserve; `BINGO` below it), food (water rations included) and crew wear. None is restored at sea.
+New Game starts a career: one captain, one boat and one war, in patrols from base. At sea the console shows the patrol chart, north up: the bodies with their wells' edges dashed, the places, our boat, and each contact report (`◇r1`) inside the circle of its error, which grows as it ages. The arrow keys or a drag move the chart, and `c` brings it home, as in a fight. Traffic nobody reported is not drawn. The strip under the chart holds the three clocks: fuel against the bingo line `│` (the fuel home at standard warp plus a 10% reserve; `BINGO` below it), food (water rations included) and crew wear. None is restored at sea.
 
 After each patrol comes the yard: the refit is paid in days, by the jobs chosen. The essentials take 30 and the hull is always mended. A damaged system is repaired, or patched for 2 days and capped at 90% until a later refit. From Commander a quirk fixed (10) and fresh torpedoes (3); from Captain new equipment (15). Standing above +2 cuts every job's days, up to a quarter. A hull past about 180 days' work pays the boat off.
 
@@ -297,14 +298,16 @@ Each war keeps a diary, by patrol, with a war patrol report for each patrol: **W
 | `Space` | Run or stop chart time. Outside iron mode it opens stopped; full iron never stops it, limited iron three times for 30 s |
 | `+` `-` `=` | Chart time faster, slower, slowest: 10 minutes to a day a second. It drops to the slowest when something happens |
 | `[` `]` | Zoom the chart |
-| `c` | The crew in the side column, or the patrol again |
+| `←` `↑` `↓` `→` | Move the chart; `c` brings it home |
+| `v` | The crew in the side column, or the patrol again |
 | `Enter` or `:` | A chart order |
 | `d` | Drop in: the tactical console where the boat is |
 | `q` | Save and go back to the title |
 
 | Order | Does |
 |---|---|
-| `warp to anvil station`, `warp to base`, `warp to zone` | Course for a place, the base or the ordered zone, round a star's well by a waypoint. Out of warp at each planet's well's edge, normal space until clear. Heading for base before the station time is kept records the reason the facts give, or none. Still at base, before the zone, `warp to base` asks first: the same order again confirms |
+| `dock`, `dock drift` | Course for the nearest berth of ours, or the one named; in a fight, `refuel` alongside |
+| `warp to anvil station`, `warp to cairn`, `warp to base`, `warp to zone` | Course for a place (a word of its name will do), the base or the ordered zone, round a star's well by a waypoint. Out of warp at each planet's well's edge, normal space until clear. Heading for base before the station time is kept records the reason the facts give, or none. Still at base, before the zone, `warp to base` asks first: the same order again confirms |
 | `warp to wreck` | Course for the nearest wreck still marked (`✕ wreck`, kept three days) |
 | `warp speed 3000` | 500 to 4000 km/s. Faster burns fuel steeply and is easier to notice. An ion storm halves it while it lasts |
 | `drop in` | Into the tactical console where the boat is, with any marked wreck in reach. A well's edge with traffic in reach, a hunter that notices the boat, a ship calling MAYDAY in reach, or an unseen contact in reach drops it in without an order |
@@ -329,11 +332,11 @@ Radio is light: every message is late by the light time, and it fades beyond a s
 | `search s3` | Search a crippled merchant: within 2 km and all but stopped, three hours. Finds her cargo, papers or dispatches, and a passenger who matters, brought off as a prisoner |
 | `confirm fire` | Fire on a contact the crew call a pod or lifeboat, within 30 s of their query. A torpedo whose line or spread passes one is queried too. A grave breach: the patrol fails and the captain is relieved |
 
-`setup patrol` shows the patrol chart as it stood at the drop. A career fight ends only when you warp out or the boat is lost; inside a well, the goal "Clear the well." is where warp becomes possible, and meeting it ends nothing. While the fight runs, `q` does not leave it. `Q` saves the fight and goes back to the title. Tonnage counts only once the boat is home.
+`setup patrol` shows the patrol chart as it stood at the drop. A career fight ends only when you warp out or the boat is lost; inside a well, the goal "Clear the well." lies just past the edge, where warp becomes possible, and meeting it ends nothing. The rose's `EDGE` tag gives the way out and its range; stop well clear, since the pull draws a stopped boat back. While the fight runs, `q` does not leave it. `Q` saves the fight and goes back to the title. Tonnage counts only once the boat is home.
 
 ### The crew
 
-Nine named crew, mixed, and the hands. Skill reads Green, Qualified, Steady, Seasoned or Expert; wear Fresh, Tired, Worn or Spent; how well they know the boat none, some, good or full. The base's **Crew** screen shows them (`Space` picks two, `s` trades their watches, `w` the scheme); while command has taken the exec, or offers a newer boat, the base lists the choices. **Shore leave**: 14 days ashore, slower wear for three patrols.
+Nine named crew, mixed, and the hands. Skill reads Green, Qualified, Steady, Seasoned or Expert; wear Fresh, Tired, Worn or Spent; how well they know the boat none, some, good or full. The base's **Crew** screen shows them (`Space` picks two, `s` trades their watches, `w` the scheme); while command has taken the exec, or offers a newer boat, the base lists the choices. On the pick for a new boat, `Enter` picks as `Space` does, and `Enter` on the last row takes the boat. **Shore leave**: 14 days ashore, slower wear for three patrols.
 
 | Order | Does |
 |---|---|

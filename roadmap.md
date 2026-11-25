@@ -52,7 +52,7 @@ Ghost Boat is built in small steps. A release that adds features is followed by 
 
 The plan as it stands. Each feature release is followed by its balance release.
 
-- **0.12.0, the generated galaxy.** A generated galaxy of wells, with satellites, beacons and a living roster of ships. The career moves into the galaxy. Follow a ship between wells by her jump wake. Skim for fuel. Survivors become a real choice. The crew's spirit rises and falls with the war. Theatres and bases. Rank worth having, and awards for an outstanding patrol. New Game offers the galaxy's size.
+- **0.12.0, the generated galaxy.** A generated galaxy of wells, with satellites, beacons and a living roster of ships. The career moves into the galaxy. Follow a ship between wells by her jump wake. Skim for fuel. Survivors become a real choice. The crew's spirit rises and falls with the war. Theatres and bases. Rank worth having, and awards for an outstanding patrol. New Game offers the galaxy's size. A shakedown on the way out: the crew drills on passage, and a test of the boat finds her defects before the first fight.
 - **0.13.0**, balance for the galaxy and the career.
 - **0.14.0, intelligence.** The cipher plant and broken traffic. A false-flag game on the radio. Wolfpacks, and banked intelligence.
 - **0.15.0**, balance for intelligence.

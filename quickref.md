@@ -4,10 +4,10 @@ One page to keep beside the console. This card is on the console too: press `?`,
 
 ## First minutes
 
-1. Power up the trainer, choose **Training** on the main menu, and run **Civilian 1: The Console**. The eleven civilian tutorials take about two hours and teach one idea each; then **Naval 1: Taking Command** teaches the navy's orders. The Ghost lessons teach the attack boat's weapons: the solution, straight runners, homing torpedoes, the line-up, jamming and the beam, each with when to use it.
+1. Power up the trainer, choose **Training** on the main menu, and run **Civilian 1: The Console**. The eleven civilian tutorials take about two hours and teach one idea each; then **Naval 1: Taking Command** teaches the navy's orders. The 34 lessons run in four tracks: Civilian 1 to 11, Naval 1 to 7, Ghost 1 to 12 and Hunter 1 to 4. Ghost 1 to 7 teach the attack boat's weapons: silent running, the solution, straight runners, homing torpedoes, the line-up, jamming and the beam. Ghost 8 to 12 teach mines, pods and people aboard, base and orders, the patrol and the trip home. Hunter 1 to 4 teach the ping, the guns, the escort and the flight deck.
 2. `Space` pauses at any time. `?` opens this card and pauses the trainer; `h` in it opens the manual, `q` goes back. `/` searches the card or the manual: `Enter` finds a word, `n` and `N` step through the matches.
-3. `q` leaves an exercise and saves it, after asking (`q` again to leave; Options turns the question off); **Continue** on the main menu picks it up again. `Esc` never quits.
-4. On the title screen, `↑`/`↓` choose, `Enter` opens, and `Esc` or `q` goes back to the main menu; `q` there quits. Scenarios holds the challenges, War Campaign the war, and Options the theme, colours and sign-in.
+3. `q` leaves an exercise and saves it, after asking (`q` again to leave; Options turns the question off); **Continue** on the main menu picks it up again. `Esc` never quits, and never leaves a fight, the base or the patrol chart.
+4. On the title screen, `↑`/`↓` choose, `Enter` opens, and `Esc` or `q` goes back to the main menu; `q` there quits. Scenarios holds the challenges, War Campaign the war, and Options the theme, colours, sign-in and Wild Spaceland (off by default). On a list of exercises, `d` sets the difficulty, `i` iron mode, `l` the loadout, `b` the boat, `w` the war, `n` the vessel's name (`r` draws one) and `o` the bare conn.
 
 ## Signing in
 
@@ -35,7 +35,7 @@ Any key skips the sign-in. `C` on the title screen (or Options, then Captain and
 | `Enter` | Give the dialled order (`Esc` drops it) |
 | `x` | All stop, without `Enter` |
 
-**Newton, not the sea.** Turning the nose does not change where you are going; only burning does. To slow down, turn round and burn (`full stop` on the conn).
+**Newton, not the sea.** Turning the nose does not change where you are going; only burning does. To slow down, the boat must turn round and burn (`full stop` on the conn does both).
 
 ## Senses
 
@@ -49,13 +49,16 @@ Any key skips the sign-in. `C` on the title screen (or Options, then Captain and
 | `<` `>` `{` `}` | Turn and tilt the 3-D view |
 | `[` `]` | Zoom the nav plot |
 | `o` | True or relative bearings |
+| `,` `.` | Tune the waterfall: move the listening bearing 2° a press, from the bow at first |
+| `w` | On a waterfall: step its layers. On the rose: show or hide your torpedoes |
 
 ## Weapons and defence
 
 | Key | Does |
 |---|---|
 | `f` | Fire at the contact with the best solution, among the shots fire control reads `OK` |
-| `g` | Gauss gun burst (destroyers and cruisers) |
+| `g` | Gauss gun burst (any hull with guns) |
+| `K` | Gauss burst into the chosen contact's area, with no solution: loud, and a hit is chance |
 | `j` | Drop a static buoy: a loud lure for homing torpedoes |
 | `d` | Launch a decoy that sounds like you |
 | `J` | Begin jamming: jam the loudest incoming torpedo |
@@ -72,17 +75,18 @@ Any key skips the sign-in. `C` on the title screen (or Options, then Captain and
 | `+` `-` | Time compression, x1 to x100k. Drops to x1 when something happens |
 | `=` | Back to x1 |
 | `step 5m`, `step tti` | Run that long (`30s`, `5m`, `2h`) or to your torpedo's impact, then pause. An alert cuts it short; full iron mode has no steps |
-| `Tab` `v` `V` `z` `L` | Focus a window, change what it shows (`V` steps back; one choice is the chart, fixed to space), swap it into the main window, next layout |
+| `Tab` `Shift+Tab` `v` `V` `z` `L` | Focus a window (`Shift+Tab` the one before), change what it shows (`V` steps back; one choice is the chart, fixed to space), swap it into the main window, next layout |
 | `F2` to `F10` | Console setups: bridge, sensors, nav, engineering, comms, science, damage, stealth, travel. `setup weapons` has no key, nor has `setup patrol` (a career fight: the patrol chart). |
 | `s` or `☰` | Menus of every station and every action (the mouse works too) |
 | `l` | The whole ship's log: `1`-`8` kinds, `f` or `c` one contact, `/` search, `Enter` detail, `p` show on the plot. Also in the replay |
 | `N` | Night orders: what wakes you |
 | `S` | Standing orders: what the crew does before you answer, and what each board setting buys |
-| `t` or `brief` | The briefing again, with each goal open, done or failed, and the current hint. Stops the clock as the manual does (`t` in testing) |
+| `t` or `brief` | The briefing again, with each goal open, done or failed, and the current hint. Pauses the clock, except in iron mode |
 | `W` | The plotting menu: filters, layers, shadows, zones |
 | `r` | When the engagement is over: the replay, true tracks and a debrief on a map you can turn and tilt |
 | `s` | When the engagement is over: keep the play, the save from just before the end, the end itself and the replay |
 | `k` | When the engagement is over: keep playing. The result stands as recorded |
+| Replay keys | `Space` plays, `←` `→` step, `n` `p` the next and previous moment, `Home` `End`, `a` `d` turn the map, `w` `s` tilt it, `+` `-` speed, `[` `]` zoom, `o` overhead, `c` centre on you, `l` the log, `q` back |
 | `i` | After a failure with an instructor's note: the replay at the moment it blames. Also jumps there inside the replay |
 | `T` `e` `m` | Theme menu (each shown as you move to it; `Enter` keeps, `Esc` puts back), colour effects, sound |
 
@@ -96,14 +100,17 @@ Press `Enter` with nothing dialled (or `:`) and type an order. `↑` brings back
 |---|---|
 | `helm 045`, `helm 045 +10` | Come to a heading (and elevation) |
 | `helm cse` | Point along your own course |
-| `helm s090`, `helm p045` | Turn by a bearing off the bow |
+| `helm s090`, `helm p045` | Turn by a bearing off the bow (three digits) |
+| `helm s1` | Turn bow on to a contact, as `steer s1` |
 | `reverse` | Helm only: end for end, the drive left as it is |
 | `clear baffles`, `clear baffles starboard` | End for end, or 90° to that side (`port`; `stbd` or `sb`; `right` and `left` work too) |
 | `helm quiet`, `helm full` | Turns held under the MAG rate (slow, silent), or full rate again |
-| `match s1` | In testing: the helm points for the burn that matches s1's velocity and says how much; you give the throttle |
+| `match s1` | An experimental order: the helm points for the burn that matches s1's velocity and says how much; you give the throttle |
 | `reverse two thirds`, `reverse 50` | End for end with the drive cut, then the drive at two thirds (or one third, standard, full, or a percentage) |
 | `point 100,-50,20` | Point at a chart position, km |
 | `helm wpt`, `helm wpt2` | Point at the next waypoint, or the second, bearing and pitch |
+| `away wpt`, `beam wpt2` | Turn a waypoint astern, or abeam |
+| `helm io`, `steer europa`, `away old wreck` | Turn relative to a body or a note, by name |
 | `all ahead one third`, `two thirds`, `standard`, `full`, `flank`; `thr 40`; `all stop` | Drive orders. Flank pushes the drive |
 | `burn to 2.5`, `burn 30` | A controlled burn, then coast |
 | `full stop`, `slow to 0.5` | Turn end for end and burn down to rest, or to a speed |
@@ -117,6 +124,7 @@ Press `Enter` with nothing dialled (or `:`) and type an order. `↑` brings back
 
 | Order | Does |
 |---|---|
+| `ping` | As `P`: range at once, and everyone hears it |
 | `contacts` | The watch reads out every contact held: bearing, solution, call |
 | `track s1 1200 090 0.6`, `track s1 off` | Your own track: range, course, speed; the vessel window shows the fit |
 | `classify s1 destroyer`, `classify s1 crew` | Overrule the crew's call on a contact's class, from its lines |
@@ -137,7 +145,9 @@ Press `Enter` with nothing dialled (or `:`) and type an order. `↑` brings back
 | `check s1` | Fire control's answer for each weapon, without firing |
 | `load 2 mk2h`, `load 2 empty`, `load 2 rack` | Change a tube now: a reload's time, and it is heard |
 | `reload 2 mk1`, `reload 2 same`, `reload 2 empty` | Choose what a tube takes next: silent |
+| `gauss s1 area` | A gauss burst into S1's area, with no solution |
 | `lase s1` | One beam shot at S1 |
+| `lay`, `lay acoustic`, `lay magnetic`, `lay captor` | Lay a mine where you are: the first kind left, or the kind named. The `MINES` line shows what is left |
 | `carrier s1 40m` | A cold carrier: it coasts, then releases two torpedoes |
 | `overload on`, `overload off` | Guns over their rating, at a risk |
 
@@ -145,6 +155,7 @@ Press `Enter` with nothing dialled (or `:`) and type an order. `↑` brings back
 
 | Order | Does |
 |---|---|
+| `buoy`, `decoy`, `decoy 090` | A static buoy astern; a decoy that sounds like you, on your course or a bearing |
 | `jam s1`, `jam s1 60%`, `jam +`, `jam off` | Jamming, at a share of full power |
 | `eccm on`, `eccm 60%`, `eccm +`, `eccm off` | Counter-jamming, likewise |
 | `jammer`, `jammer 090` | Launch a jammer drone along your course, or on a bearing |
@@ -158,6 +169,7 @@ Press `Enter` with nothing dialled (or `:`) and type an order. `↑` brings back
 | `reactor auto`, `reactor cap 30`, `reactor 40`, `scram` | Run the reactor: automatic, capped (a little quieter), held, or shut down |
 | `board`, `board patrol` | List or set the board's named settings: `standard`, `patrol`, `quiet`, `battle` |
 | `board preview patrol` | What a setting would buy and cost on your boat |
+| `radiators out`, `radiators in`, `radiators auto` | Run the radiators by hand, or leave them to the crew |
 | `shed tubes`, `restore tubes`, `restore all` | Open or close a breaker |
 | `priority tubes 3`, `priority auto` | Reorder the board |
 | `aux on`, `aux off`, `aux auto` | Run the generator |
@@ -170,6 +182,7 @@ Press `Enter` with nothing dialled (or `:`) and type an order. `↑` brings back
 | Order | Does |
 |---|---|
 | `scrubbers off`, `electrolysis off`, `candle`, `air auto` | The air by hand; `air auto` gives it back to the chief |
+| `repair drive`, `repair array`, `repair auto` | Send the damage parties to a system, or leave the choice to the crew |
 | `dc quiet`, `dc work` | Stand the damage parties down, or send them back |
 | `battery`, `heat`, `fuel`, `prop`, `hull`, `air`, `cabin`, `crew`, `helm`, `pos`, `alt`, `accel`, `turn`, `tubes`, `guns`, `pinger`, `cm`, `sig` | The crew reads that gauge from its own instruments: the cross-check for a broken gauge |
 | `gauges` | The gauges damage control knows are broken |
@@ -197,6 +210,7 @@ Press `Enter` with nothing dialled (or `:`) and type an order. `↑` brings back
 | Order | Does |
 |---|---|
 | `o` (launch page) | The bare conn: no gauges, rose or plot, only the console and the watch |
+| `setup bridge`, `setup save mine`, `setups` | Take up a console setup by name, save the console as your own, list them |
 | `mark 045`, `mark s1`, `mark b off`, `mark off` | Up to three bearing marks on the rose, the plan and the 3-D plot |
 | `shadow s1`, `shadow own`, `shadow off` | Shade what a contact cannot see, by your estimate of it |
 | `filter held`, `filter off` | What a rose shows (also `weapons`, `solved`, `hostile`, `torpedoes`, `courses`) |
@@ -204,6 +218,7 @@ Press `Enter` with nothing dialled (or `:`) and type an order. `↑` brings back
 | `vectors 30`, `vectors auto` | The plot's vector time |
 | `zone`, `zone alpha 500`, `zone off alpha`, `zones` | A tripwire box: the crew calls when a contact's estimate enters |
 | `guard port 270 330` | A guard arc off the bow: the crew calls a bearing on it |
+| `pencil 045/500`, `pencil s1 to s2` | A grease-pencil line on the plot, through the points the ruler takes: the pencil's line without the mouse |
 | `ruler s1`, `ruler us 045/500`, `leg s2`, `rulers` | The navigator's ruler: true bearing, distance, and time to run at your speed; a chain sums. `ruler off`, `rulers clear`. `R` lays one point to point |
 | `lop 045 10m`, `lop s1` | A line of position from where you were, or along a contact's bearing. Two cross at a fix |
 | `sheet attack`, `sheet show nav`, `sheet clear` | Sheets of glass, one per job: nav, attack, search, or your own. `G` takes up the next; `F4` brings up nav |
@@ -244,28 +259,28 @@ Press `Enter` with nothing dialled (or `:`) and type an order. `↑` brings back
 | `TYPE` | The crew's best guess: `unknown`, `civilian?`, `military?`, then a class. Only an opinion. `info s1` shows the odds |
 | `RANGE km` | A range and its error. `?200-900` is a limit from the signal and the crew's calls, never a solution |
 | `TMA` | How good the solution is: `POOR`, `FAIR`, `GOOD`. You need `FAIR` or better to shoot |
-| `SIG` | dB above your threshold. Rising: closing or getting louder. Falling: opening or going quiet |
+| `SIG` | dB above your threshold. A change in it is not a range: closing and getting louder look the same, and so do opening and going quiet. Only a solution gives range |
 | Rose `HEARD AT ~` | How far off you could be heard now, by your own estimate. A red-shaded contact is inside it |
 | Course | Click the focused plan to arm one; `Enter` gives it, `Esc` drops it, and it lapses after 8 s |
 | Overlay | `p` takes up the pencil: click a note, drag a line, click a mark to rub out. Pencil down: drag a note to move it. `R` takes up the ruler, `G` the next sheet |
 | Plot marks | `⊗ launch 12m` is where you were loud: a ring grows at your speed. It never says whether anyone heard |
 | Plot | Drag to pan; `centre s1` follows a contact, `c` comes home at the standard range |
-| `HEAR` | Which sensors have it: `P` passive array, `I` infrared, `X` beacon (it is announcing itself), `x` beacon gone silent, `E` EM (it is transmitting), `M` magnetic (it is close) |
+| `HEAR` | Which sensors have it: `P` passive array (`F` where the fight runs on real field units), `I` infrared, `X` beacon (it is announcing itself), `x` beacon gone silent, `E` EM (it is transmitting), `M` magnetic (it is close) |
 | `DZ km` | Height above (`+`) or below (`-`) you, once range is known. Ranges are 3-D |
 
 Symbols: `○` friendly, `◇` hostile, `□` neutral, `✣` unknown. A fighter wears the top half: `◠ ⋀ ⊓ ⌒`. `⊕ WPT` is a waypoint from your orders, not a contact.
 
-## Rules of thumb
+## Facts worth knowing
 
-- **Listen before you act.** A ship that burns or pings is heard far beyond where it can hear or see you.
-- **Range comes from a leg change.** Fly straight and the solution stays `POOR`. Turn about 90° (`beam s1`), burn briefly, and drift.
-- **Burning makes you deaf** as well as loud. Cut the drive to listen.
-- **A homing torpedo chases the loudest thing it hears.** Drop a static buoy, slide off its line, and go quiet.
-- **A carrier sees with her craft.** Her own hull is too loud to hear a quiet boat. Put pickets far out, keep a screen for torpedoes, and land craft before their pilots tire: each faint ring on the plot is how far out one can be and still make the deck. The challenge **The Flight Deck** walks you through it.
-- **Under air cover, go dark.** Craft are loud and half deaf. When one comes near, rig for silent running (`b`), keep radio silence and drift: what it hears, the destroyers hear. `Launch transients` mean a flight deck, and craft on the way.
-- **A jammer blinds a seeker.** Against jamming escorts, fire straight runners on a `GOOD` solution: on `GOOD` the fan closes.
-- **Jamming is a confession.** It hides you inside its cone and tells everyone else exactly where you are.
-- **Civilians and the navy are not equals.** A civilian hull is heard far off and hears little. A warship is the reverse.
+- A ship that burns or pings is heard far beyond where it can hear or see you.
+- Range comes from a change of course. On a straight course the solution stays `POOR`.
+- Burning makes you deaf as well as loud.
+- A homing torpedo chases the loudest thing it hears. A static buoy is a loud lure.
+- A carrier sees with her craft. Her own hull is too loud to hear a quiet boat. Pickets listen far out, a screen guards against torpedoes, and each faint ring on the plot is how far out a craft can be and still make the deck. The lesson **Hunter 4: The Flight Deck** teaches it.
+- Craft are loud and half deaf. What one hears, the destroyers hear. `Launch transients` in the log mean a flight deck, and craft on the way.
+- A jammer blinds a homing seeker, not a straight runner. On a `GOOD` solution the straight runners' fan closes.
+- Jamming hides you inside its cone and tells everyone else exactly where you are.
+- A civilian hull is heard far off and hears little. A warship is the reverse.
 
 ## The career
 

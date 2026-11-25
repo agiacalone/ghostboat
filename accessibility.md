@@ -11,9 +11,10 @@ Ghost Boat is all text, and text can be read aloud. The aim is a game every capt
 ## Keyboard only
 
 - **The keyboard does everything.** Every action has a key, or an order typed at the conn line in plain naval words: `helm 045`, `ping`, `shield up`. `help` lists the orders.
-- **No function key is needed,** and no mouse. The mouse and touch are extras, and `--no-mouse` turns them off. Tests check that every action works on a plain keyboard.
+- **No function key is needed,** and no mouse. The mouse and touch are extras, on the career's screens too, and `--no-mouse` turns them off. Tests check that every action works on a plain keyboard.
 - **No key is ever held down,** and nothing asks for quick repeated presses. A heading can be typed rather than dialled.
 - **Several orders go on one line,** split at `;`.
+- **The grease pencil has a typed order.** `pencil 045/500` or `pencil s1 to s2` draws a line on the plot with no mouse.
 - **Standing orders** let the crew act before you can, for example rigging for silent running when pinged.
 
 ## Time and pace
@@ -22,7 +23,7 @@ Ghost Boat is all text, and text can be read aloud. The aim is a game every capt
 - **Reading stops the clock.** The manual, the quick reference and the full log pause the exercise, outside iron mode.
 - **Night orders say what wakes you.** Each kind of event can be recorded, logged, dropped to x1 or made to pause the game.
 - **Iron mode is your choice,** and it is off by default.
-- **Lessons first.** 31 lessons in four tracks teach one idea each, with goals and a hint for each goal. Three levels of difficulty, Standard, Hard and Nightmare.
+- **Lessons first.** 34 lessons in four tracks teach one idea each, with goals and a hint for each goal. Three levels of difficulty, Standard, Hard and Nightmare.
 
 ## Blind and low-vision captains
 
@@ -30,14 +31,14 @@ Ghost Boat is all text, and text can be read aloud. The aim is a game every capt
 - **Every gauge has a typed answer:** `battery`, `hull`, `air`, `fuel`, `pos` and the rest. `contacts` has the watch read out every contact held, with its bearing, its solution and the crew's call. Every bearing is a number in degrees.
 - **The bare conn.** `o` on a launch page plays an exercise from the header, the goals and the log alone, with no gauges, rose, plot or waterfall. You run the boat by orders, by `status` replies and by what the watch reports. It works on the lessons, the challenges and the campaign.
 - **The goals stay on screen,** with a hint for the current one, and `brief` shows the briefing again.
-- **Text size is your terminal's.** Make the font as large as you like, while the window still holds 80 columns by 24 rows.
+- **Text size is your terminal's.** Make the font as large as you like, while the window still holds 80 columns by 24 rows. Below that, the console, the title and the career's screens say so.
 - **Plain language throughout,** with a glossary in the manual for the naval terms.
 
 **Screen readers do not work well today.** The trainer redraws its whole window many times a second. Screen readers expect lines of text that arrive one after another, so they handle the trainer badly. Nobody has yet played it with a screen reader. The manual is a plain Markdown file with headings, and on this website it is an ordinary web page.
 
 ## Colour and contrast
 
-- **Colour is never meant to be the only sign.** A contact's side is a shape as well as a colour: `○` friendly, `◇` hostile, `□` neutral, `✣` unknown. States are written as words: `PAUSED`, `BARE CONN`. A dead gauge says `NO DATA`.
+- **Colour is never meant to be the only sign.** A contact's side is a shape as well as a colour: `○` friendly, `◇` hostile, `□` neutral, `✣` unknown. States are written as words: `PAUSED`, `BARE CONN`. A dead gauge says `NO DATA`. On the plot, a solution's grade is a word on its label (`S1 GOOD`) as well as a colour. Only a refusal is drawn in red.
 - **Contrast.** In all 35 themes, text stands out from its ground by at least 4.5 to 1, and faint text by at least 3 to 1. Tests check the contrast of the alarms, labels and faint text in every theme.
 - **Colour blindness.** In every theme the three alarms, caution, warning and threat, stay apart for captains with red-green colour blindness, and a test holds them there.
 - **Choice.** `T` opens the theme menu: dark themes, five light ones, and the screens of old terminals and home computers. You can write your own theme.
@@ -50,11 +51,10 @@ Ghost Boat is all text, and text can be read aloud. The aim is a game every capt
 
 ## What does not work today
 
-- **Screen readers,** as above.
+- **Screen readers,** as above. There is no screen-reader mode yet: nothing prints new lines only, or takes orders at a plain prompt.
 - **Real time.** A fight runs in real time, and in full iron mode there is no pause. A fast moment can ask more than a screen reader can say in time.
 - **Keys cannot be changed.**
-- **A few things need the mouse.** Free-hand pencil lines are drawn by dragging. The career's screens take no mouse at all, though every key works there.
-- **Some meanings are colour alone.** On the plot, a solution's grade is shown by colour; the contacts window gives it as a word. Every notice is red, even when nothing was refused.
+- **Free-hand drawing needs the mouse.** A free-hand pencil line is drawn by dragging. `pencil` draws a line through points by key.
 - **Flashing.** With effects on, alarms flash up to twice a second and a jammer's strobe flickers faster. Effects are on by default when you play locally; `e` turns them off.
 - **Blue-yellow colour blindness.** In some themes two of the alarms are close for captains with tritanopia. No test checks it.
 - **One sound.** The bell is the same for a ping, a torpedo and a hit.

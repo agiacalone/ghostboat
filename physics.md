@@ -24,7 +24,7 @@ Crews still say *hear*, *loud* and *quiet*, out of submarine habit. They mean EF
 
 **Why nobody looks.** A ghost has no portholes, and there is no lookout and no camera. Hulls are painted a non-reflective black, so a hull reflects almost no starlight, and its own heat outshines what little it does. Every rock and grain of dust catches the same light, so a glint could be anything at any range. And light is the easiest thing to fake. So the navies built their sensors for heat, EF and magnetism, and the telescopes aboard look in the infrared.
 
-**What runs in real units.** Gravity and magnetism are real: the inverse square, and fields in tesla. Light-speed delay is real. Heat and EF are reckoned in decibels on a stand-in scale, and they fall off with range as real signals do.
+**What runs in real units.** Gravity and magnetism are real: the inverse square, and fields in tesla. Light-speed delay is real. Heat and EF are reckoned in decibels on a stand-in scale in nearly every fight, and they fall off with range as real signals do.
 
 ## Signal and noise
 
@@ -58,6 +58,8 @@ Near zero excess a contact fades in and out. Well above zero she is held steadil
 A passive sensor gives a bearing and a signal strength. It never says how far. Range comes from geometry, by target motion analysis, worked from bearings as a fire-control party did it.
 
 Each bearing says *she was somewhere on this line, at this moment*. In space a coasting ship really does hold a steady velocity, so only one track fits all the lines. But not from a straight leg of your own. Hold your course and many tracks fit, near and slow or far and fast, however long you listen. Change course, a *leg change*, and the bearings from your two legs cross. The range comes out of the geometry.
+
+**A level is not a range.** This is parallax, the way astronomers range a star. Their baseline is Earth's orbit; yours is your own two legs. A signal's level mixes how loud a ship is with how far off she is, and the level alone cannot part them. A fading trace may be a ship opening the range, or a ship going quiet where she is. Only the geometry tells you which.
 
 The solution firms from `POOR` to `FAIR` to `GOOD`. `GOOD` means the uncertainty is under a tenth of the range, and `FAIR` under three tenths. Before it calls a solution `GOOD`, fire control works the bearings again from a nearer and a farther start. If another track fits them about as well, the range is not known, and the grade drops to match.
 

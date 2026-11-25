@@ -10,9 +10,9 @@ Ghost Boat is built in small steps. A release that adds features is followed by 
 
 1.0 is the war: a captain sails a career in a ghost from the first patrol to the war's end. The civilian and privateer careers come after, in 2.0.
 
-## In play-testing: 0.11.0
+## In play-testing: 0.11.0-rc.1
 
-Balance for the career, and a clear first hour. As it stands today:
+0.11.0 is balance for the career, and a clear first hour. Its first release candidate is with play-testers now, and their reports shape the release. The candidate brings:
 
 - Three lessons teach the career before a first war: base and orders, a whole patrol, and coming home.
 - New lessons: night and standing orders, mines, and pods and the people aboard them.
@@ -32,7 +32,21 @@ Balance for the career, and a clear first hour. As it stands today:
 - Crowded fights run up to several times faster.
 - A war's code plays the same war on Linux, macOS and Windows.
 - The helm warns when the propellant left would barely stop the boat.
-- Fixes: `full stop` near a well, a fighter's burn misread, fuel under a cap, and names for every ship in a career fight.
+- Warships may hold a boat down: lying quiet, pressing passes, or feigning a departure. None holds for ever.
+- Nightmare's crews have steady nerves.
+- Range comes from geometry. A fading signal may be a ship going quiet, not a ship leaving.
+- `K` fires a gauss burst into a contact's area with no solution: loud, and a hit is chance.
+- A new order, protect the mail: sweep the packet's road before she sails.
+- The mail packet keeps a schedule.
+- A fast liner joins the merchants, and freighters carry lesser cargoes. Every cargo has a value.
+- A holed hull bleeds air until the damage parties patch it.
+- Career fights keep the rules of war. More merchants run dark as the war goes on.
+- The conn refuses an order it cannot read whole, rather than guess.
+- `away wpt` and `beam wpt2`, and the helm takes a charted body or a note by name.
+- One conn line everywhere, a solution's grade as a word on the plot, red for refusals only, and the mouse on the career's screens.
+- The manual says how the enemy behaves, never how to beat it, and has a part on accessibility.
+- Teaching notes for students: ideas in physics, maths and computing, walked through the game's own code.
+- Fixes: `full stop` near a well, a fighter's burn misread, fuel under a cap, names for every ship in a career fight, `helm s1`, heading goals met too soon, and the own-ship window at 80 by 24.
 
 ## The plan to 1.0
 

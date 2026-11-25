@@ -115,8 +115,9 @@ kbd {
    of its line stays on the grid. */
 .screen .g { display: inline-flex; justify-content: center; width: 1ch; }
 .ready { color: var(--label); margin: 0.4em 0 0; font-size: 0.93em; }
-/* The teaser under the banner, as on the trainer's title screen: a
-   survivor's words, and the reason the boats are called ghosts. */
+/* The teaser under the banner: a survivor's words, and the reason the
+   boats are called ghosts. Since 0.11.0-rc.2 they are the site's alone;
+   the trainer's title screen no longer shows them. */
 .teaser { margin: 1.3em 0 0.9em; padding: 0; }
 .teaser p { margin: 0; color: var(--value); font-style: italic; font-size: 1.2em; line-height: 1.45; }
 .teaser footer { margin-top: 0.3em; color: var(--label); font-size: 0.93em; }

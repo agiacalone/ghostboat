@@ -4,7 +4,7 @@
 
 *A game of patience. Run silent, run dark.*
 
-[![The trainer's title screen: GHOST BOAT in block letters, a survivor's words, and a recruiting poster of a ghost running dark across a planet's sunlit limb](screenshots/banner.png)](https://ghost-boat.com)
+[![The trainer's title screen: GHOST BOAT in block letters, the line A game of patience. Run silent, run dark, and a recruiting poster of a ghost running dark across a planet's sunlit limb](screenshots/banner.png)](https://ghost-boat.com)
 
 *The trainer's title screen. It hangs a different recruiting poster each time it starts.*
 
@@ -91,7 +91,7 @@ New Game signs you on for one war. One captain, one boat, and patrols from base 
 - **Rank is command's opinion** of your patrols. Do well and it may offer you a better boat.
 - **Every war keeps a diary,** written out as plain text and Markdown when it ends. Iron mode, if you want it, means no reloads.
 
-[![The patrol chart a week into a first patrol: the boat on station in Gantry Approaches, the traffic lanes and hunter areas from command, two old contact reports, Drift Station, and a new contact on the log](screenshots/career-chart.png)](screenshots/career-chart.png)
+[![The patrol chart a week into a first patrol: the boat on station in Gantry Approaches, the traffic lanes and hunter areas from command, two old contact reports, Drift Station, the range to each place, and a new contact on the log](screenshots/career-chart.png)](screenshots/career-chart.png)
 
 *The patrol chart, a week out: on station, and a new contact on the log.*
 

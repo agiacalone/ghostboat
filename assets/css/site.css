@@ -1,6 +1,8 @@
 ---
 # Jekyll fills in the house colours below from _data/tokens.json, the
 # game's own docs/tokens.json copied in by scripts/refresh-from-game.sh.
+# No layout: _config.yml's defaults would wrap the stylesheet in the page.
+layout: null
 ---
 {%- assign ds = site.data.tokens["deep-signal"] -%}
 /* ghost-boat.com: the trainer's console, in its Deep Signal colours.

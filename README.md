@@ -119,7 +119,7 @@ The trainer runs in any modern terminal, as large as the room allows. 160 column
 
 [![The Scenarios page: the challenges by kind of boat, easiest first, each with its rating](screenshots/scenarios.png)](screenshots/scenarios.png)
 
-*The challenges, Routine to Severe.*
+*The first challenges, Routine to Hard.*
 
 | | | |
 |---|---|---|

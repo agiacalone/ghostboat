@@ -112,6 +112,7 @@ Press `Enter` with nothing dialled (or `:`) and type an order. `↑` brings back
 | `helm wpt`, `helm wpt2` | Point at the next waypoint, or the second, bearing and pitch |
 | `away wpt`, `beam wpt2` | Turn a waypoint astern, or abeam |
 | `helm io`, `steer europa`, `away old wreck` | Turn relative to a body or a note, by name |
+| `helm n2`, `away n1`, `helm anvil station` | In a career fight, a charted mark as the contacts table numbers it (`N1` the way out of a well), or a berth by name |
 | `all ahead one third`, `two thirds`, `standard`, `full`, `flank`; `thr 40`; `all stop` | Drive orders. Flank pushes the drive |
 | `burn to 2.5`, `burn 30` | A controlled burn, then coast |
 | `full stop`, `slow to 0.5` | Turn end for end and burn down to rest, or to a speed |
@@ -285,7 +286,7 @@ Symbols: `○` friendly, `◇` hostile, `□` neutral, `✣` unknown. A fighter 
 
 ## The career
 
-New Game starts a career: one captain, one boat and one war, in patrols from base. At sea the console shows the patrol chart, north up: the bodies with their wells' edges dashed, the places, our boat, and each contact report (`◇r1`) inside the circle of its error, which grows as it ages. The arrow keys or a drag move the chart, and `c` brings it home, as in a fight. Traffic nobody reported is not drawn. The strip under the chart holds the three clocks: fuel against the bingo line `│` (the fuel home at standard warp plus a 10% reserve; `BINGO` below it), food (water rations included) and crew wear. None is restored at sea.
+New Game starts a career: one captain, one boat and one war, in patrols from base. In the black the console shows the patrol chart, north up: the bodies with their wells' edges dashed, the places, our boat, and each contact report (`◇r1`) inside the circle of its error, which grows as it ages. The arrow keys or a drag move the chart, and `c` brings it home, as in a fight. Traffic nobody reported is not drawn. The strip under the chart holds the three clocks: fuel against the bingo line `│` (the fuel home at standard warp plus a 10% reserve; `BINGO` below it), food (water rations included) and crew wear. None is restored in the black.
 
 After each patrol comes the yard: the refit is paid in days, by the jobs chosen. The essentials take 30 and the hull is always mended. A damaged system is repaired, or patched for 2 days and capped at 90% until a later refit. From Commander a quirk fixed (10) and fresh torpedoes (3); from Captain new equipment (15). Standing above +2 cuts every job's days, up to a quarter. A hull past about 180 days' work pays the boat off.
 
@@ -320,7 +321,7 @@ Each war keeps a diary, by patrol, with a war patrol report for each patrol: **W
 | `send report` | The boat's sightings to command by the relay in reach. A transmission: hunters near enough hear it. Out of reach, refused: the report goes home with the boat |
 | `intel`, `intel lanes off`, `intel areas on`, `intel sightings off` | The overlays held, with source and age; hide or show a kind. A bearing is a line from where it was heard |
 
-Radio is light: every message is late by the light time, and it fades beyond a system. The column's `RADIO` line says which relay is in reach and how late command's word arrives, `Enemy system: their traffic only.`, or `No signal.`. An order missed at sea is learned at the next port. Drift Station is a port: fuel and a briefing, no food or rest. People aboard beyond the crew eat: the column gives the days of food they cost.
+Radio is light: every message is late by the light time, and it fades beyond a system. The column's `RADIO` line says which relay is in reach and how late command's word arrives, `Enemy system: their traffic only.`, or `No signal.`. An order missed in the black is learned at the next port. Drift Station is a port: fuel and a briefing, no food or rest. People aboard beyond the crew eat: the column gives the days of food they cost.
 
 ### In a career fight
 
@@ -332,7 +333,7 @@ Radio is light: every message is late by the light time, and it fades beyond a s
 | `search s3` | Search a crippled merchant: within 2 km and all but stopped, three hours. Finds her cargo, papers or dispatches, and a passenger who matters, brought off as a prisoner |
 | `confirm fire` | Fire on a contact the crew call a pod or lifeboat, within 30 s of their query. A torpedo whose line or spread passes one is queried too. A grave breach: the patrol fails and the captain is relieved |
 
-`setup patrol` shows the patrol chart as it stood at the drop. A career fight ends only when you warp out or the boat is lost; inside a well, the goal "Clear the well." lies just past the edge, where warp becomes possible, and meeting it ends nothing. The rose's `EDGE` tag gives the way out and its range; stop well clear, since the pull draws a stopped boat back. While the fight runs, `q` does not leave it. `Q` saves the fight and goes back to the title. Tonnage counts only once the boat is home.
+`setup patrol` shows the patrol chart as it stood at the drop. A career fight ends only when you warp out or the boat is lost; inside a well, the goal "Clear the well." is met once clear of the edge, where warp becomes possible, and meeting it ends nothing. `helm n1` points the bow on the way out, and the rose's `EDGE` tag gives its range; stop well clear, since the pull draws a stopped boat back. While the fight runs, `q` does not leave it. `Q` saves the fight and goes back to the title. Tonnage counts only once the boat is home.
 
 ### The crew
 

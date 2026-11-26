@@ -41,11 +41,13 @@ Balance for the career, and a clear first hour. The release candidate is with pl
 - Command's signals come in naval form, and a new career opens on command's welcome letter.
 - A sixth patrol zone, the Greystone Gap.
 - `helm wpt` points the bow at the next waypoint.
+- `helm n1` steers for a charted mark, such as the way straight out of a well, and the career's first lesson now climbs out of the home well.
+- The contacts table keeps long ranges whole: `15k`, `306k`, `2.1M`.
 - `brief` shows the briefing and its goals again, mid-exercise.
 - `/` searches the manual, the quick reference and the war diaries, as in `less`.
 - A theme menu on `T`, and six new themes: five light ones and a combat information centre's.
 - Every theme reads better: text at 4.5:1 or more, and the alarms apart under red-green colour blindness.
-- A flatter title, in the posters' screen-print inks.
+- A flatter title, in the posters' screen-print inks, and the boat on the posters drawn in profile.
 - Crowded fights run up to several times faster.
 - A war's code plays the same war on Linux, macOS and Windows.
 - The helm warns when the propellant left would barely stop the boat.

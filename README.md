@@ -171,7 +171,7 @@ Citizens who wish to support the trainer programme may do so on Patreon. That of
 | [Captain's manual](manual.md) | every instrument, order and system aboard, and how the enemy thinks |
 | [Quick reference card](quickref.md) | one page of keys and orders, to keep beside the console |
 | [The physics](physics.md) | why a ghost can hide, and how she is found: signal and noise, bearings, wells and warp |
-| [The road to 1.0](roadmap.md) | what comes next, what is on sea trials, and what is in service |
+| [The road to 1.0](roadmap.md) | what comes next, what is on trials, and what is in service |
 | [Accessibility](accessibility.md) | what works today for captains with a disability, what does not, and how to tell us |
 | [Terms of issue](LICENSE) | what you may do with the trainer and its workings |
 
@@ -182,7 +182,7 @@ Every issue of the trainer comes with its workings open to inspection: the sourc
 The site is built by GitHub Pages with Jekyll, straight from `main`. At each release of the game:
 
 1. **Refresh the papers and the colours.** `scripts/refresh-from-game.sh v0.12.0` (a tag or a branch of the game's repository, which it expects at `../dev`) copies the game's `docs/manual.md`, `docs/quickref.md` and `docs/tokens.json`. The stylesheet takes Deep Signal's colours from the tokens when Jekyll builds the site. The body text keeps the site's own colour, `#5eafc7`.
-2. **Move the roadmap on.** In `roadmap.md`, the lines under *On sea trials* fold into *In service*, each under its topic. The next release's lines take their place, from the changelog's *Unreleased* section. *Coming next* follows the release plan in the game's `docs/roadmap.md`, drops the step just shipped, and names each step by what it brings.
+2. **Move the roadmap on.** In `roadmap.md`, the lines under *On trials* fold into *In service*, each under its topic. The next release's lines take their place, from the changelog's *Unreleased* section. *Coming next* follows the release plan in the game's `docs/roadmap.md`, drops the step just shipped, and names each step by what it brings.
 3. **Check the physics and accessibility pages** against the game's `docs/physics.md`, `docs/design/accessibility.md` and the manual. They show only what a release build does.
 4. **Check the front page and this README** against the changelog, and retake any screenshot the release has made stale.
 

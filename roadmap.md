@@ -4,7 +4,7 @@ title: The road to 1.0
 
 # The road to 1.0
 
-*What comes next, what is on sea trials now, and what is already in service.*
+*What comes next, what is on trials now, and what is already in service.*
 
 Ghost Boat is built in small steps. Each step that adds features is followed by one that adds none: it balances and tests what came before. The game should take a long time to master, and repay it.
 
@@ -22,12 +22,12 @@ The plan as it stands, in order. After each step below comes a step of balance a
 - **1.0.** A career in a ghost, from the first patrol to the war's end, in a generated galaxy. Every system in it tested and play-tested. It installs on Linux, macOS and Windows. It is held to the classics: *Silent Service II*, *Silent Hunter III* and *IV*, *UBOAT*, *Cold Waters* and *Dangerous Waters*.
 - **2.0.** The civilian and privateer careers.
 
-## On sea trials
+## On trials
 
 Balance for the career, and a clear first hour. The release candidate is with play-testers now, and their reports shape the release. It brings:
 
 - Command's chart shows in a career fight: the berths in reach, in a colour of their own.
-- The patrol chart gives each port's range, and the time at sea.
+- The patrol chart gives each port's range, and how long the boat has been out.
 - `dock` sets a course for the nearest berth of ours.
 - The contacts table chooses a contact by key, and takes the rose's filters.
 - `M` opens the actions menu, the log window scrolls by key, and the key bar follows what each key does now.
